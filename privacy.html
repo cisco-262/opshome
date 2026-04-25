@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — OpsHome NOC™</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0e13; --bg2: #0f1520; --surface: #141c28; --border: #1e2d42;
+    --accent: #00d4ff; --accent2: #00ff9d; --text: #e8f0fe; --text2: #7a9ab8;
+    --mono: 'Space Mono', monospace; --sans: 'DM Sans', sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: var(--sans); line-height: 1.8; }
+  body::before { content: ''; position: fixed; inset: 0; background-image: linear-gradient(rgba(0,212,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,0.03) 1px,transparent 1px); background-size: 40px 40px; pointer-events: none; z-index: 0; }
+
+  nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 20px 48px; background: rgba(10,14,19,0.95); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+  .nav-logo { font-family: var(--mono); font-size: 14px; color: var(--accent); letter-spacing: 0.08em; text-decoration: none; }
+  .nav-logo span { color: var(--accent2); }
+  .nav-back { font-family: var(--mono); font-size: 12px; color: var(--text2); text-decoration: none; letter-spacing: 0.1em; transition: color 0.2s; }
+  .nav-back:hover { color: var(--accent); }
+
+  .container { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; padding: 72px 48px; }
+
+  .doc-label { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.2em; margin-bottom: 16px; }
+  .doc-title { font-family: var(--mono); font-size: clamp(28px, 4vw, 40px); font-weight: 700; margin-bottom: 8px; }
+  .doc-title span { color: var(--accent); }
+  .doc-meta { font-family: var(--mono); font-size: 12px; color: var(--text2); margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+
+  .lang-toggle { display: flex; gap: 12px; margin-bottom: 48px; }
+  .lang-btn { font-family: var(--mono); font-size: 12px; padding: 8px 16px; border: 1px solid var(--border); background: transparent; color: var(--text2); cursor: pointer; letter-spacing: 0.08em; transition: all 0.2s; }
+  .lang-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(0,212,255,0.08); }
+
+  .lang-section { display: none; }
+  .lang-section.active { display: block; }
+
+  h2 { font-family: var(--mono); font-size: 13px; color: var(--accent2); letter-spacing: 0.1em; margin: 40px 0 12px; padding-top: 40px; border-top: 1px solid var(--border); }
+  h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+
+  p { font-size: 15px; color: var(--text2); margin-bottom: 16px; font-weight: 300; }
+  p strong { color: var(--text); font-weight: 500; }
+
+  ul { list-style: none; margin-bottom: 16px; }
+  ul li { font-size: 15px; color: var(--text2); padding: 6px 0; padding-left: 20px; position: relative; font-weight: 300; }
+  ul li::before { content: '▸'; position: absolute; left: 0; color: var(--accent); font-size: 10px; top: 9px; }
+
+  .highlight-box { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); padding: 20px 24px; margin: 24px 0; }
+  .highlight-box p { margin: 0; font-size: 14px; }
+
+  .data-table { width: 100%; border-collapse: collapse; border: 1px solid var(--border); margin: 24px 0; font-size: 13px; }
+  .data-table th { background: var(--bg2); color: var(--text2); font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); }
+  .data-table td { padding: 12px 16px; border-bottom: 1px solid rgba(30,45,66,0.5); color: var(--text2); font-weight: 300; vertical-align: top; }
+  .data-table tr:last-child td { border-bottom: none; }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  footer { position: relative; z-index: 1; border-top: 1px solid var(--border); padding: 32px 48px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+  .footer-copy { font-family: var(--mono); font-size: 11px; color: var(--text2); opacity: 0.4; }
+  .footer-links { display: flex; gap: 24px; list-style: none; }
+  .footer-links a { font-family: var(--mono); font-size: 11px; color: var(--text2); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--accent); }
+
+  @media (max-width: 768px) {
+    nav { padding: 16px 24px; }
+    .container { padding: 48px 24px; }
+    footer { padding: 24px; flex-direction: column; align-items: flex-start; }
+    .data-table th, .data-table td { padding: 10px 12px; font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">OpsHome <span>NOC</span>™</a>
+  <a href="index.html" class="nav-back">← BACK</a>
+</nav>
+
+<div class="container">
+  <p class="doc-label">// LEGAL</p>
+  <h1 class="doc-title">Privacy <span>Policy</span></h1>
+  <div class="doc-meta">
+    Effective Date: 2026-04-21 &nbsp;·&nbsp; Last Updated: 2026-04-21
+  </div>
+
+  <div class="lang-toggle">
+    <button class="lang-btn active" onclick="switchLang('en')">ENGLISH</button>
+    <button class="lang-btn" onclick="switchLang('zh')">繁體中文</button>
+  </div>
+
+  <!-- ENGLISH -->
+  <div class="lang-section active" id="lang-en">
+
+    <div class="highlight-box">
+      <p>Your privacy matters to us. This policy explains what data we collect, how we use it, and your rights. By using OpsHome NOC™, you agree to this policy.</p>
+    </div>
+
+    <h2>1. INFORMATION WE COLLECT</h2>
+    <table class="data-table">
+      <thead>
+        <tr><th>DATA TYPE</th><th>DESCRIPTION</th><th>PURPOSE</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Account info</td><td>Apple ID unique identifier only. We never see your Apple ID email or password. Apple may provide a private relay email at your option.</td><td>Authentication</td></tr>
+        <tr><td>Device info</td><td>Device model, iOS version, App version</td><td>Compatibility &amp; support</td></tr>
+        <tr><td>Monitor data</td><td>Target addresses, check results, event logs</td><td>Core service</td></tr>
+        <tr><td>Push token</td><td>APNs device token (if notifications enabled)</td><td>Alert delivery</td></tr>
+      </tbody>
+    </table>
+    <p>We do <strong>not</strong> collect your name, email address, location, contacts, browsing history, or any data unrelated to the Service.</p>
+
+    <h2>2. HOW WE USE YOUR DATA</h2>
+    <p>We use your data only for what is necessary to provide the Service:</p>
+    <ul>
+      <li>Account management and authentication</li>
+      <li>Executing monitoring checks and delivering alerts</li>
+      <li>Ensuring service stability and security auditing</li>
+    </ul>
+    <p>We do <strong>not</strong> use your data for advertising, profiling, or any purpose beyond operating the Service.</p>
+
+    <h2>3. THIRD-PARTY SHARING</h2>
+    <p>We do <strong>not</strong> sell or share your personal data with third parties. The only exception is when required by applicable law or a lawful order from a judicial or regulatory authority.</p>
+    <p>If we ever introduce third-party data sharing in the future, we will update this policy and notify you in advance.</p>
+
+    <h2>4. DATA STORAGE &amp; TRANSFER</h2>
+    <p>Your data is stored on our cloud servers. Servers may be located outside your region. We apply reasonable technical and organizational security measures to protect your data, and process it only to the extent necessary to provide the Service.</p>
+
+    <h2>5. DATA RETENTION &amp; DELETION</h2>
+    <p>We retain your data only as long as necessary to provide the Service:</p>
+    <ul>
+      <li>Active account data is retained while your account exists</li>
+      <li>Upon account deletion, all associated data is permanently removed</li>
+      <li>Disabled monitor history is deleted 7 days after Pro plan expiry</li>
+    </ul>
+
+    <h2>6. DATA EXPORT</h2>
+    <p>The current version does not provide data export functionality. Please keep your own records of important configurations.</p>
+
+    <h2>7. SECURITY</h2>
+    <p>We implement reasonable administrative and technical measures to protect your information. API keys and push tokens are stored in <strong>iOS Keychain</strong> and never written to UserDefaults. However, no system can guarantee absolute security.</p>
+
+    <h2>8. YOUR RIGHTS</h2>
+    <p>Subject to applicable law, you have the right to:</p>
+    <ul>
+      <li>Access and correct your account information within the app</li>
+      <li>Delete your account and all associated data via in-app settings</li>
+      <li>Withdraw push notification consent via iOS system settings</li>
+      <li>Revoke OpsHome NOC™ access to your Apple ID via <strong>Settings → Apple ID → Password &amp; Security → Apps Using Apple ID</strong></li>
+    </ul>
+
+    <h2>9. CHILDREN'S PRIVACY</h2>
+    <p>This Service is not directed at children under 13 (or the applicable age in your jurisdiction). We do not knowingly collect personal information from children. If you believe a child has provided us with personal data, please contact us.</p>
+
+    <h2>10. CHANGES TO THIS POLICY</h2>
+    <p>We may update this policy at any time. Updates will be announced via the app or App Store page. Continued use of the Service after an update constitutes acceptance of the revised policy.</p>
+
+    <h2>11. CONTACT</h2>
+    <p>For privacy-related inquiries, please contact: <a href="mailto:opshome@outlook.com">opshome@outlook.com</a></p>
+
+  </div>
+
+  <!-- TRADITIONAL CHINESE -->
+  <div class="lang-section" id="lang-zh">
+
+    <div class="highlight-box">
+      <p>你的隱私對我們很重要。本政策說明我們如何收集、使用、儲存與保護資料。你使用本服務即表示你已閱讀並同意本政策。</p>
+    </div>
+
+    <h2>1. 我們收集的資訊</h2>
+    <table class="data-table">
+      <thead>
+        <tr><th>資料類型</th><th>說明</th><th>用途</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>帳戶資訊</td><td>僅限 Apple ID 唯一識別碼。我們無法取得你的 Apple ID 電子郵件或密碼。Apple 可能依你的選擇提供私密轉址電子郵件。</td><td>身份驗證</td></tr>
+        <tr><td>裝置資訊</td><td>裝置型號、iOS 版本、App 版本</td><td>相容性與支援</td></tr>
+        <tr><td>監控資料</td><td>目標位址、檢測結果、事件記錄</td><td>核心服務</td></tr>
+        <tr><td>推播憑證</td><td>APNs 裝置 Token（若你授權通知）</td><td>告警推播</td></tr>
+      </tbody>
+    </table>
+    <p>我們<strong>不會</strong>收集你的姓名、電子郵件、位置、通訊錄、瀏覽記錄或任何與本服務無關的資料。</p>
+
+    <h2>2. 資訊使用目的</h2>
+    <p>我們僅在提供服務所必要的範圍內使用你的資料：</p>
+    <ul>
+      <li>帳戶管理與身份驗證</li>
+      <li>執行監控檢測與推播告警</li>
+      <li>確保服務穩定性與安全稽核</li>
+    </ul>
+    <p>我們<strong>不會</strong>將你的資料用於廣告、分析建檔或任何超出服務運營範圍的目的。</p>
+
+    <h2>3. 第三方共享</h2>
+    <p>我們<strong>不會</strong>出售或向第三方共享你的個人資料。唯一例外為適用法律規定或司法、監管機關依法要求的情形。</p>
+    <p>若未來新增第三方共享場景，我們將事先更新本政策並通知你。</p>
+
+    <h2>4. 資料儲存與傳輸</h2>
+    <p>你的資料儲存於我們的雲端伺服器，伺服器可能位於你所在地區以外。我們採取合理的技術與組織安全措施保護你的資料，且僅在提供服務所必要的範圍內處理資料。</p>
+
+    <h2>5. 資料保留與刪除</h2>
+    <p>我們僅在提供服務所需期限內保留你的資料：</p>
+    <ul>
+      <li>帳戶存續期間保留活躍帳戶資料</li>
+      <li>帳戶刪除後，所有相關資料將被永久清除</li>
+      <li>Pro 方案到期後，被停用監控的歷史記錄將於 7 天後刪除</li>
+    </ul>
+
+    <h2>6. 資料匯出</h2>
+    <p>目前版本暫不提供資料匯出功能，請自行記錄重要設定。</p>
+
+    <h2>7. 安全措施</h2>
+    <p>我們採取合理的管理與技術措施保護你的資訊。API 金鑰與推播憑證儲存於 <strong>iOS Keychain</strong>，不寫入 UserDefaults。但任何系統均無法保證絕對安全。</p>
+
+    <h2>8. 你的權利</h2>
+    <p>在適用法律允許範圍內，你有權：</p>
+    <ul>
+      <li>在應用程式內查詢與更正帳戶資訊</li>
+      <li>透過應用程式內設定刪除帳戶及所有相關資料</li>
+      <li>透過 iOS 系統設定撤回推播通知授權</li>
+      <li>透過 <strong>設定 → Apple ID → 密碼與安全性 → 使用 Apple ID 的 App</strong> 撤銷 OpsHome NOC™ 對你 Apple ID 的存取授權</li>
+    </ul>
+
+    <h2>9. 兒童隱私</h2>
+    <p>本服務不針對 13 歲以下兒童（或你所在地區適用年齡）。我們不會刻意收集兒童的個人資訊。如你認為有兒童向我們提供了個人資料，請與我們聯絡。</p>
+
+    <h2>10. 政策更新</h2>
+    <p>本政策更新後，將透過應用程式內或 App Store 頁面公示。你繼續使用本服務，即視為接受更新後的政策。</p>
+
+    <h2>11. 聯絡方式</h2>
+    <p>如有隱私相關問題，請聯絡：<a href="mailto:opshome@outlook.com">opshome@outlook.com</a></p>
+
+  </div>
+</div>
+
+<footer>
+  <p class="footer-copy">© 2025 OpsHome NOC™. All rights reserved.</p>
+  <ul class="footer-links">
+    <li><a href="privacy.html">Privacy Policy</a></li>
+    <li><a href="terms.html">Terms of Service</a></li>
+    <li><a href="mailto:opshome@outlook.com">Support</a></li>
+  </ul>
+</footer>
+
+<script>
+function switchLang(lang) {
+  document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+  document.getElementById('lang-' + lang).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+</body>
+</html>
