@@ -20,8 +20,10 @@
   body::before { content: ''; position: fixed; inset: 0; background-image: linear-gradient(rgba(0,212,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,0.03) 1px,transparent 1px); background-size: 40px 40px; pointer-events: none; z-index: 0; }
 
   nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 20px 48px; background: rgba(10,14,19,0.95); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
-  .nav-logo { font-family: var(--mono); font-size: 14px; color: var(--accent); letter-spacing: 0.08em; text-decoration: none; }
-  .nav-logo span { color: var(--accent2); }
+  .nav-logo { display: inline-flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 14px; color: var(--accent); letter-spacing: 0.08em; text-decoration: none; white-space: nowrap; }
+  .nav-logo img { width: 34px; height: 34px; border-radius: 9px; display: block; box-shadow: 0 0 18px rgba(0,212,255,0.28); }
+  .nav-logo .brand-name { color: var(--accent); }
+  .nav-logo .brand-name strong { color: var(--accent2); font-weight: 700; }
   .nav-back { font-family: var(--mono); font-size: 12px; color: var(--text2); text-decoration: none; letter-spacing: 0.1em; transition: color 0.2s; }
   .nav-back:hover { color: var(--accent); }
 
@@ -77,7 +79,7 @@
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo">OpsHome <span>NOC</span>™</a>
+  <a href="index.html" class="nav-logo"><img src="logo.png" alt="OpsHome NOC Logo"><span class="brand-name">OpsHome <strong>NOC</strong>™</span></a>
   <a href="index.html" class="nav-back">← BACK</a>
 </nav>
 
