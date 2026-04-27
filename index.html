@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OpsHome NOC™ — Home Network Monitor</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -44,6 +47,11 @@
     z-index: 0;
   }
 
+  .t-zh, .t-block-zh { display: none; }
+  body.lang-zh .t-en, body.lang-zh .t-block-en { display: none; }
+  body.lang-zh .t-zh { display: inline; }
+  body.lang-zh .t-block-zh { display: block; }
+
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -51,17 +59,22 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 24px;
     padding: 20px 64px;
     background: rgba(10,14,19,0.9);
     backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border);
   }
-  .nav-logo { font-family: var(--mono); font-size: 14px; color: var(--accent); letter-spacing: 0.08em; }
+  .nav-logo { font-family: var(--mono); font-size: 14px; color: var(--accent); letter-spacing: 0.08em; white-space: nowrap; }
   .nav-logo span { color: var(--accent2); }
+  .nav-right { display: flex; align-items: center; gap: 24px; }
   .nav-links { display: flex; gap: 32px; list-style: none; }
   .nav-links a { font-family: var(--mono); font-size: 12px; color: var(--text2); text-decoration: none; letter-spacing: 0.1em; transition: color 0.2s; }
   .nav-links a:hover { color: var(--accent); }
-  .nav-cta { font-family: var(--mono); font-size: 12px; color: var(--bg); background: var(--accent); border: none; padding: 10px 20px; cursor: pointer; letter-spacing: 0.08em; text-decoration: none; transition: background 0.2s, transform 0.1s; }
+  .lang-switch { display: flex; align-items: center; gap: 6px; padding: 4px; border: 1px solid var(--border); background: rgba(20,28,40,0.75); }
+  .lang-switch button { font-family: var(--mono); font-size: 11px; color: var(--text2); background: transparent; border: 0; padding: 6px 10px; cursor: pointer; letter-spacing: 0.08em; }
+  .lang-switch button.active { color: var(--bg); background: var(--accent); }
+  .nav-cta { font-family: var(--mono); font-size: 12px; color: var(--bg); background: var(--accent); border: none; padding: 10px 20px; cursor: pointer; letter-spacing: 0.08em; text-decoration: none; transition: background 0.2s, transform 0.1s; white-space: nowrap; }
   .nav-cta:hover { background: var(--accent2); transform: translateY(-1px); }
 
   .hero {
@@ -76,11 +89,12 @@
     z-index: 1;
   }
 
+  .hero-logo { width: 100px; height: 100px; border-radius: 22px; margin-bottom: 24px; box-shadow: 0 8px 32px rgba(0,212,255,0.2); }
   .hero-badge { font-family: var(--mono); font-size: 11px; color: var(--accent2); letter-spacing: 0.2em; border: 1px solid rgba(0,255,157,0.3); padding: 6px 16px; margin-bottom: 32px; animation: fadeDown 0.6s ease both; }
   .hero h1 { font-family: var(--mono); font-size: clamp(42px, 8vw, 88px); font-weight: 700; line-height: 1.0; letter-spacing: -0.02em; margin-bottom: 8px; animation: fadeDown 0.6s ease 0.1s both; }
   .hero h1 .noc { color: var(--accent); display: block; }
   .hero-sub { font-family: var(--mono); font-size: clamp(11px, 1.8vw, 14px); color: var(--accent2); letter-spacing: 0.15em; margin-bottom: 32px; animation: fadeDown 0.6s ease 0.2s both; }
-  .hero-desc { font-size: 22px; color: var(--text2); max-width: 540px; line-height: 1.7; margin-bottom: 48px; font-weight: 300; animation: fadeDown 0.6s ease 0.3s both; }
+  .hero-desc { font-size: 22px; color: var(--text2); max-width: 580px; line-height: 1.7; margin-bottom: 48px; font-weight: 300; animation: fadeDown 0.6s ease 0.3s both; }
   .hero-desc strong { color: var(--text); font-weight: 500; }
   .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; animation: fadeDown 0.6s ease 0.4s both; }
 
@@ -111,7 +125,7 @@
   .section { position: relative; z-index: 1; padding: 100px 64px; max-width: 1400px; margin: 0 auto; }
   .section-label { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.2em; margin-bottom: 16px; }
   .section-title { font-family: var(--mono); font-size: clamp(32px, 4vw, 52px); font-weight: 700; line-height: 1.2; margin-bottom: 16px; }
-  .section-desc { font-size: 20px; color: var(--text2); max-width: 500px; line-height: 1.7; margin-bottom: 64px; font-weight: 300; }
+  .section-desc { font-size: 20px; color: var(--text2); max-width: 620px; line-height: 1.7; margin-bottom: 64px; font-weight: 300; }
 
   .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); }
   .feature-card { background: var(--surface); padding: 36px 32px; transition: background 0.2s; position: relative; overflow: hidden; }
@@ -129,11 +143,11 @@
   .proto-table tr:last-child td { border-bottom: none; }
   .proto-table tr:hover td { background: rgba(255,255,255,0.02); }
 
-  .badge-free { font-size: 10px; background: rgba(0,212,255,0.1); color: var(--accent); border: 1px solid rgba(0,212,255,0.3); padding: 3px 8px; letter-spacing: 0.08em; margin-right: 6px; }
-  .badge-pro { font-size: 10px; background: rgba(0,255,157,0.1); color: var(--accent2); border: 1px solid rgba(0,255,157,0.3); padding: 3px 8px; letter-spacing: 0.08em; }
-  .badge-proonly { font-size: 10px; background: rgba(0,255,157,0.15); color: var(--accent2); border: 1px solid rgba(0,255,157,0.4); padding: 3px 8px; letter-spacing: 0.08em; font-weight: bold; }
+  .badge-free { font-size: 10px; background: rgba(0,212,255,0.1); color: var(--accent); border: 1px solid rgba(0,212,255,0.3); padding: 3px 8px; letter-spacing: 0.08em; margin-right: 6px; white-space: nowrap; }
+  .badge-pro { font-size: 10px; background: rgba(0,255,157,0.1); color: var(--accent2); border: 1px solid rgba(0,255,157,0.3); padding: 3px 8px; letter-spacing: 0.08em; white-space: nowrap; }
+  .badge-proonly { font-size: 10px; background: rgba(0,255,157,0.15); color: var(--accent2); border: 1px solid rgba(0,255,157,0.4); padding: 3px 8px; letter-spacing: 0.08em; font-weight: bold; white-space: nowrap; }
 
-  .alert-demo { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--danger); padding: 20px 24px; margin-top: 48px; display: flex; align-items: flex-start; gap: 20px; max-width: 520px; }
+  .alert-demo { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--danger); padding: 20px 24px; margin-top: 48px; display: flex; align-items: flex-start; gap: 20px; max-width: 560px; }
   .alert-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
   .alert-title { font-family: var(--mono); font-size: 13px; color: var(--danger); margin-bottom: 6px; }
   .alert-body { font-size: 16px; color: var(--text2); line-height: 1.6; font-weight: 300; }
@@ -145,6 +159,7 @@
   .price-card:hover { transform: translateY(-4px); }
   .price-card.featured { border-color: var(--accent); }
   .price-card.featured::before { content: 'MOST POPULAR'; position: absolute; top: -1px; right: 24px; font-family: var(--mono); font-size: 10px; color: var(--bg); background: var(--accent); padding: 4px 12px; letter-spacing: 0.1em; }
+  body.lang-zh .price-card.featured::before { content: '推薦方案'; }
   .price-plan { font-family: var(--mono); font-size: 12px; color: var(--text2); letter-spacing: 0.2em; margin-bottom: 20px; }
   .price-amount { font-family: var(--mono); font-size: 56px; font-weight: 700; color: var(--text); line-height: 1; margin-bottom: 4px; }
   .price-amount sup { font-size: 20px; vertical-align: super; }
@@ -166,59 +181,43 @@
 
   footer { position: relative; z-index: 1; border-top: 1px solid var(--border); padding: 48px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px; }
   .footer-logo { font-family: var(--mono); font-size: 13px; color: var(--text2); }
-  .footer-links { display: flex; gap: 24px; list-style: none; }
+  .footer-links { display: flex; gap: 24px; list-style: none; flex-wrap: wrap; }
   .footer-links a { font-family: var(--mono); font-size: 11px; color: var(--text2); text-decoration: none; letter-spacing: 0.08em; transition: color 0.2s; }
   .footer-links a:hover { color: var(--accent); }
   .footer-copy { font-family: var(--mono); font-size: 11px; color: var(--text2); opacity: 0.4; }
   .divider { border: none; border-top: 1px solid var(--border); margin: 0; }
 
-
-  /* SCREENSHOTS */
-  .screenshots-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    align-items: end;
-    margin-top: 48px;
-  }
+  .screenshots-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; align-items: start; margin-top: 48px; }
   .screenshot-item { display: flex; flex-direction: column; gap: 16px; }
-  .screenshot-item.featured { transform: translateY(-24px); }
-  .screenshot-frame {
-    position: relative;
-    border-radius: 36px;
-    overflow: hidden;
-    border: 1px solid var(--border);
-    box-shadow: 0 24px 64px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.04);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: #000;
-  }
-  .screenshot-frame:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 40px 80px rgba(0,212,255,0.15), 0 0 0 1px rgba(0,212,255,0.2);
-  }
-  .screenshot-frame img { width: 100%; display: block; }
+  .screenshot-frame { position: relative; aspect-ratio: 941 / 2048; width: 100%; border-radius: 36px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 24px 64px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.04); transition: transform 0.3s ease, box-shadow 0.3s ease; background: #000; }
+  .screenshot-frame:hover { transform: translateY(-8px); box-shadow: 0 40px 80px rgba(0,212,255,0.15), 0 0 0 1px rgba(0,212,255,0.2); }
+  .screenshot-frame img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: top center; }
   .screenshot-label { text-align: center; }
   .screenshot-label .s-tag { font-family: var(--mono); font-size: 10px; color: var(--accent); letter-spacing: 0.15em; display: block; margin-bottom: 4px; }
   .screenshot-label .s-desc { font-size: 15px; color: var(--text2); font-weight: 300; }
-  @media (max-width: 900px) {
-    .screenshots-grid { grid-template-columns: repeat(2, 1fr); }
-    .screenshot-item.featured { transform: none; }
-  }
-  @media (max-width: 540px) {
-    .screenshots-grid { grid-template-columns: 1fr; }
-  }
 
   @keyframes fadeDown { from{opacity:0;transform:translateY(-20px)} to{opacity:1;transform:translateY(0)} }
   @keyframes fadeUp   { from{opacity:0;transform:translateY(30px)}  to{opacity:1;transform:translateY(0)} }
 
-  @media (max-width: 768px) {
+  @media (max-width: 980px) {
     nav { padding: 16px 24px; }
     .nav-links { display: none; }
+    .nav-right { gap: 12px; }
+    .screenshots-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 768px) {
     .section { padding: 72px 24px; }
     footer { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
     .monitor-row { grid-template-columns: 1fr auto auto; }
     .monitor-type { display: none; }
     .proto-table td, .proto-table th { padding: 12px 14px; font-size: 12px; }
+  }
+
+  @media (max-width: 540px) {
+    .nav-cta { display: none; }
+    .screenshots-grid { grid-template-columns: 1fr; }
+    .hero-desc { font-size: 18px; }
   }
 </style>
 </head>
@@ -226,32 +225,38 @@
 
 <nav>
   <div class="nav-logo">OpsHome <span>NOC</span>™</div>
-  <ul class="nav-links">
-    <li><a href="#features">FEATURES</a></li>
-    <li><a href="#protocols">PROTOCOLS</a></li>
-    <li><a href="#pricing">PRICING</a></li>
-  </ul>
-  <a href="#" class="nav-cta">Coming Soon ↓</a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#features"><span class="t-en">FEATURES</span><span class="t-zh">功能</span></a></li>
+      <li><a href="#protocols"><span class="t-en">PROTOCOLS</span><span class="t-zh">監控類型</span></a></li>
+      <li><a href="#screenshots"><span class="t-en">SCREENSHOTS</span><span class="t-zh">介面</span></a></li>
+      <li><a href="#pricing"><span class="t-en">PRICING</span><span class="t-zh">價格</span></a></li>
+    </ul>
+    <div class="lang-switch" aria-label="Language switcher">
+      <button type="button" class="active" data-lang="en">EN</button>
+      <button type="button" data-lang="zh">繁中</button>
+    </div>
+    <a href="#" class="nav-cta"><span class="t-en">Coming Soon ↓</span><span class="t-zh">即將推出 ↓</span></a>
+  </div>
 </nav>
 
 <section class="hero">
-  <img src="logo.png" alt="OpsHome NOC Logo" style="width:100px;height:100px;border-radius:22px;margin-bottom:24px;box-shadow:0 8px 32px rgba(0,212,255,0.2);">
-  <div class="hero-badge">FOR HOMELAB · HOME SERVER · PERSONAL SITES</div>
+  <img src="logo.png" alt="OpsHome NOC Logo" class="hero-logo">
+  <div class="hero-badge"><span class="t-en">FOR HOMELAB · HOME SERVER · PERSONAL SITES</span><span class="t-zh">適用於 HOMELAB · 家庭伺服器 · 個人網站</span></div>
   <h1>OpsHome<span class="noc">NOC™</span></h1>
-  <p class="hero-sub">HOME NETWORK MONITOR &amp; ALERTS</p>
+  <p class="hero-sub"><span class="t-en">HOME NETWORK MONITOR &amp; ALERTS</span><span class="t-zh">家庭網路監控與告警</span></p>
   <p class="hero-desc">
-    Know the moment your <strong>home server goes down</strong>.<br>
-    active probing from our <strong>low-latency cloud server</strong> —<br>
-    real push alerts to your iPhone, every time.
+    <span class="t-block-en">Know the moment your <strong>home server goes down</strong>.<br>External cloud probing and real push alerts to your iPhone, every time.</span>
+    <span class="t-block-zh">當你的<strong>家庭伺服器或個人網站異常</strong>時，立即知道。<br>透過外部雲端主動檢測，並將告警即時推送到 iPhone。</span>
   </p>
   <div class="hero-actions">
-    <a href="#" class="btn-primary">⬇ Coming Soon on App Store</a>
-    <a href="#features" class="btn-secondary">See Features</a>
+    <a href="#" class="btn-primary"><span class="t-en">⬇ Coming Soon on App Store</span><span class="t-zh">⬇ 即將登上 App Store</span></a>
+    <a href="#features" class="btn-secondary"><span class="t-en">See Features</span><span class="t-zh">查看功能</span></a>
   </div>
 
   <div class="monitor-widget">
     <div class="widget-header">
-      <span class="widget-title">MONITOR DASHBOARD</span>
+      <span class="widget-title"><span class="t-en">MONITOR DASHBOARD</span><span class="t-zh">監控儀表板</span></span>
       <div class="widget-dots">
         <div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div>
       </div>
@@ -259,31 +264,31 @@
     <div class="monitor-row">
       <span class="monitor-name">homelab.local</span>
       <span class="monitor-type">HTTPS</span>
-      <span class="monitor-status" style="color:var(--accent2)">ONLINE</span>
+      <span class="monitor-status" style="color:var(--accent2)"><span class="t-en">ONLINE</span><span class="t-zh">正常</span></span>
       <div class="status-dot status-ok"></div>
     </div>
     <div class="monitor-row">
       <span class="monitor-name">nas.home:5000</span>
       <span class="monitor-type">TCP</span>
-      <span class="monitor-status" style="color:var(--accent2)">ONLINE</span>
+      <span class="monitor-status" style="color:var(--accent2)"><span class="t-en">ONLINE</span><span class="t-zh">正常</span></span>
       <div class="status-dot status-ok"></div>
     </div>
     <div class="monitor-row">
       <span class="monitor-name">opshome.run SSL</span>
       <span class="monitor-type">SSL</span>
-      <span class="monitor-status" style="color:var(--accent2)">87 DAYS</span>
+      <span class="monitor-status" style="color:var(--accent2)"><span class="t-en">87 DAYS</span><span class="t-zh">87 天</span></span>
       <div class="status-dot status-ok"></div>
     </div>
     <div class="monitor-row">
       <span class="monitor-name">plex.server</span>
       <span class="monitor-type">HTTP</span>
-      <span class="monitor-status" style="color:var(--danger)">OFFLINE</span>
+      <span class="monitor-status" style="color:var(--danger)"><span class="t-en">OFFLINE</span><span class="t-zh">離線</span></span>
       <div class="status-dot status-err"></div>
     </div>
     <div class="monitor-row">
       <span class="monitor-name">mydomain.run SSL</span>
       <span class="monitor-type">SSL</span>
-      <span class="monitor-status" style="color:var(--warn)">12 DAYS</span>
+      <span class="monitor-status" style="color:var(--warn)"><span class="t-en">12 DAYS</span><span class="t-zh">12 天</span></span>
       <div class="status-dot status-warn"></div>
     </div>
   </div>
@@ -292,45 +297,45 @@
 <hr class="divider">
 
 <section class="section" id="features">
-  <p class="section-label">// WHAT IT DOES</p>
-  <h2 class="section-title">More than online<br>or offline.</h2>
-  <p class="section-desc">OpsHome NOC doesn't just tell you something is down — it tells you why, and what to do next.</p>
+  <p class="section-label"><span class="t-en">// WHAT IT DOES</span><span class="t-zh">// 核心功能</span></p>
+  <h2 class="section-title"><span class="t-block-en">More than online<br>or offline.</span><span class="t-block-zh">不只是顯示<br>在線或離線。</span></h2>
+  <p class="section-desc"><span class="t-en">OpsHome NOC doesn't just tell you something is down — it tells you why, and what to do next.</span><span class="t-zh">OpsHome NOC 不只告訴你服務異常，也協助你理解原因與下一步處理方向。</span></p>
 
   <div class="features-grid">
     <div class="feature-card">
       <span class="feature-icon">🔴</span>
-      <h3 class="feature-title">INSTANT PUSH ALERTS</h3>
-      <p class="feature-desc">Get notified the moment your service goes down or recovers. Powered by APNs, delivered directly to your iPhone in real time.</p>
+      <h3 class="feature-title"><span class="t-en">INSTANT PUSH ALERTS</span><span class="t-zh">即時推播告警</span></h3>
+      <p class="feature-desc"><span class="t-en">Get notified the moment your service goes down or recovers. Powered by APNs, delivered directly to your iPhone in real time.</span><span class="t-zh">服務異常或恢復時即時收到通知。透過 APNs 直接推送到你的 iPhone。</span></p>
       <span class="feature-tag">APNs</span>
     </div>
     <div class="feature-card">
       <span class="feature-icon">🧠</span>
-      <h3 class="feature-title">SMART ANALYSIS REPORT</h3>
-      <p class="feature-desc">Every check result comes with a human-readable analysis. HTTP timeout? Check your reverse proxy. SSL expiring? Time to renew. Knowledge-base driven suggestions.</p>
+      <h3 class="feature-title"><span class="t-en">SMART ANALYSIS REPORT</span><span class="t-zh">智慧分析報告</span></h3>
+      <p class="feature-desc"><span class="t-en">Every check result comes with a human-readable analysis. Free includes a Basic report; Pro unlocks the Full report with more detailed suggestions.</span><span class="t-zh">每次檢測結果都提供易讀分析。Free 包含基礎版分析報告；Pro 解鎖更完整的分析與建議。</span></p>
       <span class="feature-tag">KB-DRIVEN</span>
     </div>
     <div class="feature-card">
       <span class="feature-icon">📊</span>
-      <h3 class="feature-title">HEALTH DASHBOARD</h3>
-      <p class="feature-desc">At-a-glance summary: online rate, active alerts, recent recoveries, and a 12-hour uptime trend chart for your entire homelab.</p>
+      <h3 class="feature-title"><span class="t-en">HEALTH DASHBOARD</span><span class="t-zh">健康儀表板</span></h3>
+      <p class="feature-desc"><span class="t-en">At-a-glance summary: online rate, active alerts, recent recoveries, and a 12-hour uptime trend chart for your entire homelab.</span><span class="t-zh">快速掌握在線率、目前告警、近期恢復，以及整體 12 小時狀態趨勢。</span></p>
       <span class="feature-tag">12H TREND CHART</span>
     </div>
     <div class="feature-card">
       <span class="feature-icon">🔒</span>
-      <h3 class="feature-title">SSL CERT WATCH</h3>
-      <p class="feature-desc">Automatically tracks SSL certificate expiry. Warns you at 30 days and again at 7 days. Fixed 120-minute check cycle.</p>
+      <h3 class="feature-title"><span class="t-en">SSL CERT WATCH</span><span class="t-zh">SSL 憑證監控</span></h3>
+      <p class="feature-desc"><span class="t-en">Track SSL certificate validity. Free includes status monitoring; Pro users also get proactive expiry reminders before certificates lapse.</span><span class="t-zh">監控 SSL 憑證有效性。Free 可查看狀態；Pro 額外提供憑證到期前提醒。</span></p>
       <span class="feature-tag">AUTO MONITOR</span>
     </div>
     <div class="feature-card">
       <span class="feature-icon">🛡️</span>
-      <h3 class="feature-title">PRIVACY MASK</h3>
-      <p class="feature-desc">When you switch to App Switcher or background, your monitor data is automatically covered. No accidental screenshot leaks.</p>
+      <h3 class="feature-title"><span class="t-en">PRIVACY MASK</span><span class="t-zh">隱私遮罩</span></h3>
+      <p class="feature-desc"><span class="t-en">When you switch to App Switcher or background, your monitor data is automatically covered. No accidental screenshot leaks.</span><span class="t-zh">切換到 App 切換器或背景時，自動遮蔽監控資料，避免截圖外洩。</span></p>
       <span class="feature-tag">SECURITY</span>
     </div>
     <div class="feature-card">
       <span class="feature-icon">🍎</span>
-      <h3 class="feature-title">SIGN IN WITH APPLE</h3>
-      <p class="feature-desc">One-tap login. No email or password to manage. API keys and tokens stored securely in iOS Keychain — never in UserDefaults.</p>
+      <h3 class="feature-title"><span class="t-en">SIGN IN WITH APPLE</span><span class="t-zh">使用 Apple 登入</span></h3>
+      <p class="feature-desc"><span class="t-en">One-tap login. No email or password to manage. API keys and tokens are stored securely in iOS Keychain — never in UserDefaults.</span><span class="t-zh">一鍵登入，無需管理信箱或密碼。API key 與 token 安全儲存在 iOS Keychain，不寫入 UserDefaults。</span></p>
       <span class="feature-tag">KEYCHAIN STORAGE</span>
     </div>
   </div>
@@ -339,69 +344,37 @@
 <hr class="divider">
 
 <section class="section" id="protocols">
-  <p class="section-label">// SUPPORTED PROTOCOLS</p>
-  <h2 class="section-title">Seven probe types<br>for every use case.</h2>
-  <p class="section-desc">Active probing from our Hong Kong cloud server. Your services are checked as an external observer would — just like your users.</p>
+  <p class="section-label"><span class="t-en">// SUPPORTED PROTOCOLS</span><span class="t-zh">// 支援的監控類型</span></p>
+  <h2 class="section-title"><span class="t-block-en">Eight probe types<br>for every use case.</span><span class="t-block-zh">八種監控類型，<br>覆蓋常見場景。</span></h2>
+  <p class="section-desc"><span class="t-en">Active probing from external cloud infrastructure. Your services are checked as an outside observer would — just like your users.</span><span class="t-zh">透過外部雲端基礎設施主動檢測，以使用者視角確認你的服務是否可用。</span></p>
 
   <table class="proto-table">
     <thead>
       <tr>
-        <th>TYPE</th>
-        <th>DESCRIPTION</th>
-        <th>PLAN</th>
+        <th><span class="t-en">TYPE</span><span class="t-zh">類型</span></th>
+        <th><span class="t-en">DESCRIPTION</span><span class="t-zh">說明</span></th>
+        <th><span class="t-en">PLAN</span><span class="t-zh">方案</span></th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>HTTP</td>
-        <td>Website reachability &amp; status code detection (200, 400–505)</td>
-        <td><span class="badge-free">FREE</span><span class="badge-pro">PRO</span></td>
-      </tr>
-      <tr>
-        <td>HTTPS</td>
-        <td>HTTPS reachability with certificate validation (200, 400–505)</td>
-        <td><span class="badge-free">FREE</span><span class="badge-pro">PRO</span></td>
-      </tr>
-      <tr>
-        <td>TCP</td>
-        <td>IP + port connectivity check</td>
-        <td><span class="badge-free">FREE</span><span class="badge-pro">PRO</span></td>
-      </tr>
-      <tr>
-        <td>SSL Expiry</td>
-        <td>SSL certificate remaining validity in days</td>
-        <td><span class="badge-free">FREE</span><span class="badge-pro">PRO</span></td>
-      </tr>
-      <tr>
-        <td>ICMP (Ping)</td>
-        <td>Host reachability via Ping</td>
-        <td><span class="badge-free">FREE</span><span class="badge-pro">PRO</span></td>
-      </tr>
-      <tr>
-        <td>UDP</td>
-        <td>UDP port connectivity detection</td>
-        <td><span class="badge-proonly">PRO ONLY</span></td>
-      </tr>
-      <tr>
-        <td>DNS</td>
-        <td>DNS resolution check (A record, MX record)</td>
-        <td><span class="badge-proonly">PRO ONLY</span></td>
-      </tr>
-      <tr>
-        <td>DOMAIN</td>
-        <td>Track domain expiry date &amp; alert before it lapses</td>
-        <td><span class="badge-proonly">PRO ONLY</span></td>
-      </tr>
+      <tr><td>HTTP</td><td><span class="t-en">Website reachability &amp; status code detection (200, 400–505)</span><span class="t-zh">網站可達性與狀態碼檢測（200、400–505）</span></td><td><span class="badge-free">FREE</span><span class="badge-pro">PRO</span></td></tr>
+      <tr><td>HTTPS</td><td><span class="t-en">HTTPS reachability with certificate validation (200, 400–505)</span><span class="t-zh">HTTPS 可達性與憑證驗證（200、400–505）</span></td><td><span class="badge-free">FREE</span><span class="badge-pro">PRO</span></td></tr>
+      <tr><td>TCP</td><td><span class="t-en">IP + port connectivity check</span><span class="t-zh">IP 與 Port 連線檢測</span></td><td><span class="badge-free">FREE</span><span class="badge-pro">PRO</span></td></tr>
+      <tr><td>SSL Expiry</td><td><span class="t-en">SSL certificate remaining validity in days</span><span class="t-zh">SSL 憑證剩餘有效天數</span></td><td><span class="badge-free">FREE</span><span class="badge-pro">PRO</span></td></tr>
+      <tr><td>ICMP (Ping)</td><td><span class="t-en">Host reachability via Ping</span><span class="t-zh">透過 Ping 檢測主機可達性</span></td><td><span class="badge-free">FREE</span><span class="badge-pro">PRO</span></td></tr>
+      <tr><td>UDP</td><td><span class="t-en">UDP port connectivity detection</span><span class="t-zh">UDP Port 連線檢測</span></td><td><span class="badge-proonly">PRO ONLY</span></td></tr>
+      <tr><td>DNS</td><td><span class="t-en">DNS resolution check (A record, MX record)</span><span class="t-zh">DNS 解析檢測（A 記錄、MX 記錄）</span></td><td><span class="badge-proonly">PRO ONLY</span></td></tr>
+      <tr><td>DOMAIN</td><td><span class="t-en">Track domain expiry date &amp; alert before it lapses</span><span class="t-zh">追蹤網域到期日，並在到期前提醒</span></td><td><span class="badge-proonly">PRO ONLY</span></td></tr>
     </tbody>
   </table>
 
   <div class="alert-demo">
     <div class="alert-icon">🔔</div>
     <div>
-      <div class="alert-title">🔴 SERVICE DOWN — plex.server</div>
-      <div class="alert-body">HTTP check failed. Connection refused on port 32400.</div>
-      <div class="alert-suggestion">💡 Check if your reverse proxy is running. Verify port mapping on your router.</div>
-      <div class="alert-time">Just now · via OpsHome NOC</div>
+      <div class="alert-title"><span class="t-en">🔴 SERVICE DOWN — plex.server</span><span class="t-zh">🔴 服務異常 — plex.server</span></div>
+      <div class="alert-body"><span class="t-en">HTTP check failed. Connection refused on port 32400.</span><span class="t-zh">HTTP 檢測失敗，Port 32400 連線被拒絕。</span></div>
+      <div class="alert-suggestion"><span class="t-en">💡 Check if your reverse proxy is running. Verify port mapping on your router.</span><span class="t-zh">💡 檢查反向代理是否執行，並確認路由器 Port 對應設定。</span></div>
+      <div class="alert-time"><span class="t-en">Just now · via OpsHome NOC</span><span class="t-zh">剛剛 · 由 OpsHome NOC 發送</span></div>
     </div>
   </div>
 </section>
@@ -409,86 +382,66 @@
 <hr class="divider">
 
 <section class="section" id="screenshots">
-  <p class="section-label">// REAL APP SCREENSHOTS</p>
-  <h2 class="section-title">See it in action.</h2>
-  <p class="section-desc">Every screen built for clarity — know what's running, what's down, and what needs attention.</p>
+  <p class="section-label"><span class="t-en">// REAL APP SCREENSHOTS</span><span class="t-zh">// App 實際介面</span></p>
+  <h2 class="section-title"><span class="t-en">See it in action.</span><span class="t-zh">查看實際使用畫面。</span></h2>
+  <p class="section-desc"><span class="t-en">Every screen is built for clarity — know what's running, what's down, and what needs attention.</span><span class="t-zh">每個畫面都以清晰為核心，讓你快速知道哪些服務正常、哪些異常、哪些需要注意。</span></p>
 
   <div class="screenshots-grid">
     <div class="screenshot-item">
-      <div class="screenshot-frame">
-        <img src="screen_home.png" alt="OpsHome NOC Overview Dashboard">
-      </div>
-      <div class="screenshot-label">
-        <span class="s-tag">HOME</span>
-        <span class="s-desc">Dashboard with 12h trend chart</span>
-      </div>
-    </div>
-    <div class="screenshot-item featured">
-      <div class="screenshot-frame">
-        <img src="screen_monitors.png" alt="OpsHome NOC Monitor List">
-      </div>
-      <div class="screenshot-label">
-        <span class="s-tag">MONITORS</span>
-        <span class="s-desc">All targets at a glance</span>
-      </div>
+      <div class="screenshot-frame"><img src="screen_home.png" alt="OpsHome NOC Overview Dashboard"></div>
+      <div class="screenshot-label"><span class="s-tag">HOME</span><span class="s-desc"><span class="t-en">Dashboard with 12h trend chart</span><span class="t-zh">含 12 小時趨勢圖的首頁</span></span></div>
     </div>
     <div class="screenshot-item">
-      <div class="screenshot-frame">
-        <img src="screen_notifications.png" alt="OpsHome NOC Notification Center">
-      </div>
-      <div class="screenshot-label">
-        <span class="s-tag">ALERTS</span>
-        <span class="s-desc">Alert &amp; recovery history</span>
-      </div>
+      <div class="screenshot-frame"><img src="screen_monitors.png" alt="OpsHome NOC Monitor List"></div>
+      <div class="screenshot-label"><span class="s-tag">MONITORS</span><span class="s-desc"><span class="t-en">All targets at a glance</span><span class="t-zh">快速查看所有監控目標</span></span></div>
     </div>
     <div class="screenshot-item">
-      <div class="screenshot-frame">
-        <img src="screen_me.png" alt="OpsHome NOC Me Page">
-      </div>
-      <div class="screenshot-label">
-        <span class="s-tag">ACCOUNT</span>
-        <span class="s-desc">Plan &amp; settings overview</span>
-      </div>
+      <div class="screenshot-frame"><img src="screen_notifications.png" alt="OpsHome NOC Notification Center"></div>
+      <div class="screenshot-label"><span class="s-tag">ALERTS</span><span class="s-desc"><span class="t-en">Alert &amp; recovery history</span><span class="t-zh">告警與恢復記錄</span></span></div>
+    </div>
+    <div class="screenshot-item">
+      <div class="screenshot-frame"><img src="screen_me_web.png" alt="OpsHome NOC Me Page"></div>
+      <div class="screenshot-label"><span class="s-tag">ACCOUNT</span><span class="s-desc"><span class="t-en">Plan &amp; settings overview</span><span class="t-zh">方案與設定總覽</span></span></div>
     </div>
   </div>
 </section>
 
-
 <hr class="divider">
 
 <section class="section" id="pricing">
-  <p class="section-label">// PRICING</p>
-  <h2 class="section-title">Simple,<br>honest pricing.</h2>
-  <p class="section-desc">Start free. Upgrade when your homelab grows. No hidden fees. No data sold.</p>
+  <p class="section-label"><span class="t-en">// PRICING</span><span class="t-zh">// 價格方案</span></p>
+  <h2 class="section-title"><span class="t-block-en">Simple,<br>honest pricing.</span><span class="t-block-zh">簡單、透明的<br>價格方案。</span></h2>
+  <p class="section-desc"><span class="t-en">Start free with alert push notifications included. Upgrade to Pro for expiry reminders and the full feature set. No hidden fees. No data sold.</span><span class="t-zh">Free 也包含告警推播通知。升級 Pro 可取得到期提醒與完整功能。無隱藏費用，不販售資料。</span></p>
 
   <div class="pricing-grid">
     <div class="price-card">
       <p class="price-plan">FREE</p>
       <div class="price-amount"><sup>$</sup>0</div>
-      <p class="price-period">forever</p>
+      <p class="price-period"><span class="t-en">forever</span><span class="t-zh">永久免費</span></p>
       <ul class="price-features">
-        <li><strong>2</strong> monitor targets</li>
+        <li><strong>5</strong> <span class="t-en">monitor targets</span><span class="t-zh">個監控目標</span></li>
         <li>HTTP / HTTPS / TCP / SSL / ICMP</li>
-        <li>Check interval: <strong>30 min – 12 hr</strong></li>
-        <li>Event history: <strong>2 days</strong></li>
-        <li>Push notifications</li>
-        <li>Smart analysis report</li>
+        <li><span class="t-en">Check interval: </span><span class="t-zh">檢測間隔：</span><strong>30 min – 12 hr</strong></li>
+        <li><span class="t-en">Event history: </span><span class="t-zh">歷史記錄：</span><strong><span class="t-en">7 days</span><span class="t-zh">7 天</span></strong></li>
+        <li><span class="t-en">Push notifications &amp; alerts</span><span class="t-zh">推播通知與服務告警</span></li>
+        <li><span class="t-en">No expiry reminders</span><span class="t-zh">不包含到期提醒</span></li>
+        <li><span class="t-en">Basic analysis report</span><span class="t-zh">基礎版分析報告</span></li>
       </ul>
-      <button class="btn-plan btn-plan-free">GET STARTED FREE</button>
+      <button class="btn-plan btn-plan-free"><span class="t-en">GET STARTED FREE</span><span class="t-zh">免費開始使用</span></button>
     </div>
     <div class="price-card featured">
       <p class="price-plan">PRO</p>
       <div class="price-amount"><sup>$</sup>2.99</div>
-      <p class="price-period">per month &nbsp;·&nbsp; or <strong>$19.99 / year</strong> (save 44%)</p>
+      <p class="price-period"><span class="t-en">per month &nbsp;·&nbsp; or <strong>$19.99 / year</strong> (save 44%)</span><span class="t-zh">每月 &nbsp;·&nbsp; 或 <strong>$19.99 / 年</strong>（省 44%）</span></p>
       <ul class="price-features">
-        <li><strong>30</strong> monitor targets</li>
-        <li>All 7 protocols incl. <strong>UDP &amp; DNS</strong></li>
-        <li>Check interval: <strong>10 min – 12 hr</strong></li>
-        <li>Event history: <strong>90 days</strong></li>
-        <li>Push notifications + expiry alerts</li>
-        <li>Smart analysis report</li>
+        <li><strong>30</strong> <span class="t-en">monitor targets</span><span class="t-zh">個監控目標</span></li>
+        <li><span class="t-en">All 8 protocols incl. </span><span class="t-zh">全部 8 種監控類型，包含 </span><strong>UDP, DNS &amp; Domain</strong></li>
+        <li><span class="t-en">Check interval: </span><span class="t-zh">檢測間隔：</span><strong>10 min – 12 hr</strong></li>
+        <li><span class="t-en">Event history: </span><span class="t-zh">歷史記錄：</span><strong><span class="t-en">90 days</span><span class="t-zh">90 天</span></strong></li>
+        <li><span class="t-en">Push notifications, alerts &amp; expiry reminders</span><span class="t-zh">推播通知、服務告警與到期提醒</span></li>
+        <li><span class="t-en">Full analysis report</span><span class="t-zh">完整分析報告</span></li>
       </ul>
-      <button class="btn-plan btn-plan-pro">UPGRADE TO PRO</button>
+      <button class="btn-plan btn-plan-pro"><span class="t-en">UPGRADE TO PRO</span><span class="t-zh">升級 PRO</span></button>
     </div>
   </div>
 </section>
@@ -496,16 +449,16 @@
 <hr class="divider">
 
 <section class="section">
-  <p class="section-label">// BUILT WITH CARE</p>
-  <h2 class="section-title">Privacy-first,<br>security-minded.</h2>
-  <p class="section-desc">Every detail is designed to keep your data safe and your homelab visible.</p>
+  <p class="section-label"><span class="t-en">// BUILT WITH CARE</span><span class="t-zh">// 以隱私與安全為核心</span></p>
+  <h2 class="section-title"><span class="t-block-en">Privacy-first,<br>security-minded.</span><span class="t-block-zh">隱私優先，<br>重視安全。</span></h2>
+  <p class="section-desc"><span class="t-en">Every detail is designed to keep your data safe and your homelab visible.</span><span class="t-zh">每個細節都為保護你的資料與維持服務可見性而設計。</span></p>
 
   <div class="badges-row">
-    <div class="badge-item"><span>🍎</span> Sign in with Apple</div>
-    <div class="badge-item"><span>🔑</span> Keychain Secure Storage</div>
-    <div class="badge-item"><span>🛡️</span> Privacy Mask on Background</div>
-    <div class="badge-item"><span>🌏</span> 繁體中文 · English</div>
-    <div class="badge-item"><span>📡</span> Active External Probing</div>
+    <div class="badge-item"><span>🍎</span> <span class="t-en">Sign in with Apple</span><span class="t-zh">使用 Apple 登入</span></div>
+    <div class="badge-item"><span>🔑</span> <span class="t-en">Keychain Secure Storage</span><span class="t-zh">Keychain 安全儲存</span></div>
+    <div class="badge-item"><span>🛡️</span> <span class="t-en">Privacy Mask on Background</span><span class="t-zh">背景隱私遮罩</span></div>
+    <div class="badge-item"><span>🌏</span> English · 繁體中文</div>
+    <div class="badge-item"><span>📡</span> <span class="t-en">Active External Probing</span><span class="t-zh">外部主動檢測</span></div>
   </div>
 </section>
 
@@ -514,13 +467,35 @@
 <footer>
   <div class="footer-logo">OpsHome NOC™</div>
   <ul class="footer-links">
-    <li><a href="privacy.html">Privacy Policy</a></li>
-    <li><a href="terms.html">Terms of Service</a></li>
-    <li><a href="mailto:opshome@outlook.com">Support</a></li>
+    <li><a href="privacy.html"><span class="t-en">Privacy Policy</span><span class="t-zh">隱私權政策</span></a></li>
+    <li><a href="terms.html"><span class="t-en">Terms of Service</span><span class="t-zh">服務條款</span></a></li>
+    <li><a href="mailto:opshome@outlook.com"><span class="t-en">Support</span><span class="t-zh">支援</span></a></li>
     <li><a href="https://opshome.run">opshome.run</a></li>
   </ul>
   <p class="footer-copy">© 2025 OpsHome NOC™. All rights reserved.</p>
 </footer>
+
+<script>
+  function setLanguage(lang) {
+    var isZh = lang === 'zh';
+    document.body.classList.toggle('lang-zh', isZh);
+    document.documentElement.lang = isZh ? 'zh-Hant' : 'en';
+    document.querySelectorAll('.lang-switch button').forEach(function(btn) {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+    try { localStorage.setItem('opshome_site_lang', lang); } catch (e) {}
+  }
+
+  document.querySelectorAll('.lang-switch button').forEach(function(btn) {
+    btn.addEventListener('click', function() { setLanguage(btn.dataset.lang); });
+  });
+
+  (function initLanguage() {
+    var saved = null;
+    try { saved = localStorage.getItem('opshome_site_lang'); } catch (e) {}
+    setLanguage(saved || 'en');
+  })();
+</script>
 
 </body>
 </html>
