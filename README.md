@@ -124,8 +124,7 @@ OpsHome NOC™ 會透過雲端主動檢測目標服務，並在服務離線或�
 
 ## Screenshots / App 畫面
 
-> Add screenshots to the `assets/screenshots/` folder and update the paths below.  
-> 請將截圖放到 `assets/screenshots/` 資料夾，並按需修改下方路徑。
+
 
 <p align="center">
   <img src="screen_home.png" alt="OpsHome NOC Home Dashboard" width="220">
