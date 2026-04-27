@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="assets/opshome-noc-logo.png" alt="OpsHome NOC Logo" width="120">
+
 # OpsHome NOC™
 
 **Home Network Monitor & Alerts**  
@@ -17,7 +19,8 @@ For homelab, home servers, personal sites, and always-on services.
 [English](#english) · [繁體中文](#繁體中文) · [App Store](#app-store--app-store-下載)
 
 <!-- Replace APP_STORE_LINK_PLACEHOLDER with your real App Store URL when available. -->
-<!-- Add the App Store badge image at: assets/app-store-badge.svg -->
+<!-- App logo path: assets/opshome-noc-logo.png -->
+<!-- App Store badge path: assets/app-store-badge.svg -->
 
 </div>
 
