@@ -128,10 +128,10 @@ OpsHome NOC™ 會透過雲端主動檢測目標服務，並在服務離線或�
 > 請將截圖放到 `assets/screenshots/` 資料夾，並按需修改下方路徑。
 
 <p align="center">
-  <img src="home.png" alt="OpsHome NOC Home Dashboard" width="220">
-  <img src="monitors.png" alt="OpsHome NOC Monitor List" width="220">
-  <img src="alerts.png" alt="OpsHome NOC Alerts" width="220">
-  <img src="account.png" alt="OpsHome NOC Account" width="220">
+  <img src="screen_home.png" alt="OpsHome NOC Home Dashboard" width="220">
+  <img src="screen_monitors.png" alt="OpsHome NOC Monitor List" width="220">
+  <img src="screen_notifications.png" alt="OpsHome NOC Alerts" width="220">
+  <img src="screen_me_web.png" alt="OpsHome NOC Account" width="220">
 </p>
 
 ---
