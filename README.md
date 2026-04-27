@@ -145,10 +145,6 @@ OpsHome NOC™ 採用隱私優先設計，僅收集提供監控與告警服務�
 - No unnecessary location or contact access / 不要求不必要的位置或通訊錄權限
 - API keys and tokens are stored securely in iOS Keychain / API 金鑰與 Token 安全儲存於 iOS Keychain
 
-For details / 詳細內容：
-
-- [Privacy Policy](privacy.html)
-- [Terms of Service](terms.html)
 
 ---
 
