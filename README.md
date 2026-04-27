@@ -165,8 +165,7 @@ App 目前正在準備發布。
 APP_STORE_LINK_PLACEHOLDER
 ```
 
-Replace the placeholder above with the final App Store product page URL.  
-發布後請將上方佔位符替換為正式 App Store 產品頁連結。
+
 
 ---
 
