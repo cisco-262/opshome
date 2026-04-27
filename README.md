@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/opshome-noc-logo.png" alt="OpsHome NOC Logo" width="120">
+<img src="opshome-noc-logo.png" alt="OpsHome NOC Logo" width="120">
 
 # OpsHome NOC™
 
@@ -11,7 +11,7 @@ For homelab, home servers, personal sites, and always-on services.
 適合 Homelab、家庭伺服器、個人網站與自架服務。
 
 <a href="APP_STORE_LINK_PLACEHOLDER">
-  <img src="assets/app-store-badge.svg" alt="Download on the App Store" height="56">
+  <img src="app-store-badge.svg" alt="Download on the App Store" height="56">
 </a>
 
 <br>
@@ -19,8 +19,8 @@ For homelab, home servers, personal sites, and always-on services.
 [English](#english) · [繁體中文](#繁體中文) · [App Store](#app-store--app-store-下載)
 
 <!-- Replace APP_STORE_LINK_PLACEHOLDER with your real App Store URL when available. -->
-<!-- App logo path: assets/opshome-noc-logo.png -->
-<!-- App Store badge path: assets/app-store-badge.svg -->
+<!-- App logo path: opshome-noc-logo.png -->
+<!-- App Store badge path: app-store-badge.svg -->
 
 </div>
 
@@ -128,10 +128,10 @@ OpsHome NOC™ 會透過雲端主動檢測目標服務，並在服務離線或�
 > 請將截圖放到 `assets/screenshots/` 資料夾，並按需修改下方路徑。
 
 <p align="center">
-  <img src="assets/screenshots/home.png" alt="OpsHome NOC Home Dashboard" width="220">
-  <img src="assets/screenshots/monitors.png" alt="OpsHome NOC Monitor List" width="220">
-  <img src="assets/screenshots/alerts.png" alt="OpsHome NOC Alerts" width="220">
-  <img src="assets/screenshots/account.png" alt="OpsHome NOC Account" width="220">
+  <img src="home.png" alt="OpsHome NOC Home Dashboard" width="220">
+  <img src="monitors.png" alt="OpsHome NOC Monitor List" width="220">
+  <img src="alerts.png" alt="OpsHome NOC Alerts" width="220">
+  <img src="account.png" alt="OpsHome NOC Account" width="220">
 </p>
 
 ---
@@ -159,7 +159,7 @@ The app is currently preparing for release.
 App 目前正在準備發布。
 
 <a href="APP_STORE_LINK_PLACEHOLDER">
-  <img src="assets/app-store-badge.svg" alt="Download on the App Store" height="48">
+  <img src="app-store-badge.svg" alt="Download on the App Store" height="48">
 </a>
 
 ```text
