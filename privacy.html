@@ -5,16 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy - OpsHome NOC</title>
 <meta name="description" content="Privacy Policy for OpsHome NOC.">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="assets/images/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
 <style>
-  :root{--bg:#0a0e13;--surface:#141c28;--border:#223247;--accent:#00d4ff;--accent2:#00ff9d;--text:#e8f0fe;--muted:#86a1bb;--soft:#c6d3df;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,"Noto Sans",sans-serif;--mono:"SFMono-Regular","SF Mono",Consolas,"Liberation Mono",monospace}
+  @font-face{font-family:"Space Mono Local";src:url("assets/fonts/SpaceMono-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+  @font-face{font-family:"Space Mono Local";src:url("assets/fonts/SpaceMono-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
+  @font-face{font-family:"Noto Sans SC Local";src:url("assets/fonts/NotoSansSC-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+  @font-face{font-family:"Noto Sans SC Local";src:url("assets/fonts/NotoSansSC-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
+  @font-face{font-family:"Noto Sans TC Local";src:url("assets/fonts/NotoSansTC-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+  @font-face{font-family:"Noto Sans TC Local";src:url("assets/fonts/NotoSansTC-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
+  :root{--bg:#0a0e13;--surface:#141c28;--border:#223247;--accent:#00d4ff;--accent2:#00ff9d;--text:#e8f0fe;--muted:#86a1bb;--soft:#c6d3df;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;--sans-hans:"Noto Sans SC Local","PingFang SC","Microsoft YaHei",sans-serif;--sans-hant:"Noto Sans TC Local","PingFang TC","Microsoft JhengHei",sans-serif;--mono:"Space Mono Local","SFMono-Regular","SF Mono",Consolas,"Liberation Mono",monospace}
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.8}
+  body.lang-zh{font-family:var(--sans-hans)}
+  body.lang-hant{font-family:var(--sans-hant)}
   body:before{content:"";position:fixed;inset:0;background-image:linear-gradient(rgba(0,212,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,.035) 1px,transparent 1px);background-size:40px 40px;pointer-events:none}
   a{color:inherit;text-decoration:none}
   nav{position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 48px;background:rgba(10,14,19,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
   .brand{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:14px;letter-spacing:.06em;color:var(--accent)}
+  sup.tm{font-size:.55em;line-height:0;vertical-align:super;margin-left:2px;letter-spacing:0}
   .brand img{width:34px;height:34px;border-radius:9px}
   .nav-actions{display:flex;align-items:center;gap:12px}
   .back{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.08em}
@@ -44,7 +53,7 @@
 </head>
 <body>
 <nav>
-  <a class="brand" href="index.html"><img src="brand-logo.png" alt="">OpsHome <strong>NOC</strong></a>
+  <a class="brand" href="index.html"><img src="assets/images/brand-logo.png" alt="">OpsHome <strong>NOC</strong><sup class="tm">&trade;</sup></a>
   <div class="nav-actions">
     <a class="back" href="index.html"><span class="t-en">BACK HOME</span><span class="t-hant">返回首頁</span><span class="t-zh">返回首页</span></a>
     <div class="lang" aria-label="Language">
@@ -197,7 +206,7 @@
 </main>
 
 <footer>
-  <span>© 2026 OpsHome NOC</span>
+  <span>&copy; 2026 OpsHome NOC&trade;. OpsHome NOC&trade; is a trademark of its owner.</span>
   <a href="terms.html"><span class="t-en">Terms of Service</span><span class="t-hant">服務條款</span><span class="t-zh">服务条款</span></a>
 </footer>
 
