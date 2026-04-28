@@ -3,220 +3,225 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms of Service — OpsHome NOC™</title>
+<title>Terms of Service - OpsHome NOC</title>
+<meta name="description" content="Terms of Service for OpsHome NOC.">
 <link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #0a0e13; --bg2: #0f1520; --surface: #141c28; --border: #1e2d42;
-    --accent: #00d4ff; --accent2: #00ff9d; --text: #e8f0fe; --text2: #7a9ab8;
-    --mono: 'Space Mono', monospace; --sans: 'DM Sans', sans-serif;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: var(--bg); color: var(--text); font-family: var(--sans); line-height: 1.8; }
-  body::before { content: ''; position: fixed; inset: 0; background-image: linear-gradient(rgba(0,212,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,0.03) 1px,transparent 1px); background-size: 40px 40px; pointer-events: none; z-index: 0; }
-
-  nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 20px 48px; background: rgba(10,14,19,0.95); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
-  .nav-logo { display: inline-flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 14px; color: var(--accent); letter-spacing: 0.08em; text-decoration: none; white-space: nowrap; }
-  .nav-logo img { width: 34px; height: 34px; border-radius: 9px; display: block; box-shadow: 0 0 18px rgba(0,212,255,0.28); }
-  .nav-logo .brand-name { color: var(--accent); }
-  .nav-logo .brand-name strong { color: var(--accent2); font-weight: 700; }
-  .nav-back { font-family: var(--mono); font-size: 12px; color: var(--text2); text-decoration: none; letter-spacing: 0.1em; transition: color 0.2s; }
-  .nav-back:hover { color: var(--accent); }
-
-  .container { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; padding: 72px 48px; }
-
-  .doc-label { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.2em; margin-bottom: 16px; }
-  .doc-title { font-family: var(--mono); font-size: clamp(28px, 4vw, 40px); font-weight: 700; margin-bottom: 8px; }
-  .doc-title span { color: var(--accent); }
-  .doc-meta { font-family: var(--mono); font-size: 12px; color: var(--text2); margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
-
-  .lang-toggle { display: flex; gap: 12px; margin-bottom: 48px; }
-  .lang-btn { font-family: var(--mono); font-size: 12px; padding: 8px 16px; border: 1px solid var(--border); background: transparent; color: var(--text2); cursor: pointer; letter-spacing: 0.08em; transition: all 0.2s; }
-  .lang-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(0,212,255,0.08); }
-
-  .lang-section { display: none; }
-  .lang-section.active { display: block; }
-
-  h2 { font-family: var(--mono); font-size: 13px; color: var(--accent2); letter-spacing: 0.1em; margin: 40px 0 12px; padding-top: 40px; border-top: 1px solid var(--border); }
-  h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
-
-  p { font-size: 15px; color: var(--text2); margin-bottom: 16px; font-weight: 300; }
-  p strong { color: var(--text); font-weight: 500; }
-
-  ul { list-style: none; margin-bottom: 16px; }
-  ul li { font-size: 15px; color: var(--text2); padding: 6px 0; padding-left: 20px; position: relative; font-weight: 300; }
-  ul li::before { content: '▸'; position: absolute; left: 0; color: var(--accent); font-size: 10px; top: 9px; }
-
-  .highlight-box { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); padding: 20px 24px; margin: 24px 0; }
-  .highlight-box p { margin: 0; font-size: 14px; }
-
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-
-  footer { position: relative; z-index: 1; border-top: 1px solid var(--border); padding: 32px 48px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
-  .footer-copy { font-family: var(--mono); font-size: 11px; color: var(--text2); opacity: 0.4; }
-  .footer-links { display: flex; gap: 24px; list-style: none; }
-  .footer-links a { font-family: var(--mono); font-size: 11px; color: var(--text2); text-decoration: none; transition: color 0.2s; }
-  .footer-links a:hover { color: var(--accent); }
-
-  @media (max-width: 768px) {
-    nav { padding: 16px 24px; }
-    .container { padding: 48px 24px; }
-    footer { padding: 24px; flex-direction: column; align-items: flex-start; }
-  }
+  :root{--bg:#0a0e13;--surface:#141c28;--border:#223247;--accent:#00d4ff;--accent2:#00ff9d;--text:#e8f0fe;--muted:#86a1bb;--soft:#c6d3df;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,"Noto Sans",sans-serif;--mono:"SFMono-Regular","SF Mono",Consolas,"Liberation Mono",monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.8}
+  body:before{content:"";position:fixed;inset:0;background-image:linear-gradient(rgba(0,212,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,.035) 1px,transparent 1px);background-size:40px 40px;pointer-events:none}
+  a{color:inherit;text-decoration:none}
+  nav{position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 48px;background:rgba(10,14,19,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+  .brand{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:14px;letter-spacing:.06em;color:var(--accent)}
+  .brand img{width:34px;height:34px;border-radius:9px}
+  .nav-actions{display:flex;align-items:center;gap:12px}
+  .back{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.08em}
+  .back:hover{color:var(--accent)}
+  .lang{display:flex;gap:4px;padding:4px;border:1px solid var(--border);background:rgba(20,28,40,.75)}
+  .lang button{font-family:var(--mono);font-size:11px;color:var(--muted);background:transparent;border:0;padding:6px 9px;cursor:pointer}
+  .lang button.active{background:var(--accent);color:#061015}
+  .t-hant,.block-hant,.t-zh,.block-zh{display:none}
+  body.lang-hant .t-en,body.lang-hant .block-en,body.lang-zh .t-en,body.lang-zh .block-en{display:none}
+  body.lang-hant .t-hant{display:inline}
+  body.lang-hant .block-hant{display:block}
+  body.lang-zh .t-zh{display:inline}
+  body.lang-zh .block-zh{display:block}
+  main{position:relative;z-index:1;max-width:880px;margin:0 auto;padding:72px 40px}
+  .label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--accent);margin-bottom:14px}
+  h1{font-family:var(--mono);font-size:clamp(32px,5vw,48px);line-height:1.15;margin-bottom:10px}
+  .meta{font-family:var(--mono);font-size:12px;color:var(--muted);padding-bottom:30px;margin-bottom:34px;border-bottom:1px solid var(--border)}
+  section{margin:34px 0}
+  h2{font-family:var(--mono);font-size:21px;margin-bottom:10px;color:var(--soft)}
+  p,li{color:var(--muted)}
+  ul{padding-left:22px}
+  .box{border:1px solid var(--border);background:var(--surface);padding:22px;margin-top:18px}
+  footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:30px 48px;color:var(--muted);font-family:var(--mono);font-size:12px;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+  footer a:hover{color:var(--accent)}
+  @media(max-width:680px){nav{padding:16px 22px;align-items:flex-start}.nav-actions{flex-direction:column;align-items:flex-end}main{padding:54px 22px}}
 </style>
 </head>
 <body>
-
 <nav>
-  <a href="index.html" class="nav-logo"><img src="brand-logo.png" alt="OpsHome NOC Logo"><span class="brand-name">OpsHome <strong>NOC</strong>™</span></a>
-  <a href="index.html" class="nav-back">← BACK</a>
+  <a class="brand" href="index.html"><img src="brand-logo.png" alt="">OpsHome <strong>NOC</strong></a>
+  <div class="nav-actions">
+    <a class="back" href="index.html"><span class="t-en">BACK HOME</span><span class="t-hant">返回首頁</span><span class="t-zh">返回首页</span></a>
+    <div class="lang" aria-label="Language">
+      <button class="active" data-lang="en">EN</button>
+      <button data-lang="hant">繁</button>
+      <button data-lang="zh">简</button>
+    </div>
+  </div>
 </nav>
 
-<div class="container">
-  <p class="doc-label">// LEGAL</p>
-  <h1 class="doc-title">Terms of <span>Service</span></h1>
-  <div class="doc-meta">
-    Effective Date: 2026-04-21 &nbsp;·&nbsp; Last Updated: 2026-04-21
+<main>
+  <div class="label">TERMS</div>
+  <h1><span class="block-en">Terms of Service</span><span class="block-hant">服務條款</span><span class="block-zh">服务条款</span></h1>
+  <div class="meta"><span class="t-en">Last updated: April 28, 2026</span><span class="t-hant">最後更新：2026 年 4 月 28 日</span><span class="t-zh">最后更新：2026 年 4 月 28 日</span></div>
+
+  <div class="block-en">
+    <section>
+      <h2>Service</h2>
+      <p>OpsHome NOC provides external monitoring for personal and small infrastructure, including HTTP/HTTPS, TCP, ICMP, SSL certificates, DNS records, and domain expiry checks. The service is intended as an operational aid, not a guaranteed uptime or incident response system.</p>
+    </section>
+    <section>
+      <h2>Accounts</h2>
+      <p>You sign in with Apple and are responsible for keeping your Apple account and device secure. Client-side state does not determine account identity; the server verifies account and subscription status.</p>
+    </section>
+    <section>
+      <h2>Acceptable Use</h2>
+      <p>You may only monitor targets that you own or are authorized to test. You must not use OpsHome NOC for abuse, attacks, unauthorized scanning, service disruption, or illegal activity.</p>
+    </section>
+    <section>
+      <h2>Plans and Subscriptions</h2>
+      <ul>
+        <li>Free includes a limited number of monitors, core monitor types, alert push notifications, and compact analysis details.</li>
+        <li>Pro increases monitor limits and unlocks additional monitor categories, shorter intervals, full analysis reports, and SSL/domain expiry reminders.</li>
+        <li>Subscriptions are billed through Apple App Store In-App Purchase. Final price, local currency, renewal, cancellation, and refund handling are shown and managed by Apple.</li>
+        <li>We do not receive or store your payment card information.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Downgrade or Expiration</h2>
+      <p>If Pro expires or is cancelled, your account may return to Free limits. Monitors or features above the Free limit may be disabled or hidden according to service rules, and related historical data may be cleaned up after an operational grace period.</p>
+    </section>
+    <section>
+      <h2>Alerts and Analysis</h2>
+      <p>Alerts, reminders, and analysis are generated from network checks and system rules. They may be delayed, incomplete, unavailable, or inaccurate due to network conditions, third-party services, device settings, Apple push delivery, or other operational factors.</p>
+    </section>
+    <section>
+      <h2>Availability</h2>
+      <p>The service is provided on a best-effort basis. We may modify, suspend, or discontinue features for maintenance, security, legal, or operational reasons.</p>
+    </section>
+    <section>
+      <h2>Account Deletion</h2>
+      <p>You may delete your account in the app. Account deletion removes service data associated with your account, subject to legal, security, and backup retention needs. Deleting an account does not automatically cancel an App Store subscription; subscription cancellation must be managed through Apple.</p>
+    </section>
+    <section>
+      <h2>No Warranty</h2>
+      <p>OpsHome NOC is provided "as is" and "as available" without warranties of uninterrupted operation, error-free results, or fitness for a particular purpose.</p>
+    </section>
+    <section>
+      <h2>Contact</h2>
+      <p>For service questions, contact <a href="mailto:opshome@outlook.com">opshome@outlook.com</a>.</p>
+    </section>
   </div>
 
-  <div class="lang-toggle">
-    <button class="lang-btn active" onclick="switchLang('en')">ENGLISH</button>
-    <button class="lang-btn" onclick="switchLang('zh')">繁體中文</button>
+  <div class="block-hant">
+    <section>
+      <h2>服務內容</h2>
+      <p>OpsHome NOC 為個人與小型基礎設施提供外部監測，包括 HTTP/HTTPS、TCP、ICMP、SSL 證書、DNS 記錄與域名到期檢查。本服務是營運輔助工具，不是保證可用性的 SLA 或事故處理系統。</p>
+    </section>
+    <section>
+      <h2>帳戶</h2>
+      <p>你透過 Apple 登入，並需自行保護 Apple 帳戶與裝置安全。客戶端狀態不決定使用者身份；帳戶與訂閱狀態由伺服器驗證。</p>
+    </section>
+    <section>
+      <h2>可接受使用</h2>
+      <p>你只能監測自己擁有或已獲授權測試的目標。不得將 OpsHome NOC 用於濫用、攻擊、未授權掃描、服務干擾或違法行為。</p>
+    </section>
+    <section>
+      <h2>方案與訂閱</h2>
+      <ul>
+        <li>Free 包含有限數量的監測項目、核心監測類型、告警推播通知與精簡分析詳情。</li>
+        <li>Pro 提高監測數量限制，解鎖更多監測類別、更短檢查間隔、完整分析報告，以及 SSL/域名到期提醒。</li>
+        <li>訂閱透過 Apple App Store App 內購買結算。最終價格、本地貨幣、續訂、取消與退款均由 Apple 顯示與管理。</li>
+        <li>我們不會接收或儲存你的付款卡資料。</li>
+      </ul>
+    </section>
+    <section>
+      <h2>降級或到期</h2>
+      <p>如果 Pro 到期或取消，帳戶可能回到 Free 限制。超出 Free 限制的監測項目或功能可能依服務規則被停用或隱藏，相關歷史資料可能在營運寬限期後清理。</p>
+    </section>
+    <section>
+      <h2>通知與分析</h2>
+      <p>告警、提醒與分析根據網路檢查與系統規則產生。受網路狀況、第三方服務、裝置設定、Apple 推播投遞或其他營運因素影響，可能延遲、不完整、不可用或不準確。</p>
+    </section>
+    <section>
+      <h2>可用性</h2>
+      <p>本服務以盡力而為方式提供。基於維護、安全、法律或營運原因，我們可能修改、暫停或終止部分功能。</p>
+    </section>
+    <section>
+      <h2>帳戶刪除</h2>
+      <p>你可以在 App 內刪除帳戶。刪除帳戶會移除與帳戶相關的服務資料，但法律、安全與備份保留需求除外。刪除帳戶不會自動取消 App Store 訂閱；訂閱取消需透過 Apple 管理。</p>
+    </section>
+    <section>
+      <h2>無擔保</h2>
+      <p>OpsHome NOC 依「現狀」與「可用狀態」提供，不保證不中斷、結果無錯誤，或適合任何特定用途。</p>
+    </section>
+    <section>
+      <h2>聯絡</h2>
+      <p>如有服務問題，請聯絡 <a href="mailto:opshome@outlook.com">opshome@outlook.com</a>。</p>
+    </section>
   </div>
 
-  <!-- ENGLISH -->
-  <div class="lang-section active" id="lang-en">
-
-    <div class="highlight-box">
-      <p>By registering, logging in, or continuing to use OpsHome NOC™, you confirm that you have read and agree to these Terms of Service.</p>
-    </div>
-
-    <h2>1. SERVICE DESCRIPTION</h2>
-    <p>OpsHome NOC™ ("the Service") provides online status monitoring for home networks, personal devices, and individual websites.</p>
-    <p>OpsHome NOC™ is a personal and homelab tool. It is <strong>not an enterprise monitoring product</strong> and does not provide any enterprise-grade Service Level Agreement (SLA) or uptime guarantees (including 99.9%, 99.99%, or higher).</p>
-    <p>The Service is provided <strong>"AS IS"</strong> without warranty of uninterrupted availability, absence of false alerts, or missed alerts.</p>
-
-    <h2>2. ACCOUNT &amp; SECURITY</h2>
-    <p>OpsHome NOC™ uses <strong>Sign in with Apple</strong> exclusively. We do not collect or store your Apple ID password. Authentication is handled entirely by Apple.</p>
-    <p>You are responsible for maintaining the security of your Apple ID. Any actions taken under your account are your responsibility. If you believe your account has been compromised, please secure your Apple ID immediately via Apple's account settings.</p>
-
-    <h2>3. ACCEPTABLE USE</h2>
-    <p>You agree not to use the Service to:</p>
-    <ul>
-      <li>Engage in any unlawful, infringing, or harmful activities</li>
-      <li>Conduct network attacks or interfere with network security</li>
-      <li>Monitor targets you do not own or have explicit permission to monitor</li>
-    </ul>
-    <p>We reserve the right to restrict, suspend, or terminate your access in the event of a violation.</p>
-
-    <h2>4. ACCOUNT DELETION &amp; DATA</h2>
-    <p>You may delete your account via the in-app <strong>"Manage Account"</strong> option. Upon deletion, your account and all associated data will be permanently removed and cannot be recovered. Any active subscription benefits will be terminated upon account deletion.</p>
-
-    <h2>5. DATA EXPORT &amp; BACKUP</h2>
-    <p>The current version does not provide data export or backup functionality. Please keep your own records of critical configurations and information.</p>
-
-    <h2>6. SUBSCRIPTION &amp; BILLING</h2>
-    <p>Free and Pro subscription plans are available. The Free plan includes 5 monitor targets, 7 days of event history, push notifications and service alerts, and a Basic analysis report, but does not include expiry reminders. Pro includes the full alert set, including expiry reminders, plus the Full analysis report. Pro subscriptions are billed through Apple In-App Purchase. Cancellation and refund policies follow Apple's standard terms. We do not have access to your payment information.</p>
-    <p>Upon Pro plan expiry, your account will revert to the Free plan limits. The 5 oldest monitor targets (by creation order) will remain active; all others will be disabled. Disabled monitors and their data are retained for 7 days before cloud history is permanently deleted.</p>
-
-    <h2>7. LIMITATION OF LIABILITY</h2>
-    <p>To the maximum extent permitted by applicable law:</p>
-    <ul>
-      <li>We are not liable for any indirect, incidental, or consequential damages</li>
-      <li>This includes data loss, revenue loss, business interruption, or reputational harm</li>
-      <li>We are not liable for issues caused by network operators, third-party services, or force majeure events</li>
-    </ul>
-    <p>You may not hold OpsHome NOC™ to enterprise-grade performance, availability, compensation, or refund standards that are outside the scope of this Service.</p>
-
-    <h2>8. CHANGES TO THESE TERMS</h2>
-    <p>We may update these Terms at any time. Updates will be announced via the app or App Store page. Continued use of the Service after an update constitutes acceptance of the revised Terms.</p>
-
-    <h2>9. MINORS</h2>
-    <p>This Service is intended for users with full legal capacity. Minors should use this Service only with the consent and supervision of a parent or guardian.</p>
-
-    <h2>10. CONTACT</h2>
-    <p>For inquiries, please contact us at: <a href="mailto:opshome@outlook.com">opshome@outlook.com</a></p>
-
+  <div class="block-zh">
+    <section>
+      <h2>服务内容</h2>
+      <p>OpsHome NOC 为个人与小型基础设施提供外部监测，包括 HTTP/HTTPS、TCP、ICMP、SSL 证书、DNS 记录与域名到期检查。本服务是运营辅助工具，不是保证可用性的 SLA 或事故处理系统。</p>
+    </section>
+    <section>
+      <h2>账户</h2>
+      <p>你通过 Apple 登录，并需自行保护 Apple 账户与设备安全。客户端状态不决定用户身份；账户与订阅状态由服务器验证。</p>
+    </section>
+    <section>
+      <h2>可接受使用</h2>
+      <p>你只能监测自己拥有或已获授权测试的目标。不得将 OpsHome NOC 用于滥用、攻击、未授权扫描、服务干扰或违法行为。</p>
+    </section>
+    <section>
+      <h2>方案与订阅</h2>
+      <ul>
+        <li>Free 包含有限数量的监测项目、核心监测类型、告警推送通知与精简分析详情。</li>
+        <li>Pro 提高监测数量限制，解锁更多监测类别、更短检查间隔、完整分析报告，以及 SSL/域名到期提醒。</li>
+        <li>订阅通过 Apple App Store App 内购买结算。最终价格、本地货币、续订、取消与退款均由 Apple 显示与管理。</li>
+        <li>我们不会接收或存储你的付款卡数据。</li>
+      </ul>
+    </section>
+    <section>
+      <h2>降级或到期</h2>
+      <p>如果 Pro 到期或取消，账户可能回到 Free 限制。超出 Free 限制的监测项目或功能可能按服务规则被停用或隐藏，相关历史数据可能在运营宽限期后清理。</p>
+    </section>
+    <section>
+      <h2>通知与分析</h2>
+      <p>告警、提醒与分析根据网络检查与系统规则产生。受网络状况、第三方服务、设备设置、Apple 推送投递或其他运营因素影响，可能延迟、不完整、不可用或不准确。</p>
+    </section>
+    <section>
+      <h2>可用性</h2>
+      <p>本服务以尽力而为方式提供。基于维护、安全、法律或运营原因，我们可能修改、暂停或终止部分功能。</p>
+    </section>
+    <section>
+      <h2>账户删除</h2>
+      <p>你可以在 App 内删除账户。删除账户会移除与账户相关的服务数据，但法律、安全与备份保留需求除外。删除账户不会自动取消 App Store 订阅；订阅取消需通过 Apple 管理。</p>
+    </section>
+    <section>
+      <h2>无担保</h2>
+      <p>OpsHome NOC 按“现状”和“可用状态”提供，不保证不中断、结果无错误，或适合任何特定用途。</p>
+    </section>
+    <section>
+      <h2>联系</h2>
+      <p>如有服务问题，请联系 <a href="mailto:opshome@outlook.com">opshome@outlook.com</a>。</p>
+    </section>
   </div>
-
-  <!-- TRADITIONAL CHINESE -->
-  <div class="lang-section" id="lang-zh">
-
-    <div class="highlight-box">
-      <p>你註冊、登入或繼續使用 OpsHome NOC™，即視為你已閱讀並同意本協議。</p>
-    </div>
-
-    <h2>1. 服務定位與說明</h2>
-    <p>OpsHome NOC™（以下簡稱「本服務」）為家庭網路、個人裝置與個人站台提供在線狀態監測服務。</p>
-    <p>OpsHome NOC™ 為個人與家庭用途工具，<strong>並非企業級監控產品</strong>，不提供任何企業服務等級承諾（SLA），亦不承諾 99.9%、99.99% 等可用性等級。</p>
-    <p>本服務按「現狀（AS IS）」提供，不承諾絕對無中斷、無誤報、無漏報。</p>
-
-    <h2>2. 帳戶與使用安全</h2>
-    <p>OpsHome NOC™ 僅採用 <strong>Apple 登入（Sign in with Apple）</strong>。我們不收集或儲存你的 Apple ID 密碼，身份驗證完全由 Apple 處理。</p>
-    <p>你應妥善保管你的 Apple ID 安全。帳號下的一切行為由你負責。若你認為帳號遭到入侵，請立即透過 Apple 帳號設定保護你的 Apple ID。</p>
-
-    <h2>3. 合法使用</h2>
-    <p>你不得利用本服務從事以下行為：</p>
-    <ul>
-      <li>任何違法、侵權或有害行為</li>
-      <li>網路攻擊或干擾網路安全</li>
-      <li>監控你未擁有或未獲授權的目標</li>
-    </ul>
-    <p>發生違規時，本服務有權採取限制、暫停或終止措施。</p>
-
-    <h2>4. 帳戶刪除與資料處理</h2>
-    <p>你可透過應用程式內的<strong>「管理帳戶」</strong>功能發起刪除。刪除後，帳戶及所有相關資料將被永久清除且無法恢復。刪除完成後，與帳戶相關的會員權益（如有）同步終止。</p>
-
-    <h2>5. 資料匯出與備份</h2>
-    <p>目前版本暫不提供資料匯出或備份功能，請自行記錄重要設定與必要資訊。</p>
-
-    <h2>6. 訂閱與付款</h2>
-    <p>本服務提供免費版與 Pro 版方案。免費版包含 5 個監控目標、7 天歷史記錄、推播通知與服務告警，以及基礎版分析報告，但不包含到期提醒功能。Pro 版包含完整告警能力（含到期提醒）與完整分析報告。Pro 版透過 Apple App 內購買計費，取消與退款政策依 Apple 標準條款執行，我們無法取得你的付款資訊。</p>
-    <p>Pro 到期後，帳戶將自動降回免費版限制。依建立時間排序最早的 5 個監控目標將保持啟用，其餘將被停用。被停用的監控資料保留 7 天後，雲端歷史記錄將被永久刪除。</p>
-
-    <h2>7. 責任限制</h2>
-    <p>在適用法律允許的最大範圍內：</p>
-    <ul>
-      <li>本服務不對任何間接損失、附帶損失或後果性損失承擔責任</li>
-      <li>包括但不限於資料損失、收益損失、業務中斷或商譽損失</li>
-      <li>本服務不因網路營運商、第三方服務或不可抗力事件導致的問題承擔責任</li>
-    </ul>
-    <p>你不得以企業級標準對 OpsHome NOC™ 提出超出本服務定位範圍的性能、可用性、賠償或退款主張。</p>
-
-    <h2>8. 協議變更</h2>
-    <p>本協議更新後，將透過應用程式內或 App Store 頁面公示。你繼續使用本服務，即視為接受更新後的協議。</p>
-
-    <h2>9. 未成年人說明</h2>
-    <p>本服務面向具備完全民事行為能力的用戶。未成年人應在監護人同意與指導下使用。</p>
-
-    <h2>10. 聯絡方式</h2>
-    <p>如需聯絡，請寄信至：<a href="mailto:opshome@outlook.com">opshome@outlook.com</a></p>
-
-  </div>
-</div>
+</main>
 
 <footer>
-  <p class="footer-copy">© 2025 OpsHome NOC™. All rights reserved.</p>
-  <ul class="footer-links">
-    <li><a href="privacy.html">Privacy Policy</a></li>
-    <li><a href="terms.html">Terms of Service</a></li>
-    <li><a href="mailto:opshome@outlook.com">Support</a></li>
-  </ul>
+  <span>© 2026 OpsHome NOC</span>
+  <a href="privacy.html"><span class="t-en">Privacy Policy</span><span class="t-hant">隱私權政策</span><span class="t-zh">隐私政策</span></a>
 </footer>
 
 <script>
-function switchLang(lang) {
-  document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
-  document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
-  document.getElementById('lang-' + lang).classList.add('active');
-  event.target.classList.add('active');
+function setLanguage(lang){
+  document.body.classList.toggle('lang-hant', lang === 'hant');
+  document.body.classList.toggle('lang-zh', lang === 'zh');
+  document.documentElement.lang = lang === 'hant' ? 'zh-Hant' : (lang === 'zh' ? 'zh-Hans' : 'en');
+  document.querySelectorAll('.lang button').forEach(function(btn){btn.classList.toggle('active', btn.dataset.lang === lang);});
+  try{localStorage.setItem('opshome_site_lang', lang);}catch(e){}
 }
+document.querySelectorAll('.lang button').forEach(function(btn){btn.addEventListener('click', function(){setLanguage(btn.dataset.lang);});});
+var saved='en';
+try{saved=localStorage.getItem('opshome_site_lang') || 'en';}catch(e){}
+setLanguage(saved === 'hant' || saved === 'zh' ? saved : 'en');
 </script>
 </body>
 </html>

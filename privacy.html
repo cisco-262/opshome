@@ -3,260 +3,216 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — OpsHome NOC™</title>
+<title>Privacy Policy - OpsHome NOC</title>
+<meta name="description" content="Privacy Policy for OpsHome NOC.">
 <link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #0a0e13; --bg2: #0f1520; --surface: #141c28; --border: #1e2d42;
-    --accent: #00d4ff; --accent2: #00ff9d; --text: #e8f0fe; --text2: #7a9ab8;
-    --mono: 'Space Mono', monospace; --sans: 'DM Sans', sans-serif;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: var(--bg); color: var(--text); font-family: var(--sans); line-height: 1.8; }
-  body::before { content: ''; position: fixed; inset: 0; background-image: linear-gradient(rgba(0,212,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,0.03) 1px,transparent 1px); background-size: 40px 40px; pointer-events: none; z-index: 0; }
-
-  nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 20px 48px; background: rgba(10,14,19,0.95); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
-  .nav-logo { display: inline-flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 14px; color: var(--accent); letter-spacing: 0.08em; text-decoration: none; white-space: nowrap; }
-  .nav-logo img { width: 34px; height: 34px; border-radius: 9px; display: block; box-shadow: 0 0 18px rgba(0,212,255,0.28); }
-  .nav-logo .brand-name { color: var(--accent); }
-  .nav-logo .brand-name strong { color: var(--accent2); font-weight: 700; }
-  .nav-back { font-family: var(--mono); font-size: 12px; color: var(--text2); text-decoration: none; letter-spacing: 0.1em; transition: color 0.2s; }
-  .nav-back:hover { color: var(--accent); }
-
-  .container { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; padding: 72px 48px; }
-
-  .doc-label { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.2em; margin-bottom: 16px; }
-  .doc-title { font-family: var(--mono); font-size: clamp(28px, 4vw, 40px); font-weight: 700; margin-bottom: 8px; }
-  .doc-title span { color: var(--accent); }
-  .doc-meta { font-family: var(--mono); font-size: 12px; color: var(--text2); margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
-
-  .lang-toggle { display: flex; gap: 12px; margin-bottom: 48px; }
-  .lang-btn { font-family: var(--mono); font-size: 12px; padding: 8px 16px; border: 1px solid var(--border); background: transparent; color: var(--text2); cursor: pointer; letter-spacing: 0.08em; transition: all 0.2s; }
-  .lang-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(0,212,255,0.08); }
-
-  .lang-section { display: none; }
-  .lang-section.active { display: block; }
-
-  h2 { font-family: var(--mono); font-size: 13px; color: var(--accent2); letter-spacing: 0.1em; margin: 40px 0 12px; padding-top: 40px; border-top: 1px solid var(--border); }
-  h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
-
-  p { font-size: 15px; color: var(--text2); margin-bottom: 16px; font-weight: 300; }
-  p strong { color: var(--text); font-weight: 500; }
-
-  ul { list-style: none; margin-bottom: 16px; }
-  ul li { font-size: 15px; color: var(--text2); padding: 6px 0; padding-left: 20px; position: relative; font-weight: 300; }
-  ul li::before { content: '▸'; position: absolute; left: 0; color: var(--accent); font-size: 10px; top: 9px; }
-
-  .highlight-box { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); padding: 20px 24px; margin: 24px 0; }
-  .highlight-box p { margin: 0; font-size: 14px; }
-
-  .data-table { width: 100%; border-collapse: collapse; border: 1px solid var(--border); margin: 24px 0; font-size: 13px; }
-  .data-table th { background: var(--bg2); color: var(--text2); font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); }
-  .data-table td { padding: 12px 16px; border-bottom: 1px solid rgba(30,45,66,0.5); color: var(--text2); font-weight: 300; vertical-align: top; }
-  .data-table tr:last-child td { border-bottom: none; }
-
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-
-  footer { position: relative; z-index: 1; border-top: 1px solid var(--border); padding: 32px 48px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
-  .footer-copy { font-family: var(--mono); font-size: 11px; color: var(--text2); opacity: 0.4; }
-  .footer-links { display: flex; gap: 24px; list-style: none; }
-  .footer-links a { font-family: var(--mono); font-size: 11px; color: var(--text2); text-decoration: none; transition: color 0.2s; }
-  .footer-links a:hover { color: var(--accent); }
-
-  @media (max-width: 768px) {
-    nav { padding: 16px 24px; }
-    .container { padding: 48px 24px; }
-    footer { padding: 24px; flex-direction: column; align-items: flex-start; }
-    .data-table th, .data-table td { padding: 10px 12px; font-size: 12px; }
-  }
+  :root{--bg:#0a0e13;--surface:#141c28;--border:#223247;--accent:#00d4ff;--accent2:#00ff9d;--text:#e8f0fe;--muted:#86a1bb;--soft:#c6d3df;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,"Noto Sans",sans-serif;--mono:"SFMono-Regular","SF Mono",Consolas,"Liberation Mono",monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.8}
+  body:before{content:"";position:fixed;inset:0;background-image:linear-gradient(rgba(0,212,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,.035) 1px,transparent 1px);background-size:40px 40px;pointer-events:none}
+  a{color:inherit;text-decoration:none}
+  nav{position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 48px;background:rgba(10,14,19,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+  .brand{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:14px;letter-spacing:.06em;color:var(--accent)}
+  .brand img{width:34px;height:34px;border-radius:9px}
+  .nav-actions{display:flex;align-items:center;gap:12px}
+  .back{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.08em}
+  .back:hover{color:var(--accent)}
+  .lang{display:flex;gap:4px;padding:4px;border:1px solid var(--border);background:rgba(20,28,40,.75)}
+  .lang button{font-family:var(--mono);font-size:11px;color:var(--muted);background:transparent;border:0;padding:6px 9px;cursor:pointer}
+  .lang button.active{background:var(--accent);color:#061015}
+  .t-hant,.block-hant,.t-zh,.block-zh{display:none}
+  body.lang-hant .t-en,body.lang-hant .block-en,body.lang-zh .t-en,body.lang-zh .block-en{display:none}
+  body.lang-hant .t-hant{display:inline}
+  body.lang-hant .block-hant{display:block}
+  body.lang-zh .t-zh{display:inline}
+  body.lang-zh .block-zh{display:block}
+  main{position:relative;z-index:1;max-width:880px;margin:0 auto;padding:72px 40px}
+  .label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--accent);margin-bottom:14px}
+  h1{font-family:var(--mono);font-size:clamp(32px,5vw,48px);line-height:1.15;margin-bottom:10px}
+  .meta{font-family:var(--mono);font-size:12px;color:var(--muted);padding-bottom:30px;margin-bottom:34px;border-bottom:1px solid var(--border)}
+  section{margin:34px 0}
+  h2{font-family:var(--mono);font-size:21px;margin-bottom:10px;color:var(--soft)}
+  p,li{color:var(--muted)}
+  ul{padding-left:22px}
+  .box{border:1px solid var(--border);background:var(--surface);padding:22px;margin-top:18px}
+  footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:30px 48px;color:var(--muted);font-family:var(--mono);font-size:12px;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+  footer a:hover{color:var(--accent)}
+  @media(max-width:680px){nav{padding:16px 22px;align-items:flex-start}.nav-actions{flex-direction:column;align-items:flex-end}main{padding:54px 22px}}
 </style>
 </head>
 <body>
-
 <nav>
-  <a href="index.html" class="nav-logo"><img src="brand-logo.png" alt="OpsHome NOC Logo"><span class="brand-name">OpsHome <strong>NOC</strong>™</span></a>
-  <a href="index.html" class="nav-back">← BACK</a>
+  <a class="brand" href="index.html"><img src="brand-logo.png" alt="">OpsHome <strong>NOC</strong></a>
+  <div class="nav-actions">
+    <a class="back" href="index.html"><span class="t-en">BACK HOME</span><span class="t-hant">返回首頁</span><span class="t-zh">返回首页</span></a>
+    <div class="lang" aria-label="Language">
+      <button class="active" data-lang="en">EN</button>
+      <button data-lang="hant">繁</button>
+      <button data-lang="zh">简</button>
+    </div>
+  </div>
 </nav>
 
-<div class="container">
-  <p class="doc-label">// LEGAL</p>
-  <h1 class="doc-title">Privacy <span>Policy</span></h1>
-  <div class="doc-meta">
-    Effective Date: 2026-04-21 &nbsp;·&nbsp; Last Updated: 2026-04-21
+<main>
+  <div class="label">PRIVACY</div>
+  <h1><span class="block-en">Privacy Policy</span><span class="block-hant">隱私權政策</span><span class="block-zh">隐私政策</span></h1>
+  <div class="meta"><span class="t-en">Last updated: April 28, 2026</span><span class="t-hant">最後更新：2026 年 4 月 28 日</span><span class="t-zh">最后更新：2026 年 4 月 28 日</span></div>
+
+  <div class="block-en">
+    <section>
+      <h2>Overview</h2>
+      <p>OpsHome NOC is a monitoring app for websites, ports, SSL certificates, DNS records, and domain expiry. We process only the data needed to provide monitoring, alerts, subscription entitlement, account security, and support.</p>
+    </section>
+    <section>
+      <h2>Information We Process</h2>
+      <ul>
+        <li>Account data: Sign in with Apple identifier, email address if Apple provides it, account ID, and API credentials used by the app.</li>
+        <li>Device and notification data: device identifier, app version, preferred language, and APNs token when push notifications are enabled.</li>
+        <li>Monitoring data: monitor names, targets, domains, IP addresses, ports, paths, DNS record types, check settings, check results, alert state, and analysis results.</li>
+        <li>Subscription data: App Store product IDs, transaction identifiers, plan status, and expiration status. We do not receive or store your payment card information.</li>
+        <li>Security data: IP address and approximate country, region, or city derived from IP address for security, abuse prevention, and operational statistics.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>How We Use Data</h2>
+      <p>We use data to create and secure your account, run monitoring checks, send alerts and expiry reminders according to your plan, show analysis reports, verify Pro entitlement, troubleshoot service issues, and maintain service reliability.</p>
+    </section>
+    <section>
+      <h2>Sharing</h2>
+      <p>We do not sell personal data and do not build advertising profiles. Data may be processed by Apple services including Sign in with Apple, App Store In-App Purchase, and APNs, and by hosting or database providers that operate the service infrastructure.</p>
+    </section>
+    <section>
+      <h2>Retention</h2>
+      <p>Account and monitoring data are retained while your account is active or as needed to provide the service. Event history and analysis records are retained according to plan limits and operational limits. If you delete your account, service data associated with the account is scheduled for deletion, subject to legal, security, and backup retention needs.</p>
+    </section>
+    <section>
+      <h2>Your Choices</h2>
+      <p>You can disable push notifications in iOS settings, manage monitors in the app, and delete your account from the account management screen. App Store subscription cancellation is managed through Apple.</p>
+    </section>
+    <section>
+      <h2>Security</h2>
+      <p>We use reasonable technical and organizational measures to protect service data, including authenticated API access and secure storage of app credentials. No internet service can guarantee absolute security.</p>
+    </section>
+    <section>
+      <h2>Children</h2>
+      <p>OpsHome NOC is not directed to children and is not intended for users under the age required by local law to use online services without parental consent.</p>
+    </section>
+    <section>
+      <h2>Contact</h2>
+      <p>For privacy requests, contact us at <a href="mailto:opshome@outlook.com">opshome@outlook.com</a>.</p>
+    </section>
   </div>
 
-  <div class="lang-toggle">
-    <button class="lang-btn active" onclick="switchLang('en')">ENGLISH</button>
-    <button class="lang-btn" onclick="switchLang('zh')">繁體中文</button>
+  <div class="block-hant">
+    <section>
+      <h2>概述</h2>
+      <p>OpsHome NOC 是用於網站、連接埠、SSL 證書、DNS 記錄與域名到期監測的 App。我們只處理提供監測、通知、訂閱權益、帳戶安全與支援所需的資料。</p>
+    </section>
+    <section>
+      <h2>我們處理的資料</h2>
+      <ul>
+        <li>帳戶資料：Sign in with Apple 識別碼、Apple 提供的電子郵件地址、帳戶 ID，以及 App 使用的 API 憑證。</li>
+        <li>裝置與通知資料：裝置識別碼、App 版本、偏好語言，以及啟用推播通知時使用的 APNs token。</li>
+        <li>監測資料：監測名稱、目標、域名、IP 位址、連接埠、路徑、DNS 記錄類型、檢查設定、檢查結果、告警狀態與分析結果。</li>
+        <li>訂閱資料：App Store 產品 ID、交易識別碼、方案狀態與到期狀態。我們不會接收或儲存你的付款卡資料。</li>
+        <li>安全資料：IP 位址，以及由 IP 位址推算的概略國家、地區或城市，用於安全、防止濫用與營運統計。</li>
+      </ul>
+    </section>
+    <section>
+      <h2>資料用途</h2>
+      <p>我們使用資料來建立與保護帳戶、執行監測檢查、依方案發送告警與到期提醒、顯示分析報告、驗證 Pro 權益、排查服務問題並維持服務穩定。</p>
+    </section>
+    <section>
+      <h2>資料分享</h2>
+      <p>我們不出售個人資料，也不建立廣告用途的個人畫像。資料可能由 Apple 的 Sign in with Apple、App Store App 內購買、APNs，以及承載服務基礎設施的雲端主機或資料庫供應商處理。</p>
+    </section>
+    <section>
+      <h2>資料保留</h2>
+      <p>帳戶與監測資料會在帳戶有效期間，或為提供服務所需期間保留。事件歷史與分析記錄會依方案限制與營運限制保留。刪除帳戶後，與帳戶相關的服務資料會排程刪除，但法律、安全與備份保留需求除外。</p>
+    </section>
+    <section>
+      <h2>你的選擇</h2>
+      <p>你可以在 iOS 設定中關閉推播通知，在 App 內管理監測項目，並在帳戶管理頁面刪除帳戶。App Store 訂閱取消需透過 Apple 管理。</p>
+    </section>
+    <section>
+      <h2>安全</h2>
+      <p>我們採取合理的技術與組織措施保護服務資料，包括經驗證的 API 存取與 App 憑證安全儲存。任何網路服務都無法保證絕對安全。</p>
+    </section>
+    <section>
+      <h2>兒童</h2>
+      <p>OpsHome NOC 並非面向兒童，也不適合未達當地法律要求、需監護人同意才可使用線上服務的使用者單獨使用。</p>
+    </section>
+    <section>
+      <h2>聯絡</h2>
+      <p>如有隱私相關請求，請透過 <a href="mailto:opshome@outlook.com">opshome@outlook.com</a> 聯絡我們。</p>
+    </section>
   </div>
 
-  <!-- ENGLISH -->
-  <div class="lang-section active" id="lang-en">
-
-    <div class="highlight-box">
-      <p>Your privacy matters to us. This policy explains what data we collect, how we use it, and your rights. By using OpsHome NOC™, you agree to this policy.</p>
-    </div>
-
-    <h2>1. INFORMATION WE COLLECT</h2>
-    <table class="data-table">
-      <thead>
-        <tr><th>DATA TYPE</th><th>DESCRIPTION</th><th>PURPOSE</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Account info</td><td>Apple ID unique identifier only. We never see your Apple ID email or password. Apple may provide a private relay email at your option.</td><td>Authentication</td></tr>
-        <tr><td>Device info</td><td>Device model, iOS version, App version</td><td>Compatibility &amp; support</td></tr>
-        <tr><td>Monitor data</td><td>Target addresses, check results, event logs</td><td>Core service</td></tr>
-        <tr><td>Push token</td><td>APNs device token (if notifications enabled)</td><td>Alert delivery</td></tr>
-      </tbody>
-    </table>
-    <p>We do <strong>not</strong> collect your name, email address, location, contacts, browsing history, or any data unrelated to the Service.</p>
-
-    <h2>2. HOW WE USE YOUR DATA</h2>
-    <p>We use your data only for what is necessary to provide the Service:</p>
-    <ul>
-      <li>Account management and authentication</li>
-      <li>Executing monitoring checks and delivering alerts</li>
-      <li>Ensuring service stability and security auditing</li>
-    </ul>
-    <p>We do <strong>not</strong> use your data for advertising, profiling, or any purpose beyond operating the Service.</p>
-
-    <h2>3. THIRD-PARTY SHARING</h2>
-    <p>We do <strong>not</strong> sell or share your personal data with third parties. The only exception is when required by applicable law or a lawful order from a judicial or regulatory authority.</p>
-    <p>If we ever introduce third-party data sharing in the future, we will update this policy and notify you in advance.</p>
-
-    <h2>4. DATA STORAGE &amp; TRANSFER</h2>
-    <p>Your data is stored on our cloud servers. Servers may be located outside your region. We apply reasonable technical and organizational security measures to protect your data, and process it only to the extent necessary to provide the Service.</p>
-
-    <h2>5. DATA RETENTION &amp; DELETION</h2>
-    <p>We retain your data only as long as necessary to provide the Service:</p>
-    <ul>
-      <li>Active account data is retained while your account exists</li>
-      <li>Free plan event history is retained for 7 days; Pro plan event history is retained for up to 90 days</li>
-      <li>Upon account deletion, all associated data is permanently removed</li>
-      <li>Disabled monitor history is deleted 7 days after Pro plan expiry</li>
-    </ul>
-
-    <h2>6. DATA EXPORT</h2>
-    <p>The current version does not provide data export functionality. Please keep your own records of important configurations.</p>
-
-    <h2>7. SECURITY</h2>
-    <p>We implement reasonable administrative and technical measures to protect your information. API keys and push tokens are stored in <strong>iOS Keychain</strong> and never written to UserDefaults. However, no system can guarantee absolute security.</p>
-
-    <h2>8. YOUR RIGHTS</h2>
-    <p>Subject to applicable law, you have the right to:</p>
-    <ul>
-      <li>Access and correct your account information within the app</li>
-      <li>Delete your account and all associated data via in-app settings</li>
-      <li>Withdraw push notification consent via iOS system settings</li>
-      <li>Revoke OpsHome NOC™ access to your Apple ID via <strong>Settings → Apple ID → Password &amp; Security → Apps Using Apple ID</strong></li>
-    </ul>
-
-    <h2>9. CHILDREN'S PRIVACY</h2>
-    <p>This Service is not directed at children under 13 (or the applicable age in your jurisdiction). We do not knowingly collect personal information from children. If you believe a child has provided us with personal data, please contact us.</p>
-
-    <h2>10. CHANGES TO THIS POLICY</h2>
-    <p>We may update this policy at any time. Updates will be announced via the app or App Store page. Continued use of the Service after an update constitutes acceptance of the revised policy.</p>
-
-    <h2>11. CONTACT</h2>
-    <p>For privacy-related inquiries, please contact: <a href="mailto:opshome@outlook.com">opshome@outlook.com</a></p>
-
+  <div class="block-zh">
+    <section>
+      <h2>概述</h2>
+      <p>OpsHome NOC 是用于网站、端口、SSL 证书、DNS 记录与域名到期监测的 App。我们只处理提供监测、通知、订阅权益、账户安全与支持所需的数据。</p>
+    </section>
+    <section>
+      <h2>我们处理的数据</h2>
+      <ul>
+        <li>账户数据：Sign in with Apple 标识符、Apple 提供的电子邮件地址、账户 ID，以及 App 使用的 API 凭证。</li>
+        <li>设备与通知数据：设备标识符、App 版本、偏好语言，以及启用推送通知时使用的 APNs token。</li>
+        <li>监测数据：监测名称、目标、域名、IP 地址、端口、路径、DNS 记录类型、检查设置、检查结果、告警状态与分析结果。</li>
+        <li>订阅数据：App Store 产品 ID、交易标识符、方案状态与到期状态。我们不会接收或存储你的付款卡数据。</li>
+        <li>安全数据：IP 地址，以及由 IP 地址推算的概略国家、地区或城市，用于安全、防止滥用与运营统计。</li>
+      </ul>
+    </section>
+    <section>
+      <h2>数据用途</h2>
+      <p>我们使用数据来创建与保护账户、执行监测检查、按方案发送告警与到期提醒、显示分析报告、验证 Pro 权益、排查服务问题并保持服务稳定。</p>
+    </section>
+    <section>
+      <h2>数据共享</h2>
+      <p>我们不出售个人数据，也不建立广告用途的个人画像。数据可能由 Apple 的 Sign in with Apple、App Store App 内购买、APNs，以及承载服务基础设施的云主机或数据库供应商处理。</p>
+    </section>
+    <section>
+      <h2>数据保留</h2>
+      <p>账户与监测数据会在账户有效期间，或为提供服务所需期间保留。事件历史与分析记录会按方案限制与运营限制保留。删除账户后，与账户相关的服务数据会排程删除，但法律、安全与备份保留需求除外。</p>
+    </section>
+    <section>
+      <h2>你的选择</h2>
+      <p>你可以在 iOS 设置中关闭推送通知，在 App 内管理监测项目，并在账户管理页面删除账户。App Store 订阅取消需通过 Apple 管理。</p>
+    </section>
+    <section>
+      <h2>安全</h2>
+      <p>我们采取合理的技术与组织措施保护服务数据，包括经过验证的 API 访问与 App 凭证安全存储。任何网络服务都无法保证绝对安全。</p>
+    </section>
+    <section>
+      <h2>儿童</h2>
+      <p>OpsHome NOC 并非面向儿童，也不适合未达到当地法律要求、需监护人同意才可使用在线服务的用户单独使用。</p>
+    </section>
+    <section>
+      <h2>联系</h2>
+      <p>如有隐私相关请求，请通过 <a href="mailto:opshome@outlook.com">opshome@outlook.com</a> 联系我们。</p>
+    </section>
   </div>
-
-  <!-- TRADITIONAL CHINESE -->
-  <div class="lang-section" id="lang-zh">
-
-    <div class="highlight-box">
-      <p>你的隱私對我們很重要。本政策說明我們如何收集、使用、儲存與保護資料。你使用本服務即表示你已閱讀並同意本政策。</p>
-    </div>
-
-    <h2>1. 我們收集的資訊</h2>
-    <table class="data-table">
-      <thead>
-        <tr><th>資料類型</th><th>說明</th><th>用途</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>帳戶資訊</td><td>僅限 Apple ID 唯一識別碼。我們無法取得你的 Apple ID 電子郵件或密碼。Apple 可能依你的選擇提供私密轉址電子郵件。</td><td>身份驗證</td></tr>
-        <tr><td>裝置資訊</td><td>裝置型號、iOS 版本、App 版本</td><td>相容性與支援</td></tr>
-        <tr><td>監控資料</td><td>目標位址、檢測結果、事件記錄</td><td>核心服務</td></tr>
-        <tr><td>推播憑證</td><td>APNs 裝置 Token（若你授權通知）</td><td>告警推播</td></tr>
-      </tbody>
-    </table>
-    <p>我們<strong>不會</strong>收集你的姓名、電子郵件、位置、通訊錄、瀏覽記錄或任何與本服務無關的資料。</p>
-
-    <h2>2. 資訊使用目的</h2>
-    <p>我們僅在提供服務所必要的範圍內使用你的資料：</p>
-    <ul>
-      <li>帳戶管理與身份驗證</li>
-      <li>執行監控檢測與推播告警</li>
-      <li>確保服務穩定性與安全稽核</li>
-    </ul>
-    <p>我們<strong>不會</strong>將你的資料用於廣告、分析建檔或任何超出服務運營範圍的目的。</p>
-
-    <h2>3. 第三方共享</h2>
-    <p>我們<strong>不會</strong>出售或向第三方共享你的個人資料。唯一例外為適用法律規定或司法、監管機關依法要求的情形。</p>
-    <p>若未來新增第三方共享場景，我們將事先更新本政策並通知你。</p>
-
-    <h2>4. 資料儲存與傳輸</h2>
-    <p>你的資料儲存於我們的雲端伺服器，伺服器可能位於你所在地區以外。我們採取合理的技術與組織安全措施保護你的資料，且僅在提供服務所必要的範圍內處理資料。</p>
-
-    <h2>5. 資料保留與刪除</h2>
-    <p>我們僅在提供服務所需期限內保留你的資料：</p>
-    <ul>
-      <li>帳戶存續期間保留活躍帳戶資料</li>
-      <li>免費版歷史記錄保留 7 天；Pro 版歷史記錄最多保留 90 天</li>
-      <li>帳戶刪除後，所有相關資料將被永久清除</li>
-      <li>Pro 方案到期後，被停用監控的歷史記錄將於 7 天後刪除</li>
-    </ul>
-
-    <h2>6. 資料匯出</h2>
-    <p>目前版本暫不提供資料匯出功能，請自行記錄重要設定。</p>
-
-    <h2>7. 安全措施</h2>
-    <p>我們採取合理的管理與技術措施保護你的資訊。API 金鑰與推播憑證儲存於 <strong>iOS Keychain</strong>，不寫入 UserDefaults。但任何系統均無法保證絕對安全。</p>
-
-    <h2>8. 你的權利</h2>
-    <p>在適用法律允許範圍內，你有權：</p>
-    <ul>
-      <li>在應用程式內查詢與更正帳戶資訊</li>
-      <li>透過應用程式內設定刪除帳戶及所有相關資料</li>
-      <li>透過 iOS 系統設定撤回推播通知授權</li>
-      <li>透過 <strong>設定 → Apple ID → 密碼與安全性 → 使用 Apple ID 的 App</strong> 撤銷 OpsHome NOC™ 對你 Apple ID 的存取授權</li>
-    </ul>
-
-    <h2>9. 兒童隱私</h2>
-    <p>本服務不針對 13 歲以下兒童（或你所在地區適用年齡）。我們不會刻意收集兒童的個人資訊。如你認為有兒童向我們提供了個人資料，請與我們聯絡。</p>
-
-    <h2>10. 政策更新</h2>
-    <p>本政策更新後，將透過應用程式內或 App Store 頁面公示。你繼續使用本服務，即視為接受更新後的政策。</p>
-
-    <h2>11. 聯絡方式</h2>
-    <p>如有隱私相關問題，請聯絡：<a href="mailto:opshome@outlook.com">opshome@outlook.com</a></p>
-
-  </div>
-</div>
+</main>
 
 <footer>
-  <p class="footer-copy">© 2025 OpsHome NOC™. All rights reserved.</p>
-  <ul class="footer-links">
-    <li><a href="privacy.html">Privacy Policy</a></li>
-    <li><a href="terms.html">Terms of Service</a></li>
-    <li><a href="mailto:opshome@outlook.com">Support</a></li>
-  </ul>
+  <span>© 2026 OpsHome NOC</span>
+  <a href="terms.html"><span class="t-en">Terms of Service</span><span class="t-hant">服務條款</span><span class="t-zh">服务条款</span></a>
 </footer>
 
 <script>
-function switchLang(lang) {
-  document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
-  document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
-  document.getElementById('lang-' + lang).classList.add('active');
-  event.target.classList.add('active');
+function setLanguage(lang){
+  document.body.classList.toggle('lang-hant', lang === 'hant');
+  document.body.classList.toggle('lang-zh', lang === 'zh');
+  document.documentElement.lang = lang === 'hant' ? 'zh-Hant' : (lang === 'zh' ? 'zh-Hans' : 'en');
+  document.querySelectorAll('.lang button').forEach(function(btn){btn.classList.toggle('active', btn.dataset.lang === lang);});
+  try{localStorage.setItem('opshome_site_lang', lang);}catch(e){}
 }
+document.querySelectorAll('.lang button').forEach(function(btn){btn.addEventListener('click', function(){setLanguage(btn.dataset.lang);});});
+var saved='en';
+try{saved=localStorage.getItem('opshome_site_lang') || 'en';}catch(e){}
+setLanguage(saved === 'hant' || saved === 'zh' ? saved : 'en');
 </script>
 </body>
 </html>
