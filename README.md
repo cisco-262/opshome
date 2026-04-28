@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="/assets/images/brand-logo.png" alt="OpsHome NOC Logo" width="120">
+<img src="/docs/assets/images/brand-logo.png" alt="OpsHome NOC Logo" width="120">
 
 # OpsHome NOC™
 
@@ -11,7 +11,7 @@ For homelab, home servers, personal sites, and always-on services.
 適合 Homelab、家庭伺服器、個人網站與自架服務。
 
 <a href="APP_STORE_LINK_PLACEHOLDER">
-  <img src="/assets/images/app-store-badge.svg" alt="Download on the App Store" height="56">
+  <img src="/docs/assets/images/app-store-badge.svg" alt="Download on the App Store" height="56">
 </a>
 
 <br>
@@ -127,10 +127,10 @@ OpsHome NOC™ 會透過雲端主動檢測目標服務，並在服務離線或�
 
 
 <p align="center">
-  <img src="/assets/images/screen_home.png" alt="OpsHome NOC Home Dashboard" width="220">
-  <img src="/assets/images/screen_monitors.png" alt="OpsHome NOC Monitor List" width="220">
-  <img src="/assets/images/screen_notifications.png" alt="OpsHome NOC Alerts" width="220">
-  <img src="/assets/images/screen_me_web.png" alt="OpsHome NOC Account" width="220">
+  <img src="/docs/assets/images/screen_home.png" alt="OpsHome NOC Home Dashboard" width="220">
+  <img src="/docs/assets/images/screen_monitors.png" alt="OpsHome NOC Monitor List" width="220">
+  <img src="/docs/assets/images/screen_notifications.png" alt="OpsHome NOC Alerts" width="220">
+  <img src="/docs/assets/images/screen_me_web.png" alt="OpsHome NOC Account" width="220">
 </p>
 
 ---
@@ -154,7 +154,7 @@ The app is currently preparing for release.
 App 目前正在準備發布。
 
 <a href="APP_STORE_LINK_PLACEHOLDER">
-  <img src="/assets/images/app-store-badge.svg" alt="Download on the App Store" height="48">
+  <img src="/docs/assets/images/app-store-badge.svg" alt="Download on the App Store" height="48">
 </a>
 
 ```text
