@@ -175,6 +175,6 @@ For support or questions / 如需支援或有任何問題：
 
 <div align="center">
 
-© 2025 OpsHome NOC™. All rights reserved.
+© 2026 OpsHome NOC™. All rights reserved.
 
 </div>
