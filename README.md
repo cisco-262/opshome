@@ -204,8 +204,8 @@ OpsHome NOC is designed to collect only the data required to provide monitoring 
 
 For details:
 
-- [Privacy Policy](/docs/privacy.html)
-- [Terms of Service](/docs/terms.html)
+- [Privacy Policy](https://app.opshome.run/privacy.html)
+- [Terms of Service](https://app.opshome.run/terms.html)
 
 ## Contact / 聯絡方式 / 联系方式
 
