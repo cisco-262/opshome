@@ -2,7 +2,7 @@
 
 <img src="/docs/assets/images/brand-logo.png" alt="OpsHome NOC Logo" width="120">
 
-# OpsHome NOC
+# OpsHome NOC™
 
 **Home Network Monitor & Alerts**  
 **家庭網路監控與告警工具**  
