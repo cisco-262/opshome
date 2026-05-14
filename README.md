@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/images/brand-logo.png" alt="OpsHome NOC Logo" width="120">
+<img src="/docs/assets/images/brand-logo.png" alt="OpsHome NOC Logo" width="120">
 
 # OpsHome NOC
 
