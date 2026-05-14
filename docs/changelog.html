@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Updates - OpsHome NOC</title>
+<meta name="description" content="OpsHome NOC product updates, release notes, and new monitoring features.">
+<link rel="icon" href="assets/images/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+<style>
+  @font-face{font-family:"Space Mono Local";src:url("assets/fonts/SpaceMono-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+  @font-face{font-family:"Space Mono Local";src:url("assets/fonts/SpaceMono-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
+  @font-face{font-family:"Noto Sans SC Local";src:url("assets/fonts/NotoSansSC-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+  @font-face{font-family:"Noto Sans SC Local";src:url("assets/fonts/NotoSansSC-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
+  @font-face{font-family:"Noto Sans TC Local";src:url("assets/fonts/NotoSansTC-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+  @font-face{font-family:"Noto Sans TC Local";src:url("assets/fonts/NotoSansTC-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
+  :root{--bg:#061526;--surface:#101b2b;--surface2:#132a3f;--border:#244760;--accent:#38bdf8;--accent2:#14b8a6;--gold:#eab308;--text:#e8f0fe;--muted:#8eabc4;--soft:#cde4f6;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;--sans-hans:"Noto Sans SC Local","PingFang SC","Microsoft YaHei",sans-serif;--sans-hant:"Noto Sans TC Local","PingFang TC","Microsoft JhengHei",sans-serif;--mono:"Space Mono Local","SFMono-Regular","SF Mono",Consolas,"Liberation Mono",monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:var(--mono);line-height:1.7;letter-spacing:.01em}
+  body.lang-zh{font-family:var(--sans-hans)}
+  body.lang-hant{font-family:var(--sans-hant)}
+  body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 24% 10%,rgba(56,189,248,.18),transparent 30%),radial-gradient(circle at 78% 18%,rgba(20,184,166,.14),transparent 30%),linear-gradient(rgba(56,189,248,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(56,189,248,.035) 1px,transparent 1px);background-size:auto,auto,42px 42px,42px 42px;pointer-events:none}
+  a{color:inherit;text-decoration:none}
+  nav{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 56px;background:rgba(6,21,38,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+  .brand{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:14px;letter-spacing:.06em;color:var(--accent)}
+  .brand img{width:34px;height:34px;border-radius:9px}
+  sup.tm{font-size:.5em;line-height:0;vertical-align:super;margin-left:2px;letter-spacing:0}
+  .navlinks{display:flex;align-items:center;gap:24px;list-style:none;font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.08em}
+  .navlinks a:hover,.navlinks a.active{color:var(--accent)}
+  .lang{display:flex;gap:4px;padding:4px;border:1px solid var(--border);background:rgba(16,27,43,.75)}
+  .lang button{font-family:var(--mono);font-size:11px;color:var(--muted);background:transparent;border:0;padding:6px 9px;cursor:pointer}
+  .lang button.active{background:var(--accent);color:#061015}
+  .t-zh,.t-hant,.block-zh,.block-hant{display:none}
+  body.lang-zh .t-en,body.lang-zh .block-en,body.lang-hant .t-en,body.lang-hant .block-en{display:none}
+  body.lang-zh .t-zh{display:inline} body.lang-zh .block-zh{display:block}
+  body.lang-hant .t-hant{display:inline} body.lang-hant .block-hant{display:block}
+  main{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:88px 56px}
+  .label{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--accent2);margin-bottom:16px}
+  h1{font-family:var(--mono);font-size:clamp(42px,7vw,76px);line-height:1.02;margin-bottom:18px}
+  .lead{max-width:760px;color:var(--muted);font-family:var(--sans);font-size:20px;font-weight:300;margin-bottom:46px}
+  .timeline{position:relative;display:grid;gap:26px}
+  .timeline:before{content:"";position:absolute;left:20px;top:8px;bottom:8px;width:2px;background:linear-gradient(180deg,var(--accent),var(--accent2),rgba(56,189,248,.05));box-shadow:0 0 18px rgba(56,189,248,.45)}
+  .release{position:relative;margin-left:54px;border:1px solid rgba(56,189,248,.2);background:linear-gradient(145deg,rgba(16,27,43,.96),rgba(14,42,63,.86));padding:28px;box-shadow:0 24px 70px rgba(0,0,0,.28)}
+  .release:before{content:"";position:absolute;left:-43px;top:32px;width:16px;height:16px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 6px rgba(56,189,248,.12),0 0 24px rgba(56,189,248,.8)}
+  .release.current:before{background:var(--accent2);box-shadow:0 0 0 6px rgba(20,184,166,.12),0 0 24px rgba(20,184,166,.8)}
+  .meta{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:16px}
+  h2{font-family:var(--mono);font-size:30px;line-height:1}
+  .date{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.08em}
+  .summary{color:var(--soft);font-family:var(--sans);font-size:17px;margin-bottom:18px}
+  .tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+  .tag{font-family:var(--mono);font-size:10px;letter-spacing:.1em;border:1px solid rgba(56,189,248,.32);color:var(--accent);padding:4px 8px}
+  .tag.green{border-color:rgba(20,184,166,.4);color:var(--accent2)}
+  .tag.gold{border-color:rgba(234,179,8,.42);color:var(--gold)}
+  ul{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 22px;list-style:none}
+  li{position:relative;color:var(--muted);font-family:var(--sans);padding-left:20px}
+  li:before{content:"";position:absolute;left:0;top:.72em;width:7px;height:7px;border-radius:50%;background:var(--accent2);box-shadow:0 0 12px rgba(20,184,166,.5)}
+  .cta{margin-top:38px;border:1px solid rgba(20,184,166,.35);background:linear-gradient(135deg,rgba(20,184,166,.14),rgba(56,189,248,.12));padding:28px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .cta h2{font-size:28px;margin-bottom:8px}
+  .cta p{color:var(--muted);font-family:var(--sans)}
+  .btn{font-family:var(--mono);font-size:13px;letter-spacing:.08em;padding:14px 22px;border:1px solid var(--accent);background:var(--accent);color:#061015;white-space:nowrap}
+  footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:36px 56px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;color:var(--muted);font-family:var(--mono);font-size:12px}
+  footer ul{display:flex;gap:22px;list-style:none}
+  footer li{padding-left:0}
+  footer li:before{display:none}
+  footer a:hover{color:var(--accent)}
+  @media(max-width:900px){nav{padding:16px 22px}.navlinks{display:none}main{padding:64px 22px}.timeline:before{left:12px}.release{margin-left:36px;padding:22px}.release:before{left:-32px}ul{grid-template-columns:1fr}.cta{flex-direction:column;align-items:flex-start}}
+  @media(max-width:560px){h1{font-size:40px}.lead{font-size:18px}.release{margin-left:28px}.release:before{left:-28px}.timeline:before{left:8px}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="brand" href="index.html"><img src="assets/images/brand-logo.png" alt="OpsHome NOC logo"><span>OpsHome <strong>NOC</strong><sup class="tm">&trade;</sup></span></a>
+  <ul class="navlinks">
+    <li><a href="use-cases.html">USE CASES</a></li>
+    <li><a class="active" href="changelog.html">CHANGELOG</a></li>
+    <li><a href="index.html#pricing">PRICING</a></li>
+    <li><a href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">APP STORE</a></li>
+  </ul>
+  <div class="lang" aria-label="Language">
+    <button class="active" data-lang="en">EN</button>
+    <button data-lang="hant">繁</button>
+    <button data-lang="zh">简</button>
+  </div>
+</nav>
+
+<main>
+  <p class="label">// PRODUCT UPDATES</p>
+  <h1><span class="block-en">OpsHome NOC release history.</span><span class="block-zh">OpsHome NOC 产品更新日志。</span><span class="block-hant">OpsHome NOC 產品更新日誌。</span></h1>
+  <p class="lead"><span class="t-en">A simple public record of major product improvements and new user-facing capabilities.</span><span class="t-zh">公开记录主要产品改进和面向用户的新能力。</span><span class="t-hant">公開記錄主要產品改進和面向用戶的新能力。</span></p>
+
+  <div class="timeline">
+    <article class="release current">
+      <div class="meta"><h2>v1.2</h2><span class="date"><span class="t-en">May 2026</span><span class="t-zh">2026年5月</span><span class="t-hant">2026年5月</span></span></div>
+      <div class="tags"><span class="tag green">NEW</span><span class="tag gold">DOCKER PROBE</span><span class="tag">IMPROVED</span></div>
+      <p class="summary"><span class="t-en">A release focused on private service monitoring, clearer onboarding, and a more readable dashboard.</span><span class="t-zh">聚焦私有服务监控、清晰引导和更易读首页体验的版本。</span><span class="t-hant">聚焦私有服務監控、清晰引導和更易讀首頁體驗的版本。</span></p>
+      <ul>
+        <li><span class="t-en">Added Docker Probe for private Docker, NAS, and internal services.</span><span class="t-zh">新增 Docker Probe，支持私有 Docker、NAS 和内网服务监控。</span><span class="t-hant">新增 Docker Probe，支持私有 Docker、NAS 和內網服務監控。</span></li>
+        <li><span class="t-en">Made private monitor setup easier to understand and follow.</span><span class="t-zh">优化私有监控创建流程，让部署和添加监控更清楚。</span><span class="t-hant">優化私有監控創建流程，讓部署和添加監控更清楚。</span></li>
+        <li><span class="t-en">Added in-app guides for cloud monitoring and Docker Probe monitoring.</span><span class="t-zh">新增云端监控和 Docker Probe 监控的 App 内引导。</span><span class="t-hant">新增雲端監控和 Docker Probe 監控的 App 內引導。</span></li>
+        <li><span class="t-en">Added a scenario guide to help users choose the right monitor type.</span><span class="t-zh">新增场景指南，帮助用户选择合适的监控类型。</span><span class="t-hant">新增場景指南，幫助用戶選擇合適的監控類型。</span></li>
+        <li><span class="t-en">Improved dashboard analysis and recommendation readability.</span><span class="t-zh">优化首页分析和建议展示，可读性更好。</span><span class="t-hant">優化首頁分析和建議展示，可讀性更好。</span></li>
+        <li><span class="t-en">Improved overall stability for private monitoring workflows.</span><span class="t-zh">提升私有监控相关流程的整体稳定性。</span><span class="t-hant">提升私有監控相關流程的整體穩定性。</span></li>
+      </ul>
+    </article>
+
+    <article class="release">
+      <div class="meta"><h2>v1.1</h2><span class="date"><span class="t-en">May 2026</span><span class="t-zh">2026年5月</span><span class="t-hant">2026年5月</span></span></div>
+      <div class="tags"><span class="tag green">NEW</span><span class="tag">ANALYSIS</span><span class="tag gold">PRO</span></div>
+      <p class="summary"><span class="t-en">Expanded the monitor set and made the Pro value clearer inside the app.</span><span class="t-zh">扩展监控类型，并在 App 内更清楚展示 Pro 权益。</span><span class="t-hant">擴展監控類型，並在 App 內更清楚展示 Pro 權益。</span></p>
+      <ul>
+        <li><span class="t-en">Added Pro benefits comparison table.</span><span class="t-zh">新增 Pro 权益对比表。</span><span class="t-hant">新增 Pro 權益對比表。</span></li>
+        <li><span class="t-en">Improved monitor analysis reports.</span><span class="t-zh">增强监控点分析报告。</span><span class="t-hant">增強監控點分析報告。</span></li>
+        <li><span class="t-en">Added DNS, UDP, and domain-related capabilities.</span><span class="t-zh">新增 DNS、UDP、域名相关能力。</span><span class="t-hant">新增 DNS、UDP、域名相關能力。</span></li>
+        <li><span class="t-en">Improved multilingual interface support.</span><span class="t-zh">优化多语言界面支持。</span><span class="t-hant">優化多語言界面支持。</span></li>
+        <li><span class="t-en">Improved alert and recovery event presentation.</span><span class="t-zh">优化通知和恢复事件展示。</span><span class="t-hant">優化通知和恢復事件展示。</span></li>
+      </ul>
+    </article>
+
+    <article class="release">
+      <div class="meta"><h2>v1.0</h2><span class="date"><span class="t-en">April 2026</span><span class="t-zh">2026年4月</span><span class="t-hant">2026年4月</span></span></div>
+      <div class="tags"><span class="tag green">LAUNCH</span><span class="tag">CORE MONITORING</span></div>
+      <p class="summary"><span class="t-en">The first public version of OpsHome NOC for personal infrastructure monitoring from iPhone.</span><span class="t-zh">OpsHome NOC 首个公开版本，用 iPhone 管理个人基础设施监控。</span><span class="t-hant">OpsHome NOC 首個公開版本，用 iPhone 管理個人基礎設施監控。</span></p>
+      <ul>
+        <li><span class="t-en">HTTP, HTTPS, TCP, and SSL monitor types.</span><span class="t-zh">支持 HTTP、HTTPS、TCP、SSL 基础监控。</span><span class="t-hant">支持 HTTP、HTTPS、TCP、SSL 基礎監控。</span></li>
+        <li><span class="t-en">Dashboard and monitor list.</span><span class="t-zh">首页总览与监控点列表。</span><span class="t-hant">首頁總覽與監控點列表。</span></li>
+        <li><span class="t-en">Push alerts and recovery notifications.</span><span class="t-zh">推送告警与恢复通知。</span><span class="t-hant">推送告警與恢復通知。</span></li>
+        <li><span class="t-en">Sign in with Apple.</span><span class="t-zh">Apple 登录。</span><span class="t-hant">Apple 登入。</span></li>
+        <li><span class="t-en">Free and Pro plan foundation.</span><span class="t-zh">Free / Pro 基础套餐框架。</span><span class="t-hant">Free / Pro 基礎套餐框架。</span></li>
+        <li><span class="t-en">English, Simplified Chinese, and Traditional Chinese UI.</span><span class="t-zh">英文、简体中文、繁体中文界面。</span><span class="t-hant">英文、簡體中文、繁體中文界面。</span></li>
+      </ul>
+    </article>
+  </div>
+
+  <div class="cta">
+    <div>
+      <h2><span class="block-en">Get the latest OpsHome NOC.</span><span class="block-zh">获取最新版本 OpsHome NOC。</span><span class="block-hant">獲取最新版本 OpsHome NOC。</span></h2>
+      <p><span class="t-en">Updates are delivered through the App Store.</span><span class="t-zh">更新通过 App Store 发布。</span><span class="t-hant">更新透過 App Store 發布。</span></p>
+    </div>
+    <a class="btn" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener"><span class="t-en">Open App Store</span><span class="t-zh">打开 App Store</span><span class="t-hant">開啟 App Store</span></a>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2026 OpsHome NOC&trade;. All rights reserved.</p>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="use-cases.html">Use Cases</a></li>
+    <li><a href="privacy.html">Privacy</a></li>
+    <li><a href="terms.html">Terms</a></li>
+  </ul>
+</footer>
+
+<script>
+function setLanguage(lang){document.body.classList.toggle('lang-zh',lang==='zh');document.body.classList.toggle('lang-hant',lang==='hant');document.documentElement.lang=lang==='zh'?'zh-Hans':(lang==='hant'?'zh-Hant':'en');document.querySelectorAll('.lang button').forEach(function(btn){btn.classList.toggle('active',btn.dataset.lang===lang)});try{localStorage.setItem('opshome_site_lang',lang)}catch(e){}}
+document.querySelectorAll('.lang button').forEach(function(btn){btn.addEventListener('click',function(){setLanguage(btn.dataset.lang)})});
+(function(){var saved='en';try{saved=localStorage.getItem('opshome_site_lang')||'en'}catch(e){}setLanguage(saved)})();
+</script>
+</body>
+</html>
