@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="/docs/assets/images/brand-logo.png" alt="OpsHome NOC Logo" width="120">
+<img src="assets/images/brand-logo.png" alt="OpsHome NOC Logo" width="120">
 
-# OpsHome NOC™
+# OpsHome NOC
 
 **Home Network Monitor & Alerts**  
 **家庭網路監控與告警工具**  
@@ -13,7 +13,7 @@ For homelab, home servers, personal sites, and always-on services.
 适合 Homelab、家庭服务器、个人网站与自架服务。
 
 <a href="https://apps.apple.com/us/app/opshome-noc/id6763890679">
-  <img src="/docs/assets/images/app-store-badge.svg" alt="Download on the App Store" height="56">
+  <img src="assets/images/app-store-badge.svg" alt="Download on the App Store" height="56">
 </a>
 
 <br>
@@ -34,10 +34,13 @@ It is designed for users who run homelabs, NAS devices, reverse proxies, home se
 
 OpsHome NOC performs active cloud-based checks and sends push alerts to your iPhone when a service goes down or recovers.
 
+For private environments, Pro users can deploy Docker Probe to monitor internal Docker services, NAS panels, and private HTTP/HTTPS/TCP targets without exposing them to the public internet.
+
 ### Key Features
 
 - Instant push alerts when a monitored service goes down or recovers
 - Multiple monitor types for common homelab and website scenarios
+- Docker Probe for private Docker, NAS, and internal service monitoring
 - Health dashboard with uptime status and recent activity
 - SSL certificate monitoring for expiry visibility
 - Event history for reviewing past incidents
@@ -63,6 +66,8 @@ OpsHome NOC performs active cloud-based checks and sends push alerts to your iPh
 | Feature | Free | Pro |
 | --- | --- | --- |
 | Monitor targets | 15 | 80 |
+| Docker Probe devices | Not included | 2 |
+| Private/internal monitors | Not included | 50 |
 | Supported protocols | HTTP, HTTPS, TCP, SSL, ICMP | All monitor types |
 | Check interval | 10 min - 1 hr | 5 min - 1 hr |
 | Event history | 14 days | 90 days |
@@ -84,10 +89,13 @@ Subscriptions are billed through Apple In-App Purchase. Final prices and local c
 
 OpsHome NOC 透過雲端主動檢測目標服務，並將推播告警送達你的 iPhone。
 
+針對私有環境，Pro 使用者可以部署 Docker 探針，監控內部 Docker 服務、NAS 面板，以及不想暴露到公網的 HTTP/HTTPS/TCP 目標。
+
 ### 核心功能
 
 - 服務離線或恢復時即時推播告警
 - 支援多種 Homelab 與網站監控類型
+- Docker 探針支援私有 Docker、NAS 與內部服務監控
 - 首頁儀表板展示可用狀態與近期活動
 - SSL 憑證到期監控
 - 事件歷史，便於回顧過往異常
@@ -113,6 +121,8 @@ OpsHome NOC 透過雲端主動檢測目標服務，並將推播告警送達你�
 | 功能 | Free | Pro |
 | --- | --- | --- |
 | 監控目標數量 | 15 | 80 |
+| Docker 探針 | 不支援 | 2 |
+| 內部監控點 | 不支援 | 50 |
 | 支援協議 | HTTP、HTTPS、TCP、SSL、ICMP | 全部監控類型 |
 | 檢測間隔 | 10 分鐘 - 1 小時 | 5 分鐘 - 1 小時 |
 | 事件歷史 | 14 天 | 90 天 |
@@ -134,10 +144,13 @@ OpsHome NOC 透過雲端主動檢測目標服務，並將推播告警送達你�
 
 OpsHome NOC 通过云端主动检测目标服务，并将推送告警送达你的 iPhone。
 
+针对私有环境，Pro 用户可以部署 Docker 探针，监控内部 Docker 服务、NAS 面板，以及不想暴露到公网的 HTTP/HTTPS/TCP 目标。
+
 ### 核心功能
 
 - 服务离线或恢复时即时推送告警
 - 支持多种 Homelab 与网站监控类型
+- Docker 探针支持私有 Docker、NAS 与内部服务监控
 - 首页仪表盘展示可用状态与近期活动
 - SSL 证书到期监控
 - 事件历史，便于回顾过往异常
@@ -163,6 +176,8 @@ OpsHome NOC 通过云端主动检测目标服务，并将推送告警送达你�
 | 功能 | Free | Pro |
 | --- | --- | --- |
 | 监控目标数量 | 15 | 80 |
+| Docker 探针 | 不支持 | 2 |
+| 内部监控点 | 不支持 | 50 |
 | 支持协议 | HTTP、HTTPS、TCP、SSL、ICMP | 全部监控类型 |
 | 检测间隔 | 10 分钟 - 1 小时 | 5 分钟 - 1 小时 |
 | 事件历史 | 14 天 | 90 天 |
@@ -177,10 +192,10 @@ OpsHome NOC 通过云端主动检测目标服务，并将推送告警送达你�
 ## Screenshots / App 畫面 / App 截图
 
 <p align="center">
-  <img src="/docs/assets/images/screen_home.png" alt="OpsHome NOC Home Dashboard" width="220">
-  <img src="/docs/assets/images/screen_monitors.png" alt="OpsHome NOC Monitor List" width="220">
-  <img src="/docs/assets/images/screen_notifications.png" alt="OpsHome NOC Alerts" width="220">
-  <img src="/docs/assets/images/screen_me_web.png" alt="OpsHome NOC Account" width="220">
+  <img src="assets/images/screen_home.png" alt="OpsHome NOC Home Dashboard" width="220">
+  <img src="assets/images/screen_monitors.png" alt="OpsHome NOC Monitor List" width="220">
+  <img src="assets/images/screen_notifications.png" alt="OpsHome NOC Alerts" width="220">
+  <img src="assets/images/screen_me_web.png" alt="OpsHome NOC Account" width="220">
 </p>
 
 ## App Store
@@ -190,7 +205,7 @@ OpsHome NOC is available on the App Store:
 https://apps.apple.com/us/app/opshome-noc/id6763890679
 
 <a href="https://apps.apple.com/us/app/opshome-noc/id6763890679">
-  <img src="/docs/assets/images/app-store-badge.svg" alt="Download on the App Store" height="48">
+  <img src="assets/images/app-store-badge.svg" alt="Download on the App Store" height="48">
 </a>
 
 ## Privacy / 隱私 / 隐私
@@ -204,8 +219,8 @@ OpsHome NOC is designed to collect only the data required to provide monitoring 
 
 For details:
 
-- [Privacy Policy](https://app.opshome.run/privacy.html)
-- [Terms of Service](https://app.opshome.run/terms.html)
+- [Privacy Policy](docs/privacy.html)
+- [Terms of Service](docs/terms.html)
 
 ## Contact / 聯絡方式 / 联系方式
 
