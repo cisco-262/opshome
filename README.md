@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="/docs/assets/images/brand-logo.png" alt="OpsHome NOC Logo" width="120">
+<img src="assets/images/brand-logo.png" alt="OpsHome NOC Logo" width="120">
 
 # OpsHome NOC
 
@@ -65,9 +65,9 @@ For private environments, Pro users can deploy Docker Probe to monitor internal 
 
 | Feature | Free | Pro |
 | --- | --- | --- |
-| Monitor targets | 15 | 80 |
+| Cloud monitor targets | 15 | 80 |
 | Docker Probe devices | Not included | 2 |
-| Private/internal monitors | Not included | 50 |
+| Docker Probe internal monitor targets | Not included | 50 |
 | Supported protocols | HTTP, HTTPS, TCP, SSL, ICMP | All monitor types |
 | Check interval | 10 min - 1 hr | 5 min - 1 hr |
 | Event history | 14 days | 90 days |
@@ -120,9 +120,9 @@ OpsHome NOC 透過雲端主動檢測目標服務，並將推播告警送達你�
 
 | 功能 | Free | Pro |
 | --- | --- | --- |
-| 監控目標數量 | 15 | 80 |
+| 雲端監控點數量 | 15 | 80 |
 | Docker 探針 | 不支援 | 2 |
-| 內部監控點 | 不支援 | 50 |
+| Docker 探針內部監控點 | 不支援 | 50 |
 | 支援協議 | HTTP、HTTPS、TCP、SSL、ICMP | 全部監控類型 |
 | 檢測間隔 | 10 分鐘 - 1 小時 | 5 分鐘 - 1 小時 |
 | 事件歷史 | 14 天 | 90 天 |
@@ -175,9 +175,9 @@ OpsHome NOC 通过云端主动检测目标服务，并将推送告警送达你�
 
 | 功能 | Free | Pro |
 | --- | --- | --- |
-| 监控目标数量 | 15 | 80 |
+| 云端监控点数量 | 15 | 80 |
 | Docker 探针 | 不支持 | 2 |
-| 内部监控点 | 不支持 | 50 |
+| Docker 探针内部监控点 | 不支持 | 50 |
 | 支持协议 | HTTP、HTTPS、TCP、SSL、ICMP | 全部监控类型 |
 | 检测间隔 | 10 分钟 - 1 小时 | 5 分钟 - 1 小时 |
 | 事件历史 | 14 天 | 90 天 |
