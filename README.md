@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/images/brand-logo.png" alt="OpsHome NOC Logo" width="120">
+<img src="/docs/assets/images/brand-logo.png" alt="OpsHome NOC Logo" width="120">
 
 # OpsHome NOC
 
@@ -13,7 +13,7 @@ For homelab, home servers, personal sites, and always-on services.
 适合 Homelab、家庭服务器、个人网站与自架服务。
 
 <a href="https://apps.apple.com/us/app/opshome-noc/id6763890679">
-  <img src="assets/images/app-store-badge.svg" alt="Download on the App Store" height="56">
+  <img src="/docs/assets/images/app-store-badge.svg" alt="Download on the App Store" height="56">
 </a>
 
 <br>
@@ -192,10 +192,10 @@ OpsHome NOC 通过云端主动检测目标服务，并将推送告警送达你�
 ## Screenshots / App 畫面 / App 截图
 
 <p align="center">
-  <img src="assets/images/screen_home.png" alt="OpsHome NOC Home Dashboard" width="220">
-  <img src="assets/images/screen_monitors.png" alt="OpsHome NOC Monitor List" width="220">
-  <img src="assets/images/screen_notifications.png" alt="OpsHome NOC Alerts" width="220">
-  <img src="assets/images/screen_me_web.png" alt="OpsHome NOC Account" width="220">
+  <img src="/docs/assets/images/screen_home.png" alt="OpsHome NOC Home Dashboard" width="220">
+  <img src="/docs/assets/images/screen_monitors.png" alt="OpsHome NOC Monitor List" width="220">
+  <img src="/docs/assets/images/screen_notifications.png" alt="OpsHome NOC Alerts" width="220">
+  <img src="/docs/assets/images/screen_me_web.png" alt="OpsHome NOC Account" width="220">
 </p>
 
 ## App Store
@@ -205,7 +205,7 @@ OpsHome NOC is available on the App Store:
 https://apps.apple.com/us/app/opshome-noc/id6763890679
 
 <a href="https://apps.apple.com/us/app/opshome-noc/id6763890679">
-  <img src="assets/images/app-store-badge.svg" alt="Download on the App Store" height="48">
+  <img src="/docs/assets/images/app-store-badge.svg" alt="Download on the App Store" height="48">
 </a>
 
 ## Privacy / 隱私 / 隐私
