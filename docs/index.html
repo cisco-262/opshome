@@ -70,6 +70,23 @@
   .badge{display:inline-block;font-family:var(--mono);font-size:10px;padding:3px 8px;border:1px solid rgba(20,121,255,.26);color:var(--accent);margin-right:6px;white-space:nowrap;border-radius:999px;background:#fff}
   .badge.pro{border-color:rgba(56,189,248,.28);color:#0f8ec7}
   .badge.only{background:rgba(20,121,255,.08);border-color:rgba(20,121,255,.28);color:var(--accent)}
+  .monitor-matrix{padding-top:104px;padding-bottom:104px}
+  .monitor-matrix .label{display:inline-flex;align-items:center;padding:7px 12px;border:1px solid rgba(20,121,255,.32);background:#eaf4ff;border-radius:999px}
+  .monitor-matrix h2{max-width:820px}
+  .monitor-table{
+    overflow:hidden;
+    border:2px solid rgba(20,121,255,.45);
+    border-radius:22px;
+    background:#fff;
+    box-shadow:0 26px 60px rgba(20,121,255,.13);
+  }
+  .monitor-table table{border:0}
+  .monitor-table th,.monitor-table td{border-bottom:1px solid #b9d6f1}
+  .monitor-table th{background:linear-gradient(180deg,#1479ff,#0b63dd);color:#fff}
+  .monitor-table tbody tr:nth-child(even){background:#f4f9ff}
+  .monitor-table tbody tr:hover{background:#eaf4ff}
+  .monitor-table tbody tr:last-child td{border-bottom:0}
+  .monitor-table td:first-child{font-weight:800;color:#0b1b2e}
   .screens{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
   .shot{background:#fff;border:1px solid var(--border);border-radius:28px;overflow:hidden;box-shadow:0 24px 54px rgba(31,91,150,.14)}
   .shot img{display:block;width:100%;height:auto}
@@ -97,9 +114,10 @@
     <li><a href="#features">FEATURES</a></li>
     <li><a href="use-cases.html">USE CASES</a></li>
     <li><a href="#protocols">MONITORS</a></li>
-    <li><a href="changelog.html">CHANGELOG</a></li>
+    <li><a href="https://docs.opshome.run" target="_blank" rel="noopener">DOCS</a></li>
     <li><a href="#pricing">PRICING</a></li>
     <li><a href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">APP STORE</a></li>
+    <li><a href="https://docs.opshome.run/release-notes.html" target="_blank" rel="noopener">CHANGELOG</a></li>
   </ul>
   <div class="lang" aria-label="Language">
     <button class="active" data-lang="en">EN</button>
@@ -138,23 +156,25 @@
     </div>
   </section>
 
-  <section class="section" id="protocols">
+  <section class="section monitor-matrix" id="protocols">
     <p class="label">// MONITOR TYPES</p>
     <h2><span class="block-en">Monitor types and plan access.</span><span class="block-zh">监控类型和方案权限。</span><span class="block-hant">監控類型和方案權限。</span></h2>
-    <table>
-      <thead><tr><th>Type</th><th>Description</th><th>Plan</th></tr></thead>
-      <tbody>
-        <tr><td>HTTP</td><td>HTTP status-code detection and analysis hints.</td><td><span class="badge">FREE</span><span class="badge pro">PRO</span></td></tr>
-        <tr><td>HTTPS</td><td>HTTPS reachability and status-code detection.</td><td><span class="badge">FREE</span><span class="badge pro">PRO</span></td></tr>
-        <tr><td>TCP</td><td>Custom port connectivity without fixed port restrictions.</td><td><span class="badge">FREE</span><span class="badge pro">PRO</span></td></tr>
-        <tr><td>SSL</td><td>Certificate validity, CN, issuer, and hostname match checks.</td><td><span class="badge">FREE</span><span class="badge pro">PRO</span></td></tr>
-        <tr><td>ICMP</td><td>Ping-style host reachability.</td><td><span class="badge">FREE</span><span class="badge pro">PRO</span></td></tr>
-        <tr><td>UDP</td><td>UDP response checks for supported payloads.</td><td><span class="badge only">PRO ONLY</span></td></tr>
-        <tr><td>DNS</td><td>DNS response checks and A/MX record validation.</td><td><span class="badge only">PRO ONLY</span></td></tr>
-        <tr><td>Domain</td><td>Domain registration expiry monitoring.</td><td><span class="badge only">PRO ONLY</span></td></tr>
-        <tr><td>Docker Probe</td><td>Private Docker, NAS, and internal HTTP/HTTPS/TCP checks through a user-deployed probe.</td><td><span class="badge only">PRO ONLY</span></td></tr>
-      </tbody>
-    </table>
+    <div class="monitor-table">
+      <table>
+        <thead><tr><th>Type</th><th>Description</th><th>Plan</th></tr></thead>
+        <tbody>
+          <tr><td>HTTP</td><td>HTTP status-code detection and analysis hints.</td><td><span class="badge">FREE</span><span class="badge pro">PRO</span></td></tr>
+          <tr><td>HTTPS</td><td>HTTPS reachability and status-code detection.</td><td><span class="badge">FREE</span><span class="badge pro">PRO</span></td></tr>
+          <tr><td>TCP</td><td>Custom port connectivity without fixed port restrictions.</td><td><span class="badge">FREE</span><span class="badge pro">PRO</span></td></tr>
+          <tr><td>SSL</td><td>Certificate validity, CN, issuer, and hostname match checks.</td><td><span class="badge">FREE</span><span class="badge pro">PRO</span></td></tr>
+          <tr><td>ICMP</td><td>Ping-style host reachability.</td><td><span class="badge">FREE</span><span class="badge pro">PRO</span></td></tr>
+          <tr><td>UDP</td><td>UDP response checks for supported payloads.</td><td><span class="badge only">PRO ONLY</span></td></tr>
+          <tr><td>DNS</td><td>DNS response checks and A/MX record validation.</td><td><span class="badge only">PRO ONLY</span></td></tr>
+          <tr><td>Domain</td><td>Domain registration expiry monitoring.</td><td><span class="badge only">PRO ONLY</span></td></tr>
+          <tr><td>Docker Probe</td><td>Private Docker, NAS, and internal HTTP/HTTPS/TCP checks through a user-deployed probe.</td><td><span class="badge only">PRO ONLY</span></td></tr>
+        </tbody>
+      </table>
+    </div>
   </section>
 
   <section class="section" id="screenshots">
@@ -215,7 +235,8 @@
   <p>&copy; 2026 OpsHome NOC&trade;. All rights reserved. OpsHome NOC&trade; is a trademark of its owner.</p>
   <ul>
     <li><a href="use-cases.html">Use Cases</a></li>
-    <li><a href="changelog.html">Changelog</a></li>
+    <li><a href="https://docs.opshome.run/release-notes.html" target="_blank" rel="noopener">Release Notes</a></li>
+    <li><a href="https://docs.opshome.run" target="_blank" rel="noopener">Docs</a></li>
     <li><a href="privacy.html">Privacy Policy</a></li>
     <li><a href="terms.html">Terms of Service</a></li>
     <li><a href="mailto:opshome@outlook.com">Support</a></li>
