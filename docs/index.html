@@ -58,11 +58,27 @@
   .label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--accent);margin-bottom:14px}
   h2{font-family:var(--mono);font-size:clamp(30px,4vw,48px);line-height:1.18;margin-bottom:16px}
   .desc{max-width:760px;color:var(--muted);font-size:19px;font-weight:400;margin-bottom:42px}
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;background:transparent;border:0}
-  .card{background:var(--surface);padding:30px;min-height:210px;border:1px solid var(--border);border-radius:20px;box-shadow:0 16px 36px rgba(31,91,150,.08)}
-  .card h3{font-family:var(--mono);font-size:15px;letter-spacing:.06em;margin:12px 0;color:var(--text)}
-  .card p{color:var(--muted);font-weight:400}
-  .icon{font-size:25px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;background:transparent;border:0}
+  .card{
+    position:relative;
+    background:var(--surface);
+    padding:32px;
+    min-height:232px;
+    border:2px solid var(--border);
+    border-radius:20px;
+    box-shadow:0 18px 42px rgba(31,91,150,.10);
+    overflow:hidden;
+  }
+  .card:before{content:"";position:absolute;inset:0 0 auto;height:6px;background:var(--card-accent,#1479ff)}
+  .card:nth-child(1){--card-accent:#1479ff;background:linear-gradient(180deg,#ffffff 0,#eef6ff 100%);border-color:#8fc3ff}
+  .card:nth-child(2){--card-accent:#16a34a;background:linear-gradient(180deg,#ffffff 0,#f0fbf4 100%);border-color:#8fd6aa}
+  .card:nth-child(3){--card-accent:#d4af37;background:linear-gradient(180deg,#ffffff 0,#fff8df 100%);border-color:#d4af37}
+  .card:nth-child(4){--card-accent:#0ea5e9;background:linear-gradient(180deg,#ffffff 0,#eefaff 100%);border-color:#7dd3fc}
+  .card:nth-child(5){--card-accent:#7c3aed;background:linear-gradient(180deg,#ffffff 0,#f5f0ff 100%);border-color:#b79cff}
+  .card:nth-child(6){--card-accent:#0f766e;background:linear-gradient(180deg,#ffffff 0,#ecfdf8 100%);border-color:#6ee7d8}
+  .card h3{font-family:var(--mono);font-size:17px;letter-spacing:.04em;margin:16px 0 10px;color:#0b1b2e}
+  .card p{color:#102033;font-weight:500}
+  .icon{font-size:42px;line-height:1}
   table{width:100%;border-collapse:collapse;border:1px solid var(--border);font-size:15px}
   th,td{padding:16px 18px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
   th{font-family:var(--mono);font-size:12px;color:var(--muted);background:var(--bg2);letter-spacing:.08em}
