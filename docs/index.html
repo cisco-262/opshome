@@ -83,21 +83,41 @@
   th,td{padding:16px 18px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
   th{font-family:var(--mono);font-size:12px;color:var(--muted);background:var(--bg2);letter-spacing:.08em}
   td:first-child{font-family:var(--mono);color:var(--soft)}
-  .badge{display:inline-block;font-family:var(--mono);font-size:10px;padding:3px 8px;border:1px solid rgba(20,121,255,.26);color:var(--accent);margin-right:6px;white-space:nowrap;border-radius:999px;background:#fff}
-  .badge.pro{border-color:rgba(56,189,248,.28);color:#0f8ec7}
-  .badge.only{background:rgba(20,121,255,.08);border-color:rgba(20,121,255,.28);color:var(--accent)}
+  .badge{
+    display:inline-block;
+    font-family:var(--mono);
+    font-size:10px;
+    font-weight:800;
+    padding:4px 9px;
+    border:1px solid #16a34a;
+    color:#15803d;
+    margin-right:6px;
+    white-space:nowrap;
+    border-radius:999px;
+    background:#dcfce7;
+  }
+  .badge.pro{
+    border-color:#d4af37;
+    color:#8a6400;
+    background:#fff3bf;
+  }
+  .badge.only{
+    border-color:#d4af37;
+    color:#8a6400;
+    background:#fff3bf;
+  }
   .monitor-matrix{padding-top:104px;padding-bottom:104px}
   .monitor-matrix .label{display:inline-flex;align-items:center;padding:7px 12px;border:1px solid rgba(20,121,255,.32);background:#eaf4ff;border-radius:999px}
   .monitor-matrix h2{max-width:820px}
   .monitor-table{
     overflow:hidden;
-    border:2px solid rgba(20,121,255,.45);
+    border:2px solid #7fb7ef;
     border-radius:22px;
     background:#fff;
     box-shadow:0 26px 60px rgba(20,121,255,.13);
   }
   .monitor-table table{border:0}
-  .monitor-table th,.monitor-table td{border-bottom:1px solid #b9d6f1}
+  .monitor-table th,.monitor-table td{border-bottom:1px solid #8fbce8}
   .monitor-table th{background:linear-gradient(180deg,#1479ff,#0b63dd);color:#fff}
   .monitor-table tbody tr:nth-child(even){background:#f4f9ff}
   .monitor-table tbody tr:hover{background:#eaf4ff}
