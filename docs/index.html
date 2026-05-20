@@ -204,7 +204,12 @@
     <div style="position:relative;max-width:860px;margin:0 auto;border-radius:12px;overflow:hidden;border:1px solid var(--border);box-shadow:0 4px 24px rgba(20,121,255,.12)">
       <div style="position:relative;padding-bottom:56.25%;height:0">
         <iframe
-          src="https://www.youtube.com/embed/TlYqvQlFEjo"
+          id="product-video"
+          src="about:blank"
+          data-youtube-src="https://www.youtube.com/embed/TlYqvQlFEjo"
+          data-bilibili-src="https://player.bilibili.com/player.html?bvid=BV1v8L26AEZE&page=1&autoplay=0"
+          data-youtube-title="OpsHome NOC v1.3 Preview"
+          data-bilibili-title="OpsHome NOC v1.3 Product Video"
           title="OpsHome NOC v1.3 Preview"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -334,6 +339,28 @@ document.querySelectorAll('.lang button').forEach(function(btn) {
   var saved = 'en';
   try { saved = localStorage.getItem('opshome_site_lang') || 'en'; } catch (e) {}
   setLanguage(saved);
+})();
+(function() {
+  var iframe = document.getElementById('product-video');
+  if (!iframe) return;
+
+  function setVideoSource(source) {
+    var useBilibili = source === 'bilibili';
+    var nextSrc = useBilibili ? iframe.dataset.bilibiliSrc : iframe.dataset.youtubeSrc;
+    var nextTitle = useBilibili ? iframe.dataset.bilibiliTitle : iframe.dataset.youtubeTitle;
+    if (nextSrc && iframe.src !== nextSrc) iframe.src = nextSrc;
+    if (nextTitle) iframe.title = nextTitle;
+  }
+
+  fetch('/cdn-cgi/trace', { cache: 'no-store' })
+    .then(function(resp) { return resp.ok ? resp.text() : ''; })
+    .then(function(text) {
+      var match = text.match(/^loc=([A-Z]{2})$/m);
+      setVideoSource(match && match[1] === 'CN' ? 'bilibili' : 'youtube');
+    })
+    .catch(function() {
+      setVideoSource('youtube');
+    });
 })();
 </script>
 </body>
