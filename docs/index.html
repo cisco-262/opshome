@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OpsHome NOC - Home Network Monitor</title>
-<meta name="description" content="OpsHome NOC monitors websites, ports, SSL certificates, DNS records, and domain expiry with iPhone push alerts.">
+<title>OpsHome NOC - iPhone Monitoring for Homelab, NAS, Docker</title>
+<meta name="description" content="OpsHome NOC monitors NAS, Docker, homelab, websites, private services, SSL, DNS, and domain expiry from your iPhone.">
 <link rel="icon" type="image/png" href="assets/images/favicon-256.png" sizes="256x256">
 <link rel="icon" href="assets/images/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
@@ -111,7 +111,8 @@
   .monitor-table tbody tr:hover{background:#eaf4ff}
   .monitor-table tbody tr:last-child td{border-bottom:0}
   .monitor-table td:first-child{font-weight:800;color:var(--text);font-size:17px}
-  .screens{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .section.wide{max-width:1440px}
+  .screens{display:grid;grid-template-columns:repeat(5,1fr);gap:24px}
   .shot{background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.07)}
   .shot img{display:block;width:100%;height:auto}
   .shot-label{text-align:center;color:var(--muted);font-size:14px;font-weight:500;margin-top:12px}
@@ -170,7 +171,7 @@
 <nav>
   <a class="brand" href="index.html"><img src="assets/images/brand-logo.png" alt="OpsHome NOC logo"><span>OpsHome <strong>NOC</strong><sup class="tm">&trade;</sup></span></a>
   <ul class="navlinks">
-    <li><a href="#features"><span class="t-en">FEATURES</span><span class="t-zh">功能</span><span class="t-hant">功能</span></a></li>
+    <li><a href="#features"><span class="t-en">V1.4</span><span class="t-zh">V1.4</span><span class="t-hant">V1.4</span></a></li>
     <li><a href="use-cases.html"><span class="t-en">USE CASES</span><span class="t-zh">使用场景</span><span class="t-hant">使用場景</span></a></li>
     <li><a href="#protocols"><span class="t-en">MONITORS</span><span class="t-zh">监控类型</span><span class="t-hant">監控類型</span></a></li>
     <li><a href="#pricing"><span class="t-en">PRICING</span><span class="t-zh">方案</span><span class="t-hant">方案</span></a></li>
@@ -187,12 +188,12 @@
 <main>
   <section class="hero">
     <img src="assets/images/brand-logo.png" alt="OpsHome NOC app logo" class="hero-logo">
-    <div class="eyebrow"><span class="t-en">HOMELAB · HOME SERVER · PERSONAL SITES</span><span class="t-zh">家庭实验室 · 家庭服务器 · 个人网站</span><span class="t-hant">家庭實驗室 · 家庭伺服器 · 個人網站</span></div>
+    <div class="eyebrow"><span class="t-en">HOMELAB · NAS · DOCKER · PRIVATE SERVICES</span><span class="t-zh">家庭实验室 · NAS · Docker · 私有服务</span><span class="t-hant">家庭實驗室 · NAS · Docker · 私有服務</span></div>
     <h1>OpsHome <span>NOC<sup class="tm">&trade;</sup></span></h1>
     <p>
-      <span class="block-en">Monitor your websites, home servers, ports, SSL certificates, DNS records, and domain expiry from your iPhone.</span>
-      <span class="block-zh">用 iPhone 集中监控网站、家庭服务器、端口、SSL 证书、DNS 记录和域名到期。</span>
-      <span class="block-hant">用 iPhone 集中監控網站、家庭伺服器、連接埠、SSL 證書、DNS 記錄和域名到期。</span>
+      <span class="block-en">A high-tech homelab monitoring command center for your iPhone: cloud checks, Docker Probe private monitoring, topology maps, widgets, and status pages.</span>
+      <span class="block-zh">专为 Homelab 打造的 iPhone 监控中枢：云端检测、Docker Probe 私有监控、拓扑图、桌面组件和状态页。</span>
+      <span class="block-hant">專為 Homelab 打造的 iPhone 監控中樞：雲端檢測、Docker Probe 私有監控、拓撲圖、桌面組件和狀態頁。</span>
     </p>
     <div class="actions">
       <a class="btn primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener"><span class="t-en">Download on App Store</span><span class="t-zh">前往 App Store 下载</span><span class="t-hant">前往 App Store 下載</span></a>
@@ -209,9 +210,9 @@
           src="about:blank"
           data-youtube-src="https://www.youtube.com/embed/TlYqvQlFEjo"
           data-bilibili-src="https://player.bilibili.com/player.html?bvid=BV1v8L26AEZE&page=1&autoplay=0"
-          data-youtube-title="OpsHome NOC v1.3 Preview"
-          data-bilibili-title="OpsHome NOC v1.3 Product Video"
-          title="OpsHome NOC v1.3 Preview"
+          data-youtube-title="OpsHome NOC Product Preview"
+          data-bilibili-title="OpsHome NOC Product Preview"
+          title="OpsHome NOC Product Preview"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
@@ -224,15 +225,15 @@
 
   <section class="section" id="features">
     <p class="label">// FEATURES</p>
-    <h2><span class="block-en">Designed for small but important services.</span><span class="block-zh">为小型但关键的服务而设计。</span><span class="block-hant">為小型但關鍵的服務而設計。</span></h2>
-    <p class="desc"><span class="t-en">OpsHome NOC focuses on practical external monitoring, push alerts, and readable analysis for personal infrastructure.</span><span class="t-zh">OpsHome NOC 专注于个人基础设施的外部监测、推送告警和易读分析。</span><span class="t-hant">OpsHome NOC 專注於個人基礎設施的外部監測、推送告警和易讀分析。</span></p>
+    <h2><span class="block-en">The iPhone-first control room for your homelab.</span><span class="block-zh">属于 Homelab 的 iPhone 优先控制室。</span><span class="block-hant">屬於 Homelab 的 iPhone 優先控制室。</span></h2>
+    <p class="desc"><span class="t-en">V1.4 turns OpsHome NOC into a focused monitoring workspace for NAS, Docker, private services, personal websites, and small production endpoints.</span><span class="t-zh">V1.4 将 OpsHome NOC 打造成面向 NAS、Docker、私有服务、个人网站和小型生产端点的专属监控工作区。</span><span class="t-hant">V1.4 將 OpsHome NOC 打造成面向 NAS、Docker、私有服務、個人網站和小型生產端點的專屬監控工作區。</span></p>
     <div class="grid">
-      <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div><h3><span class="t-en">APNs Alerts</span><span class="t-zh">APNs 告警</span><span class="t-hant">APNs 告警</span></h3><p><span class="t-en">Free includes service alert push notifications. Pro adds expiry reminders for SSL certificates and domains.</span><span class="t-zh">Free 包含服务告警推送。PRO 额外包含 SSL 证书和域名到期提醒。</span><span class="t-hant">Free 包含服務告警推送。PRO 額外包含 SSL 證書和域名到期提醒。</span></p></div>
-      <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div><h3><span class="t-en">Analysis Reports</span><span class="t-zh">分析报告</span><span class="t-hant">分析報告</span></h3><p><span class="t-en">Free shows compact monitor analysis. Pro unlocks the full dashboard and detailed analysis report.</span><span class="t-zh">Free 显示精简监测分析。PRO 解锁首页报告和完整详情分析。</span><span class="t-hant">Free 顯示精簡監測分析。PRO 解鎖首頁報告和完整詳情分析。</span></p></div>
-      <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3><span class="t-en">SSL Checks</span><span class="t-zh">SSL 检测</span><span class="t-hant">SSL 檢測</span></h3><p><span class="t-en">Read certificate validity, CN, issuer, and hostname coverage. SSL capability is not split internally by plan.</span><span class="t-zh">读取证书有效期、CN、颁发者和名称一致性。SSL 能力本身不做内部分级。</span><span class="t-hant">讀取證書有效期、CN、頒發者和名稱一致性。SSL 能力本身不做內部分級。</span></p></div>
-      <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><h3><span class="t-en">DNS & Domain</span><span class="t-zh">DNS 与域名</span><span class="t-hant">DNS 與域名</span></h3><p><span class="t-en">Pro supports DNS response checks, A/MX records, and domain expiry monitoring. Supports a wide range of TLDs including .com, .net, .org, .io, .co, .app, .dev, and more.</span><span class="t-zh">PRO 支持 DNS 响应、A/MX 记录和域名到期监测，覆盖 .com、.net、.org、.io、.co、.app、.dev 等主流后缀及更多。</span><span class="t-hant">PRO 支援 DNS 回應、A/MX 記錄和域名到期監測，覆蓋 .com、.net、.org、.io、.co、.app、.dev 等主流後綴及更多。</span></p></div>
-      <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div><h3><span class="t-en">Ports & Protocols</span><span class="t-zh">端口与协议</span><span class="t-hant">連接埠與協議</span></h3><p><span class="t-en">HTTP/HTTPS status-code analysis, unrestricted TCP ports, UDP checks, and ICMP reachability.</span><span class="t-zh">支持 HTTP/HTTPS 状态码分析、TCP 自定义端口、UDP 检测和 ICMP 连通性。</span><span class="t-hant">支援 HTTP/HTTPS 狀態碼分析、TCP 自訂連接埠、UDP 檢測和 ICMP 連通性。</span></p></div>
-      <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3><span class="t-en">Privacy Minded</span><span class="t-zh">重视隐私</span><span class="t-hant">重視隱私</span></h3><p><span class="t-en">Sign in with Apple, iOS Keychain storage, no advertising profile, and no sale of personal data.</span><span class="t-zh">使用 Apple 登录，敏感凭据存入 iOS Keychain，不做广告画像，不出售个人数据。</span><span class="t-hant">使用 Apple 登入，敏感憑據存入 iOS Keychain，不做廣告畫像，不出售個人資料。</span></p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/><path d="M8 5v14"/></svg></div><h3><span class="t-en">Monitor Workspace</span><span class="t-zh">监控工作区</span><span class="t-hant">監控工作區</span></h3><p><span class="t-en">All, Dock, Map, and Tags views separate cloud checks from Docker Probe private monitoring.</span><span class="t-zh">All、Dock、Map、Tags 视图清晰区分云端检测和 Docker Probe 私有监控。</span><span class="t-hant">All、Dock、Map、Tags 視圖清晰區分雲端檢測和 Docker Probe 私有監控。</span></p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 20h10"/><path d="M9 8h6"/><path d="M9 12h3"/></svg></div><h3><span class="t-en">Docker Probe</span><span class="t-zh">Docker Probe</span><span class="t-hant">Docker Probe</span></h3><p><span class="t-en">Monitor NAS panels, Docker services, and internal HTTP/HTTPS/TCP targets without opening your home network.</span><span class="t-zh">无需开放家庭网络端口，即可监控 NAS 面板、Docker 服务和内网 HTTP/HTTPS/TCP 目标。</span><span class="t-hant">無需開放家庭網路連接埠，即可監控 NAS 面板、Docker 服務和內網 HTTP/HTTPS/TCP 目標。</span></p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><path d="M12 7v4"/><path d="M12 11 6 16"/><path d="M12 11l6 5"/></svg></div><h3><span class="t-en">Topology Map</span><span class="t-zh">拓扑地图</span><span class="t-hant">拓撲地圖</span></h3><p><span class="t-en">A visual Cloud to Private Networks map shows where each service lives and which probe owns it.</span><span class="t-zh">Cloud 到 Private Networks 的可视化拓扑，让服务位置和所属探针一目了然。</span><span class="t-hant">Cloud 到 Private Networks 的可視化拓撲，讓服務位置和所屬探針一目了然。</span></p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="3"/><path d="M9 7h6"/><path d="M9 11h6"/><path d="M9 15h3"/></svg></div><h3><span class="t-en">iOS Widgets</span><span class="t-zh">iOS 组件</span><span class="t-hant">iOS 組件</span></h3><p><span class="t-en">Home screen and lock screen widgets keep your homelab status visible without opening the app.</span><span class="t-zh">桌面和锁屏组件让 Homelab 状态不打开 App 也能快速扫一眼。</span><span class="t-hant">桌面和鎖屏組件讓 Homelab 狀態不打開 App 也能快速掃一眼。</span></p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="M8 10h8"/><path d="M8 14h5"/></svg></div><h3><span class="t-en">Status Pages</span><span class="t-zh">公开状态页</span><span class="t-hant">公開狀態頁</span></h3><p><span class="t-en">Share public service status with access codes, expiry windows, QR verification, and private-target masking.</span><span class="t-zh">可分享公开状态页，支持访问口令、有效期、二维码验真和私有目标脱敏。</span><span class="t-hant">可分享公開狀態頁，支援訪問口令、有效期、二維碼驗真和私有目標脫敏。</span></p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div><h3><span class="t-en">Alerts & Analysis</span><span class="t-zh">告警与分析</span><span class="t-hant">告警與分析</span></h3><p><span class="t-en">Push alerts, incident history, uptime blocks, SSL/domain risk, and readable analysis help you act fast.</span><span class="t-zh">推送告警、事件历史、在线率色块、SSL/域名风险和易读分析，帮助你快速处置。</span><span class="t-hant">推送告警、事件歷史、在線率色塊、SSL/域名風險和易讀分析，幫助你快速處置。</span></p></div>
     </div>
   </section>
 
@@ -257,14 +258,15 @@
     </div>
   </section>
 
-  <section class="section" id="screenshots">
+  <section class="section wide" id="screenshots">
     <p class="label">// APP SCREENSHOTS</p>
-    <h2><span class="block-en">A quiet dashboard for repeated checks.</span><span class="block-zh">适合反复查看的安静仪表盘。</span><span class="block-hant">適合反覆查看的安靜儀表盤。</span></h2>
+    <h2><span class="block-en">Built for the way homelab people actually check status.</span><span class="block-zh">为 Homelab 用户真实查看状态的方式而设计。</span><span class="block-hant">為 Homelab 使用者真實查看狀態的方式而設計。</span></h2>
     <div class="screens">
-      <div><div class="shot"><img src="assets/images/screen_home.png" alt="OpsHome NOC dashboard"></div><p class="shot-label"><span class="t-en">Dashboard</span><span class="t-zh">仪表盘</span><span class="t-hant">儀表盤</span></p></div>
-      <div><div class="shot"><img src="assets/images/screen_monitors.png" alt="OpsHome NOC monitor list"></div><p class="shot-label"><span class="t-en">Monitors</span><span class="t-zh">监控项</span><span class="t-hant">監控項</span></p></div>
-      <div><div class="shot"><img src="assets/images/screen_notifications.png" alt="OpsHome NOC notification center"></div><p class="shot-label"><span class="t-en">Alerts</span><span class="t-zh">告警</span><span class="t-hant">告警</span></p></div>
-      <div><div class="shot"><img src="assets/images/screen_me_web.png" alt="OpsHome NOC account page"></div><p class="shot-label"><span class="t-en">Account</span><span class="t-zh">账户</span><span class="t-hant">帳戶</span></p></div>
+      <div><div class="shot"><img src="assets/images/homepage.jpg" alt="OpsHome NOC dashboard with private probes"></div><p class="shot-label"><span class="t-en">Dashboard</span><span class="t-zh">首页总览</span><span class="t-hant">首頁總覽</span></p></div>
+      <div><div class="shot"><img src="assets/images/monitor list.jpg" alt="OpsHome NOC monitor workspace"></div><p class="shot-label"><span class="t-en">Workspace</span><span class="t-zh">监控工作区</span><span class="t-hant">監控工作區</span></p></div>
+      <div><div class="shot"><img src="assets/images/monitor map.jpg" alt="OpsHome NOC topology map"></div><p class="shot-label"><span class="t-en">Topology Map</span><span class="t-zh">拓扑地图</span><span class="t-hant">拓撲地圖</span></p></div>
+      <div><div class="shot"><img src="assets/images/event history.jpg" alt="OpsHome NOC monitor detail and incident history"></div><p class="shot-label"><span class="t-en">Incident History</span><span class="t-zh">事件历史</span><span class="t-hant">事件歷史</span></p></div>
+      <div><div class="shot"><img src="assets/images/widget_all(1).jpg" alt="OpsHome NOC iOS widgets"></div><p class="shot-label"><span class="t-en">Widgets</span><span class="t-zh">桌面组件</span><span class="t-hant">桌面組件</span></p></div>
     </div>
   </section>
 
@@ -284,6 +286,8 @@
           <li><span class="t-en">Docker Probe internal monitor targets: <strong>not included</strong></span><span class="t-zh">Docker Probe 内网监控目标：<strong>不包含</strong></span><span class="t-hant">Docker Probe 內網監控目標：<strong>不包含</strong></span></li>
           <li><span class="t-en"><strong>1</strong> public status page</span><span class="t-zh"><strong>1</strong> 个公开状态页</span><span class="t-hant"><strong>1</strong> 個公開狀態頁</span></li>
           <li><span class="t-en"><strong>5</strong> monitors per status page</span><span class="t-zh">每个状态页 <strong>5</strong> 个监控点</span><span class="t-hant">每個狀態頁 <strong>5</strong> 個監控點</span></li>
+          <li><span class="t-en">Home screen and lock screen widgets</span><span class="t-zh">桌面和锁屏组件</span><span class="t-hant">桌面和鎖屏組件</span></li>
+          <li><span class="t-en">All / Dock / Map / Tags workspace views</span><span class="t-zh">All / Dock / Map / Tags 工作区视图</span><span class="t-hant">All / Dock / Map / Tags 工作區視圖</span></li>
           <li><span class="t-en">Minimum interval: <strong>10 minutes</strong></span><span class="t-zh">最短间隔：<strong>10 分钟</strong></span><span class="t-hant">最短間隔：<strong>10 分鐘</strong></span></li>
           <li><span class="t-en">Alert push notifications</span><span class="t-zh">告警推送通知</span><span class="t-hant">告警推播通知</span></li>
           <li><span class="t-en">No expiry reminders</span><span class="t-zh">不包含到期提醒</span><span class="t-hant">不包含到期提醒</span></li>
@@ -299,8 +303,10 @@
           <li><span class="t-en">All monitor types including <strong>UDP, DNS, Domain</strong></span><span class="t-zh">全部监控类型，包含 <strong>UDP、DNS、域名</strong></span><span class="t-hant">全部監控類型，包含 <strong>UDP、DNS、域名</strong></span></li>
           <li><span class="t-en"><strong>2</strong> Docker Probe devices</span><span class="t-zh"><strong>2</strong> 个 Docker Probe 设备</span><span class="t-hant"><strong>2</strong> 個 Docker Probe 裝置</span></li>
           <li><span class="t-en"><strong>50</strong> Docker Probe internal monitor targets</span><span class="t-zh"><strong>50</strong> 个 Docker Probe 内网监控目标</span><span class="t-hant"><strong>50</strong> 個 Docker Probe 內網監控目標</span></li>
+          <li><span class="t-en">Location-based Probe grouping and topology map</span><span class="t-zh">按位置组织 Probe，并展示拓扑地图</span><span class="t-hant">按位置組織 Probe，並展示拓撲地圖</span></li>
           <li><span class="t-en"><strong>3</strong> public status pages</span><span class="t-zh"><strong>3</strong> 个公开状态页</span><span class="t-hant"><strong>3</strong> 個公開狀態頁</span></li>
           <li><span class="t-en"><strong>20</strong> monitors per status page</span><span class="t-zh">每个状态页 <strong>20</strong> 个监控点</span><span class="t-hant">每個狀態頁 <strong>20</strong> 個監控點</span></li>
+          <li><span class="t-en">Status page sharing, access code, expiry, and QR verification</span><span class="t-zh">状态页分享、访问口令、有效期和二维码验真</span><span class="t-hant">狀態頁分享、訪問口令、有效期和二維碼驗真</span></li>
           <li><span class="t-en">Minimum interval: <strong>5 minutes</strong></span><span class="t-zh">最短间隔：<strong>5 分钟</strong></span><span class="t-hant">最短間隔：<strong>5 分鐘</strong></span></li>
           <li><span class="t-en">Alerts plus SSL/domain expiry reminders</span><span class="t-zh">告警推送，以及 SSL/域名到期提醒</span><span class="t-hant">告警推播，以及 SSL/域名到期提醒</span></li>
           <li><span class="t-en">Full dashboard and detail analysis reports</span><span class="t-zh">完整首页仪表盘和详情分析报告</span><span class="t-hant">完整首頁儀表盤和詳情分析報告</span></li>
