@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy - OpsHome NOC</title>
-<meta name="description" content="Privacy Policy for OpsHome NOC.">
+<meta name="description" content="Privacy Policy for OpsHome NOC, including monitoring data, Docker Probe, alert channel credentials, third-party services, retention, and account deletion.">
 <link rel="canonical" href="https://app.opshome.run/privacy.html">
 <link rel="icon" type="image/png" href="assets/images/favicon-256.png" sizes="256x256">
 <link rel="icon" href="assets/images/favicon.ico" sizes="any">
@@ -69,7 +69,7 @@
 <main>
   <div class="label">PRIVACY</div>
   <h1><span class="block-en">Privacy Policy</span><span class="block-hant">隱私權政策</span><span class="block-zh">隐私政策</span></h1>
-  <div class="meta"><span class="t-en">Last updated: May 2, 2026</span><span class="t-hant">最後更新：2026 年 5 月 2 日</span><span class="t-zh">最后更新：2026 年 5 月 2 日</span></div>
+  <div class="meta"><span class="t-en">Last updated: May 26, 2026</span><span class="t-hant">最後更新：2026 年 5 月 26 日</span><span class="t-zh">最后更新：2026 年 5 月 26 日</span></div>
 
   <div class="block-en">
     <section>
@@ -87,12 +87,23 @@
       </ul>
     </section>
     <section>
+      <h2>Monitoring Targets, Credentials, and Integrations</h2>
+      <p>You may provide monitor targets such as domains, URLs, IP addresses, ports, Docker Probe names, status page settings, Telegram chat identifiers, Telegram bot tokens, and future infrastructure integration settings such as Proxmox API endpoints or tokens.</p>
+      <p>Credentials and tokens you provide are used only to deliver the feature you configure, such as sending Telegram alerts or reading authorized infrastructure state. Sensitive integration secrets are stored using encryption controls where supported by the service and are not shown publicly.</p>
+    </section>
+    <section>
+      <h2>Docker Probe and Private Network Data</h2>
+      <p>Docker Probe runs in your private network and connects outbound to OpsHome Cloud. OpsHome NOC does not require you to open inbound ports and does not proxy your business traffic.</p>
+      <p>For private monitoring, we process the minimum operational data needed to provide the service, such as probe heartbeat, assigned monitor tasks, check results, latency, status, error summaries, and limited host or asset metadata. We do not collect the content of your private services.</p>
+    </section>
+    <section>
       <h2>How We Use Data</h2>
       <p>We use data to create and secure your account, run monitoring checks, send alerts and expiry reminders according to your plan, show analysis reports, verify Pro entitlement, troubleshoot service issues, and maintain service reliability.</p>
     </section>
     <section>
       <h2>Sharing</h2>
       <p>We do not sell personal data and do not build advertising profiles. Data may be processed by Apple services used for sign-in, subscriptions, and notifications, and by hosting or database providers that operate the service infrastructure.</p>
+      <p>Some optional features depend on third-party services, such as Telegram for alert delivery, DNS/WHOIS/RDAP providers for domain-related checks, and infrastructure providers used to operate and secure the service. When you click a third-party link or configure a third-party integration, that provider's own terms and privacy policy may apply.</p>
     </section>
     <section>
       <h2>Retention</h2>
@@ -140,6 +151,16 @@
   </div>
 
   <div class="block-hant">
+    <section>
+      <h2>監控目標、憑證與整合</h2>
+      <p>你可能會提供域名、URL、IP 位址、連接埠、Docker Probe 名稱、狀態頁設定、Telegram Chat ID、Telegram Bot Token，以及未來基礎設施整合所需的 Proxmox API 位址或 Token 等資料。</p>
+      <p>你提供的憑證與 Token 僅用於你設定的功能，例如發送 Telegram 告警或讀取已授權的基礎設施狀態。敏感整合密鑰會在服務支援的範圍內採用加密控制儲存，且不會公開展示。</p>
+    </section>
+    <section>
+      <h2>Docker Probe 與私有網路資料</h2>
+      <p>Docker Probe 在你的私有網路內執行，並主動向 OpsHome Cloud 建立對外連線。OpsHome NOC 不要求你開放入站連接埠，也不代理你的業務流量。</p>
+      <p>私有監控僅處理提供服務所需的最小營運資料，例如 Probe 心跳、分配的監控任務、檢查結果、延遲、狀態、錯誤摘要，以及有限的主機或資產中繼資料。我們不收集你的私有服務內容。</p>
+    </section>
     <section>
       <h2>概述</h2>
       <p>OpsHome NOC 是用於網站、連接埠、SSL 證書、DNS 記錄與域名到期監測的 App。我們只處理提供監測、通知、訂閱權益、帳戶安全與支援所需的資料。</p>
@@ -207,6 +228,16 @@
   </div>
 
   <div class="block-zh">
+    <section>
+      <h2>监控目标、凭证与集成</h2>
+      <p>你可能会提供域名、URL、IP 地址、端口、Docker Probe 名称、状态页设置、Telegram Chat ID、Telegram Bot Token，以及未来基础设施集成所需的 Proxmox API 地址或 Token 等数据。</p>
+      <p>你提供的凭证与 Token 仅用于你配置的功能，例如发送 Telegram 告警或读取已授权的基础设施状态。敏感集成密钥会在服务支持的范围内采用加密控制存储，且不会公开展示。</p>
+    </section>
+    <section>
+      <h2>Docker Probe 与私有网络数据</h2>
+      <p>Docker Probe 在你的私有网络内运行，并主动向 OpsHome Cloud 建立对外连接。OpsHome NOC 不要求你开放入站端口，也不代理你的业务流量。</p>
+      <p>私有监控仅处理提供服务所需的最小运营数据，例如 Probe 心跳、分配的监控任务、检查结果、延迟、状态、错误摘要，以及有限的主机或资产元数据。我们不收集你的私有服务内容。</p>
+    </section>
     <section>
       <h2>概述</h2>
       <p>OpsHome NOC 是用于网站、端口、SSL 证书、DNS 记录与域名到期监测的 App。我们只处理提供监测、通知、订阅权益、账户安全与支持所需的数据。</p>
