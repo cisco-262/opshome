@@ -19,6 +19,7 @@
   :root {
     --bg:#f8fafc; --bg2:#eaf4ff; --surface:#ffffff; --border:#d7e8f8;
     --accent:#1479ff; --accent2:#0b5fd3; --text:#0b1b2e; --muted:#334155; --soft:#102033;
+    --gold:#f59e0b; --gold-dim:#fbbf24;
     --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
     --sans-hans:"Noto Sans SC Local","PingFang SC","Microsoft YaHei",sans-serif;
     --sans-hant:"Noto Sans TC Local","PingFang TC","Microsoft JhengHei",sans-serif;
@@ -44,7 +45,7 @@
   body.lang-zh .t-en,body.lang-zh .block-en,body.lang-hant .t-en,body.lang-hant .block-en{display:none}
   body.lang-zh .t-zh{display:inline} body.lang-zh .block-zh{display:block}
   body.lang-hant .t-hant{display:inline} body.lang-hant .block-hant{display:block}
-  .hero{position:relative;z-index:1;min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:96px 24px 72px}
+  .hero{position:relative;z-index:1;min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:96px 24px 72px;background:radial-gradient(ellipse 100% 70% at 50% -5%,rgba(245,158,11,.07) 0%,transparent 60%)}
   .hero-logo{width:188px;height:188px;margin-bottom:22px}
   .eyebrow{font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:.18em;border:1px solid rgba(20,121,255,.22);background:#fff;padding:6px 14px;margin-bottom:26px;border-radius:999px}
   h1{font-family:var(--mono);font-size:clamp(42px,8vw,84px);line-height:1;font-weight:800;margin-bottom:16px}
@@ -91,9 +92,9 @@
     background:#dcfce7;
   }
   .badge.pro,.badge.only{
-    border-color:#1479ff;
-    color:#0b5fd3;
-    background:#e8f0ff;
+    border-color:#d97706;
+    color:#92400e;
+    background:#fef3c7;
   }
   .monitor-matrix{padding-top:104px;padding-bottom:104px}
   .monitor-matrix .label{display:inline-flex;align-items:center;padding:7px 12px;border:1px solid rgba(20,121,255,.32);background:#eaf4ff;border-radius:6px}
@@ -135,10 +136,10 @@
     overflow:hidden;
   }
   .plan.pro{
-    border:1px solid #1479ff;
-    border-top:4px solid #1479ff;
+    border:1px solid rgba(245,158,11,.35);
+    border-top:4px solid var(--gold);
     background:#0b1b2e;
-    box-shadow:0 4px 24px rgba(20,121,255,.18);
+    box-shadow:0 4px 28px rgba(245,158,11,.14);
     transform:translateY(-8px);
   }
   .plan.pro:after{
@@ -147,17 +148,17 @@
     top:20px;
     right:20px;
     padding:5px 10px;
-    border:1px solid rgba(20,121,255,.4);
+    border:1px solid rgba(245,158,11,.45);
     border-radius:4px;
-    background:rgba(20,121,255,.15);
-    color:#7db8ff;
+    background:rgba(245,158,11,.12);
+    color:#fbbf24;
     font-family:var(--mono);
     font-size:10px;
     font-weight:800;
     letter-spacing:.08em;
   }
   .plan-name{font-family:var(--mono);font-size:13px;letter-spacing:.18em;color:var(--muted);margin-bottom:16px}
-  .plan.pro .plan-name{color:#7db8ff}
+  .plan.pro .plan-name{color:var(--gold-dim)}
   .plan-price{font-family:var(--mono);font-size:42px;margin-bottom:6px}
   .plan.pro .plan-price{color:#ffffff}
   .plan-note{color:var(--muted);font-size:14px;font-weight:400;margin-bottom:24px}
@@ -170,6 +171,21 @@
   footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:36px 56px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;color:var(--muted);font-family:var(--mono);font-size:12px}
   footer ul{display:flex;gap:22px;list-style:none}
   footer a:hover{color:var(--accent)}
+  /* feature card icon/border variations */
+  #features .grid .card:nth-child(2){border-top-color:#16a34a}
+  #features .grid .card:nth-child(2) .icon{background:#f0fdf4}
+  #features .grid .card:nth-child(2) .icon svg{stroke:#16a34a}
+  #features .grid .card:nth-child(3){border-top-color:#7c3aed}
+  #features .grid .card:nth-child(3) .icon{background:#f5f3ff}
+  #features .grid .card:nth-child(3) .icon svg{stroke:#7c3aed}
+  #features .grid .card:nth-child(4) .icon{background:#fff7ed}
+  #features .grid .card:nth-child(4) .icon svg{stroke:#ea580c}
+  #features .grid .card:nth-child(5){border-top-color:#16a34a}
+  #features .grid .card:nth-child(5) .icon{background:#f0fdf4}
+  #features .grid .card:nth-child(5) .icon svg{stroke:#16a34a}
+  #features .grid .card:nth-child(6){border-top-color:#ea580c}
+  #features .grid .card:nth-child(6) .icon{background:#fff7ed}
+  #features .grid .card:nth-child(6) .icon svg{stroke:#ea580c}
   @media(max-width:900px){nav{padding:16px 22px}.navlinks{display:none}.section{padding:64px 22px}.grid,.pricing,.trust-panel{grid-template-columns:1fr}.screens{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:560px){.screens{grid-template-columns:1fr}.hero p{font-size:18px}th,td{padding:12px;font-size:13px}}
 </style>
@@ -313,6 +329,7 @@
           <li><span class="t-en"><strong>10</strong> monitors per status page</span><span class="t-zh">每个状态页 <strong>10</strong> 个监控点</span><span class="t-hant">每個狀態頁 <strong>10</strong> 個監控點</span></li>
           <li><span class="t-en">Home screen and lock screen widgets</span><span class="t-zh">桌面和锁屏组件</span><span class="t-hant">桌面和鎖屏組件</span></li>
           <li><span class="t-en">All / Dock / Map / Tags workspace views</span><span class="t-zh">All / Dock / Map / Tags 工作区视图</span><span class="t-hant">All / Dock / Map / Tags 工作區視圖</span></li>
+          <li><span class="t-en">Synology DSM public asset collection</span><span class="t-zh">群晖 DSM 公开资产采集</span><span class="t-hant">群暉 DSM 公開資產採集</span></li>
           <li><span class="t-en">Minimum interval: <strong>10 minutes</strong></span><span class="t-zh">最短间隔：<strong>10 分钟</strong></span><span class="t-hant">最短間隔：<strong>10 分鐘</strong></span></li>
           <li><span class="t-en">Alert push notifications</span><span class="t-zh">告警推送通知</span><span class="t-hant">告警推播通知</span></li>
           <li><span class="t-en">No expiry reminders</span><span class="t-zh">不包含到期提醒</span><span class="t-hant">不包含到期提醒</span></li>
@@ -328,7 +345,7 @@
           <li><span class="t-en">All monitor types including <strong>UDP, DNS, Domain</strong></span><span class="t-zh">全部监控类型，包含 <strong>UDP、DNS、域名</strong></span><span class="t-hant">全部監控類型，包含 <strong>UDP、DNS、域名</strong></span></li>
           <li><span class="t-en"><strong>5</strong> private collectors</span><span class="t-zh"><strong>5</strong> 个私有采集节点</span><span class="t-hant"><strong>5</strong> 個私有採集節點</span></li>
           <li><span class="t-en"><strong>50</strong> private monitor targets</span><span class="t-zh"><strong>50</strong> 个私有监控目标</span><span class="t-hant"><strong>50</strong> 個私有監控目標</span></li>
-          <li><span class="t-en">Synology / Proxmox infrastructure integrations</span><span class="t-zh">Synology / Proxmox 基础设施集成</span><span class="t-hant">Synology / Proxmox 基礎設施整合</span></li>
+          <li><span class="t-en">Proxmox infrastructure integrations + private Synology collection</span><span class="t-zh">Proxmox 基础设施集成 + 群晖私有采集</span><span class="t-hant">Proxmox 基礎設施整合 + 群暉私有採集</span></li>
           <li><span class="t-en"><strong>3</strong> public status pages</span><span class="t-zh"><strong>3</strong> 个公开状态页</span><span class="t-hant"><strong>3</strong> 個公開狀態頁</span></li>
           <li><span class="t-en"><strong>20</strong> monitors per status page</span><span class="t-zh">每个状态页 <strong>20</strong> 个监控点</span><span class="t-hant">每個狀態頁 <strong>20</strong> 個監控點</span></li>
           <li><span class="t-en">Status page sharing, access code, expiry, and QR verification</span><span class="t-zh">状态页分享、访问口令、有效期和二维码验真</span><span class="t-hant">狀態頁分享、訪問口令、有效期和二維碼驗真</span></li>
