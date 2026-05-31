@@ -171,18 +171,12 @@
   footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:36px 56px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;color:var(--muted);font-family:var(--mono);font-size:12px}
   footer ul{display:flex;gap:22px;list-style:none}
   footer a:hover{color:var(--accent)}
-  /* feature card icon/border variations */
-  #features .grid .card:nth-child(2){border-top-color:#16a34a}
-  #features .grid .card:nth-child(2) .icon{background:#f0fdf4}
-  #features .grid .card:nth-child(2) .icon svg{stroke:#16a34a}
-  #features .grid .card:nth-child(3){border-top-color:#7c3aed}
-  #features .grid .card:nth-child(3) .icon{background:#f5f3ff}
-  #features .grid .card:nth-child(3) .icon svg{stroke:#7c3aed}
-  #features .grid .card:nth-child(4) .icon{background:#fff7ed}
-  #features .grid .card:nth-child(4) .icon svg{stroke:#ea580c}
-  #features .grid .card:nth-child(5){border-top-color:#16a34a}
-  #features .grid .card:nth-child(5) .icon{background:#f0fdf4}
-  #features .grid .card:nth-child(5) .icon svg{stroke:#16a34a}
+  .feature-group{margin-top:48px}
+  .feature-group:first-of-type{margin-top:0}
+  .feature-group-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--muted);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+  .grid-2{grid-template-columns:repeat(2,1fr)}
+  .group-row td{background:var(--text)!important;color:#fff;font-family:var(--mono);font-size:11px;font-weight:900;letter-spacing:.14em;padding:9px 16px;border-bottom:0}
+  @media(max-width:900px){.grid-2{grid-template-columns:1fr}}
   #features .grid .card:nth-child(6){border-top-color:#ea580c}
   #features .grid .card:nth-child(6) .icon{background:#fff7ed}
   #features .grid .card:nth-child(6) .icon svg{stroke:#ea580c}
@@ -268,13 +262,30 @@
     <p class="label">// FEATURES</p>
     <h2><span class="block-en">The iPhone-first control room for your homelab.</span><span class="block-zh">属于 Homelab 的 iPhone 优先控制室。</span><span class="block-hant">屬於 Homelab 的 iPhone 優先控制室。</span></h2>
     <p class="desc"><span class="t-en">V1.5 focuses OpsHome NOC on public monitoring, private network visibility, infrastructure integrations, and clear status sharing for NAS, Docker, homelab, and small production endpoints.</span><span class="t-zh">V1.5 聚焦公网监控、私有网络可见性、基础设施集成和清晰的状态共享，覆盖 NAS、Docker、Homelab 和小型生产端点。</span><span class="t-hant">V1.5 聚焦公網監控、私有網路可見性、基礎設施整合和清晰的狀態分享，覆蓋 NAS、Docker、Homelab 和小型生產端點。</span></p>
-    <div class="grid">
-      <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/><path d="M8 5v14"/></svg></div><h3><span class="t-en">Monitor Workspace</span><span class="t-zh">监控工作区</span><span class="t-hant">監控工作區</span></h3><p><span class="t-en">All, Dock, Map, and Tags views separate public checks from private network monitoring.</span><span class="t-zh">All、Dock、Map、Tags 视图清晰区分公网检测和私有网络监控。</span><span class="t-hant">All、Dock、Map、Tags 視圖清晰區分公網檢測和私有網路監控。</span></p></div>
-      <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 20h10"/><path d="M9 8h6"/><path d="M9 12h3"/></svg></div><h3><span class="t-en">Private Monitoring</span><span class="t-zh">私有网络监控</span><span class="t-hant">私有網路監控</span></h3><p><span class="t-en">Monitor NAS panels, Docker services, and internal HTTP/HTTPS/TCP targets without opening your home network.</span><span class="t-zh">无需开放家庭网络端口，即可监控 NAS 面板、Docker 服务和内网 HTTP/HTTPS/TCP 目标。</span><span class="t-hant">無需開放家庭網路連接埠，即可監控 NAS 面板、Docker 服務和內網 HTTP/HTTPS/TCP 目標。</span></p></div>
-      <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><path d="M12 7v4"/><path d="M12 11 6 16"/><path d="M12 11l6 5"/></svg></div><h3><span class="t-en">Topology Map</span><span class="t-zh">拓扑地图</span><span class="t-hant">拓撲地圖</span></h3><p><span class="t-en">A visual Cloud to Private Networks map shows where each service lives and how it is monitored.</span><span class="t-zh">Cloud 到 Private Networks 的可视化拓扑，让服务位置和监控来源一目了然。</span><span class="t-hant">Cloud 到 Private Networks 的可視化拓撲，讓服務位置和監控來源一目了然。</span></p></div>
-      <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="3"/><path d="M9 7h6"/><path d="M9 11h6"/><path d="M9 15h3"/></svg></div><h3><span class="t-en">iOS Widgets</span><span class="t-zh">iOS 组件</span><span class="t-hant">iOS 組件</span></h3><p><span class="t-en">Home screen and lock screen widgets keep your homelab status visible without opening the app.</span><span class="t-zh">桌面和锁屏组件让 Homelab 状态不打开 App 也能快速扫一眼。</span><span class="t-hant">桌面和鎖屏組件讓 Homelab 狀態不打開 App 也能快速掃一眼。</span></p></div>
-      <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="M8 10h8"/><path d="M8 14h5"/></svg></div><h3><span class="t-en">Status Pages</span><span class="t-zh">公开状态页</span><span class="t-hant">公開狀態頁</span></h3><p><span class="t-en">Share public service status with access codes, expiry windows, QR verification, and private-target masking.</span><span class="t-zh">可分享公开状态页，支持访问口令、有效期、二维码验真和私有目标脱敏。</span><span class="t-hant">可分享公開狀態頁，支援訪問口令、有效期、二維碼驗真和私有目標脫敏。</span></p></div>
-      <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div><h3><span class="t-en">Alerts & Analysis</span><span class="t-zh">告警与分析</span><span class="t-hant">告警與分析</span></h3><p><span class="t-en">Push alerts, incident history, uptime blocks, SSL/domain risk, and readable analysis help you act fast.</span><span class="t-zh">推送告警、事件历史、在线率色块、SSL/域名风险和易读分析，帮助你快速处置。</span><span class="t-hant">推送告警、事件歷史、在線率色塊、SSL/域名風險和易讀分析，幫助你快速處置。</span></p></div>
+
+    <div class="feature-group">
+      <p class="feature-group-label"><span class="t-en">// PRIVATE NETWORK</span><span class="t-zh">// 私有网络</span><span class="t-hant">// 私有網路</span></p>
+      <div class="grid">
+        <div class="card" style="border-top-color:#16a34a"><div class="icon" style="background:#f0fdf4"><svg viewBox="0 0 24 24" style="stroke:#16a34a"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 20h10"/><path d="M9 8h6"/><path d="M9 12h3"/></svg></div><h3><span class="t-en">Private Monitoring</span><span class="t-zh">私有网络监控</span><span class="t-hant">私有網路監控</span></h3><p><span class="t-en">Monitor NAS panels, Docker services, and internal HTTP/HTTPS/TCP targets without opening your home network.</span><span class="t-zh">无需开放家庭网络端口，即可监控 NAS 面板、Docker 服务和内网 HTTP/HTTPS/TCP 目标。</span><span class="t-hant">無需開放家庭網路連接埠，即可監控 NAS 面板、Docker 服務和內網 HTTP/HTTPS/TCP 目標。</span></p></div>
+        <div class="card" style="border-top-color:#16a34a"><div class="icon" style="background:#f0fdf4"><svg viewBox="0 0 24 24" style="stroke:#16a34a"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 7h.01"/><path d="M11 7h6"/><path d="M7 11h.01"/><path d="M11 11h6"/></svg></div><h3><span class="t-en">Infrastructure Assets</span><span class="t-zh">基础设施资产</span><span class="t-hant">基礎設施資產</span></h3><p><span class="t-en">Synology NAS, Docker containers, and Proxmox VE — CPU, memory, disk I/O, temperature, and container health without exposing management interfaces.</span><span class="t-zh">Synology NAS、Docker 容器和 Proxmox VE 的 CPU、内存、磁盘 I/O、温度和容器健康，无需暴露管理界面。</span><span class="t-hant">Synology NAS、Docker 容器和 Proxmox VE 的 CPU、記憶體、磁碟 I/O、溫度和容器健康，無需暴露管理介面。</span></p></div>
+        <div class="card" style="border-top-color:#7c3aed"><div class="icon" style="background:#f5f3ff"><svg viewBox="0 0 24 24" style="stroke:#7c3aed"><circle cx="12" cy="5" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><path d="M12 7v4"/><path d="M12 11 6 16"/><path d="M12 11l6 5"/></svg></div><h3><span class="t-en">Topology Map</span><span class="t-zh">拓扑地图</span><span class="t-hant">拓撲地圖</span></h3><p><span class="t-en">A visual Cloud to Private Networks map shows where each service lives and how it is monitored.</span><span class="t-zh">Cloud 到 Private Networks 的可视化拓扑，让服务位置和监控来源一目了然。</span><span class="t-hant">Cloud 到 Private Networks 的可視化拓撲，讓服務位置和監控來源一目了然。</span></p></div>
+      </div>
+    </div>
+
+    <div class="feature-group">
+      <p class="feature-group-label"><span class="t-en">// CLOUD MONITORING</span><span class="t-zh">// 公网监控</span><span class="t-hant">// 公網監控</span></p>
+      <div class="grid grid-2">
+        <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/><path d="M8 5v14"/></svg></div><h3><span class="t-en">Monitor Workspace</span><span class="t-zh">监控工作区</span><span class="t-hant">監控工作區</span></h3><p><span class="t-en">All, Dock, Map, and Tags views separate public checks from private network monitoring.</span><span class="t-zh">All、Dock、Map、Tags 视图清晰区分公网检测和私有网络监控。</span><span class="t-hant">All、Dock、Map、Tags 視圖清晰區分公網檢測和私有網路監控。</span></p></div>
+        <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div><h3><span class="t-en">Alerts & Analysis</span><span class="t-zh">告警与分析</span><span class="t-hant">告警與分析</span></h3><p><span class="t-en">Push alerts, Telegram, incident history, uptime blocks, SSL/domain risk, and readable analysis help you act fast.</span><span class="t-zh">推送告警、Telegram、事件历史、在线率色块、SSL/域名风险和易读分析，帮助你快速处置。</span><span class="t-hant">推播告警、Telegram、事件歷史、在線率色塊、SSL/域名風險和易讀分析，幫助你快速處置。</span></p></div>
+      </div>
+    </div>
+
+    <div class="feature-group">
+      <p class="feature-group-label"><span class="t-en">// VISIBILITY & SHARING</span><span class="t-zh">// 可见性与分享</span><span class="t-hant">// 可見性與分享</span></p>
+      <div class="grid grid-2">
+        <div class="card"><div class="icon" style="background:#fff7ed"><svg viewBox="0 0 24 24" style="stroke:#ea580c"><rect x="5" y="3" width="14" height="18" rx="3"/><path d="M9 7h6"/><path d="M9 11h6"/><path d="M9 15h3"/></svg></div><h3><span class="t-en">iOS Widgets</span><span class="t-zh">iOS 组件</span><span class="t-hant">iOS 組件</span></h3><p><span class="t-en">Home screen and lock screen widgets keep your homelab status visible without opening the app.</span><span class="t-zh">桌面和锁屏组件让 Homelab 状态不打开 App 也能快速扫一眼。</span><span class="t-hant">桌面和鎖屏組件讓 Homelab 狀態不打開 App 也能快速掃一眼。</span></p></div>
+        <div class="card"><div class="icon" style="background:#f0fdf4"><svg viewBox="0 0 24 24" style="stroke:#16a34a"><path d="M4 6h16v12H4z"/><path d="M8 10h8"/><path d="M8 14h5"/></svg></div><h3><span class="t-en">Status Pages</span><span class="t-zh">公开状态页</span><span class="t-hant">公開狀態頁</span></h3><p><span class="t-en">Share public service status with access codes, expiry windows, QR verification, and private-target masking.</span><span class="t-zh">可分享公开状态页，支持访问口令、有效期、二维码验真和私有目标脱敏。</span><span class="t-hant">可分享公開狀態頁，支援訪問口令、有效期、二維碼驗真和私有目標脫敏。</span></p></div>
+      </div>
     </div>
   </section>
 
@@ -285,14 +296,17 @@
       <table>
         <thead><tr><th><span class="t-en">Type</span><span class="t-zh">类型</span><span class="t-hant">類型</span></th><th><span class="t-en">Description</span><span class="t-zh">说明</span><span class="t-hant">說明</span></th><th><span class="t-en">Plan</span><span class="t-zh">方案</span><span class="t-hant">方案</span></th></tr></thead>
         <tbody>
+          <tr class="group-row"><td colspan="3"><span class="t-en">Cloud Monitoring</span><span class="t-zh">公网检测</span><span class="t-hant">公網檢測</span></td></tr>
           <tr><td>HTTP</td><td><span class="t-en">HTTP status-code detection and analysis hints.</span><span class="t-zh">HTTP 状态码检测与分析提示。</span><span class="t-hant">HTTP 狀態碼檢測與分析提示。</span></td><td><span class="badge">FREE</span><span class="badge pro">PRO</span></td></tr>
           <tr><td>HTTPS</td><td><span class="t-en">HTTPS reachability and status-code detection.</span><span class="t-zh">HTTPS 可达性与状态码检测。</span><span class="t-hant">HTTPS 可達性與狀態碼檢測。</span></td><td><span class="badge">FREE</span><span class="badge pro">PRO</span></td></tr>
           <tr><td>TCP</td><td><span class="t-en">Custom port connectivity without fixed port restrictions.</span><span class="t-zh">自定义端口连通性检测，不限制固定端口。</span><span class="t-hant">自訂連接埠連通性檢測，不限制固定連接埠。</span></td><td><span class="badge">FREE</span><span class="badge pro">PRO</span></td></tr>
-          <tr><td>SSL</td><td><span class="t-en">Certificate validity, CN, issuer, and hostname match checks.</span><span class="t-zh">证书有效期、CN、颁发者和主机名匹配检测。</span><span class="t-hant">證書有效期、CN、頒發者和主機名稱匹配檢測。</span></td><td><span class="badge">FREE</span><span class="badge pro">PRO</span></td></tr>
           <tr><td>ICMP</td><td><span class="t-en">Ping-style host reachability.</span><span class="t-zh">类似 Ping 的主机可达性检测。</span><span class="t-hant">類似 Ping 的主機可達性檢測。</span></td><td><span class="badge">FREE</span><span class="badge pro">PRO</span></td></tr>
-          <tr><td>UDP</td><td><span class="t-en">UDP response checks for supported payloads.</span><span class="t-zh">对支持的载荷进行 UDP 响应检测。</span><span class="t-hant">對支援的載荷進行 UDP 回應檢測。</span></td><td><span class="badge only"><span class="t-en">PRO ONLY</span><span class="t-zh">仅 PRO</span><span class="t-hant">僅 PRO</span></span></td></tr>
+          <tr class="group-row"><td colspan="3"><span class="t-en">Security & Domain</span><span class="t-zh">安全与域名</span><span class="t-hant">安全與域名</span></td></tr>
+          <tr><td>SSL</td><td><span class="t-en">Certificate validity, CN, issuer, and hostname match checks.</span><span class="t-zh">证书有效期、CN、颁发者和主机名匹配检测。</span><span class="t-hant">證書有效期、CN、頒發者和主機名稱匹配檢測。</span></td><td><span class="badge">FREE</span><span class="badge pro">PRO</span></td></tr>
           <tr><td>DNS</td><td><span class="t-en">DNS response checks and A/MX record validation.</span><span class="t-zh">DNS 响应检测与 A/MX 记录校验。</span><span class="t-hant">DNS 回應檢測與 A/MX 記錄校驗。</span></td><td><span class="badge only"><span class="t-en">PRO ONLY</span><span class="t-zh">仅 PRO</span><span class="t-hant">僅 PRO</span></span></td></tr>
           <tr><td><span class="t-en">Domain</span><span class="t-zh">域名</span><span class="t-hant">域名</span></td><td><span class="t-en">Domain registration expiry monitoring.</span><span class="t-zh">域名注册到期监测。</span><span class="t-hant">域名註冊到期監測。</span></td><td><span class="badge only"><span class="t-en">PRO ONLY</span><span class="t-zh">仅 PRO</span><span class="t-hant">僅 PRO</span></span></td></tr>
+          <tr><td>UDP</td><td><span class="t-en">UDP response checks for supported payloads.</span><span class="t-zh">对支持的载荷进行 UDP 响应检测。</span><span class="t-hant">對支援的載荷進行 UDP 回應檢測。</span></td><td><span class="badge only"><span class="t-en">PRO ONLY</span><span class="t-zh">仅 PRO</span><span class="t-hant">僅 PRO</span></span></td></tr>
+          <tr class="group-row"><td colspan="3"><span class="t-en">Private Network</span><span class="t-zh">私有网络</span><span class="t-hant">私有網路</span></td></tr>
           <tr><td><span class="t-en">Private Monitoring</span><span class="t-zh">私有网络监控</span><span class="t-hant">私有網路監控</span></td><td><span class="t-en">Private Docker, NAS, and internal HTTP/HTTPS/TCP checks without exposing inbound access.</span><span class="t-zh">无需暴露入站访问，即可检测私有 Docker、NAS 和内网 HTTP/HTTPS/TCP 服务。</span><span class="t-hant">無需暴露入站存取，即可檢測私有 Docker、NAS 和內網 HTTP/HTTPS/TCP 服務。</span></td><td><span class="badge only"><span class="t-en">PRO ONLY</span><span class="t-zh">仅 PRO</span><span class="t-hant">僅 PRO</span></span></td></tr>
         </tbody>
       </table>
