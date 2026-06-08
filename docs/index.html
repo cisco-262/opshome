@@ -39,7 +39,7 @@
   },
   "description": "Native iOS monitoring app for homelab, NAS, Docker, Synology, Proxmox, and self-hosted services. Monitor private services without exposing your network.",
   "url": "https://app.opshome.run",
-  "downloadUrl": "https://apps.apple.com/app/opshome-noc/id6743438833",
+  "downloadUrl": "https://apps.apple.com/us/app/opshome-noc/id6763890679",
   "screenshot": "https://app.opshome.run/assets/images/og-image.png"
 }
 </script>
@@ -80,7 +80,30 @@
   body.lang-zh .t-en,body.lang-zh .block-en,body.lang-hant .t-en,body.lang-hant .block-en{display:none}
   body.lang-zh .t-zh{display:inline} body.lang-zh .block-zh{display:block}
   body.lang-hant .t-hant{display:inline} body.lang-hant .block-hant{display:block}
-  .hero{position:relative;z-index:1;min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:96px 24px 72px;background:radial-gradient(ellipse 100% 70% at 50% -5%,rgba(245,158,11,.07) 0%,transparent 60%)}
+  .hero{position:relative;z-index:1;min-height:88vh;padding:88px 56px 76px;overflow:hidden;background:linear-gradient(135deg,#07111f 0%,#0b1b2e 54%,#07111f 100%);color:#fff}
+  .hero:before{content:"";position:absolute;width:620px;height:620px;right:-160px;top:-220px;border-radius:50%;background:radial-gradient(circle,rgba(20,121,255,.3),transparent 68%);pointer-events:none}
+  .hero-inner{position:relative;z-index:1;max-width:1240px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:72px;align-items:center}
+  .hero-copy{text-align:left}
+  .hero-status{display:inline-flex;align-items:center;gap:10px;margin-bottom:24px;padding:8px 14px;border:1px solid rgba(255,255,255,.14);border-radius:999px;background:rgba(255,255,255,.08);color:#dbeafe;font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.04em}
+  .hero-status-dot{position:relative;width:10px;height:10px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 5px rgba(34,197,94,.14)}
+  .hero-copy h1{max-width:720px;font-size:clamp(44px,6vw,76px);line-height:1.04;margin-bottom:24px;letter-spacing:-.045em}
+  .hero-copy h1 span{display:block;color:#60a5fa}
+  .hero-copy p{max-width:680px;margin-bottom:30px;color:#cbd5e1;font-size:clamp(18px,2vw,22px);line-height:1.65}
+  .hero-copy p strong{color:#fff}
+  .hero .actions{justify-content:flex-start;align-items:center}
+  .hero-store-link{display:inline-flex;transition:transform .2s ease,filter .2s ease}
+  .hero-store-link:hover{transform:translateY(-2px);filter:brightness(1.05)}
+  .hero-store-link img{display:block;height:64px;width:auto}
+  .hero-qr{display:flex;align-items:center;gap:12px;padding:8px 12px 8px 8px;border:1px solid rgba(255,255,255,.14);border-radius:14px;background:rgba(255,255,255,.08)}
+  .hero-qr img{display:block;width:72px;height:72px;padding:4px;border-radius:8px;background:#fff}
+  .hero-qr span{max-width:90px;color:#cbd5e1;font-family:var(--mono);font-size:10px;line-height:1.45}
+  .hero-support{margin-top:20px!important;margin-bottom:0!important;color:#94a3b8!important;font-size:13px!important;font-family:var(--mono)}
+  .hero-visual{position:relative;display:flex;justify-content:center}
+  .hero-phone{position:relative;width:min(100%,420px);padding:10px;border:1px solid rgba(255,255,255,.16);border-radius:42px;background:linear-gradient(145deg,rgba(255,255,255,.16),rgba(255,255,255,.04));box-shadow:0 36px 90px rgba(0,0,0,.48),0 0 70px rgba(20,121,255,.18);transform:rotate(2deg)}
+  .hero-phone:before{content:"";position:absolute;z-index:2;top:18px;left:50%;width:92px;height:24px;transform:translateX(-50%);border-radius:999px;background:#050b13}
+  .hero-phone img{display:block;width:100%;height:auto;border-radius:33px}
+  .hero-visual-note{position:absolute;left:-28px;bottom:10%;padding:12px 16px;border:1px solid rgba(255,255,255,.14);border-radius:12px;background:rgba(8,20,36,.88);box-shadow:0 14px 36px rgba(0,0,0,.3);backdrop-filter:blur(12px);font-family:var(--mono);font-size:12px;color:#dbeafe}
+  .hero-visual-note strong{display:block;margin-top:2px;color:#4ade80;font-size:18px}
   .hero-logo{width:188px;height:188px;margin-bottom:22px}
   .eyebrow{font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:.18em;border:1px solid rgba(20,121,255,.22);background:#fff;padding:6px 14px;margin-bottom:26px;border-radius:999px}
   .eyebrow-tags{margin-bottom:26px}
@@ -225,6 +248,13 @@
   @media(max-width:900px){
     nav{padding:16px 22px}
     .navlinks{display:none}
+    .hero{min-height:auto;padding:72px 22px 64px}
+    .hero-inner{grid-template-columns:1fr;gap:48px}
+    .hero-copy{text-align:center}
+    .hero-copy h1,.hero-copy p{margin-left:auto;margin-right:auto}
+    .hero .actions{justify-content:center}
+    .hero-visual{max-width:430px;margin:0 auto}
+    .hero-phone{transform:none}
     .section{padding:64px 22px}
     .grid,.pricing,.trust-panel{grid-template-columns:1fr}
     .screens{grid-template-columns:repeat(2,1fr)}
@@ -241,7 +271,13 @@
   }
   @media(max-width:560px){
     .screens{grid-template-columns:1fr}
-    .hero p{font-size:17px}
+    .hero{padding-top:56px}
+    .hero-copy h1{font-size:clamp(38px,12vw,54px)}
+    .hero-copy p{font-size:17px}
+    .hero-store-link img{height:56px}
+    .hero-qr{display:none}
+    .hero-visual-note{left:8px;bottom:7%;padding:9px 12px;font-size:10px}
+    .hero-visual-note strong{font-size:15px}
     th,td{padding:10px;font-size:13px}
     .tag{font-size:13px;padding:6px 12px}
     .eyebrow-tags .block-en,.eyebrow-tags .block-zh,.eyebrow-tags .block-hant{gap:6px}
@@ -271,28 +307,51 @@
 
 <main>
   <section class="hero">
-    <img src="assets/images/brand-logo.png" alt="OpsHome NOC app logo" class="hero-logo">
-    <div class="eyebrow-tags">
-      <div class="block-en">
-        <span class="tag">NO PORT FORWARDING</span><span class="tag">PRIVATE</span><span class="tag">ASSETS</span><span class="tag">INFRA MAP</span><span class="tag">NATIVE iOS</span>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="hero-status">
+          <span class="hero-status-dot" aria-hidden="true"></span>
+          <span class="t-en">Available on the App Store</span>
+          <span class="t-zh">现已上线 App Store</span>
+          <span class="t-hant">現已上架 App Store</span>
+        </div>
+        <h1>
+          OpsHome NOC<sup class="tm">&trade;</sup>
+          <span class="block-en">Your homelab on iPhone.</span>
+          <span class="block-zh">用 iPhone 监控你的 Homelab</span>
+          <span class="block-hant">用 iPhone 監控你的 Homelab</span>
+        </h1>
+        <p>
+          <span class="block-en">Public uptime checks and private monitoring through Docker Probe. <strong>No inbound port forwarding required.</strong></span>
+          <span class="block-zh">公网检测与 Docker Probe 私有监控集中在一个原生 App 中。<strong>无需开放内网入站端口。</strong></span>
+          <span class="block-hant">公網檢測與 Docker Probe 私有監控集中在一個原生 App 中。<strong>無需開放內網入站連接埠。</strong></span>
+        </p>
+        <div class="actions">
+          <a class="hero-store-link" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" aria-label="Download OpsHome NOC on the App Store">
+            <img src="assets/images/app-store-badge.svg" alt="Download on the App Store">
+          </a>
+          <a class="hero-qr" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" aria-label="Open OpsHome NOC in the App Store">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&amp;data=https%3A%2F%2Fapps.apple.com%2Fus%2Fapp%2Fopshome-noc%2Fid6763890679" alt="QR code for downloading OpsHome NOC from the App Store" width="72" height="72" loading="lazy">
+            <span class="t-en">Scan to download</span>
+            <span class="t-zh">扫码下载</span>
+            <span class="t-hant">掃碼下載</span>
+          </a>
+        </div>
+        <p class="hero-support">
+          <span class="block-en">Synology · Proxmox VE · Docker · Websites · Private services</span>
+          <span class="block-zh">群晖 · Proxmox VE · Docker · 网站 · 私有服务</span>
+          <span class="block-hant">Synology · Proxmox VE · Docker · 網站 · 私有服務</span>
+        </p>
       </div>
-      <div class="block-zh">
-        <span class="tag">零端口转发</span><span class="tag">安全私有监控</span><span class="tag">Assets 资产视图</span><span class="tag">拓扑图</span><span class="tag">iOS 原生</span>
+      <div class="hero-visual">
+        <div class="hero-phone">
+          <img src="assets/images/homepage.jpg" alt="OpsHome NOC health dashboard on iPhone">
+        </div>
+        <div class="hero-visual-note">
+          <span class="t-en">NOC health</span><span class="t-zh">NOC 健康度</span><span class="t-hant">NOC 健康度</span>
+          <strong>100% Operational</strong>
+        </div>
       </div>
-      <div class="block-hant">
-        <span class="tag">零端口轉發</span><span class="tag">安全私有監控</span><span class="tag">Assets 資產視圖</span><span class="tag">拓撲圖</span><span class="tag">iOS 原生</span>
-      </div>
-    </div>
-    <h1>OpsHome <span>NOC<sup class="tm">&trade;</sup></span></h1>
-    <p>
-      <span class="block-en">The native iOS monitoring hub for homelab — public uptime checks and private network visibility via Docker Probe, no port exposure required.</span>
-      <span class="block-zh">专为 homelab 打造的原生 iOS 监控中枢。公网检测 + Docker Probe 内网监控，无需暴露任何端口。</span>
-      <span class="block-hant">專為 homelab 打造的原生 iOS 監控中樞。公網檢測 + Docker Probe 內網監控，無需暴露任何連接埠。</span>
-    </p>
-    <div class="actions">
-      <a href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" aria-label="Download on the App Store">
-        <img src="assets/images/app-store-badge.svg" alt="Download on the App Store" height="72">
-      </a>
     </div>
   </section>
 
@@ -431,9 +490,9 @@
     <h2 style="font-size:clamp(20px,2.5vw,32px);margin-left:auto;margin-right:auto"><span class="block-en">Built for the way homelab people actually check status.</span><span class="block-zh">为 Homelab 用户真实查看状态的方式而设计。</span><span class="block-hant">為 Homelab 使用者真實查看狀態的方式而設計。</span></h2>
     <div class="screens">
       <div><div class="shot"><img src="assets/images/homepage.jpg" alt="OpsHome NOC dashboard with private monitoring"></div><p class="shot-label"><span class="t-en">Dashboard</span><span class="t-zh">首页总览</span><span class="t-hant">首頁總覽</span></p></div>
-      <div><div class="shot"><img src="assets/images/monitor list.jpg" alt="OpsHome NOC monitor workspace"></div><p class="shot-label"><span class="t-en">Workspace</span><span class="t-zh">监控工作区</span><span class="t-hant">監控工作區</span></p></div>
+      <div><div class="shot"><img src="assets/images/monitor list.jpg" alt="OpsHome NOC Synology and Proxmox VE assets workspace"></div><p class="shot-label"><span class="t-en">Assets</span><span class="t-zh">资产</span><span class="t-hant">資產</span></p></div>
       <div><div class="shot"><img src="assets/images/monitor map.jpg" alt="OpsHome NOC topology map"></div><p class="shot-label"><span class="t-en">Topology Map</span><span class="t-zh">拓扑地图</span><span class="t-hant">拓撲地圖</span></p></div>
-      <div><div class="shot"><img src="assets/images/event history.jpg" alt="OpsHome NOC monitor detail and incident history"></div><p class="shot-label"><span class="t-en">Incident History</span><span class="t-zh">事件历史</span><span class="t-hant">事件歷史</span></p></div>
+      <div><div class="shot"><img src="assets/images/event history.jpg" alt="OpsHome NOC Proxmox VE performance and memory details"></div><p class="shot-label"><span class="t-en">Proxmox VE</span><span class="t-zh">Proxmox VE</span><span class="t-hant">Proxmox VE</span></p></div>
       <div><div class="shot"><img src="assets/images/widget all.jpg" alt="OpsHome NOC iOS widgets"></div><p class="shot-label"><span class="t-en">Widgets</span><span class="t-zh">桌面组件</span><span class="t-hant">桌面組件</span></p></div>
     </div>
   </section>
