@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OpsHome NOC - iPhone Monitoring for Homelab, NAS, Docker</title>
+<meta name="description" content="OpsHome NOC monitors NAS, Docker, homelab, websites, private services, SSL, DNS, and domain expiry from your iPhone.">
+<link rel="canonical" href="https://app.opshome.run/">
+<link rel="icon" type="image/png" href="assets/images/favicon-256.png" sizes="256x256">
+<link rel="icon" href="assets/images/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+
+<!-- Open Graph -->
+<meta property="og:title" content="OpsHome NOC - iPhone Monitoring for Homelab, NAS, Docker">
+<meta property="og:description" content="Monitor NAS, Docker, homelab and private services from your iPhone. No port forwarding needed.">
+<meta property="og:image" content="https://app.opshome.run/assets/images/og-image.png">
+<meta property="og:url" content="https://app.opshome.run">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="OpsHome NOC">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OpsHome NOC - Homelab Monitoring for iPhone">
+<meta name="twitter:description" content="Monitor NAS, Docker, and private services from your iPhone. No port forwarding needed.">
+<meta name="twitter:image" content="https://app.opshome.run/assets/images/og-image.png">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "OpsHome NOC",
+  "operatingSystem": "iOS",
+  "applicationCategory": "UtilitiesApplication",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "Native iOS monitoring app for homelab, NAS, Docker, Synology, Proxmox, and self-hosted services. Monitor private services without exposing your network.",
+  "url": "https://app.opshome.run",
+  "downloadUrl": "https://apps.apple.com/us/app/opshome-noc/id6763890679",
+  "screenshot": "https://app.opshome.run/assets/images/og-image.png"
+}
+</script>
+
+<style>
+  @font-face{font-family:"Space Mono Local";src:url("assets/fonts/SpaceMono-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+  @font-face{font-family:"Space Mono Local";src:url("assets/fonts/SpaceMono-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
+  @font-face{font-family:"Noto Sans SC Local";src:url("assets/fonts/NotoSansSC-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+  @font-face{font-family:"Noto Sans SC Local";src:url("assets/fonts/NotoSansSC-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
+  @font-face{font-family:"Noto Sans TC Local";src:url("assets/fonts/NotoSansTC-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+  @font-face{font-family:"Noto Sans TC Local";src:url("assets/fonts/NotoSansTC-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
+  :root {
+    --bg:#f8fafc; --bg2:#eaf4ff; --surface:#ffffff; --border:#d7e8f8;
+    --accent:#1479ff; --accent2:#0b5fd3; --text:#0b1b2e; --muted:#334155; --soft:#102033;
+    --gold:#f59e0b; --gold-dim:#fbbf24;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    --sans-hans:"Noto Sans SC Local","PingFang SC","Microsoft YaHei",sans-serif;
+    --sans-hant:"Noto Sans TC Local","PingFang TC","Microsoft JhengHei",sans-serif;
+    --mono:"Noto Sans SC Local","Noto Sans TC Local","Inter","Segoe UI",Roboto,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:#f8fafc;color:var(--text);font-family:var(--sans);line-height:1.6}
+  body.lang-zh{font-family:var(--sans-hans)}
+  body.lang-hant{font-family:var(--sans-hant)}
+  body:before{content:"";position:fixed;inset:0;background:linear-gradient(90deg,rgba(20,121,255,.06) 0 1px,transparent 1px),linear-gradient(rgba(20,121,255,.05) 0 1px,transparent 1px);background-size:56px 56px;mask-image:linear-gradient(180deg,rgba(0,0,0,.7),transparent 52%);pointer-events:none}
+  a{color:inherit;text-decoration:none}
+  nav{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 56px;background:rgba(255,255,255,.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+  .brand{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:14px;letter-spacing:.06em;color:var(--accent)}
+  sup.tm{font-size:.42em;line-height:0;vertical-align:super;margin-left:2px;letter-spacing:0}
+  .brand img{width:64px;height:64px}
+  .navlinks{display:flex;align-items:center;gap:26px;list-style:none;font-family:var(--mono);font-size:14px;font-weight:700;color:var(--muted);letter-spacing:.08em}
+  .navlinks a:hover{color:var(--accent)}
+  .lang{display:flex;gap:4px;padding:4px;border:1px solid var(--border);background:#fff;border-radius:6px}
+  .lang button{font-family:var(--mono);font-size:11px;color:var(--muted);background:transparent;border:0;padding:6px 9px;cursor:pointer}
+  .lang button.active{background:var(--accent);color:#fff;border-radius:4px}
+  .t-zh,.t-hant,.block-zh,.block-hant{display:none}
+  body.lang-zh .t-en,body.lang-zh .block-en,body.lang-hant .t-en,body.lang-hant .block-en{display:none}
+  body.lang-zh .t-zh{display:inline} body.lang-zh .block-zh{display:block}
+  body.lang-hant .t-hant{display:inline} body.lang-hant .block-hant{display:block}
+  .hero{position:relative;z-index:1;min-height:88vh;padding:88px 56px 76px;overflow:hidden;background:linear-gradient(135deg,#07111f 0%,#0b1b2e 54%,#07111f 100%);color:#fff}
+  .hero:before{content:"";position:absolute;width:620px;height:620px;right:-160px;top:-220px;border-radius:50%;background:radial-gradient(circle,rgba(20,121,255,.3),transparent 68%);pointer-events:none}
+  .hero-inner{position:relative;z-index:1;max-width:1240px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:72px;align-items:center}
+  .hero-copy{text-align:left}
+  .hero-status{display:inline-flex;align-items:center;gap:10px;margin-bottom:24px;padding:8px 14px;border:1px solid rgba(255,255,255,.14);border-radius:999px;background:rgba(255,255,255,.08);color:#dbeafe;font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.04em}
+  .hero-status-dot{position:relative;width:10px;height:10px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 5px rgba(34,197,94,.14)}
+  .hero-copy h1{max-width:720px;font-size:clamp(44px,6vw,76px);line-height:1.04;margin-bottom:24px;letter-spacing:-.045em}
+  .hero-copy h1 .block-en,.hero-copy h1 .block-zh,.hero-copy h1 .block-hant{color:#60a5fa}
+  .hero-copy p{max-width:680px;margin-bottom:30px;color:#cbd5e1;font-size:clamp(18px,2vw,22px);line-height:1.65}
+  .hero-copy p strong{color:#fff}
+  .hero .actions{justify-content:flex-start;align-items:center}
+  .hero-store-link{display:inline-flex;transition:transform .2s ease,filter .2s ease}
+  .hero-store-link:hover{transform:translateY(-2px);filter:brightness(1.05)}
+  .hero-store-link img{display:block;height:64px;width:auto}
+  .hero-qr{display:flex;align-items:center;gap:12px;padding:8px 12px 8px 8px;border:1px solid rgba(255,255,255,.14);border-radius:14px;background:rgba(255,255,255,.08)}
+  .hero-qr img{display:block;width:72px;height:72px;padding:4px;border-radius:8px;background:#fff}
+  .hero-qr span{max-width:90px;color:#cbd5e1;font-family:var(--mono);font-size:10px;line-height:1.45}
+  .hero-support{margin-top:20px!important;margin-bottom:0!important;color:#94a3b8!important;font-size:13px!important;font-family:var(--mono)}
+  .hero-visual{position:relative;display:flex;justify-content:center}
+  .hero-phone{position:relative;width:min(100%,440px);filter:drop-shadow(0 36px 45px rgba(0,0,0,.48)) drop-shadow(0 0 40px rgba(20,121,255,.2));transform:rotate(2deg)}
+  .hero-phone img{display:block;width:100%;height:auto}
+  .hero-visual-note{position:absolute;left:-28px;bottom:10%;padding:12px 16px;border:1px solid rgba(255,255,255,.14);border-radius:12px;background:rgba(8,20,36,.88);box-shadow:0 14px 36px rgba(0,0,0,.3);backdrop-filter:blur(12px);font-family:var(--mono);font-size:12px;color:#dbeafe}
+  .hero-visual-note strong{display:block;margin-top:2px;color:#4ade80;font-size:18px}
+  .hero-logo{width:188px;height:188px;margin-bottom:22px}
+  .eyebrow{font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:.18em;border:1px solid rgba(20,121,255,.22);background:#fff;padding:6px 14px;margin-bottom:26px;border-radius:999px}
+  .eyebrow-tags{margin-bottom:26px}
+  .eyebrow-tags .block-en{display:flex;flex-wrap:wrap;justify-content:center;gap:14px}
+  body.lang-zh .eyebrow-tags .block-zh,body.lang-hant .eyebrow-tags .block-hant{display:flex;flex-wrap:wrap;justify-content:center;gap:14px}
+  .tag{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;font-size:20px;font-weight:700;letter-spacing:.04em;color:#fff;background:var(--accent2);padding:9px 20px;border-radius:999px;white-space:nowrap}
+  h1{font-family:var(--mono);font-size:clamp(42px,8vw,84px);line-height:1;font-weight:800;margin-bottom:16px}
+  h1 span{display:block;color:var(--accent)}
+  .hero p{max-width:720px;color:var(--muted);font-size:21px;font-weight:400;margin-bottom:34px}
+  .actions{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+  .btn{font-family:var(--mono);font-size:13px;letter-spacing:.08em;padding:14px 26px;border:1px solid var(--accent);cursor:pointer;border-radius:6px}
+  .plan .btn{font-size:16px;font-weight:700}
+  .btn.primary{background:var(--accent);color:#fff;box-shadow:0 2px 12px rgba(20,121,255,.20)}
+  .btn.secondary{color:var(--accent);background:#fff}
+  .section{position:relative;z-index:1;max-width:1240px;margin:0 auto;padding:86px 56px}
+  .label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--accent);margin-bottom:14px}
+  h2{font-family:var(--mono);font-size:clamp(30px,4vw,48px);line-height:1.18;margin-bottom:16px}
+  .desc{max-width:760px;color:var(--muted);font-size:19px;font-weight:400;margin-bottom:42px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .card{
+    position:relative;
+    background:var(--surface);
+    padding:28px;
+    min-height:220px;
+    border:1px solid var(--border);
+    border-top:3px solid var(--accent);
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.05);
+  }
+  .card h3{font-family:var(--mono);font-size:17px;letter-spacing:.04em;margin:14px 0 8px;color:var(--text)}
+  .card p{color:var(--soft);font-weight:500}
+  .icon{width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:#eef4ff;border-radius:8px}
+  .icon svg{width:22px;height:22px;stroke:#1479ff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  table{width:100%;border-collapse:collapse;border:1px solid var(--border);font-size:15px}
+  th,td{padding:16px 18px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
+  th{font-family:var(--mono);font-size:12px;color:#ffffff;background:var(--text);letter-spacing:.08em}
+  td:first-child{font-family:var(--mono);color:var(--soft)}
+  .badge{
+    display:inline-block;
+    font-family:var(--mono);
+    font-size:10px;
+    font-weight:800;
+    padding:4px 9px;
+    border:1px solid #16a34a;
+    color:#15803d;
+    margin-right:6px;
+    white-space:nowrap;
+    border-radius:4px;
+    background:#dcfce7;
+  }
+  .badge.pro,.badge.only{
+    border-color:#d97706;
+    color:#92400e;
+    background:#fef3c7;
+  }
+  .monitor-matrix{padding-top:104px;padding-bottom:104px}
+  .monitor-matrix .label{display:inline-flex;align-items:center;padding:7px 12px;border:1px solid rgba(20,121,255,.32);background:#eaf4ff;border-radius:6px}
+  .monitor-matrix h2{max-width:820px}
+  .monitor-table{
+    overflow:hidden;
+    border:1px solid var(--border);
+    border-radius:10px;
+    background:#fff;
+    box-shadow:0 2px 12px rgba(0,0,0,.06);
+  }
+  .monitor-table table{border:0}
+  .monitor-table th,.monitor-table td{border-bottom:1px solid var(--border)}
+  .monitor-table th{background:var(--text);color:#fff;font-size:13px}
+  .monitor-table tbody tr:nth-child(even){background:#f8fafc}
+  .monitor-table tbody tr:hover{background:#eaf4ff}
+  .monitor-table tbody tr:last-child td{border-bottom:0}
+  .monitor-table td:first-child{font-weight:800;color:var(--text);font-size:17px}
+  .section.wide{max-width:1440px}
+  .trust-panel{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:start;background:#fff;border:1px solid var(--border);border-top:4px solid var(--accent);border-radius:12px;padding:30px;box-shadow:0 2px 14px rgba(20,121,255,.09);text-align:left}
+  .trust-panel p{color:var(--muted);font-size:17px;margin-top:8px}
+  .trust-list{display:grid;gap:10px}
+  .trust-item{padding:12px 14px;border:1px solid var(--accent);border-top:3px solid var(--accent);border-radius:8px;background:#f8fafc;color:var(--soft);font-weight:700}
+  .trust-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+  .trust-link{font-family:var(--mono);font-size:12px;color:var(--accent);font-weight:800}
+  .screens{display:grid;grid-template-columns:repeat(5,1fr);gap:24px}
+  .shot{background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.07)}
+  .shot img{display:block;width:100%;height:auto}
+  .shot-label{text-align:center;color:var(--muted);font-size:14px;font-weight:500;margin-top:12px}
+  .pricing{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;align-items:stretch}
+  .plan{
+    position:relative;
+    background:#ffffff;
+    border:1px solid var(--border);
+    border-top:4px solid var(--accent);
+    padding:28px 28px 80px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,.05);
+    overflow:hidden;
+  }
+  .plan.pro{
+    border:1px solid rgba(245,158,11,.35);
+    border-top:4px solid var(--gold);
+    background:#0b1b2e;
+    box-shadow:0 4px 28px rgba(245,158,11,.14);
+  }
+  .plan.pro:after{
+    content:"BEST FOR PRIVATE MONITORING";
+    position:absolute;
+    top:20px;
+    right:20px;
+    padding:5px 10px;
+    border:1px solid rgba(245,158,11,.45);
+    border-radius:4px;
+    background:rgba(245,158,11,.12);
+    color:#fbbf24;
+    font-family:var(--mono);
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:.08em;
+  }
+  .plan-name{font-family:var(--mono);font-size:13px;letter-spacing:.18em;color:var(--muted);margin-bottom:16px}
+  .plan.pro .plan-name{color:var(--gold-dim)}
+  .plan-price{font-family:var(--mono);font-size:42px;margin-bottom:6px}
+  .plan.pro .plan-price{color:#ffffff;font-weight:900}
+  .plan-note{color:var(--muted);font-size:14px;font-weight:400;margin-bottom:24px}
+  .plan.pro .plan-note{color:rgba(255,255,255,.5)}
+  .plan ul{list-style:none}
+  .plan li{padding:7px 0;border-bottom:1px solid var(--border);color:var(--muted);font-weight:400;font-size:19px}
+  .plan li strong{color:var(--text)}
+  .plan.pro li{border-bottom-color:rgba(255,255,255,.08);color:rgba(255,255,255,.65);font-weight:400;text-shadow:0 1px 3px rgba(255,255,255,.15)}
+  .plan.pro li strong{color:#92D050;text-shadow:0 1px 3px rgba(255,255,255,.2)}
+  .plan.free li{font-weight:400;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.3)}
+  .plan.free li strong{color:var(--accent);text-shadow:0 1px 2px rgba(0,0,0,.2)}
+  .plan.free .plan-name,.plan.free .plan-price,.plan.free .plan-note{color:#fff!important;font-weight:900;text-shadow:0 1px 2px rgba(0,0,0,.3)}
+  footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:36px 56px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;color:var(--muted);font-family:var(--mono);font-size:12px}
+  footer ul{display:flex;gap:22px;list-style:none}
+  footer a:hover{color:var(--accent)}
+  .feature-group{margin-top:48px}
+  .feature-group:first-of-type{margin-top:0}
+  .feature-group-label{display:inline-block;font-family:var(--mono);font-size:16px;font-weight:700;letter-spacing:.18em;color:#fff;background:var(--text);padding:7px 14px;margin-bottom:16px;border-radius:3px}
+  .grid-2{grid-template-columns:repeat(2,1fr)}
+  .group-row td{background:var(--text)!important;color:#fff!important;font-family:var(--mono);font-size:11px;font-weight:900;letter-spacing:.14em;padding:9px 16px;border-bottom:0}
+  @media(max-width:900px){.grid-2{grid-template-columns:1fr}}
+  #features .grid .card:nth-child(6){border-top-color:#ea580c}
+  #features .grid .card:nth-child(6) .icon{background:#fff7ed}
+  #features .grid .card:nth-child(6) .icon svg{stroke:#ea580c}
+  @media(max-width:900px){
+    nav{padding:16px 22px}
+    .navlinks{display:none}
+    .hero{min-height:auto;padding:72px 22px 64px}
+    .hero-inner{grid-template-columns:1fr;gap:48px}
+    .hero-copy{text-align:center}
+    .hero-copy h1,.hero-copy p{margin-left:auto;margin-right:auto}
+    .hero .actions{justify-content:center}
+    .hero-visual{max-width:430px;margin:0 auto}
+    .hero-phone{transform:none}
+    .section{padding:64px 22px}
+    .grid,.pricing,.trust-panel{grid-template-columns:1fr}
+    .screens{grid-template-columns:repeat(2,1fr)}
+    #how-it-works .grid{grid-template-columns:1fr}
+    .eyebrow-tags .block-en,.eyebrow-tags .block-zh,.eyebrow-tags .block-hant{gap:8px}
+    .tag{font-size:15px;padding:7px 14px}
+    .monitor-table{overflow-x:auto}
+    .monitor-matrix .monitor-table table{min-width:560px}
+    .trust-item{font-size:13px;padding:10px}
+    #how-it-works{text-align:center}
+    .plan{padding:24px}
+    .plan-cta{display:none!important}
+    #pricing .cta-bottom{padding:20px 22px;flex-direction:column;text-align:center;gap:16px}
+  }
+  @media(max-width:560px){
+    .screens{grid-template-columns:1fr}
+    .hero{padding-top:56px}
+    .hero-copy h1{font-size:clamp(38px,12vw,54px)}
+    .hero-copy p{font-size:17px}
+    .hero-store-link img{height:56px}
+    .hero-qr{display:none}
+    .hero-visual-note{left:8px;bottom:7%;padding:9px 12px;font-size:10px}
+    .hero-visual-note strong{font-size:15px}
+    th,td{padding:10px;font-size:13px}
+    .tag{font-size:13px;padding:6px 12px}
+    .eyebrow-tags .block-en,.eyebrow-tags .block-zh,.eyebrow-tags .block-hant{gap:6px}
+    .pricing{gap:16px}
+    .plan{padding:20px 20px 24px}
+    h2{font-size:clamp(20px,6vw,36px)}
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a class="brand" href="index.html"><img src="assets/images/brand-logo.png" alt="OpsHome NOC logo"><span>OpsHome <strong>NOC</strong><sup class="tm">&trade;</sup></span></a>
+  <ul class="navlinks">
+    <li><a href="#features"><span class="t-en">FEATURES</span><span class="t-zh">功能特性</span><span class="t-hant">功能特性</span></a></li>
+    <li><a href="use-cases.html"><span class="t-en">USE CASES</span><span class="t-zh">使用场景</span><span class="t-hant">使用場景</span></a></li>
+    <li><a href="#protocols"><span class="t-en">MONITORS</span><span class="t-zh">监控类型</span><span class="t-hant">監控類型</span></a></li>
+    <li><a href="#pricing"><span class="t-en">PRICING</span><span class="t-zh">方案</span><span class="t-hant">方案</span></a></li>
+    <li><a href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener"><span class="t-en">APP STORE</span><span class="t-zh">APP STORE</span><span class="t-hant">APP STORE</span></a></li>
+    <li><a href="https://docs.opshome.run/release-notes.html" target="_blank" rel="noopener"><span class="t-en">CHANGELOG</span><span class="t-zh">更新日志</span><span class="t-hant">更新日誌</span></a></li>
+  </ul>
+  <div class="lang" aria-label="Language">
+    <button class="active" data-lang="en">EN</button>
+    <button data-lang="hant">繁</button>
+    <button data-lang="zh">简</button>
+  </div>
+</nav>
+
+<main>
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="hero-status">
+          <span class="hero-status-dot" aria-hidden="true"></span>
+          <span class="t-en">Available on the App Store</span>
+          <span class="t-zh">现已上线 App Store</span>
+          <span class="t-hant">現已上架 App Store</span>
+        </div>
+        <h1>
+          OpsHome NOC<sup class="tm">&trade;</sup>
+          <span class="block-en">Your homelab on iPhone.</span>
+          <span class="block-zh">用 iPhone 监控你的 Homelab</span>
+          <span class="block-hant">用 iPhone 監控你的 Homelab</span>
+        </h1>
+        <p>
+          <span class="block-en">Public uptime checks and private monitoring through Docker Probe. <strong>No inbound port forwarding required.</strong></span>
+          <span class="block-zh">公网检测与 Docker Probe 私有监控集中在一个原生 App 中。<strong>无需开放内网入站端口。</strong></span>
+          <span class="block-hant">公網檢測與 Docker Probe 私有監控集中在一個原生 App 中。<strong>無需開放內網入站連接埠。</strong></span>
+        </p>
+        <div class="actions">
+          <a class="hero-store-link" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" aria-label="Download OpsHome NOC on the App Store">
+            <img src="assets/images/app-store-badge.svg" alt="Download on the App Store">
+          </a>
+          <a class="hero-qr" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" aria-label="Open OpsHome NOC in the App Store">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&amp;data=https%3A%2F%2Fapps.apple.com%2Fus%2Fapp%2Fopshome-noc%2Fid6763890679" alt="QR code for downloading OpsHome NOC from the App Store" width="72" height="72" loading="lazy">
+            <span class="t-en">Scan to download</span>
+            <span class="t-zh">扫码下载</span>
+            <span class="t-hant">掃碼下載</span>
+          </a>
+        </div>
+        <p class="hero-support">
+          <span class="block-en">Synology · Proxmox VE · Docker · Websites · Private services</span>
+          <span class="block-zh">群晖 · Proxmox VE · Docker · 网站 · 私有服务</span>
+          <span class="block-hant">Synology · Proxmox VE · Docker · 網站 · 私有服務</span>
+        </p>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-phone">
+          <img src="assets/images/hero-iphone.png" alt="OpsHome NOC health dashboard shown on an iPhone">
+        </div>
+        <div class="hero-visual-note">
+          <span class="t-en">NOC health</span><span class="t-zh">NOC 健康度</span><span class="t-hant">NOC 健康度</span>
+          <strong>100% Operational</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;padding-bottom:64px;text-align:center">
+    <p class="label">// PRODUCT PREVIEW</p>
+    <div style="position:relative;max-width:860px;margin:0 auto;border-radius:12px;overflow:hidden;border:1px solid var(--border);box-shadow:0 4px 24px rgba(20,121,255,.12)">
+      <div style="position:relative;padding-bottom:56.25%;height:0">
+        <iframe
+          id="product-video"
+          src="about:blank"
+          data-youtube-src="https://www.youtube.com/embed/pMgMqtMeOd4"
+          data-bilibili-src="https://player.bilibili.com/player.html?bvid=BV1b5Et6GE8F&page=1&autoplay=0"
+          data-youtube-title="OpsHome NOC v1.6 and v1.6.1 Video Collection"
+          data-bilibili-title="OpsHome NOC v1.6 and v1.6.1 Video Collection"
+          title="OpsHome NOC v1.6 and v1.6.1 Video Collection"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          style="position:absolute;top:0;left:0;width:100%;height:100%"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;padding-bottom:64px">
+    <div style="max-width:860px;margin:0 auto">
+      <p class="label">// ENGINEERING STANDARD</p>
+      <h2 style="font-size:clamp(16px,1.8vw,24px);margin-bottom:24px">
+        <span class="block-en">Built by a senior network &amp; systems engineer with <strong>15 years</strong> of hands-on IT operations experience.</span>
+        <span class="block-zh">由拥有 <strong>15 年</strong>一线 IT 运维经验的资深网络与系统工程师打造。</span>
+        <span class="block-hant">由擁有 <strong>15 年</strong>一線 IT 維運經驗的資深網路與系統工程師打造。</span>
+      </h2>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:28px">
+        <div class="trust-item" style="text-align:center"><span class="t-en">Cisco CCNP Enterprise Certified</span><span class="t-zh">Cisco CCNP Enterprise 认证</span><span class="t-hant">Cisco CCNP Enterprise 認證</span></div>
+        <div class="trust-item" style="text-align:center"><span class="t-en">Microsoft MCSE credential</span><span class="t-zh">Microsoft MCSE 认证</span><span class="t-hant">Microsoft MCSE 認證</span></div>
+        <div class="trust-item" style="text-align:center"><span class="t-en">Oracle MySQL HeatWave Certified Associate</span><span class="t-zh">Oracle MySQL HeatWave 认证</span><span class="t-hant">Oracle MySQL HeatWave 認證</span></div>
+        <div class="trust-item" style="text-align:center"><span class="t-en">Fortinet Firewall Certification</span><span class="t-zh">Fortinet 防火墙认证</span><span class="t-hant">Fortinet 防火牆認證</span></div>
+      </div>
+      <p style="color:var(--muted);font-size:17px;line-height:1.9;margin-bottom:20px">
+        <span class="block-en">OpsHome NOC brings real enterprise-grade engineering practices into personal homelab monitoring, from Proxmox and TrueNAS environments to Docker, NAS, and private services. Designed, developed, and maintained by an independent developer who built it after getting tired of clunky mobile monitoring tools in a real homelab.</span>
+        <span class="block-zh">OpsHome NOC 将真实企业级工程实践带入个人 Homelab 监控场景，从 Proxmox、TrueNAS 环境，到 Docker、NAS 与私有服务。由独立开发者设计、开发和维护，起点很直接：受够了笨重难用的移动监控工具。</span>
+        <span class="block-hant">OpsHome NOC 將真實企業級工程實踐帶入個人 Homelab 監控場景，從 Proxmox、TrueNAS 環境，到 Docker、NAS 與私有服務。由獨立開發者設計、開發和維護，起點很直接：受夠了笨重難用的行動監控工具。</span>
+      </p>
+      <div class="trust-links">
+        <a class="trust-link" href="https://docs.opshome.run/product-positioning.html" target="_blank" rel="noopener"><span class="t-en">Product positioning</span><span class="t-zh">产品定位说明</span><span class="t-hant">產品定位說明</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="how-it-works" style="padding-bottom:0;text-align:center">
+    <p class="label">// HOW IT WORKS</p>
+    <h2><span class="block-en">How OpsHome NOC Works</span><span class="block-zh">OpsHome NOC 是如何工作的</span><span class="block-hant">OpsHome NOC 是如何運作的</span></h2>
+    <p class="desc" style="margin-left:auto;margin-right:auto"><span class="block-en">OpsHome NOC is not a standalone app — it's a complete SaaS service built on three components working together.</span><span class="block-zh">OpsHome NOC 不是单机 App，而是由三个部分协同工作的完整 SaaS 服务。</span><span class="block-hant">OpsHome NOC 不是單機 App，而是由三個部分協同運作的完整 SaaS 服務。</span></p>
+    <div style="max-width:500px;margin:0 auto 48px;border-radius:12px;overflow:hidden;border:1px solid var(--border);box-shadow:0 4px 24px rgba(20,121,255,.1)">
+      <img src="assets/images/how-to-work.gif" alt="How OpsHome NOC Works" style="display:block;width:100%;height:auto">
+    </div>
+    <div class="grid">
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div>
+        <h3><span class="t-en">iPhone App</span><span class="t-zh">iPhone App</span><span class="t-hant">iPhone App</span></h3>
+        <p><span class="t-en">Your control center. Displays real-time data, topology maps, asset views, and delivers push alerts.</span><span class="t-zh">你的控制中心。负责显示实时数据、拓扑图、资产视图和接收告警推送。</span><span class="t-hant">你的控制中心。負責顯示即時數據、拓撲圖、資產視圖和接收告警推播。</span></p>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 16 0"/><path d="M2 12h2"/><path d="M20 12h2"/><circle cx="12" cy="12" r="3"/><path d="M12 4v2"/></svg></div>
+        <h3><span class="t-en">OpsHome Cloud</span><span class="t-zh">OpsHome Cloud</span><span class="t-hant">OpsHome Cloud</span></h3>
+        <p><span class="t-en">The SaaS backbone. Handles data storage, topology generation, alert delivery, and status pages.</span><span class="t-zh">云端 SaaS 服务。负责数据存储、拓扑图生成、告警推送和状态页。</span><span class="t-hant">雲端 SaaS 服務。負責數據存儲、拓撲圖生成、告警推播和狀態頁。</span></p>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+        <h3><span class="t-en">Docker Probe</span><span class="t-zh">Docker Probe</span><span class="t-hant">Docker Probe</span></h3>
+        <p><span class="t-en">A lightweight agent you deploy inside your home network. Collects private service status and sends it to the cloud — zero port forwarding required.</span><span class="t-zh">你部署在内网的轻量探针。采集私有服务状态并安全发送至云端，无需暴露任何端口。</span><span class="t-hant">你部署在內網的輕量探針。採集私有服務狀態並安全傳送至雲端，無需暴露任何連接埠。</span></p>
+      </div>
+    </div>
+    <p style="text-align:center;max-width:760px;margin:0 auto;color:var(--muted);font-size:17px;font-weight:600"><span class="block-en">Through Docker Probe, your iPhone sees your entire homelab in real time — without exposing a single internal port.</span><span class="block-zh">通过 Docker Probe，你的 iPhone 可以实时看到整个 homelab 的状态，完全不暴露任何内网端口。</span><span class="block-hant">透過 Docker Probe，你的 iPhone 可以即時看到整個 homelab 的狀態，完全不暴露任何內網連接埠。</span></p>
+  </section>
+
+  <section class="section" id="features" style="text-align:center">
+    <p class="label">// FEATURES</p>
+    <h2 style="font-size:clamp(20px,2.5vw,32px);margin-left:auto;margin-right:auto"><span class="block-en">The iPhone-first control room for your homelab.</span><span class="block-zh">属于 Homelab 的 iPhone 优先控制室。</span><span class="block-hant">屬於 Homelab 的 iPhone 優先控制室。</span></h2>
+    <p class="desc" style="margin-left:auto;margin-right:auto"><span class="t-en">OpsHome NOC focuses on public monitoring, private network visibility, infrastructure integrations, and clear status sharing for NAS, Docker, homelab, and small production endpoints.</span><span class="t-zh">聚焦公网监控、私有网络可见性、基础设施集成和清晰的状态共享，覆盖 NAS、Docker、Homelab 和小型生产端点。</span><span class="t-hant">聚焦公網監控、私有網路可見性、基礎設施整合和清晰的狀態分享，覆蓋 NAS、Docker、Homelab 和小型生產端點。</span></p>
+
+    <div class="feature-group">
+      <p class="feature-group-label"><span class="t-en">// PRIVATE NETWORK</span><span class="t-zh">// 私有网络</span><span class="t-hant">// 私有網路</span></p>
+      <div class="grid">
+        <div class="card" style="border-top-color:#16a34a"><div class="icon" style="background:#f0fdf4"><svg viewBox="0 0 24 24" style="stroke:#16a34a"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 20h10"/><path d="M9 8h6"/><path d="M9 12h3"/></svg></div><h3><span class="t-en">Private Monitoring</span><span class="t-zh">私有网络监控</span><span class="t-hant">私有網路監控</span></h3><p><span class="t-en">Monitor NAS panels, Docker services, and internal HTTP/HTTPS/TCP targets without opening your home network.</span><span class="t-zh">无需开放家庭网络端口，即可监控 NAS 面板、Docker 服务和内网 HTTP/HTTPS/TCP 目标。</span><span class="t-hant">無需開放家庭網路連接埠，即可監控 NAS 面板、Docker 服務和內網 HTTP/HTTPS/TCP 目標。</span></p></div>
+        <div class="card" style="border-top-color:#16a34a"><div class="icon" style="background:#f0fdf4"><svg viewBox="0 0 24 24" style="stroke:#16a34a"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 7h.01"/><path d="M11 7h6"/><path d="M7 11h.01"/><path d="M11 11h6"/></svg></div><h3><span class="t-en">Infrastructure Assets</span><span class="t-zh">基础设施资产</span><span class="t-hant">基礎設施資產</span></h3><p><span class="t-en">Synology NAS, Docker containers, and Proxmox VE — CPU, memory, disk I/O, temperature, and container health without exposing management interfaces.</span><span class="t-zh">Synology NAS、Docker 容器和 Proxmox VE 的 CPU、内存、磁盘 I/O、温度和容器健康，无需暴露管理界面。</span><span class="t-hant">Synology NAS、Docker 容器和 Proxmox VE 的 CPU、記憶體、磁碟 I/O、溫度和容器健康，無需暴露管理介面。</span></p></div>
+        <div class="card" style="border-top-color:#7c3aed"><div class="icon" style="background:#f5f3ff"><svg viewBox="0 0 24 24" style="stroke:#7c3aed"><circle cx="12" cy="5" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><path d="M12 7v4"/><path d="M12 11 6 16"/><path d="M12 11l6 5"/></svg></div><h3><span class="t-en">Topology Map</span><span class="t-zh">拓扑地图</span><span class="t-hant">拓撲地圖</span></h3><p><span class="t-en">A visual Cloud to Private Networks map shows where each service lives and how it is monitored.</span><span class="t-zh">Cloud 到 Private Networks 的可视化拓扑，让服务位置和监控来源一目了然。</span><span class="t-hant">Cloud 到 Private Networks 的可視化拓撲，讓服務位置和監控來源一目了然。</span></p></div>
+      </div>
+    </div>
+
+    <div class="feature-group">
+      <p class="feature-group-label"><span class="t-en">// PUBLIC MONITORS</span><span class="t-zh">// 公网监测</span><span class="t-hant">// 公網監測</span></p>
+      <div class="grid grid-2">
+        <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/><path d="M8 5v14"/></svg></div><h3><span class="t-en">Monitor Workspace</span><span class="t-zh">监控工作区</span><span class="t-hant">監控工作區</span></h3><p><span class="t-en">All, Dock, Map, and Tags views separate public checks from private network monitoring.</span><span class="t-zh">All、Dock、Map、Tags 视图清晰区分公网检测和私有网络监控。</span><span class="t-hant">All、Dock、Map、Tags 視圖清晰區分公網檢測和私有網路監控。</span></p></div>
+        <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div><h3><span class="t-en">Alerts & Analysis</span><span class="t-zh">告警与分析</span><span class="t-hant">告警與分析</span></h3><p><span class="t-en">Push alerts, Telegram, incident history, uptime blocks, SSL/domain risk, and readable analysis help you act fast.</span><span class="t-zh">推送告警、Telegram、事件历史、在线率色块、SSL/域名风险和易读分析，帮助你快速处置。</span><span class="t-hant">推播告警、Telegram、事件歷史、在線率色塊、SSL/域名風險和易讀分析，幫助你快速處置。</span></p></div>
+      </div>
+    </div>
+
+    <div class="feature-group">
+      <p class="feature-group-label"><span class="t-en">// VISUALIZATION & SHARING</span><span class="t-zh">// 可视化与分享</span><span class="t-hant">// 可視化與分享</span></p>
+      <div class="grid grid-2">
+        <div class="card"><div class="icon" style="background:#fff7ed"><svg viewBox="0 0 24 24" style="stroke:#ea580c"><rect x="5" y="3" width="14" height="18" rx="3"/><path d="M9 7h6"/><path d="M9 11h6"/><path d="M9 15h3"/></svg></div><h3><span class="t-en">iOS Widgets</span><span class="t-zh">iOS 组件</span><span class="t-hant">iOS 組件</span></h3><p><span class="t-en">Home screen and lock screen widgets keep your homelab status visible without opening the app.</span><span class="t-zh">桌面和锁屏组件让 Homelab 状态不打开 App 也能快速扫一眼。</span><span class="t-hant">桌面和鎖屏組件讓 Homelab 狀態不打開 App 也能快速掃一眼。</span></p></div>
+        <div class="card"><div class="icon" style="background:#f0fdf4"><svg viewBox="0 0 24 24" style="stroke:#16a34a"><path d="M4 6h16v12H4z"/><path d="M8 10h8"/><path d="M8 14h5"/></svg></div><h3><span class="t-en">Status Pages</span><span class="t-zh">公开状态页</span><span class="t-hant">公開狀態頁</span></h3><p><span class="t-en">Share public service status with access codes, expiry windows, QR verification, and private-target masking.</span><span class="t-zh">可分享公开状态页，支持访问口令、有效期、二维码验真和私有目标脱敏。</span><span class="t-hant">可分享公開狀態頁，支援訪問口令、有效期、二維碼驗真和私有目標脫敏。</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section monitor-matrix" id="protocols" style="text-align:center">
+    <p class="label">// MONITOR TYPES</p>
+    <h2 style="font-size:clamp(20px,2.5vw,32px);margin-left:auto;margin-right:auto"><span class="block-en">Monitor types and plan access.</span><span class="block-zh">监控类型和方案权限。</span><span class="block-hant">監控類型和方案權限。</span></h2>
+    <div class="monitor-table" style="max-width:860px;margin-left:auto;margin-right:auto">
+      <table>
+        <colgroup><col style="width:14%"><col style="width:58%"><col style="width:14%"><col style="width:14%"></colgroup>
+        <thead><tr><th><span class="t-en">Type</span><span class="t-zh">类型</span><span class="t-hant">類型</span></th><th><span class="t-en">Description</span><span class="t-zh">说明</span><span class="t-hant">說明</span></th><th style="text-align:center">FREE</th><th style="text-align:center">PRO</th></tr></thead>
+        <tbody>
+          <tr class="group-row"><td colspan="4"><span class="t-en">Cloud Monitoring</span><span class="t-zh">公网检测</span><span class="t-hant">公網檢測</span></td></tr>
+          <tr><td>HTTP</td><td><span class="t-en">HTTP status-code detection and analysis hints.</span><span class="t-zh">HTTP 状态码检测与分析提示。</span><span class="t-hant">HTTP 狀態碼檢測與分析提示。</span></td><td style="text-align:center;color:#16a34a;font-size:20px;font-weight:700">✓</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
+          <tr><td>HTTPS</td><td><span class="t-en">HTTPS reachability and status-code detection.</span><span class="t-zh">HTTPS 可达性与状态码检测。</span><span class="t-hant">HTTPS 可達性與狀態碼檢測。</span></td><td style="text-align:center;color:#16a34a;font-size:20px;font-weight:700">✓</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
+          <tr><td>TCP</td><td><span class="t-en">Custom port connectivity without fixed port restrictions.</span><span class="t-zh">自定义端口连通性检测，不限制固定端口。</span><span class="t-hant">自訂連接埠連通性檢測，不限制固定連接埠。</span></td><td style="text-align:center;color:#16a34a;font-size:20px;font-weight:700">✓</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
+          <tr><td>ICMP</td><td><span class="t-en">Ping-style host reachability.</span><span class="t-zh">类似 Ping 的主机可达性检测。</span><span class="t-hant">類似 Ping 的主機可達性檢測。</span></td><td style="text-align:center;color:#16a34a;font-size:20px;font-weight:700">✓</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
+          <tr class="group-row"><td colspan="4"><span class="t-en">Security & Domain</span><span class="t-zh">安全与域名</span><span class="t-hant">安全與域名</span></td></tr>
+          <tr><td>SSL</td><td><span class="t-en">Certificate validity, CN, issuer, and hostname match checks.</span><span class="t-zh">证书有效期、CN、颁发者和主机名匹配检测。</span><span class="t-hant">證書有效期、CN、頒發者和主機名稱匹配檢測。</span></td><td style="text-align:center;color:#16a34a;font-size:20px;font-weight:700">✓</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
+          <tr><td>DNS</td><td><span class="t-en">DNS response checks and A/MX record validation.</span><span class="t-zh">DNS 响应检测与 A/MX 记录校验。</span><span class="t-hant">DNS 回應檢測與 A/MX 記錄校驗。</span></td><td style="text-align:center;color:var(--muted);font-size:18px">—</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
+          <tr><td><span class="t-en">Domain</span><span class="t-zh">域名</span><span class="t-hant">域名</span></td><td><span class="t-en">Domain registration expiry monitoring.</span><span class="t-zh">域名注册到期监测。</span><span class="t-hant">域名註冊到期監測。</span></td><td style="text-align:center;color:var(--muted);font-size:18px">—</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
+          <tr><td>UDP</td><td><span class="t-en">UDP response checks for supported payloads.</span><span class="t-zh">对支持的载荷进行 UDP 响应检测。</span><span class="t-hant">對支援的載荷進行 UDP 回應檢測。</span></td><td style="text-align:center;color:var(--muted);font-size:18px">—</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
+          <tr class="group-row"><td colspan="4"><span class="t-en">Private Network</span><span class="t-zh">私有网络</span><span class="t-hant">私有網路</span></td></tr>
+          <tr><td><span class="t-en">Private Monitoring</span><span class="t-zh">私有网络监控</span><span class="t-hant">私有網路監控</span></td><td><span class="t-en">Private Docker, NAS, and internal HTTP/HTTPS/TCP checks without exposing inbound access.</span><span class="t-zh">无需暴露入站访问，即可检测私有 Docker、NAS 和内网 HTTP/HTTPS/TCP 服务。</span><span class="t-hant">無需暴露入站存取，即可檢測私有 Docker、NAS 和內網 HTTP/HTTPS/TCP 服務。</span></td><td style="text-align:center;color:var(--muted);font-size:18px">—</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section wide" id="screenshots" style="text-align:center">
+    <p class="label">// APP SCREENSHOTS</p>
+    <h2 style="font-size:clamp(20px,2.5vw,32px);margin-left:auto;margin-right:auto"><span class="block-en">Built for the way homelab people actually check status.</span><span class="block-zh">为 Homelab 用户真实查看状态的方式而设计。</span><span class="block-hant">為 Homelab 使用者真實查看狀態的方式而設計。</span></h2>
+    <div class="screens">
+      <div><div class="shot"><img src="assets/images/homepage.jpg" alt="OpsHome NOC dashboard with private monitoring"></div><p class="shot-label"><span class="t-en">Dashboard</span><span class="t-zh">首页总览</span><span class="t-hant">首頁總覽</span></p></div>
+      <div><div class="shot"><img src="assets/images/monitor list.jpg" alt="OpsHome NOC Synology and Proxmox VE assets workspace"></div><p class="shot-label"><span class="t-en">Assets</span><span class="t-zh">资产</span><span class="t-hant">資產</span></p></div>
+      <div><div class="shot"><img src="assets/images/monitor map.jpg" alt="OpsHome NOC topology map"></div><p class="shot-label"><span class="t-en">Topology Map</span><span class="t-zh">拓扑地图</span><span class="t-hant">拓撲地圖</span></p></div>
+      <div><div class="shot"><img src="assets/images/event history.jpg" alt="OpsHome NOC Proxmox VE performance and memory details"></div><p class="shot-label"><span class="t-en">Proxmox VE</span><span class="t-zh">Proxmox VE</span><span class="t-hant">Proxmox VE</span></p></div>
+      <div><div class="shot"><img src="assets/images/widget all.jpg" alt="OpsHome NOC iOS widgets"></div><p class="shot-label"><span class="t-en">Widgets</span><span class="t-zh">桌面组件</span><span class="t-hant">桌面組件</span></p></div>
+    </div>
+  </section>
+
+  <section class="section" id="pricing" style="text-align:center">
+    <p class="label">// PLANS</p>
+    <h2 style="font-size:clamp(20px,2.5vw,32px);margin-left:auto;margin-right:auto"><span class="block-en">Start free. Upgrade when you need more.</span><span class="block-zh">免费开始，需要更多时再升级。</span><span class="block-hant">免費開始，需要更多時再升級。</span></h2>
+    <p class="desc" style="margin-left:auto;margin-right:auto"><span class="t-en">Start free. No credit card required. Upgrade when you need more public monitors, private network monitoring, infrastructure integrations, and advanced visibility.</span><span class="t-zh">免费开始，无需信用卡。需要更多公网监控、私有网络监控、基础设施集成和高级可见性时再升级。</span><span class="t-hant">免費開始，無需信用卡。需要更多公網監控、私有網路監控、基礎設施整合和進階可見性時再升級。</span></p>
+    <div class="pricing" style="text-align:left">
+      <div class="plan free" style="background:linear-gradient(180deg,#92D050 0%,#6ABB65 100%)">
+        <p class="plan-name"><span style="display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:var(--accent);color:#fff;font-size:13px;font-weight:900;letter-spacing:.1em">FREE</span></p>
+        <p class="plan-price"><span class="t-en">Free</span><span class="t-hant">免費</span><span class="t-zh">免费</span></p>
+        <p class="plan-note"><span class="t-en">No subscription required.</span><span class="t-hant">無需訂閱。</span><span class="t-zh">无需订阅。</span></p>
+        <ul>
+          <li><span class="t-en"><strong>30</strong> public monitor targets</span><span class="t-zh"><strong>30</strong> 个公网监控目标</span><span class="t-hant"><strong>30</strong> 個公網監控目標</span></li>
+          <li>HTTP / HTTPS / TCP / SSL / ICMP</li>
+          <li><span class="t-en"><strong>1</strong> public status page</span><span class="t-zh"><strong>1</strong> 个公开状态页</span><span class="t-hant"><strong>1</strong> 個公開狀態頁</span></li>
+          <li><span class="t-en"><strong>10</strong> monitors per status page</span><span class="t-zh">每个状态页 <strong>10</strong> 个监控点</span><span class="t-hant">每個狀態頁 <strong>10</strong> 個監控點</span></li>
+          <li><span class="t-en">Home screen and lock screen widgets</span><span class="t-zh">桌面和锁屏组件</span><span class="t-hant">桌面和鎖屏組件</span></li>
+          <li><span class="t-en">All / Dock / Map / Tags workspace views</span><span class="t-zh">All / Dock / Map / Tags 工作区视图</span><span class="t-hant">All / Dock / Map / Tags 工作區視圖</span></li>
+          <li><span class="t-en"><strong>Synology</strong> DSM public asset collection</span><span class="t-zh"><strong>群晖</strong> DSM 公开资产采集</span><span class="t-hant"><strong>群暉</strong> DSM 公開資產採集</span></li>
+          <li><span class="t-en">Minimum interval: <strong>10 minutes</strong></span><span class="t-zh">最短间隔：<strong>10 分钟</strong></span><span class="t-hant">最短間隔：<strong>10 分鐘</strong></span></li>
+          <li><span class="t-en">Alert push notifications</span><span class="t-zh">告警推送通知</span><span class="t-hant">告警推播通知</span></li>
+          <li><span class="t-en">Basic <strong>Analysis Reports</strong> — assets · storage · CPU / RAM</span><span class="t-zh">基础<strong>分析报告</strong> — 资产趋势 · 存储 · CPU / 内存</span><span class="t-hant">基礎<strong>分析報告</strong> — 資產趨勢 · 儲存 · CPU / 記憶體</span></li>
+          <li><span class="t-en">Visual Monitoring Dashboard</span><span class="t-zh">可视化监控仪表盘</span><span class="t-hant">可視化監控儀表板</span></li>
+        </ul>
+        <div class="plan-cta" style="position:absolute;bottom:24px;right:24px;display:flex;align-items:center;gap:14px">
+          <p style="margin:0;font-size:12px;font-weight:600;color:#fff;opacity:.85"><span class="t-en">Perfect for getting started</span><span class="t-zh">适合入门体验</span><span class="t-hant">適合入門體驗</span></p>
+          <a class="btn primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" style="display:inline-block;background:#fff;color:var(--accent);border-color:#fff;white-space:nowrap"><span class="t-en">Get it Free</span><span class="t-zh">免费下载</span><span class="t-hant">免費下載</span></a>
+        </div>
+      </div>
+      <div class="plan pro">
+        <p class="plan-name"><span style="display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:#92D050;color:var(--accent);font-size:16px;font-weight:900;letter-spacing:.1em;text-shadow:0 1px 3px rgba(255,255,255,.3)">PRO</span></p>
+        <p class="plan-price" style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:22px;white-space:nowrap">
+          <span style="font-size:30px"><span class="t-en">Monthly or Yearly</span><span class="t-hant">月付或年付</span><span class="t-zh">月付或年付</span></span>
+          <span style="text-align:right;font-size:14px;line-height:1.6;opacity:.85">
+            <span style="display:block">$2.99 / <span class="t-en">month</span><span class="t-zh">月</span><span class="t-hant">月</span></span>
+            <span style="display:block">$24.99 / <span class="t-en">year</span><span class="t-zh">年</span><span class="t-hant">年</span> <span style="font-size:11px;background:#92D050;color:#0b1b2e;font-weight:800;padding:1px 6px;border-radius:999px"><span class="t-en">BEST VALUE</span><span class="t-zh">最划算</span><span class="t-hant">最划算</span></span></span>
+          </span>
+        </p>
+        <p class="plan-note"><span class="t-en">Final price is shown in the App Store before purchase.</span><span class="t-hant">最終價格會在 App Store 購買確認頁顯示。</span><span class="t-zh">最终价格会在 App Store 购买确认页显示。</span></p>
+        <ul>
+          <li><span class="t-en"><strong>100</strong> public monitor targets</span><span class="t-zh"><strong>100</strong> 个公网监控目标</span><span class="t-hant"><strong>100</strong> 個公網監控目標</span></li>
+          <li><span class="t-en">All monitor types including <strong>UDP, DNS, Domain</strong></span><span class="t-zh">全部监控类型，包含 <strong>UDP、DNS、域名</strong></span><span class="t-hant">全部監控類型，包含 <strong>UDP、DNS、域名</strong></span></li>
+          <li><span class="t-en"><strong>5</strong> private collectors</span><span class="t-zh"><strong>5</strong> 个私有采集节点</span><span class="t-hant"><strong>5</strong> 個私有採集節點</span></li>
+          <li><span class="t-en"><strong>50</strong> private monitor targets</span><span class="t-zh"><strong>50</strong> 个私有监控目标</span><span class="t-hant"><strong>50</strong> 個私有監控目標</span></li>
+          <li><span class="t-en">Proxmox infrastructure integrations + private Synology collection</span><span class="t-zh">Proxmox 基础设施集成 + 群晖私有采集</span><span class="t-hant">Proxmox 基礎設施整合 + 群暉私有採集</span></li>
+          <li><span class="t-en"><strong>3</strong> public status pages</span><span class="t-zh"><strong>3</strong> 个公开状态页</span><span class="t-hant"><strong>3</strong> 個公開狀態頁</span></li>
+          <li><span class="t-en"><strong>20</strong> monitors per status page</span><span class="t-zh">每个状态页 <strong>20</strong> 个监控点</span><span class="t-hant">每個狀態頁 <strong>20</strong> 個監控點</span></li>
+          <li><span class="t-en">Status page sharing, access code, expiry, and QR verification</span><span class="t-zh">状态页分享、访问口令、有效期和二维码验真</span><span class="t-hant">狀態頁分享、訪問口令、有效期和二維碼驗真</span></li>
+          <li><span class="t-en">Minimum interval: <strong>5 minutes</strong></span><span class="t-zh">最短间隔：<strong>5 分钟</strong></span><span class="t-hant">最短間隔：<strong>5 分鐘</strong></span></li>
+          <li><span class="t-en">Alerts plus SSL/domain expiry reminders</span><span class="t-zh">告警推送，以及 SSL/域名到期提醒</span><span class="t-hant">告警推播，以及 SSL/域名到期提醒</span></li>
+          <li><span class="t-en">Full dashboard and detail analysis reports</span><span class="t-zh">完整首页仪表盘和详情分析报告</span><span class="t-hant">完整首頁儀表盤和詳情分析報告</span></li>
+        </ul>
+        <div class="plan-cta" style="position:absolute;bottom:24px;right:24px;display:flex;align-items:center;gap:14px">
+          <p style="margin:0;font-size:12px;font-weight:600;color:rgba(255,255,255,.7)"><span class="t-en">For the serious homelab enthusiast</span><span class="t-zh">为认真玩 homelab 的你而生</span><span class="t-hant">為認真玩 homelab 的你而生</span></p>
+          <a class="btn primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" style="white-space:nowrap"><span class="t-en">Get Pro</span><span class="t-hant">取得 Pro</span><span class="t-zh">获取 Pro</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:20px 56px;background:var(--bg2);border-top:1px solid var(--border);display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap">
+    <div style="text-align:left">
+      <h2 style="font-size:clamp(18px,2vw,28px);margin-bottom:8px">
+        <span class="block-en">Ready to see the real-time status of your entire homelab?</span>
+        <span class="block-zh">想实时掌握你整个 homelab 的状态吗？</span>
+        <span class="block-hant">想即時掌握你整個 homelab 的狀態嗎？</span>
+      </h2>
+      <p style="color:var(--muted);font-size:15px;margin:0">
+        <span class="t-en">Securely monitor Synology, Proxmox, Docker and all your private assets from iPhone.</span>
+        <span class="t-zh">通过 iPhone 安全监控 Synology、Proxmox、Docker 和所有私有资产。</span>
+        <span class="t-hant">透過 iPhone 安全監控 Synology、Proxmox、Docker 和所有私有資產。</span>
+      </p>
+    </div>
+    <a href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" aria-label="Download on the App Store">
+      <img src="assets/images/app-store-badge.svg" alt="Download on the App Store" height="72">
+    </a>
+  </section>
+</main>
+
+<footer>
+  <p><span class="t-en">&copy; 2026 OpsHome NOC&trade;. All rights reserved. OpsHome NOC&trade; is a trademark of its owner.</span><span class="t-zh">&copy; 2026 OpsHome NOC&trade;。保留所有权利。OpsHome NOC&trade; 是其所有者的商标。</span><span class="t-hant">&copy; 2026 OpsHome NOC&trade;。保留所有權利。OpsHome NOC&trade; 是其所有者的商標。</span></p>
+  <ul>
+    <li><a href="use-cases.html"><span class="t-en">Use Cases</span><span class="t-zh">使用场景</span><span class="t-hant">使用場景</span></a></li>
+    <li><a href="https://docs.opshome.run/release-notes.html" target="_blank" rel="noopener"><span class="t-en">Release Notes</span><span class="t-zh">更新日志</span><span class="t-hant">更新日誌</span></a></li>
+    <li><a href="https://docs.opshome.run" target="_blank" rel="noopener"><span class="t-en">Docs</span><span class="t-zh">文档</span><span class="t-hant">文件</span></a></li>
+    <li><a href="privacy.html"><span class="t-en">Privacy Policy</span><span class="t-zh">隐私政策</span><span class="t-hant">隱私權政策</span></a></li>
+    <li><a href="terms.html"><span class="t-en">Terms of Service</span><span class="t-zh">服务条款</span><span class="t-hant">服務條款</span></a></li>
+    <li><a href="mailto:opshome@outlook.com"><span class="t-en">Support</span><span class="t-zh">支持</span><span class="t-hant">支援</span></a></li>
+  </ul>
+</footer>
+
+<script>
+function setLanguage(lang) {
+  document.body.classList.toggle('lang-zh', lang === 'zh');
+  document.body.classList.toggle('lang-hant', lang === 'hant');
+  document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : (lang === 'hant' ? 'zh-Hant' : 'en');
+  document.querySelectorAll('.lang button').forEach(function(btn) {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+  try { localStorage.setItem('opshome_site_lang', lang); } catch (e) {}
+}
+document.querySelectorAll('.lang button').forEach(function(btn) {
+  btn.addEventListener('click', function() { setLanguage(btn.dataset.lang); });
+});
+(function() {
+  var saved = 'en';
+  try { saved = localStorage.getItem('opshome_site_lang') || 'en'; } catch (e) {}
+  setLanguage(saved);
+})();
+(function() {
+  var iframe = document.getElementById('product-video');
+  if (!iframe) return;
+
+  function setVideoSource(source) {
+    var useBilibili = source === 'bilibili';
+    var nextSrc = useBilibili ? iframe.dataset.bilibiliSrc : iframe.dataset.youtubeSrc;
+    var nextTitle = useBilibili ? iframe.dataset.bilibiliTitle : iframe.dataset.youtubeTitle;
+    if (nextSrc && iframe.src !== nextSrc) iframe.src = nextSrc;
+    if (nextTitle) iframe.title = nextTitle;
+  }
+
+  fetch('/cdn-cgi/trace', { cache: 'no-store' })
+    .then(function(resp) { return resp.ok ? resp.text() : ''; })
+    .then(function(text) {
+      var match = text.match(/^loc=([A-Z]{2})$/m);
+      setVideoSource(match && match[1] === 'CN' ? 'bilibili' : 'youtube');
+    })
+    .catch(function() {
+      setVideoSource('youtube');
+    });
+})();
+</script>
+</body>
+</html>
