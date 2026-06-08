@@ -232,9 +232,24 @@
   .plan.free li{font-weight:400;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.3)}
   .plan.free li strong{color:var(--accent);text-shadow:0 1px 2px rgba(0,0,0,.2)}
   .plan.free .plan-name,.plan.free .plan-price,.plan.free .plan-note{color:#fff!important;font-weight:900;text-shadow:0 1px 2px rgba(0,0,0,.3)}
-  footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:36px 56px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;color:var(--muted);font-family:var(--mono);font-size:12px}
-  footer ul{display:flex;gap:22px;list-style:none}
-  footer a:hover{color:var(--accent)}
+  .download-cta{position:relative;z-index:1;padding:34px 56px;background:#eaf4ff;border-top:1px solid var(--border)}
+  .download-cta-inner{max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:36px}
+  .download-cta-copy{max-width:760px}
+  .download-cta-copy h2{font-size:clamp(18px,2vw,28px);margin-bottom:8px}
+  .download-cta-copy p{color:var(--muted);font-size:15px;margin:0}
+  .download-cta-actions{display:flex;align-items:center;justify-content:flex-end;gap:18px;flex-shrink:0}
+  .download-cta-store{display:inline-flex}
+  .download-cta-store img{display:block;height:64px;width:auto}
+  .download-cta-qr{display:flex;align-items:center;gap:10px;padding:8px 12px 8px 8px;border:1px solid #c5d8ec;border-radius:14px;background:#fff;box-shadow:0 8px 24px rgba(15,23,42,.08)}
+  .download-cta-qr img{display:block;width:76px;height:76px;padding:4px;border-radius:8px;background:#fff}
+  .download-cta-qr span{max-width:82px;color:#334155;font-family:var(--mono);font-size:10px;line-height:1.45}
+  footer{position:relative;z-index:1;padding:68px 56px;background:#07111f;border-top:1px solid rgba(255,255,255,.1);color:#fff;font-family:var(--mono)}
+  .footer-inner{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:minmax(280px,.8fr) minmax(520px,1.2fr);align-items:center;gap:64px}
+  footer p{max-width:440px;color:#cbd5e1;font-size:14px;line-height:1.8}
+  footer ul{display:grid;grid-template-columns:repeat(3,minmax(120px,1fr));gap:20px 34px;list-style:none}
+  footer li{min-width:0}
+  footer a{display:inline-flex;align-items:center;min-height:32px;color:#fff;font-size:17px;font-weight:600;line-height:1.35}
+  footer a:hover{color:#60a5fa}
   .feature-group{margin-top:48px}
   .feature-group:first-of-type{margin-top:0}
   .feature-group-label{display:inline-block;font-family:var(--mono);font-size:16px;font-weight:700;letter-spacing:.18em;color:#fff;background:var(--text);padding:7px 14px;margin-bottom:16px;border-radius:3px}
@@ -267,6 +282,13 @@
     .plan{padding:24px}
     .plan-cta{display:none!important}
     #pricing .cta-bottom{padding:20px 22px;flex-direction:column;text-align:center;gap:16px}
+    .download-cta{padding:30px 22px}
+    .download-cta-inner{flex-direction:column;text-align:center}
+    .download-cta-actions{justify-content:center}
+    footer{padding:52px 22px}
+    .footer-inner{grid-template-columns:1fr;gap:34px;text-align:center}
+    footer p{max-width:680px;margin:0 auto}
+    footer ul{grid-template-columns:repeat(2,minmax(130px,1fr));gap:16px 24px;width:min(100%,520px);margin:0 auto;text-align:left}
   }
   @media(max-width:560px){
     .screens{grid-template-columns:1fr}
@@ -275,6 +297,11 @@
     .hero-copy p{font-size:17px}
     .hero-store-link img{height:56px}
     .hero-qr{display:none}
+    .download-cta-actions{flex-direction:column}
+    .download-cta-qr{display:none}
+    footer{padding-top:46px;padding-bottom:46px}
+    footer ul{grid-template-columns:1fr;text-align:center;gap:12px}
+    footer a{justify-content:center;font-size:16px}
     .hero-visual-note{left:8px;bottom:7%;padding:9px 12px;font-size:10px}
     .hero-visual-note strong{font-size:15px}
     th,td{padding:10px;font-size:13px}
@@ -554,35 +581,47 @@
     </div>
   </section>
 
-  <section style="padding:20px 56px;background:var(--bg2);border-top:1px solid var(--border);display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap">
-    <div style="text-align:left">
-      <h2 style="font-size:clamp(18px,2vw,28px);margin-bottom:8px">
+  <section class="download-cta">
+    <div class="download-cta-inner">
+      <div class="download-cta-copy">
+        <h2>
         <span class="block-en">Ready to see the real-time status of your entire homelab?</span>
         <span class="block-zh">想实时掌握你整个 homelab 的状态吗？</span>
         <span class="block-hant">想即時掌握你整個 homelab 的狀態嗎？</span>
-      </h2>
-      <p style="color:var(--muted);font-size:15px;margin:0">
-        <span class="t-en">Securely monitor Synology, Proxmox, Docker and all your private assets from iPhone.</span>
-        <span class="t-zh">通过 iPhone 安全监控 Synology、Proxmox、Docker 和所有私有资产。</span>
-        <span class="t-hant">透過 iPhone 安全監控 Synology、Proxmox、Docker 和所有私有資產。</span>
-      </p>
+        </h2>
+        <p>
+          <span class="t-en">Securely monitor Synology, Proxmox, Docker and all your private assets from iPhone.</span>
+          <span class="t-zh">通过 iPhone 安全监控 Synology、Proxmox、Docker 和所有私有资产。</span>
+          <span class="t-hant">透過 iPhone 安全監控 Synology、Proxmox、Docker 和所有私有資產。</span>
+        </p>
+      </div>
+      <div class="download-cta-actions">
+        <a class="download-cta-store" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" aria-label="Download on the App Store">
+          <img src="assets/images/app-store-badge.svg" alt="Download on the App Store">
+        </a>
+        <a class="download-cta-qr" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" aria-label="Open OpsHome NOC in the App Store">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&amp;data=https%3A%2F%2Fapps.apple.com%2Fus%2Fapp%2Fopshome-noc%2Fid6763890679" alt="QR code for downloading OpsHome NOC from the App Store" width="76" height="76" loading="lazy">
+          <span class="t-en">Scan to download</span>
+          <span class="t-zh">扫码下载</span>
+          <span class="t-hant">掃碼下載</span>
+        </a>
+      </div>
     </div>
-    <a href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" aria-label="Download on the App Store">
-      <img src="assets/images/app-store-badge.svg" alt="Download on the App Store" height="72">
-    </a>
   </section>
 </main>
 
 <footer>
-  <p><span class="t-en">&copy; 2026 OpsHome NOC&trade;. All rights reserved. OpsHome NOC&trade; is a trademark of its owner.</span><span class="t-zh">&copy; 2026 OpsHome NOC&trade;。保留所有权利。OpsHome NOC&trade; 是其所有者的商标。</span><span class="t-hant">&copy; 2026 OpsHome NOC&trade;。保留所有權利。OpsHome NOC&trade; 是其所有者的商標。</span></p>
-  <ul>
-    <li><a href="use-cases.html"><span class="t-en">Use Cases</span><span class="t-zh">使用场景</span><span class="t-hant">使用場景</span></a></li>
-    <li><a href="https://docs.opshome.run/release-notes.html" target="_blank" rel="noopener"><span class="t-en">Release Notes</span><span class="t-zh">更新日志</span><span class="t-hant">更新日誌</span></a></li>
-    <li><a href="https://docs.opshome.run" target="_blank" rel="noopener"><span class="t-en">Docs</span><span class="t-zh">文档</span><span class="t-hant">文件</span></a></li>
-    <li><a href="privacy.html"><span class="t-en">Privacy Policy</span><span class="t-zh">隐私政策</span><span class="t-hant">隱私權政策</span></a></li>
-    <li><a href="terms.html"><span class="t-en">Terms of Service</span><span class="t-zh">服务条款</span><span class="t-hant">服務條款</span></a></li>
-    <li><a href="mailto:opshome@outlook.com"><span class="t-en">Support</span><span class="t-zh">支持</span><span class="t-hant">支援</span></a></li>
-  </ul>
+  <div class="footer-inner">
+    <p><span class="t-en">&copy; 2026 OpsHome NOC&trade;. All rights reserved. OpsHome NOC&trade; is a trademark of its owner.</span><span class="t-zh">&copy; 2026 OpsHome NOC&trade;。保留所有权利。OpsHome NOC&trade; 是其所有者的商标。</span><span class="t-hant">&copy; 2026 OpsHome NOC&trade;。保留所有權利。OpsHome NOC&trade; 是其所有者的商標。</span></p>
+    <ul>
+      <li><a href="use-cases.html"><span class="t-en">Use Cases</span><span class="t-zh">使用场景</span><span class="t-hant">使用場景</span></a></li>
+      <li><a href="https://docs.opshome.run/release-notes.html" target="_blank" rel="noopener"><span class="t-en">Changelog</span><span class="t-zh">更新日志</span><span class="t-hant">更新日誌</span></a></li>
+      <li><a href="https://docs.opshome.run" target="_blank" rel="noopener"><span class="t-en">Docs</span><span class="t-zh">文档</span><span class="t-hant">文件</span></a></li>
+      <li><a href="privacy.html"><span class="t-en">Privacy</span><span class="t-zh">隐私政策</span><span class="t-hant">隱私權政策</span></a></li>
+      <li><a href="terms.html"><span class="t-en">Terms</span><span class="t-zh">服务条款</span><span class="t-hant">服務條款</span></a></li>
+      <li><a href="mailto:opshome@outlook.com"><span class="t-en">opshome@outlook.com</span><span class="t-zh">联系邮箱</span><span class="t-hant">聯絡信箱</span></a></li>
+    </ul>
+  </div>
 </footer>
 
 <script>
