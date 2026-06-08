@@ -169,6 +169,7 @@
   .hero-status-dot{position:relative;width:10px;height:10px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 5px rgba(34,197,94,.14)}
   .hero-copy h1{max-width:720px;font-size:clamp(44px,6vw,76px);line-height:1.04;margin-bottom:24px;letter-spacing:-.045em}
   .hero-copy h1 .block-en,.hero-copy h1 .block-zh,.hero-copy h1 .block-hant{color:#60a5fa}
+  .hero-copy h1 .hero-headline{font-size:.82em;line-height:1.1;margin-top:10px}
   .hero-copy p{max-width:680px;margin-bottom:30px;color:#cbd5e1;font-size:clamp(18px,2vw,22px);line-height:1.65}
   .hero-copy p strong{color:#fff}
   .hero .actions{justify-content:flex-start;align-items:center}
@@ -324,7 +325,9 @@
   .faq-item[open] summary:after{content:"−";background:var(--accent);color:#fff}
   .faq-answer{padding:0 24px 22px;color:var(--muted);font-size:16px;line-height:1.75}
   .faq-answer strong{color:var(--text)}
-  .faq-link{display:inline-flex;align-items:center;margin-top:12px;color:var(--accent);font-weight:800}
+  .faq-link{align-items:center;margin-top:12px;color:var(--accent);font-weight:800}
+  .faq-link.block-en{display:inline-flex}
+  body.lang-zh .faq-link.block-zh,body.lang-hant .faq-link.block-hant{display:inline-flex}
   .faq-link:after{content:"→";margin-left:8px}
   .faq-link:hover{color:var(--accent2)}
   .download-cta{position:relative;z-index:1;padding:34px 56px;background:#eaf4ff;border-top:1px solid var(--border)}
@@ -390,6 +393,7 @@
     .screens{grid-template-columns:1fr}
     .hero{padding-top:56px}
     .hero-copy h1{font-size:clamp(38px,12vw,54px)}
+    .hero-copy h1 .hero-headline{font-size:.78em}
     .hero-copy p{font-size:17px}
     .hero-store-link img{height:56px}
     .hero-qr{display:none}
@@ -441,9 +445,9 @@
         </div>
         <h1>
           OpsHome NOC<sup class="tm">&trade;</sup>
-          <span class="block-en">Know when your homelab has a problem, without opening a VPN.</span>
-          <span class="block-zh">无需连接 VPN，也能第一时间发现 Homelab 问题。</span>
-          <span class="block-hant">無需連接 VPN，也能第一時間發現 Homelab 問題。</span>
+          <span class="hero-headline block-en">Know when your homelab has a problem, without opening a VPN.</span>
+          <span class="hero-headline block-zh">无需连接 VPN，也能第一时间发现 Homelab 问题。</span>
+          <span class="hero-headline block-hant">無需連接 VPN，也能第一時間發現 Homelab 問題。</span>
         </h1>
         <p>
           <span class="block-en">Monitor websites, NAS, Docker, Synology, and Proxmox VE from your iPhone. <strong>No inbound port forwarding required.</strong></span>
