@@ -44,6 +44,63 @@
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Docker Probe secure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Docker Probe initiates outbound connections to OpsHome Cloud. It does not require inbound port forwarding or exposing private services directly to the internet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is monitoring data transmitted?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Docker Probe collects supported service status and infrastructure metrics, then sends them to the OpsHome Cloud API over encrypted HTTPS connections."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does OpsHome upload files from my NAS or servers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. OpsHome monitoring does not require uploading NAS files, documents, photos, or other stored business data."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many monitors and probes are supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Free supports up to 30 public monitor targets. Pro supports up to 100 public monitor targets, 5 private collectors, and 50 private monitor targets."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which devices and services are supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "OpsHome supports websites, HTTP and HTTPS endpoints, TCP, SSL, DNS, ICMP, Docker services, Synology DSM, Proxmox VE, and supported private network services."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does monitoring continue when the iPhone app is closed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Checks continue through OpsHome Cloud or Docker Probe. The iPhone app is used to review status, reports, and notifications."
+      }
+    }
+  ]
+}
+</script>
+
 <style>
   @font-face{font-family:"Space Mono Local";src:url("assets/fonts/SpaceMono-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
   @font-face{font-family:"Space Mono Local";src:url("assets/fonts/SpaceMono-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
@@ -95,8 +152,8 @@
   .hero-store-link:hover{transform:translateY(-2px);filter:brightness(1.05)}
   .hero-store-link img{display:block;height:64px;width:auto}
   .hero-qr{display:flex;align-items:center;gap:12px;padding:8px 12px 8px 8px;border:1px solid rgba(255,255,255,.14);border-radius:14px;background:rgba(255,255,255,.08)}
-  .hero-qr img{display:block;width:72px;height:72px;padding:4px;border-radius:8px;background:#fff}
-  .hero-qr span{max-width:90px;color:#cbd5e1;font-family:var(--mono);font-size:10px;line-height:1.45}
+  .hero-qr img{display:block;width:96px;height:96px;padding:5px;border-radius:9px;background:#fff}
+  .hero-qr span{max-width:100px;color:#cbd5e1;font-family:var(--mono);font-size:11px;line-height:1.45}
   .hero-support{margin-top:20px!important;margin-bottom:0!important;color:#94a3b8!important;font-size:13px!important;font-family:var(--mono)}
   .hero-visual{position:relative;display:flex;justify-content:center}
   .hero-phone{position:relative;width:min(100%,440px);filter:drop-shadow(0 36px 45px rgba(0,0,0,.48)) drop-shadow(0 0 40px rgba(20,121,255,.2));transform:rotate(2deg)}
@@ -232,6 +289,17 @@
   .plan.free li{font-weight:400;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.3)}
   .plan.free li strong{color:var(--accent);text-shadow:0 1px 2px rgba(0,0,0,.2)}
   .plan.free .plan-name,.plan.free .plan-price,.plan.free .plan-note{color:#fff!important;font-weight:900;text-shadow:0 1px 2px rgba(0,0,0,.3)}
+  .faq-section{position:relative;z-index:1;max-width:1040px;margin:0 auto;padding:86px 56px}
+  .faq-section h2{max-width:760px}
+  .faq-intro{max-width:760px;margin-bottom:34px;color:var(--muted);font-size:18px}
+  .faq-list{display:grid;gap:14px}
+  .faq-item{overflow:hidden;border:1px solid var(--border);border-radius:12px;background:#fff;box-shadow:0 3px 14px rgba(15,23,42,.05)}
+  .faq-item summary{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 24px;color:var(--text);font-size:17px;font-weight:800;cursor:pointer;list-style:none}
+  .faq-item summary::-webkit-details-marker{display:none}
+  .faq-item summary:after{content:"+";display:flex;align-items:center;justify-content:center;width:30px;height:30px;flex:0 0 30px;border-radius:50%;background:#eaf4ff;color:var(--accent);font-family:var(--mono);font-size:20px;line-height:1}
+  .faq-item[open] summary:after{content:"−";background:var(--accent);color:#fff}
+  .faq-answer{padding:0 24px 22px;color:var(--muted);font-size:16px;line-height:1.75}
+  .faq-answer strong{color:var(--text)}
   .download-cta{position:relative;z-index:1;padding:34px 56px;background:#eaf4ff;border-top:1px solid var(--border)}
   .download-cta-inner{max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:36px}
   .download-cta-copy{max-width:760px}
@@ -241,8 +309,8 @@
   .download-cta-store{display:inline-flex}
   .download-cta-store img{display:block;height:64px;width:auto}
   .download-cta-qr{display:flex;align-items:center;gap:10px;padding:8px 12px 8px 8px;border:1px solid #c5d8ec;border-radius:14px;background:#fff;box-shadow:0 8px 24px rgba(15,23,42,.08)}
-  .download-cta-qr img{display:block;width:76px;height:76px;padding:4px;border-radius:8px;background:#fff}
-  .download-cta-qr span{max-width:82px;color:#334155;font-family:var(--mono);font-size:10px;line-height:1.45}
+  .download-cta-qr img{display:block;width:104px;height:104px;padding:5px;border-radius:9px;background:#fff}
+  .download-cta-qr span{max-width:96px;color:#334155;font-family:var(--mono);font-size:11px;line-height:1.45}
   footer{position:relative;z-index:1;padding:68px 56px;background:#07111f;border-top:1px solid rgba(255,255,255,.1);color:#fff;font-family:var(--mono)}
   .footer-inner{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:minmax(280px,.8fr) minmax(520px,1.2fr);align-items:center;gap:64px}
   footer p{max-width:440px;color:#cbd5e1;font-size:14px;line-height:1.8}
@@ -282,6 +350,7 @@
     .plan{padding:24px}
     .plan-cta{display:none!important}
     #pricing .cta-bottom{padding:20px 22px;flex-direction:column;text-align:center;gap:16px}
+    .faq-section{padding:64px 22px}
     .download-cta{padding:30px 22px}
     .download-cta-inner{flex-direction:column;text-align:center}
     .download-cta-actions{justify-content:center}
@@ -299,6 +368,8 @@
     .hero-qr{display:none}
     .download-cta-actions{flex-direction:column}
     .download-cta-qr{display:none}
+    .faq-item summary{padding:18px;font-size:15px}
+    .faq-answer{padding:0 18px 18px;font-size:15px}
     footer{padding-top:46px;padding-bottom:46px}
     footer ul{grid-template-columns:1fr;text-align:center;gap:12px}
     footer a{justify-content:center;font-size:16px}
@@ -343,21 +414,21 @@
         </div>
         <h1>
           OpsHome NOC<sup class="tm">&trade;</sup>
-          <span class="block-en">Your homelab on iPhone.</span>
-          <span class="block-zh">用 iPhone 监控你的 Homelab</span>
-          <span class="block-hant">用 iPhone 監控你的 Homelab</span>
+          <span class="block-en">Know when your homelab has a problem, without opening a VPN.</span>
+          <span class="block-zh">无需连接 VPN，也能第一时间发现 Homelab 问题。</span>
+          <span class="block-hant">無需連接 VPN，也能第一時間發現 Homelab 問題。</span>
         </h1>
         <p>
-          <span class="block-en">Public uptime checks and private monitoring through Docker Probe. <strong>No inbound port forwarding required.</strong></span>
-          <span class="block-zh">公网检测与 Docker Probe 私有监控集中在一个原生 App 中。<strong>无需开放内网入站端口。</strong></span>
-          <span class="block-hant">公網檢測與 Docker Probe 私有監控集中在一個原生 App 中。<strong>無需開放內網入站連接埠。</strong></span>
+          <span class="block-en">Monitor websites, NAS, Docker, Synology, and Proxmox VE from your iPhone. <strong>No inbound port forwarding required.</strong></span>
+          <span class="block-zh">用 iPhone 监控网站、NAS、Docker、群晖和 Proxmox VE。<strong>无需开放内网入站端口。</strong></span>
+          <span class="block-hant">使用 iPhone 監控網站、NAS、Docker、Synology 和 Proxmox VE。<strong>無需開放內網入站連接埠。</strong></span>
         </p>
         <div class="actions">
           <a class="hero-store-link" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" aria-label="Download OpsHome NOC on the App Store">
             <img src="assets/images/app-store-badge.svg" alt="Download on the App Store">
           </a>
           <a class="hero-qr" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" aria-label="Open OpsHome NOC in the App Store">
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&amp;data=https%3A%2F%2Fapps.apple.com%2Fus%2Fapp%2Fopshome-noc%2Fid6763890679" alt="QR code for downloading OpsHome NOC from the App Store" width="72" height="72" loading="lazy">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&amp;data=https%3A%2F%2Fapps.apple.com%2Fus%2Fapp%2Fopshome-noc%2Fid6763890679" alt="QR code for downloading OpsHome NOC from the App Store" width="96" height="96" loading="lazy">
             <span class="t-en">Scan to download</span>
             <span class="t-zh">扫码下载</span>
             <span class="t-hant">掃碼下載</span>
@@ -581,6 +652,94 @@
     </div>
   </section>
 
+  <section class="faq-section" id="faq">
+    <p class="label">// FAQ</p>
+    <h2>
+      <span class="block-en">Frequently asked questions.</span>
+      <span class="block-zh">常见问题</span>
+      <span class="block-hant">常見問題</span>
+    </h2>
+    <p class="faq-intro">
+      <span class="block-en">Clear answers about security, data transmission, plans, and supported infrastructure.</span>
+      <span class="block-zh">了解安全性、数据传输、方案额度和支持的基础设施。</span>
+      <span class="block-hant">了解安全性、資料傳輸、方案額度和支援的基礎設施。</span>
+    </p>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>
+          <span class="t-en">Is Docker Probe secure?</span>
+          <span class="t-zh">Docker Probe 安全吗？</span>
+          <span class="t-hant">Docker Probe 安全嗎？</span>
+        </summary>
+        <div class="faq-answer">
+          <span class="block-en">Docker Probe initiates an <strong>outbound connection</strong> to OpsHome Cloud. It does not require inbound port forwarding or exposing private services directly to the internet.</span>
+          <span class="block-zh">Docker Probe 主动向 OpsHome Cloud 发起<strong>出站连接</strong>，不要求配置入站端口转发，也不需要将私有服务直接暴露到公网。</span>
+          <span class="block-hant">Docker Probe 主動向 OpsHome Cloud 發起<strong>出站連線</strong>，不要求設定入站連接埠轉發，也不需要將私有服務直接暴露到公網。</span>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>
+          <span class="t-en">How is monitoring data transmitted?</span>
+          <span class="t-zh">监控数据如何传输？</span>
+          <span class="t-hant">監控資料如何傳輸？</span>
+        </summary>
+        <div class="faq-answer">
+          <span class="block-en">Probe collects supported service status and infrastructure metrics, then sends them to the OpsHome Cloud API through an <strong>encrypted HTTPS connection</strong>.</span>
+          <span class="block-zh">Probe 采集受支持的服务状态和基础设施指标，再通过<strong>加密 HTTPS 连接</strong>发送至 OpsHome Cloud API。</span>
+          <span class="block-hant">Probe 採集受支援的服務狀態和基礎設施指標，再透過<strong>加密 HTTPS 連線</strong>傳送至 OpsHome Cloud API。</span>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>
+          <span class="t-en">Does OpsHome upload files from my NAS or servers?</span>
+          <span class="t-zh">OpsHome 会上传 NAS 或服务器中的文件吗？</span>
+          <span class="t-hant">OpsHome 會上傳 NAS 或伺服器中的檔案嗎？</span>
+        </summary>
+        <div class="faq-answer">
+          <span class="block-en"><strong>No.</strong> Monitoring does not require uploading NAS files, documents, photos, or other stored business data.</span>
+          <span class="block-zh"><strong>不会。</strong>监控不需要上传 NAS 文件、文档、照片或其他存储的业务数据。</span>
+          <span class="block-hant"><strong>不會。</strong>監控不需要上傳 NAS 檔案、文件、照片或其他儲存的業務資料。</span>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>
+          <span class="t-en">How many monitors and probes are supported?</span>
+          <span class="t-zh">支持多少监控点和 Probe？</span>
+          <span class="t-hant">支援多少監控點和 Probe？</span>
+        </summary>
+        <div class="faq-answer">
+          <span class="block-en">Free supports up to <strong>30 public monitor targets</strong>. Pro supports up to <strong>100 public targets, 5 private collectors, and 50 private monitor targets</strong>.</span>
+          <span class="block-zh">Free 支持最多 <strong>30 个公网监控目标</strong>；Pro 支持最多 <strong>100 个公网目标、5 个私有采集节点和 50 个私有监控目标</strong>。</span>
+          <span class="block-hant">Free 支援最多 <strong>30 個公網監控目標</strong>；Pro 支援最多 <strong>100 個公網目標、5 個私有採集節點和 50 個私有監控目標</strong>。</span>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>
+          <span class="t-en">Which devices and services are supported?</span>
+          <span class="t-zh">支持哪些设备和服务？</span>
+          <span class="t-hant">支援哪些裝置和服務？</span>
+        </summary>
+        <div class="faq-answer">
+          <span class="block-en">OpsHome supports websites, HTTP/HTTPS endpoints, TCP, SSL, DNS, ICMP, Docker services, Synology DSM, Proxmox VE, and supported private network services.</span>
+          <span class="block-zh">支持网站、HTTP/HTTPS、TCP、SSL、DNS、ICMP、Docker 服务、Synology DSM、Proxmox VE 和受支持的私有网络服务。</span>
+          <span class="block-hant">支援網站、HTTP/HTTPS、TCP、SSL、DNS、ICMP、Docker 服務、Synology DSM、Proxmox VE 和受支援的私有網路服務。</span>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>
+          <span class="t-en">Does monitoring continue when the iPhone app is closed?</span>
+          <span class="t-zh">关闭 iPhone App 后监控还会继续吗？</span>
+          <span class="t-hant">關閉 iPhone App 後監控還會繼續嗎？</span>
+        </summary>
+        <div class="faq-answer">
+          <span class="block-en"><strong>Yes.</strong> Checks continue through OpsHome Cloud or Docker Probe. The iPhone app is used to review status, reports, and notifications.</span>
+          <span class="block-zh"><strong>会。</strong>检测由 OpsHome Cloud 或 Docker Probe 持续执行，iPhone App 用于查看状态、报告和接收通知。</span>
+          <span class="block-hant"><strong>會。</strong>檢測由 OpsHome Cloud 或 Docker Probe 持續執行，iPhone App 用於查看狀態、報告和接收通知。</span>
+        </div>
+      </details>
+    </div>
+  </section>
+
   <section class="download-cta">
     <div class="download-cta-inner">
       <div class="download-cta-copy">
@@ -600,7 +759,7 @@
           <img src="assets/images/app-store-badge.svg" alt="Download on the App Store">
         </a>
         <a class="download-cta-qr" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" aria-label="Open OpsHome NOC in the App Store">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&amp;data=https%3A%2F%2Fapps.apple.com%2Fus%2Fapp%2Fopshome-noc%2Fid6763890679" alt="QR code for downloading OpsHome NOC from the App Store" width="76" height="76" loading="lazy">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&amp;data=https%3A%2F%2Fapps.apple.com%2Fus%2Fapp%2Fopshome-noc%2Fid6763890679" alt="QR code for downloading OpsHome NOC from the App Store" width="104" height="104" loading="lazy">
           <span class="t-en">Scan to download</span>
           <span class="t-zh">扫码下载</span>
           <span class="t-hant">掃碼下載</span>
