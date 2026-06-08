@@ -5,6 +5,14 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://app.opshome.run/zh-CN/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.opshome.run/zh-Hant/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://app.opshome.run/use-cases.html</loc>
     <priority>0.8</priority>
   </url>

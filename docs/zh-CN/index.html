@@ -1,25 +1,25 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html><html lang="zh-CN"><head>
 <meta charset="UTF-8"><base href="/"><link rel="alternate" hreflang="en" href="https://app.opshome.run/"><link rel="alternate" hreflang="zh-CN" href="https://app.opshome.run/zh-CN/"><link rel="alternate" hreflang="zh-Hant" href="https://app.opshome.run/zh-Hant/"><link rel="alternate" hreflang="x-default" href="https://app.opshome.run/">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OpsHome NOC - iPhone Monitoring for Homelab, NAS, Docker</title>
-<meta name="description" content="Monitor websites, NAS, Docker, Synology, Proxmox VE, and private services from your iPhone without inbound port forwarding.">
-<link rel="canonical" href="https://app.opshome.run/">
+<title>OpsHome NOC - iPhone 监控 Homelab、NAS、Docker</title>
+<meta name="description" content="用 iPhone 监控网站、NAS、Docker、群晖、Proxmox VE 和私有服务，无需开放内网入站端口。">
+<link rel="canonical" href="https://app.opshome.run/zh-CN/">
 <link rel="icon" type="image/png" href="assets/images/favicon-256.png" sizes="256x256">
 <link rel="icon" href="assets/images/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
 
 <!-- Open Graph -->
-<meta property="og:title" content="OpsHome NOC - Homelab Monitoring for iPhone">
-<meta property="og:description" content="Public and private homelab monitoring from iPhone, with Docker Probe and no inbound port forwarding.">
+<meta property="og:title" content="OpsHome NOC - 用 iPhone 监控你的 Homelab">
+<meta property="og:description" content="同时查看公网和私有网络状态，Docker Probe 无需开放内网入站端口。">
 <meta property="og:image" content="https://app.opshome.run/assets/images/og-image.png">
-<meta property="og:url" content="https://app.opshome.run/">
+<meta property="og:url" content="https://app.opshome.run/zh-CN/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="OpsHome NOC">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="OpsHome NOC - Homelab Monitoring for iPhone">
-<meta name="twitter:description" content="Public and private homelab monitoring from iPhone, with Docker Probe and no inbound port forwarding.">
+<meta name="twitter:title" content="OpsHome NOC - 用 iPhone 监控你的 Homelab">
+<meta name="twitter:description" content="同时查看公网和私有网络状态，Docker Probe 无需开放内网入站端口。">
 <meta name="twitter:image" content="https://app.opshome.run/assets/images/og-image.png">
 
 <!-- Schema.org -->
@@ -34,8 +34,8 @@
     "price": "0",
     "priceCurrency": "USD"
   },
-  "description": "Native iOS monitoring for homelab, NAS, Docker, Synology, Proxmox VE, websites, and private services.",
-  "url": "https://app.opshome.run/",
+  "description": "面向 Homelab、NAS、Docker、群晖、Proxmox VE、网站和私有服务的原生 iOS 监控工具。",
+  "url": "https://app.opshome.run/zh-CN/",
   "downloadUrl": "https://apps.apple.com/us/app/opshome-noc/id6763890679",
   "screenshot": "https://app.opshome.run/assets/images/og-image.png"
 }</script>
@@ -46,74 +46,74 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is the main difference between Free and Pro?",
+      "name": "免费版和 Pro 版的核心区别是什么？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Free is designed for public monitoring and includes up to 30 public monitor targets. Pro adds higher limits, Docker Probe private monitoring, private infrastructure integrations, 5 private collectors, and up to 50 private monitor targets."
+        "text": "Free 主要用于公网监控，支持最多 30 个公网监控目标。Pro 增加更高额度、Docker Probe 私有网络监控、私有基础设施集成、5 个私有采集节点和最多 50 个私有监控目标。"
       }
     },
     {
       "@type": "Question",
-      "name": "Can I cancel my Pro subscription at any time?",
+      "name": "能随时取消 Pro 订阅吗？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Cancel through your Apple ID subscription settings. Pro remains available until the end of the current paid billing period. Deleting the app or your OpsHome account does not cancel the subscription."
+        "text": "可以。你可以在 Apple ID 的订阅设置中取消。Pro 权益会持续到当前已付费周期结束。删除 App 或 OpsHome 账户不会取消订阅。"
       }
     },
     {
       "@type": "Question",
-      "name": "Is Docker Probe difficult to install?",
+      "name": "Docker Probe 难安装吗？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Follow the deployment guide and run the provided Docker commands. Users familiar with basic Docker operations can usually complete installation in a few minutes."
+        "text": "按照部署指南运行提供的 Docker 命令即可。熟悉基础 Docker 操作的用户通常可在几分钟内完成安装。"
       }
     },
     {
       "@type": "Question",
-      "name": "Is my data secure, and where is it stored?",
+      "name": "我的数据安全吗？数据存在哪里？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Supported status and infrastructure metrics are transmitted over encrypted HTTPS and processed by hosted OpsHome Cloud infrastructure and database providers. OpsHome does not require uploading NAS files, documents, photos, or payment card information."
+        "text": "受支持的状态和基础设施指标通过加密 HTTPS 传输，并由 OpsHome Cloud 的托管基础设施和数据库服务处理。OpsHome 不要求上传 NAS 文件、文档、照片或银行卡信息。"
       }
     },
     {
       "@type": "Question",
-      "name": "Why is the final subscription price confirmed in the App Store?",
+      "name": "为什么最终价格要在 App Store 确认？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Apple displays local currency, taxes, eligible offers, trials, and final billing confirmation before purchase. OpsHome does not receive or store payment card information."
+        "text": "Apple 会在购买前显示本地货币、税费、适用优惠、试用和最终付款确认。OpsHome 不接收或保存银行卡信息。"
       }
     },
     {
       "@type": "Question",
-      "name": "Can I use OpsHome on multiple devices or with Family Sharing?",
+      "name": "支持多设备或家庭共享吗？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Use the same Sign in with Apple account on another supported device and restore an active Pro purchase if needed. Family Sharing is not currently included in the published OpsHome plan entitlement."
+        "text": "你可以在另一台受支持设备上使用同一个“通过 Apple 登录”账户，并在需要时恢复有效的 Pro 购买。目前公开方案不包含家庭共享。"
       }
     },
     {
       "@type": "Question",
-      "name": "Is Docker Probe secure?",
+      "name": "Docker Probe 安全吗？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Docker Probe initiates outbound connections to OpsHome Cloud. It does not require inbound port forwarding or exposing private services directly to the internet."
+        "text": "Docker Probe 主动向 OpsHome Cloud 发起出站连接，不需要配置入站端口转发，也不需要将私有服务直接暴露到公网。"
       }
     },
     {
       "@type": "Question",
-      "name": "How is monitoring data transmitted?",
+      "name": "监控数据如何传输？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Docker Probe sends supported service status and infrastructure metrics to the OpsHome Cloud API over encrypted HTTPS connections."
+        "text": "Docker Probe 通过加密 HTTPS 连接将受支持的服务状态和基础设施指标发送至 OpsHome Cloud API。"
       }
     },
     {
       "@type": "Question",
-      "name": "Does monitoring continue when the iPhone app is closed?",
+      "name": "关闭 iPhone App 后，监控还会继续吗？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Checks continue through OpsHome Cloud or Docker Probe. The iPhone app is used to review status, reports, and notifications."
+        "text": "会。检测由 OpsHome Cloud 或 Docker Probe 持续执行，iPhone App 用于查看状态、报告和接收通知。"
       }
     }
   ]
@@ -432,16 +432,16 @@
 </head>
 <body>
 <nav>
-  <a class="brand" href="/"><img src="assets/images/brand-logo.png" alt="OpsHome NOC logo"><span>OpsHome <strong>NOC</strong><sup class="tm">™</sup></span></a>
+  <a class="brand" href="/zh-CN/"><img src="assets/images/brand-logo.png" alt="OpsHome NOC logo"><span>OpsHome <strong>NOC</strong><sup class="tm">™</sup></span></a>
   <ul class="navlinks">
-    <li><a href="#features"><span>FEATURES</span></a></li>
-    <li><a href="use-cases.html"><span>USE CASES</span></a></li>
-    <li><a href="#protocols"><span>MONITORS</span></a></li>
-    <li><a href="#pricing"><span>PRICING</span></a></li>
+    <li><a href="#features"><span>功能特性</span></a></li>
+    <li><a href="use-cases.html"><span>使用场景</span></a></li>
+    <li><a href="#protocols"><span>监控类型</span></a></li>
+    <li><a href="#pricing"><span>方案</span></a></li>
     <li><a href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener"><span>APP STORE</span></a></li>
-    <li><a href="https://docs.opshome.run/release-notes.html" target="_blank" rel="noopener"><span>CHANGELOG</span></a></li>
+    <li><a href="https://docs.opshome.run/release-notes.html" target="_blank" rel="noopener"><span>更新日志</span></a></li>
   </ul>
-  <div class="lang" aria-label="Language"><a href="/" class="active" lang="en">EN</a><a href="/zh-Hant/" lang="zh-Hant">繁</a><a href="/zh-CN/" lang="zh-CN">简</a></div>
+  <div class="lang" aria-label="Language"><a href="/" lang="en">EN</a><a href="/zh-Hant/" lang="zh-Hant">繁</a><a href="/zh-CN/" class="active" lang="zh-CN">简</a></div>
 </nav>
 
 <main>
@@ -450,19 +450,19 @@
       <div class="hero-copy">
         <div class="hero-status">
           <span class="hero-status-dot" aria-hidden="true"></span>
-          <span>Available on the App Store</span>
           
+          <span>现已上线 App Store</span>
           
         </div>
         <h1>
           OpsHome NOC<sup class="tm">™</sup>
-          <span class="hero-headline">Know when your homelab has a problem, without opening a VPN.</span>
           
+          <span class="hero-headline">无需连接 VPN，也能第一时间发现 Homelab 问题。</span>
           
         </h1>
         <p>
-          <span>Monitor websites, NAS, Docker, Synology, and Proxmox VE from your iPhone. <strong>No inbound port forwarding required.</strong></span>
           
+          <span>用 iPhone 监控网站、NAS、Docker、群晖和 Proxmox VE。<strong>无需开放内网入站端口。</strong></span>
           
         </p>
         <div class="actions">
@@ -471,14 +471,14 @@
           </a>
           <a class="hero-qr" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" aria-label="Open OpsHome NOC in the App Store">
             <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&amp;data=https%3A%2F%2Fapps.apple.com%2Fus%2Fapp%2Fopshome-noc%2Fid6763890679" alt="QR code for downloading OpsHome NOC from the App Store" width="96" height="96" loading="lazy">
-            <span>Scan to download</span>
             
+            <span>扫码下载</span>
             
           </a>
         </div>
         <p class="hero-support">
-          <span>Synology · Proxmox VE · Docker · Websites · Private services</span>
           
+          <span>群晖 · Proxmox VE · Docker · 网站 · 私有服务</span>
           
         </p>
       </div>
@@ -487,7 +487,7 @@
           <img src="assets/images/hero-iphone.png?v=20260608-0918" alt="OpsHome NOC health dashboard shown on an iPhone">
         </div>
         <div class="hero-visual-note">
-          <span>NOC health</span>
+          <span>NOC 健康度</span>
           <strong>100% Operational</strong>
         </div>
       </div>
@@ -507,31 +507,31 @@
     <div style="max-width:860px;margin:0 auto">
       <p class="label">// ENGINEERING STANDARD</p>
       <h2 style="font-size:clamp(16px,1.8vw,24px);margin-bottom:24px">
-        <span>Built by a senior network &amp; systems engineer with <strong>15 years</strong> of hands-on IT operations experience.</span>
         
+        <span>由拥有 <strong>15 年</strong>一线 IT 运维经验的资深网络与系统工程师打造。</span>
         
       </h2>
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:28px">
-        <div class="trust-item" style="text-align:center"><span>Cisco CCNP Enterprise Certified</span></div>
-        <div class="trust-item" style="text-align:center"><span>Microsoft MCSE credential</span></div>
-        <div class="trust-item" style="text-align:center"><span>Oracle MySQL HeatWave Certified Associate</span></div>
-        <div class="trust-item" style="text-align:center"><span>Fortinet Firewall Certification</span></div>
+        <div class="trust-item" style="text-align:center"><span>Cisco CCNP Enterprise 认证</span></div>
+        <div class="trust-item" style="text-align:center"><span>Microsoft MCSE 认证</span></div>
+        <div class="trust-item" style="text-align:center"><span>Oracle MySQL HeatWave 认证</span></div>
+        <div class="trust-item" style="text-align:center"><span>Fortinet 防火墙认证</span></div>
       </div>
       <p style="color:var(--muted);font-size:17px;line-height:1.9;margin-bottom:20px">
-        <span>OpsHome NOC brings real enterprise-grade engineering practices into personal homelab monitoring, from Proxmox and TrueNAS environments to Docker, NAS, and private services. Designed, developed, and maintained by an independent developer who built it after getting tired of clunky mobile monitoring tools in a real homelab.</span>
         
+        <span>OpsHome NOC 将真实企业级工程实践带入个人 Homelab 监控场景，从 Proxmox、TrueNAS 环境，到 Docker、NAS 与私有服务。由独立开发者设计、开发和维护，起点很直接：受够了笨重难用的移动监控工具。</span>
         
       </p>
       <div class="trust-links">
-        <a class="trust-link" href="https://docs.opshome.run/product-positioning.html" target="_blank" rel="noopener"><span>Product positioning</span></a>
+        <a class="trust-link" href="https://docs.opshome.run/product-positioning.html" target="_blank" rel="noopener"><span>产品定位说明</span></a>
       </div>
     </div>
   </section>
 
   <section class="section" id="how-it-works" style="padding-bottom:0;text-align:center">
     <p class="label">// HOW IT WORKS</p>
-    <h2><span>How OpsHome NOC Works</span></h2>
-    <p class="desc" style="margin-left:auto;margin-right:auto"><span>OpsHome NOC is not a standalone app — it's a complete SaaS service built on three components working together.</span></p>
+    <h2><span>OpsHome NOC 是如何工作的</span></h2>
+    <p class="desc" style="margin-left:auto;margin-right:auto"><span>OpsHome NOC 不是单机 App，而是由三个部分协同工作的完整 SaaS 服务。</span></p>
     <div style="max-width:500px;margin:0 auto 48px;border-radius:12px;overflow:hidden;border:1px solid var(--border);box-shadow:0 4px 24px rgba(20,121,255,.1)">
       <img src="assets/images/how-to-work.gif" alt="How OpsHome NOC Works" style="display:block;width:100%;height:auto">
     </div>
@@ -539,73 +539,73 @@
       <div class="card">
         <div class="icon"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"></rect><path d="M12 18h.01"></path></svg></div>
         <h3><span>iPhone App</span></h3>
-        <p><span>Your control center. Displays real-time data, topology maps, asset views, and delivers push alerts.</span></p>
+        <p><span>你的控制中心。负责显示实时数据、拓扑图、资产视图和接收告警推送。</span></p>
       </div>
       <div class="card">
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 16 0"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><circle cx="12" cy="12" r="3"></circle><path d="M12 4v2"></path></svg></div>
         <h3><span>OpsHome Cloud</span></h3>
-        <p><span>The SaaS backbone. Handles data storage, topology generation, alert delivery, and status pages.</span></p>
+        <p><span>云端 SaaS 服务。负责数据存储、拓扑图生成、告警推送和状态页。</span></p>
       </div>
       <div class="card">
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg></div>
         <h3><span>Docker Probe</span></h3>
-        <p><span>A lightweight agent you deploy inside your home network. Collects private service status and sends it to the cloud — zero port forwarding required.</span></p>
+        <p><span>你部署在内网的轻量探针。采集私有服务状态并安全发送至云端，无需暴露任何端口。</span></p>
       </div>
     </div>
-    <p style="text-align:center;max-width:760px;margin:0 auto;color:var(--muted);font-size:17px;font-weight:600"><span>Through Docker Probe, your iPhone sees your entire homelab in real time — without exposing a single internal port.</span></p>
+    <p style="text-align:center;max-width:760px;margin:0 auto;color:var(--muted);font-size:17px;font-weight:600"><span>通过 Docker Probe，你的 iPhone 可以实时看到整个 homelab 的状态，完全不暴露任何内网端口。</span></p>
   </section>
 
   <section class="section" id="features" style="text-align:center">
     <p class="label">// FEATURES</p>
-    <h2 style="font-size:clamp(20px,2.5vw,32px);margin-left:auto;margin-right:auto"><span>The iPhone-first control room for your homelab.</span></h2>
-    <p class="desc" style="margin-left:auto;margin-right:auto"><span>OpsHome NOC focuses on public monitoring, private network visibility, infrastructure integrations, and clear status sharing for NAS, Docker, homelab, and small production endpoints.</span></p>
+    <h2 style="font-size:clamp(20px,2.5vw,32px);margin-left:auto;margin-right:auto"><span>属于 Homelab 的 iPhone 优先控制室。</span></h2>
+    <p class="desc" style="margin-left:auto;margin-right:auto"><span>聚焦公网监控、私有网络可见性、基础设施集成和清晰的状态共享，覆盖 NAS、Docker、Homelab 和小型生产端点。</span></p>
 
     <div class="feature-group">
-      <p class="feature-group-label"><span>// PRIVATE NETWORK</span></p>
+      <p class="feature-group-label"><span>// 私有网络</span></p>
       <div class="grid">
-        <div class="card" style="border-top-color:#16a34a"><div class="icon" style="background:#f0fdf4"><svg viewBox="0 0 24 24" style="stroke:#16a34a"><rect x="3" y="4" width="18" height="14" rx="2"></rect><path d="M7 20h10"></path><path d="M9 8h6"></path><path d="M9 12h3"></path></svg></div><h3><span>Private Monitoring</span></h3><p><span>Monitor NAS panels, Docker services, and internal HTTP/HTTPS/TCP targets without opening your home network.</span></p></div>
-        <div class="card" style="border-top-color:#16a34a"><div class="icon" style="background:#f0fdf4"><svg viewBox="0 0 24 24" style="stroke:#16a34a"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8"></path><path d="M12 17v4"></path><path d="M7 7h.01"></path><path d="M11 7h6"></path><path d="M7 11h.01"></path><path d="M11 11h6"></path></svg></div><h3><span>Infrastructure Assets</span></h3><p><span>Synology NAS, Docker containers, and Proxmox VE — CPU, memory, disk I/O, temperature, and container health without exposing management interfaces.</span></p></div>
-        <div class="card" style="border-top-color:#7c3aed"><div class="icon" style="background:#f5f3ff"><svg viewBox="0 0 24 24" style="stroke:#7c3aed"><circle cx="12" cy="5" r="2"></circle><circle cx="6" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle><path d="M12 7v4"></path><path d="M12 11 6 16"></path><path d="M12 11l6 5"></path></svg></div><h3><span>Topology Map</span></h3><p><span>A visual Cloud to Private Networks map shows where each service lives and how it is monitored.</span></p></div>
+        <div class="card" style="border-top-color:#16a34a"><div class="icon" style="background:#f0fdf4"><svg viewBox="0 0 24 24" style="stroke:#16a34a"><rect x="3" y="4" width="18" height="14" rx="2"></rect><path d="M7 20h10"></path><path d="M9 8h6"></path><path d="M9 12h3"></path></svg></div><h3><span>私有网络监控</span></h3><p><span>无需开放家庭网络端口，即可监控 NAS 面板、Docker 服务和内网 HTTP/HTTPS/TCP 目标。</span></p></div>
+        <div class="card" style="border-top-color:#16a34a"><div class="icon" style="background:#f0fdf4"><svg viewBox="0 0 24 24" style="stroke:#16a34a"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8"></path><path d="M12 17v4"></path><path d="M7 7h.01"></path><path d="M11 7h6"></path><path d="M7 11h.01"></path><path d="M11 11h6"></path></svg></div><h3><span>基础设施资产</span></h3><p><span>Synology NAS、Docker 容器和 Proxmox VE 的 CPU、内存、磁盘 I/O、温度和容器健康，无需暴露管理界面。</span></p></div>
+        <div class="card" style="border-top-color:#7c3aed"><div class="icon" style="background:#f5f3ff"><svg viewBox="0 0 24 24" style="stroke:#7c3aed"><circle cx="12" cy="5" r="2"></circle><circle cx="6" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle><path d="M12 7v4"></path><path d="M12 11 6 16"></path><path d="M12 11l6 5"></path></svg></div><h3><span>拓扑地图</span></h3><p><span>Cloud 到 Private Networks 的可视化拓扑，让服务位置和监控来源一目了然。</span></p></div>
       </div>
     </div>
 
     <div class="feature-group">
-      <p class="feature-group-label"><span>// PUBLIC MONITORS</span></p>
+      <p class="feature-group-label"><span>// 公网监测</span></p>
       <div class="grid grid-2">
-        <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path><path d="M8 5v14"></path></svg></div><h3><span>Monitor Workspace</span></h3><p><span>All, Dock, Map, and Tags views separate public checks from private network monitoring.</span></p></div>
-        <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg></div><h3><span>Alerts &amp; Analysis</span></h3><p><span>Push alerts, Telegram, incident history, uptime blocks, SSL/domain risk, and readable analysis help you act fast.</span></p></div>
+        <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path><path d="M8 5v14"></path></svg></div><h3><span>监控工作区</span></h3><p><span>All、Dock、Map、Tags 视图清晰区分公网检测和私有网络监控。</span></p></div>
+        <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg></div><h3><span>告警与分析</span></h3><p><span>推送告警、Telegram、事件历史、在线率色块、SSL/域名风险和易读分析，帮助你快速处置。</span></p></div>
       </div>
     </div>
 
     <div class="feature-group">
-      <p class="feature-group-label"><span>// VISUALIZATION &amp; SHARING</span></p>
+      <p class="feature-group-label"><span>// 可视化与分享</span></p>
       <div class="grid grid-2">
-        <div class="card"><div class="icon" style="background:#fff7ed"><svg viewBox="0 0 24 24" style="stroke:#ea580c"><rect x="5" y="3" width="14" height="18" rx="3"></rect><path d="M9 7h6"></path><path d="M9 11h6"></path><path d="M9 15h3"></path></svg></div><h3><span>iOS Widgets</span></h3><p><span>Home screen and lock screen widgets keep your homelab status visible without opening the app.</span></p></div>
-        <div class="card"><div class="icon" style="background:#f0fdf4"><svg viewBox="0 0 24 24" style="stroke:#16a34a"><path d="M4 6h16v12H4z"></path><path d="M8 10h8"></path><path d="M8 14h5"></path></svg></div><h3><span>Status Pages</span></h3><p><span>Share public service status with access codes, expiry windows, QR verification, and private-target masking.</span></p></div>
+        <div class="card"><div class="icon" style="background:#fff7ed"><svg viewBox="0 0 24 24" style="stroke:#ea580c"><rect x="5" y="3" width="14" height="18" rx="3"></rect><path d="M9 7h6"></path><path d="M9 11h6"></path><path d="M9 15h3"></path></svg></div><h3><span>iOS 组件</span></h3><p><span>桌面和锁屏组件让 Homelab 状态不打开 App 也能快速扫一眼。</span></p></div>
+        <div class="card"><div class="icon" style="background:#f0fdf4"><svg viewBox="0 0 24 24" style="stroke:#16a34a"><path d="M4 6h16v12H4z"></path><path d="M8 10h8"></path><path d="M8 14h5"></path></svg></div><h3><span>公开状态页</span></h3><p><span>可分享公开状态页，支持访问口令、有效期、二维码验真和私有目标脱敏。</span></p></div>
       </div>
     </div>
   </section>
 
   <section class="section monitor-matrix" id="protocols" style="text-align:center">
     <p class="label">// MONITOR TYPES</p>
-    <h2 style="font-size:clamp(20px,2.5vw,32px);margin-left:auto;margin-right:auto"><span>Monitor types and plan access.</span></h2>
+    <h2 style="font-size:clamp(20px,2.5vw,32px);margin-left:auto;margin-right:auto"><span>监控类型和方案权限。</span></h2>
     <div class="monitor-table" style="max-width:860px;margin-left:auto;margin-right:auto">
       <table>
         <colgroup><col style="width:14%"><col style="width:58%"><col style="width:14%"><col style="width:14%"></colgroup>
-        <thead><tr><th><span>Type</span></th><th><span>Description</span></th><th style="text-align:center">FREE</th><th style="text-align:center">PRO</th></tr></thead>
+        <thead><tr><th><span>类型</span></th><th><span>说明</span></th><th style="text-align:center">FREE</th><th style="text-align:center">PRO</th></tr></thead>
         <tbody>
-          <tr class="group-row"><td colspan="4"><span>Cloud Monitoring</span></td></tr>
-          <tr><td>HTTP</td><td><span>HTTP status-code detection and analysis hints.</span></td><td style="text-align:center;color:#16a34a;font-size:20px;font-weight:700">✓</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
-          <tr><td>HTTPS</td><td><span>HTTPS reachability and status-code detection.</span></td><td style="text-align:center;color:#16a34a;font-size:20px;font-weight:700">✓</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
-          <tr><td>TCP</td><td><span>Custom port connectivity without fixed port restrictions.</span></td><td style="text-align:center;color:#16a34a;font-size:20px;font-weight:700">✓</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
-          <tr><td>ICMP</td><td><span>Ping-style host reachability.</span></td><td style="text-align:center;color:#16a34a;font-size:20px;font-weight:700">✓</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
-          <tr class="group-row"><td colspan="4"><span>Security &amp; Domain</span></td></tr>
-          <tr><td>SSL</td><td><span>Certificate validity, CN, issuer, and hostname match checks.</span></td><td style="text-align:center;color:#16a34a;font-size:20px;font-weight:700">✓</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
-          <tr><td>DNS</td><td><span>DNS response checks and A/MX record validation.</span></td><td style="text-align:center;color:var(--muted);font-size:18px">—</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
-          <tr><td><span>Domain</span></td><td><span>Domain registration expiry monitoring.</span></td><td style="text-align:center;color:var(--muted);font-size:18px">—</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
-          <tr><td>UDP</td><td><span>UDP response checks for supported payloads.</span></td><td style="text-align:center;color:var(--muted);font-size:18px">—</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
-          <tr class="group-row"><td colspan="4"><span>Private Network</span></td></tr>
-          <tr><td><span>Private Monitoring</span></td><td><span>Private Docker, NAS, and internal HTTP/HTTPS/TCP checks without exposing inbound access.</span></td><td style="text-align:center;color:var(--muted);font-size:18px">—</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
+          <tr class="group-row"><td colspan="4"><span>公网检测</span></td></tr>
+          <tr><td>HTTP</td><td><span>HTTP 状态码检测与分析提示。</span></td><td style="text-align:center;color:#16a34a;font-size:20px;font-weight:700">✓</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
+          <tr><td>HTTPS</td><td><span>HTTPS 可达性与状态码检测。</span></td><td style="text-align:center;color:#16a34a;font-size:20px;font-weight:700">✓</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
+          <tr><td>TCP</td><td><span>自定义端口连通性检测，不限制固定端口。</span></td><td style="text-align:center;color:#16a34a;font-size:20px;font-weight:700">✓</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
+          <tr><td>ICMP</td><td><span>类似 Ping 的主机可达性检测。</span></td><td style="text-align:center;color:#16a34a;font-size:20px;font-weight:700">✓</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
+          <tr class="group-row"><td colspan="4"><span>安全与域名</span></td></tr>
+          <tr><td>SSL</td><td><span>证书有效期、CN、颁发者和主机名匹配检测。</span></td><td style="text-align:center;color:#16a34a;font-size:20px;font-weight:700">✓</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
+          <tr><td>DNS</td><td><span>DNS 响应检测与 A/MX 记录校验。</span></td><td style="text-align:center;color:var(--muted);font-size:18px">—</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
+          <tr><td><span>域名</span></td><td><span>域名注册到期监测。</span></td><td style="text-align:center;color:var(--muted);font-size:18px">—</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
+          <tr><td>UDP</td><td><span>对支持的载荷进行 UDP 响应检测。</span></td><td style="text-align:center;color:var(--muted);font-size:18px">—</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
+          <tr class="group-row"><td colspan="4"><span>私有网络</span></td></tr>
+          <tr><td><span>私有网络监控</span></td><td><span>无需暴露入站访问，即可检测私有 Docker、NAS 和内网 HTTP/HTTPS/TCP 服务。</span></td><td style="text-align:center;color:var(--muted);font-size:18px">—</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
         </tbody>
       </table>
     </div>
@@ -613,62 +613,62 @@
 
   <section class="section wide" id="screenshots" style="text-align:center">
     <p class="label">// APP SCREENSHOTS</p>
-    <h2 style="font-size:clamp(20px,2.5vw,32px);margin-left:auto;margin-right:auto"><span>Built for the way homelab people actually check status.</span></h2>
+    <h2 style="font-size:clamp(20px,2.5vw,32px);margin-left:auto;margin-right:auto"><span>为 Homelab 用户真实查看状态的方式而设计。</span></h2>
     <div class="screens">
-      <div><div class="shot"><img src="assets/images/showcase-home-20260608.png" alt="OpsHome NOC dashboard with private monitoring"></div><p class="shot-label"><span>Dashboard</span></p></div>
-      <div><div class="shot"><img src="assets/images/showcase-assets-20260608.png" alt="OpsHome NOC Synology and Proxmox VE assets workspace"></div><p class="shot-label"><span>Assets</span></p></div>
-      <div><div class="shot"><img src="assets/images/showcase-map-20260608.png" alt="OpsHome NOC topology map"></div><p class="shot-label"><span>Topology Map</span></p></div>
+      <div><div class="shot"><img src="assets/images/showcase-home-20260608.png" alt="OpsHome NOC dashboard with private monitoring"></div><p class="shot-label"><span>首页总览</span></p></div>
+      <div><div class="shot"><img src="assets/images/showcase-assets-20260608.png" alt="OpsHome NOC Synology and Proxmox VE assets workspace"></div><p class="shot-label"><span>资产</span></p></div>
+      <div><div class="shot"><img src="assets/images/showcase-map-20260608.png" alt="OpsHome NOC topology map"></div><p class="shot-label"><span>拓扑地图</span></p></div>
       <div><div class="shot"><img src="assets/images/showcase-pve-20260608.png" alt="OpsHome NOC Proxmox VE performance and memory details"></div><p class="shot-label"><span>Proxmox VE</span></p></div>
-      <div><div class="shot"><img src="assets/images/showcase-widgets-20260608.png" alt="OpsHome NOC iOS widgets"></div><p class="shot-label"><span>Widgets</span></p></div>
+      <div><div class="shot"><img src="assets/images/showcase-widgets-20260608.png" alt="OpsHome NOC iOS widgets"></div><p class="shot-label"><span>桌面组件</span></p></div>
     </div>
   </section>
 
   <section class="comparison-section" id="comparison">
     <p class="label">// WHY OPSHOME</p>
     <h2>
-      <span>How others do it vs how OpsHome does it.</span>
       
+      <span>别人怎么做 vs OpsHome NOC 怎么做</span>
       
     </h2>
     <p class="comparison-intro">
-      <span>Built for people who want to check homelab health directly from iPhone, without maintaining a heavy monitoring stack or opening inbound access.</span>
       
+      <span>面向希望直接用 iPhone 查看 Homelab 状态，又不想维护重型监控系统或开放内网入站访问的用户。</span>
       
     </p>
     <div class="comparison-table">
       <table>
         <thead>
           <tr>
-            <th><span>Approach</span></th>
-            <th><span>Common friction</span></th>
-            <th><span>How OpsHome NOC handles it</span></th>
+            <th><span>方案</span></th>
+            <th><span>常见痛点</span></th>
+            <th><span>OpsHome NOC 怎么做</span></th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>UptimeRobot</td>
-            <td><span>Primarily focused on public endpoint monitoring.</span></td>
-            <td><span>Combines public monitoring and private network visibility in one iPhone app.</span></td>
+            <td><span>主要面向公网端点监控。</span></td>
+            <td><span>在一个 iPhone App 中同时查看公网监控和私有网络状态。</span></td>
           </tr>
           <tr>
             <td>Uptime Kuma</td>
-            <td><span>Requires self-hosting and maintenance; remote access usually needs a VPN, reverse proxy, or another access path.</span></td>
-            <td><span>Docker Probe connects outbound to OpsHome Cloud, with no inbound port forwarding required.</span></td>
+            <td><span>需要自行部署和维护；远程查看通常还需要 VPN、反向代理或其他访问路径。</span></td>
+            <td><span>Docker Probe 主动连接 OpsHome Cloud，无需配置内网入站端口转发。</span></td>
           </tr>
           <tr>
             <td>Prometheus / Grafana</td>
-            <td><span>Complex configuration, weaker mobile experience, and ongoing maintenance overhead.</span></td>
-            <td><span>iPhone-first and lightweight, with dashboards, alerts, assets, and reports ready to use.</span></td>
+            <td><span>配置复杂、手机端体验弱，长期维护成本高。</span></td>
+            <td><span>以 iPhone 为优先，轻量提供仪表盘、告警、资产和报告。</span></td>
           </tr>
           <tr>
-            <td><span>VPN + admin consoles</span></td>
-            <td><span>Connect the VPN, open each console, and manually check systems one by one.</span></td>
-            <td><span>Open one app to see current health, issues, assets, and notifications.</span></td>
+            <td><span>VPN + 管理后台</span></td>
+            <td><span>先连接 VPN，再逐个打开群晖、Proxmox 或服务后台检查，操作慢且分散。</span></td>
+            <td><span>打开一个 App，即可查看当前健康状态、问题、资产和通知。</span></td>
           </tr>
           <tr>
-            <td><span>Exposing NAS or service ports</span></td>
-            <td><span>Creates additional inbound exposure and security risk.</span></td>
-            <td><span>Private monitoring uses outbound Docker Probe connections instead of opening inbound access.</span></td>
+            <td><span>暴露 NAS 或服务端口</span></td>
+            <td><span>增加内网入站暴露面和安全风险。</span></td>
+            <td><span>私有监控通过 Docker Probe 出站连接完成，无需开放内网入站访问。</span></td>
           </tr>
         </tbody>
       </table>
@@ -677,57 +677,57 @@
 
   <section class="section" id="pricing" style="text-align:center">
     <p class="label">// PLANS</p>
-    <h2 style="font-size:clamp(20px,2.5vw,32px);margin-left:auto;margin-right:auto"><span>Start free. Upgrade when you need more.</span></h2>
-    <p class="desc" style="margin-left:auto;margin-right:auto"><span>Start free. No credit card required. Upgrade when you need more public monitors, private network monitoring, infrastructure integrations, and advanced visibility.</span></p>
+    <h2 style="font-size:clamp(20px,2.5vw,32px);margin-left:auto;margin-right:auto"><span>免费开始，需要更多时再升级。</span></h2>
+    <p class="desc" style="margin-left:auto;margin-right:auto"><span>免费开始，无需信用卡。需要更多公网监控、私有网络监控、基础设施集成和高级可见性时再升级。</span></p>
     <div class="pricing" style="text-align:left">
       <div class="plan free" style="background:linear-gradient(180deg,#92D050 0%,#6ABB65 100%)">
         <p class="plan-name"><span style="display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:var(--accent);color:#fff;font-size:13px;font-weight:900;letter-spacing:.1em">FREE</span></p>
-        <p class="plan-price"><span>Free</span></p>
-        <p class="plan-note"><span>No subscription required.</span></p>
+        <p class="plan-price"><span>免费</span></p>
+        <p class="plan-note"><span>无需订阅。</span></p>
         <ul>
-          <li><span><strong>30</strong> public monitor targets</span></li>
+          <li><span><strong>30</strong> 个公网监控目标</span></li>
           <li>HTTP / HTTPS / TCP / SSL / ICMP</li>
-          <li><span><strong>1</strong> public status page</span></li>
-          <li><span><strong>10</strong> monitors per status page</span></li>
-          <li><span>Home screen and lock screen widgets</span></li>
-          <li><span>All / Dock / Map / Tags workspace views</span></li>
-          <li><span><strong>Synology</strong> DSM public asset collection</span></li>
-          <li><span>Minimum interval: <strong>10 minutes</strong></span></li>
-          <li><span>Alert push notifications</span></li>
-          <li><span>Basic <strong>Analysis Reports</strong> — assets · storage · CPU / RAM</span></li>
-          <li><span>Visual Monitoring Dashboard</span></li>
+          <li><span><strong>1</strong> 个公开状态页</span></li>
+          <li><span>每个状态页 <strong>10</strong> 个监控点</span></li>
+          <li><span>桌面和锁屏组件</span></li>
+          <li><span>All / Dock / Map / Tags 工作区视图</span></li>
+          <li><span><strong>群晖</strong> DSM 公开资产采集</span></li>
+          <li><span>最短间隔：<strong>10 分钟</strong></span></li>
+          <li><span>告警推送通知</span></li>
+          <li><span>基础<strong>分析报告</strong> — 资产趋势 · 存储 · CPU / 内存</span></li>
+          <li><span>可视化监控仪表盘</span></li>
         </ul>
         <div class="plan-cta" style="position:absolute;bottom:24px;right:24px;display:flex;align-items:center;gap:14px">
-          <p style="margin:0;font-size:12px;font-weight:600;color:#fff;opacity:.85"><span>Perfect for getting started</span></p>
-          <a class="btn primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" style="display:inline-block;background:#fff;color:var(--accent);border-color:#fff;white-space:nowrap"><span>Get it Free</span></a>
+          <p style="margin:0;font-size:12px;font-weight:600;color:#fff;opacity:.85"><span>适合入门体验</span></p>
+          <a class="btn primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" style="display:inline-block;background:#fff;color:var(--accent);border-color:#fff;white-space:nowrap"><span>免费下载</span></a>
         </div>
       </div>
       <div class="plan pro">
         <p class="plan-name"><span style="display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:#92D050;color:var(--accent);font-size:16px;font-weight:900;letter-spacing:.1em;text-shadow:0 1px 3px rgba(255,255,255,.3)">PRO</span></p>
         <p class="plan-price" style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:22px;white-space:nowrap">
-          <span style="font-size:30px"><span>Monthly or Yearly</span></span>
+          <span style="font-size:30px"><span>月付或年付</span></span>
           <span style="text-align:right;font-size:14px;line-height:1.6;opacity:.85">
-            <span style="display:block">$2.99 / <span>month</span></span>
-            <span style="display:block">$24.99 / <span>year</span> <span style="font-size:11px;background:#92D050;color:#0b1b2e;font-weight:800;padding:1px 6px;border-radius:999px"><span>BEST VALUE</span></span></span>
+            <span style="display:block">$2.99 / <span>月</span></span>
+            <span style="display:block">$24.99 / <span>年</span> <span style="font-size:11px;background:#92D050;color:#0b1b2e;font-weight:800;padding:1px 6px;border-radius:999px"><span>最划算</span></span></span>
           </span>
         </p>
-        <p class="plan-note"><span>Final price is shown in the App Store before purchase.</span></p>
+        <p class="plan-note"><span>最终价格会在 App Store 购买确认页显示。</span></p>
         <ul>
-          <li><span><strong>100</strong> public monitor targets</span></li>
-          <li><span>All monitor types including <strong>UDP, DNS, Domain</strong></span></li>
-          <li><span><strong>5</strong> private collectors</span></li>
-          <li><span><strong>50</strong> private monitor targets</span></li>
-          <li><span>Proxmox infrastructure integrations + private Synology collection</span></li>
-          <li><span><strong>3</strong> public status pages</span></li>
-          <li><span><strong>20</strong> monitors per status page</span></li>
-          <li><span>Status page sharing, access code, expiry, and QR verification</span></li>
-          <li><span>Minimum interval: <strong>5 minutes</strong></span></li>
-          <li><span>Alerts plus SSL/domain expiry reminders</span></li>
-          <li><span>Full dashboard and detail analysis reports</span></li>
+          <li><span><strong>100</strong> 个公网监控目标</span></li>
+          <li><span>全部监控类型，包含 <strong>UDP、DNS、域名</strong></span></li>
+          <li><span><strong>5</strong> 个私有采集节点</span></li>
+          <li><span><strong>50</strong> 个私有监控目标</span></li>
+          <li><span>Proxmox 基础设施集成 + 群晖私有采集</span></li>
+          <li><span><strong>3</strong> 个公开状态页</span></li>
+          <li><span>每个状态页 <strong>20</strong> 个监控点</span></li>
+          <li><span>状态页分享、访问口令、有效期和二维码验真</span></li>
+          <li><span>最短间隔：<strong>5 分钟</strong></span></li>
+          <li><span>告警推送，以及 SSL/域名到期提醒</span></li>
+          <li><span>完整首页仪表盘和详情分析报告</span></li>
         </ul>
         <div class="plan-cta" style="position:absolute;bottom:24px;right:24px;display:flex;align-items:center;gap:14px">
-          <p style="margin:0;font-size:12px;font-weight:600;color:rgba(255,255,255,.7)"><span>For the serious homelab enthusiast</span></p>
-          <a class="btn primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" style="white-space:nowrap"><span>Get Pro</span></a>
+          <p style="margin:0;font-size:12px;font-weight:600;color:rgba(255,255,255,.7)"><span>为认真玩 homelab 的你而生</span></p>
+          <a class="btn primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" style="white-space:nowrap"><span>获取 Pro</span></a>
         </div>
       </div>
     </div>
@@ -736,124 +736,124 @@
   <section class="faq-section" id="faq">
     <p class="label">// FAQ</p>
     <h2>
-      <span>Frequently asked questions.</span>
       
+      <span>常见问题</span>
       
     </h2>
     <p class="faq-intro">
-      <span>Clear answers about security, data transmission, plans, and supported infrastructure.</span>
       
+      <span>了解安全性、数据传输、方案额度和支持的基础设施。</span>
       
     </p>
     <div class="faq-list">
       <details class="faq-item">
         <summary>
-          <span>What is the main difference between Free and Pro?</span>
           
+          <span>免费版和 Pro 版的核心区别是什么？</span>
           
         </summary>
         <div class="faq-answer">
-          <span>Free is designed for public monitoring and includes up to <strong>30 public monitor targets</strong>. Pro raises the public limit and adds Docker Probe private monitoring, private infrastructure integrations, up to <strong>5 private collectors and 50 private monitor targets</strong>.</span>
           
+          <span>Free 主要用于公网监控，支持最多 <strong>30 个公网监控目标</strong>。Pro 提高公网监控额度，并增加 Docker Probe 私有网络监控、私有基础设施集成、最多 <strong>5 个私有采集节点和 50 个私有监控目标</strong>。</span>
           
         </div>
       </details>
       <details class="faq-item">
         <summary>
-          <span>Can I cancel my Pro subscription at any time?</span>
           
+          <span>能随时取消 Pro 订阅吗？</span>
           
         </summary>
         <div class="faq-answer">
-          <span><strong>Yes.</strong> Cancel through your Apple ID subscription settings at any time. Pro remains available until the end of the current paid billing period. Deleting the app or your OpsHome account does not cancel the App Store subscription.</span>
           
+          <span><strong>可以。</strong>你可以在 Apple ID 的订阅设置中随时取消。取消后，Pro 权益会持续到当前已付费周期结束。删除 App 或删除 OpsHome 账户不会自动取消 App Store 订阅。</span>
           
         </div>
       </details>
       <details class="faq-item">
         <summary>
-          <span>Is Docker Probe difficult to install?</span>
           
+          <span>Docker Probe 难安装吗？</span>
           
         </summary>
         <div class="faq-answer">
-          <span>Follow the documentation and run the provided Docker deployment commands. Users familiar with basic Docker operations can usually complete installation in <strong>a few minutes</strong>.</span>
+          
+          <span>按照文档运行提供的 Docker 部署命令即可。熟悉基础 Docker 操作的用户通常可在<strong>几分钟内</strong>完成安装。</span>
           
           
-          <a class="faq-link" href="https://docs.opshome.run/docker-probe-linux.html" target="_blank" rel="noopener">View deployment guide and video</a>
-          
+          <a class="faq-link" href="https://docs.opshome.run/zh/docker-probe-linux.html" target="_blank" rel="noopener">查看部署指南与视频</a>
           
         </div>
       </details>
       <details class="faq-item">
         <summary>
-          <span>Is my data secure, and where is it stored?</span>
           
+          <span>我的数据安全吗？数据存在哪里？</span>
           
         </summary>
         <div class="faq-answer">
-          <span>Supported monitoring status and infrastructure metrics are transmitted over <strong>encrypted HTTPS</strong> and processed by hosted OpsHome Cloud infrastructure and database providers. OpsHome does not require uploading NAS files, documents, photos, or payment card information.</span>
           
+          <span>受支持的监控状态和基础设施指标通过<strong>加密 HTTPS</strong>传输，并由 OpsHome Cloud 的托管基础设施和数据库服务处理。OpsHome 不要求上传 NAS 文件、文档、照片，也不会接收或保存银行卡信息。</span>
           
         </div>
       </details>
       <details class="faq-item">
         <summary>
-          <span>Why is the final subscription price confirmed in the App Store?</span>
           
+          <span>为什么最终价格要在 App Store 确认？</span>
           
         </summary>
         <div class="faq-answer">
-          <span>Apple shows the final local currency, taxes, eligible offers, trials, and billing confirmation for your App Store region before purchase. OpsHome does not receive or store your payment card information.</span>
           
+          <span>Apple 会根据你的 App Store 地区，在购买前显示本地货币、税费、适用优惠、试用和最终付款信息。OpsHome 不接收或保存银行卡信息。</span>
           
         </div>
       </details>
       <details class="faq-item">
         <summary>
-          <span>Can I use OpsHome on multiple devices or with Family Sharing?</span>
           
+          <span>支持多设备或家庭共享吗？</span>
           
         </summary>
         <div class="faq-answer">
-          <span>You can sign in on another supported device with the same <strong>Sign in with Apple account</strong> and restore an active Pro purchase if needed. Family Sharing is not currently included in the published OpsHome plan entitlement.</span>
           
+          <span>你可以在另一台受支持设备上使用同一个<strong>“通过 Apple 登录”账户</strong>，并在需要时恢复有效的 Pro 购买。目前公开的 OpsHome 方案权益不包含家庭共享。</span>
           
         </div>
       </details>
       <details class="faq-item">
         <summary>
-          <span>Is Docker Probe secure?</span>
           
+          <span>Docker Probe 安全吗？</span>
           
         </summary>
         <div class="faq-answer">
-          <span>Docker Probe initiates an <strong>outbound connection</strong> to OpsHome Cloud. It does not require inbound port forwarding or exposing private services directly to the internet.</span>
           
+          <span>Docker Probe 主动向 OpsHome Cloud 发起<strong>出站连接</strong>，不需要配置入站端口转发，也不需要将私有服务直接暴露到公网。</span>
           
         </div>
       </details>
       <details class="faq-item">
         <summary>
-          <span>How is monitoring data transmitted?</span>
           
+          <span>监控数据如何传输？</span>
           
         </summary>
         <div class="faq-answer">
-          <span>Docker Probe collects supported service status and infrastructure metrics, then sends them to the OpsHome Cloud API through an <strong>encrypted HTTPS connection</strong>.</span>
           
+          <span>Docker Probe 采集受支持的服务状态和基础设施指标，再通过<strong>加密 HTTPS 连接</strong>发送至 OpsHome Cloud API。</span>
           
         </div>
       </details>
       <details class="faq-item">
         <summary>
-          <span>Does monitoring continue when the iPhone app is closed?</span>
           
+          <span>关闭 iPhone App 后监控还会继续吗？</span>
           
         </summary>
         <div class="faq-answer">
-          <span><strong>Yes.</strong> Checks continue through OpsHome Cloud or Docker Probe. The iPhone app is used to review status, reports, and notifications.</span>
           
+          <span><strong>会。</strong>检测由 OpsHome Cloud 或 Docker Probe 持续执行，iPhone App 用于查看状态、报告和接收通知。</span>
           
         </div>
       </details>
@@ -864,13 +864,13 @@
     <div class="download-cta-inner">
       <div class="download-cta-copy">
         <h2>
-        <span>Ready to see the real-time status of your entire homelab?</span>
         
+        <span>想实时掌握你整个 homelab 的状态吗？</span>
         
         </h2>
         <p>
-          <span>Securely monitor Synology, Proxmox, Docker and all your private assets from iPhone.</span>
           
+          <span>通过 iPhone 安全监控 Synology、Proxmox、Docker 和所有私有资产。</span>
           
         </p>
       </div>
@@ -880,8 +880,8 @@
         </a>
         <a class="download-cta-qr" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" aria-label="Open OpsHome NOC in the App Store">
           <img src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&amp;data=https%3A%2F%2Fapps.apple.com%2Fus%2Fapp%2Fopshome-noc%2Fid6763890679" alt="QR code for downloading OpsHome NOC from the App Store" width="104" height="104" loading="lazy">
-          <span>Scan to download</span>
           
+          <span>扫码下载</span>
           
         </a>
       </div>
@@ -891,14 +891,14 @@
 
 <footer>
   <div class="footer-inner">
-    <p><span>© 2026 OpsHome NOC™. All rights reserved. OpsHome NOC™ is a trademark of its owner.</span></p>
+    <p><span>© 2026 OpsHome NOC™。保留所有权利。OpsHome NOC™ 是其所有者的商标。</span></p>
     <ul>
-      <li><a href="use-cases.html"><span>Use Cases</span></a></li>
-      <li><a href="https://docs.opshome.run/release-notes.html" target="_blank" rel="noopener"><span>Changelog</span></a></li>
-      <li><a href="https://docs.opshome.run" target="_blank" rel="noopener"><span>Docs</span></a></li>
-      <li><a href="privacy.html"><span>Privacy</span></a></li>
-      <li><a href="terms.html"><span>Terms</span></a></li>
-      <li><a href="mailto:opshome@outlook.com"><span>opshome@outlook.com</span></a></li>
+      <li><a href="use-cases.html"><span>使用场景</span></a></li>
+      <li><a href="https://docs.opshome.run/release-notes.html" target="_blank" rel="noopener"><span>更新日志</span></a></li>
+      <li><a href="https://docs.opshome.run" target="_blank" rel="noopener"><span>文档</span></a></li>
+      <li><a href="privacy.html"><span>隐私政策</span></a></li>
+      <li><a href="terms.html"><span>服务条款</span></a></li>
+      <li><a href="mailto:opshome@outlook.com"><span>联系邮箱</span></a></li>
     </ul>
   </div>
 </footer>
