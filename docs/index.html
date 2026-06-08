@@ -51,6 +51,54 @@
   "mainEntity": [
     {
       "@type": "Question",
+      "name": "What is the main difference between Free and Pro?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Free is designed for public monitoring and includes up to 30 public monitor targets. Pro adds higher public limits, Docker Probe private monitoring, private infrastructure integrations, 5 private collectors, and up to 50 private monitor targets."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I cancel my Pro subscription at any time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You can cancel through your Apple ID subscription settings. Pro remains available until the end of the current paid billing period. Deleting the app or your OpsHome account does not cancel the App Store subscription."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Docker Probe difficult to install?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Docker Probe is deployed by following the documentation and running the provided Docker commands. It usually takes only a few minutes for users familiar with basic Docker operations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my data secure, and where is it stored?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Supported monitoring status and infrastructure metrics are transmitted over encrypted HTTPS and processed by the hosted OpsHome Cloud infrastructure and database providers. OpsHome does not require uploading NAS files, documents, photos, or payment card information."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is the final subscription price confirmed in the App Store?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Apple displays the final local currency, taxes, eligible offers, trials, and billing confirmation for your App Store region before purchase. OpsHome does not receive or store your payment card information."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use OpsHome on multiple devices or with Family Sharing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can sign in on another supported device with the same Sign in with Apple account and restore an active Pro purchase if needed. Family Sharing is not currently included in the published OpsHome plan entitlement."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Is Docker Probe secure?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -63,30 +111,6 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Docker Probe collects supported service status and infrastructure metrics, then sends them to the OpsHome Cloud API over encrypted HTTPS connections."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does OpsHome upload files from my NAS or servers?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. OpsHome monitoring does not require uploading NAS files, documents, photos, or other stored business data."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How many monitors and probes are supported?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Free supports up to 30 public monitor targets. Pro supports up to 100 public monitor targets, 5 private collectors, and 50 private monitor targets."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Which devices and services are supported?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "OpsHome supports websites, HTTP and HTTPS endpoints, TCP, SSL, DNS, ICMP, Docker services, Synology DSM, Proxmox VE, and supported private network services."
       }
     },
     {
@@ -300,6 +324,9 @@
   .faq-item[open] summary:after{content:"−";background:var(--accent);color:#fff}
   .faq-answer{padding:0 24px 22px;color:var(--muted);font-size:16px;line-height:1.75}
   .faq-answer strong{color:var(--text)}
+  .faq-link{display:inline-flex;align-items:center;margin-top:12px;color:var(--accent);font-weight:800}
+  .faq-link:after{content:"→";margin-left:8px}
+  .faq-link:hover{color:var(--accent2)}
   .download-cta{position:relative;z-index:1;padding:34px 56px;background:#eaf4ff;border-top:1px solid var(--border)}
   .download-cta-inner{max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:36px}
   .download-cta-copy{max-width:760px}
@@ -667,14 +694,89 @@
     <div class="faq-list">
       <details class="faq-item">
         <summary>
+          <span class="t-en">What is the main difference between Free and Pro?</span>
+          <span class="t-zh">免费版和 Pro 版的核心区别是什么？</span>
+          <span class="t-hant">免費版和 Pro 版的核心差異是什麼？</span>
+        </summary>
+        <div class="faq-answer">
+          <span class="block-en">Free is designed for public monitoring and includes up to <strong>30 public monitor targets</strong>. Pro raises the public limit and adds Docker Probe private monitoring, private infrastructure integrations, up to <strong>5 private collectors and 50 private monitor targets</strong>.</span>
+          <span class="block-zh">Free 主要用于公网监控，支持最多 <strong>30 个公网监控目标</strong>。Pro 提高公网监控额度，并增加 Docker Probe 私有网络监控、私有基础设施集成、最多 <strong>5 个私有采集节点和 50 个私有监控目标</strong>。</span>
+          <span class="block-hant">Free 主要用於公網監控，支援最多 <strong>30 個公網監控目標</strong>。Pro 提高公網監控額度，並增加 Docker Probe 私有網路監控、私有基礎設施整合、最多 <strong>5 個私有採集節點和 50 個私有監控目標</strong>。</span>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>
+          <span class="t-en">Can I cancel my Pro subscription at any time?</span>
+          <span class="t-zh">能随时取消 Pro 订阅吗？</span>
+          <span class="t-hant">可以隨時取消 Pro 訂閱嗎？</span>
+        </summary>
+        <div class="faq-answer">
+          <span class="block-en"><strong>Yes.</strong> Cancel through your Apple ID subscription settings at any time. Pro remains available until the end of the current paid billing period. Deleting the app or your OpsHome account does not cancel the App Store subscription.</span>
+          <span class="block-zh"><strong>可以。</strong>你可以在 Apple ID 的订阅设置中随时取消。取消后，Pro 权益会持续到当前已付费周期结束。删除 App 或删除 OpsHome 账户不会自动取消 App Store 订阅。</span>
+          <span class="block-hant"><strong>可以。</strong>你可以在 Apple ID 的訂閱設定中隨時取消。取消後，Pro 權益會持續到目前已付費週期結束。刪除 App 或刪除 OpsHome 帳戶不會自動取消 App Store 訂閱。</span>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>
+          <span class="t-en">Is Docker Probe difficult to install?</span>
+          <span class="t-zh">Docker Probe 难安装吗？</span>
+          <span class="t-hant">Docker Probe 難安裝嗎？</span>
+        </summary>
+        <div class="faq-answer">
+          <span class="block-en">Follow the documentation and run the provided Docker deployment commands. Users familiar with basic Docker operations can usually complete installation in <strong>a few minutes</strong>.</span>
+          <span class="block-zh">按照文档运行提供的 Docker 部署命令即可。熟悉基础 Docker 操作的用户通常可在<strong>几分钟内</strong>完成安装。</span>
+          <span class="block-hant">按照文件執行提供的 Docker 部署指令即可。熟悉基礎 Docker 操作的使用者通常可在<strong>幾分鐘內</strong>完成安裝。</span>
+          <a class="faq-link block-en" href="https://docs.opshome.run/docker-probe-linux.html" target="_blank" rel="noopener">View deployment guide and video</a>
+          <a class="faq-link block-zh" href="https://docs.opshome.run/zh/docker-probe-linux.html" target="_blank" rel="noopener">查看部署指南与视频</a>
+          <a class="faq-link block-hant" href="https://docs.opshome.run/hant/docker-probe-linux.html" target="_blank" rel="noopener">查看部署指南與影片</a>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>
+          <span class="t-en">Is my data secure, and where is it stored?</span>
+          <span class="t-zh">我的数据安全吗？数据存在哪里？</span>
+          <span class="t-hant">我的資料安全嗎？資料儲存在哪裡？</span>
+        </summary>
+        <div class="faq-answer">
+          <span class="block-en">Supported monitoring status and infrastructure metrics are transmitted over <strong>encrypted HTTPS</strong> and processed by hosted OpsHome Cloud infrastructure and database providers. OpsHome does not require uploading NAS files, documents, photos, or payment card information.</span>
+          <span class="block-zh">受支持的监控状态和基础设施指标通过<strong>加密 HTTPS</strong>传输，并由 OpsHome Cloud 的托管基础设施和数据库服务处理。OpsHome 不要求上传 NAS 文件、文档、照片，也不会接收或保存银行卡信息。</span>
+          <span class="block-hant">受支援的監控狀態和基礎設施指標透過<strong>加密 HTTPS</strong>傳輸，並由 OpsHome Cloud 的託管基礎設施和資料庫服務處理。OpsHome 不要求上傳 NAS 檔案、文件、照片，也不會接收或儲存付款卡資料。</span>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>
+          <span class="t-en">Why is the final subscription price confirmed in the App Store?</span>
+          <span class="t-zh">为什么最终价格要在 App Store 确认？</span>
+          <span class="t-hant">為什麼最終價格要在 App Store 確認？</span>
+        </summary>
+        <div class="faq-answer">
+          <span class="block-en">Apple shows the final local currency, taxes, eligible offers, trials, and billing confirmation for your App Store region before purchase. OpsHome does not receive or store your payment card information.</span>
+          <span class="block-zh">Apple 会根据你的 App Store 地区，在购买前显示本地货币、税费、适用优惠、试用和最终付款信息。OpsHome 不接收或保存银行卡信息。</span>
+          <span class="block-hant">Apple 會根據你的 App Store 地區，在購買前顯示當地貨幣、稅費、適用優惠、試用和最終付款資訊。OpsHome 不接收或儲存付款卡資料。</span>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>
+          <span class="t-en">Can I use OpsHome on multiple devices or with Family Sharing?</span>
+          <span class="t-zh">支持多设备或家庭共享吗？</span>
+          <span class="t-hant">支援多裝置或家人共享嗎？</span>
+        </summary>
+        <div class="faq-answer">
+          <span class="block-en">You can sign in on another supported device with the same <strong>Sign in with Apple account</strong> and restore an active Pro purchase if needed. Family Sharing is not currently included in the published OpsHome plan entitlement.</span>
+          <span class="block-zh">你可以在另一台受支持设备上使用同一个<strong>“通过 Apple 登录”账户</strong>，并在需要时恢复有效的 Pro 购买。目前公开的 OpsHome 方案权益不包含家庭共享。</span>
+          <span class="block-hant">你可以在另一台受支援裝置上使用同一個<strong>「透過 Apple 登入」帳戶</strong>，並在需要時恢復有效的 Pro 購買。目前公開的 OpsHome 方案權益不包含家人共享。</span>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>
           <span class="t-en">Is Docker Probe secure?</span>
           <span class="t-zh">Docker Probe 安全吗？</span>
           <span class="t-hant">Docker Probe 安全嗎？</span>
         </summary>
         <div class="faq-answer">
           <span class="block-en">Docker Probe initiates an <strong>outbound connection</strong> to OpsHome Cloud. It does not require inbound port forwarding or exposing private services directly to the internet.</span>
-          <span class="block-zh">Docker Probe 主动向 OpsHome Cloud 发起<strong>出站连接</strong>，不要求配置入站端口转发，也不需要将私有服务直接暴露到公网。</span>
-          <span class="block-hant">Docker Probe 主動向 OpsHome Cloud 發起<strong>出站連線</strong>，不要求設定入站連接埠轉發，也不需要將私有服務直接暴露到公網。</span>
+          <span class="block-zh">Docker Probe 主动向 OpsHome Cloud 发起<strong>出站连接</strong>，不需要配置入站端口转发，也不需要将私有服务直接暴露到公网。</span>
+          <span class="block-hant">Docker Probe 主動向 OpsHome Cloud 發起<strong>出站連線</strong>，不需要設定入站連接埠轉發，也不需要將私有服務直接暴露到公網。</span>
         </div>
       </details>
       <details class="faq-item">
@@ -684,45 +786,9 @@
           <span class="t-hant">監控資料如何傳輸？</span>
         </summary>
         <div class="faq-answer">
-          <span class="block-en">Probe collects supported service status and infrastructure metrics, then sends them to the OpsHome Cloud API through an <strong>encrypted HTTPS connection</strong>.</span>
-          <span class="block-zh">Probe 采集受支持的服务状态和基础设施指标，再通过<strong>加密 HTTPS 连接</strong>发送至 OpsHome Cloud API。</span>
-          <span class="block-hant">Probe 採集受支援的服務狀態和基礎設施指標，再透過<strong>加密 HTTPS 連線</strong>傳送至 OpsHome Cloud API。</span>
-        </div>
-      </details>
-      <details class="faq-item">
-        <summary>
-          <span class="t-en">Does OpsHome upload files from my NAS or servers?</span>
-          <span class="t-zh">OpsHome 会上传 NAS 或服务器中的文件吗？</span>
-          <span class="t-hant">OpsHome 會上傳 NAS 或伺服器中的檔案嗎？</span>
-        </summary>
-        <div class="faq-answer">
-          <span class="block-en"><strong>No.</strong> Monitoring does not require uploading NAS files, documents, photos, or other stored business data.</span>
-          <span class="block-zh"><strong>不会。</strong>监控不需要上传 NAS 文件、文档、照片或其他存储的业务数据。</span>
-          <span class="block-hant"><strong>不會。</strong>監控不需要上傳 NAS 檔案、文件、照片或其他儲存的業務資料。</span>
-        </div>
-      </details>
-      <details class="faq-item">
-        <summary>
-          <span class="t-en">How many monitors and probes are supported?</span>
-          <span class="t-zh">支持多少监控点和 Probe？</span>
-          <span class="t-hant">支援多少監控點和 Probe？</span>
-        </summary>
-        <div class="faq-answer">
-          <span class="block-en">Free supports up to <strong>30 public monitor targets</strong>. Pro supports up to <strong>100 public targets, 5 private collectors, and 50 private monitor targets</strong>.</span>
-          <span class="block-zh">Free 支持最多 <strong>30 个公网监控目标</strong>；Pro 支持最多 <strong>100 个公网目标、5 个私有采集节点和 50 个私有监控目标</strong>。</span>
-          <span class="block-hant">Free 支援最多 <strong>30 個公網監控目標</strong>；Pro 支援最多 <strong>100 個公網目標、5 個私有採集節點和 50 個私有監控目標</strong>。</span>
-        </div>
-      </details>
-      <details class="faq-item">
-        <summary>
-          <span class="t-en">Which devices and services are supported?</span>
-          <span class="t-zh">支持哪些设备和服务？</span>
-          <span class="t-hant">支援哪些裝置和服務？</span>
-        </summary>
-        <div class="faq-answer">
-          <span class="block-en">OpsHome supports websites, HTTP/HTTPS endpoints, TCP, SSL, DNS, ICMP, Docker services, Synology DSM, Proxmox VE, and supported private network services.</span>
-          <span class="block-zh">支持网站、HTTP/HTTPS、TCP、SSL、DNS、ICMP、Docker 服务、Synology DSM、Proxmox VE 和受支持的私有网络服务。</span>
-          <span class="block-hant">支援網站、HTTP/HTTPS、TCP、SSL、DNS、ICMP、Docker 服務、Synology DSM、Proxmox VE 和受支援的私有網路服務。</span>
+          <span class="block-en">Docker Probe collects supported service status and infrastructure metrics, then sends them to the OpsHome Cloud API through an <strong>encrypted HTTPS connection</strong>.</span>
+          <span class="block-zh">Docker Probe 采集受支持的服务状态和基础设施指标，再通过<strong>加密 HTTPS 连接</strong>发送至 OpsHome Cloud API。</span>
+          <span class="block-hant">Docker Probe 採集受支援的服務狀態和基礎設施指標，再透過<strong>加密 HTTPS 連線</strong>傳送至 OpsHome Cloud API。</span>
         </div>
       </details>
       <details class="faq-item">
