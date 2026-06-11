@@ -7,6 +7,7 @@
 <link rel="icon" type="image/png" href="assets/images/favicon-256.png" sizes="256x256">
 <link rel="icon" href="assets/images/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/video-playlist.css?v=20260611">
 
 <!-- Open Graph -->
 <meta property="og:title" content="OpsHome NOC - Homelab-Monitoring für das iPhone">
@@ -49,7 +50,7 @@
       "name": "Was ist der wichtigste Unterschied zwischen Free und Pro?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Free ist für öffentliches Monitoring ausgelegt und umfasst bis zu 30 öffentliche Monitoring-Ziele. Pro bietet höhere Limits, privates Monitoring über Docker Probe, private Infrastrukturintegrationen, 5 private Collectors und bis zu 50 private Monitoring-Ziele."
+        "text": "Regular Free ist für öffentliches Monitoring ausgelegt und umfasst bis zu 30 öffentliche Monitoring-Ziele. Pro bietet höhere Limits, privates Monitoring über Docker Probe, private Infrastrukturintegrationen, 5 Docker-Probe-Geräte und bis zu 50 private Monitoring-Ziele."
       }
     },
     {
@@ -439,7 +440,7 @@
     <li><a href="#protocols"><span>MONITORING</span></a></li>
     <li><a href="#pricing"><span>PREISE</span></a></li>
     <li><a href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener"><span>APP STORE</span></a></li>
-    <li><a href="https://docs.opshome.run/release-notes.html" target="_blank" rel="noopener"><span>CHANGELOG</span></a></li>
+    <li><a href="https://docs.opshome.run/de/release-notes.html" target="_blank" rel="noopener"><span>CHANGELOG</span></a></li>
   </ul>
   <div class="lang" aria-label="Sprache"><a href="/" lang="en">EN</a><a href="/zh-Hant/" lang="zh-Hant">繁</a><a href="/de/" class="active" lang="de">DE</a></div>
 </nav>
@@ -496,10 +497,17 @@
 
   <section class="section" style="padding-top:0;padding-bottom:64px;text-align:center">
     <p class="label">// PRODUKTVORSCHAU</p>
-    <div style="position:relative;max-width:860px;margin:0 auto;border-radius:12px;overflow:hidden;border:1px solid var(--border);box-shadow:0 4px 24px rgba(20,121,255,.12)">
-      <div style="position:relative;padding-bottom:56.25%;height:0">
-        <iframe id="product-video" src="about:blank" data-youtube-src="https://www.youtube.com/embed/pMgMqtMeOd4" data-bilibili-src="https://player.bilibili.com/player.html?bvid=BV1b5Et6GE8F&amp;page=1&amp;autoplay=0" data-youtube-title="OpsHome NOC Videos zu Version 1.6 und 1.6.1" data-bilibili-title="OpsHome NOC Videos zu Version 1.6 und 1.6.1" title="OpsHome NOC Videos zu Version 1.6 und 1.6.1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" style="position:absolute;top:0;left:0;width:100%;height:100%" loading="lazy"></iframe>
-      </div>
+    <div class="video-showcase">
+      <div class="video-stage"><div class="video-frame"><iframe id="product-video" src="about:blank" title="OpsHome NOC v1.6 Produktvideo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+      <aside class="video-playlist" aria-label="Produktvideo-Wiedergabeliste">
+        <div class="video-playlist-head"><strong>RELEASE-VIDEOS</strong><span>Das nächste Video startet automatisch.</span></div>
+        <div class="video-list">
+          <button class="video-item active" type="button" data-youtube-id="pMgMqtMeOd4" data-bilibili-src="https://player.bilibili.com/player.html?bvid=BV1b5Et6GE8F&amp;page=1" data-title="OpsHome NOC v1.6 Produktvideo"><span class="video-thumb"><img src="../assets/images/video-v16.jpg" alt="" loading="lazy"></span><span><span class="video-item-version">v1.6</span><span class="video-item-title">Gesundheitsübersicht &amp; Assets</span></span></button>
+          <button class="video-item" type="button" data-youtube-id="UzBklGOy-Vk" data-bilibili-src="https://player.bilibili.com/player.html?bvid=BV15F7969ExB&amp;page=1" data-title="OpsHome NOC v1.5 Produktvideo"><span class="video-thumb"><img src="../assets/images/video-v15.jpg" alt="" loading="lazy"></span><span><span class="video-item-version">v1.5</span><span class="video-item-title">Privates Monitoring &amp; Infrastruktur</span></span></button>
+          <button class="video-item" type="button" data-youtube-id="iwlJucCTJLE" data-bilibili-src="https://player.bilibili.com/player.html?bvid=BV19iGE6CE62&amp;page=1" data-title="OpsHome NOC v1.4 Produktvideo"><span class="video-thumb"><img src="../assets/images/video-v14.jpg" alt="" loading="lazy"></span><span><span class="video-item-version">v1.4</span><span class="video-item-title">Arbeitsbereich, Topologie &amp; Widgets</span></span></button>
+        </div>
+        <p class="video-platform-note">YouTube durchläuft die Liste automatisch. In Festlandchina können Bilibili-Videos über die Liste gewählt werden.</p>
+      </aside>
     </div>
   </section>
 
@@ -689,11 +697,12 @@
           <li>HTTP / HTTPS / TCP / SSL / ICMP</li>
           <li><span><strong>1</strong> öffentliche Statusseite</span></li>
           <li><span><strong>10</strong> Monitore pro Statusseite</span></li>
+          <li><span>Fester Statusseitentitel · Freigabe bis zu <strong>6 Monaten</strong></span></li>
           <li><span>Widgets für Home- und Sperrbildschirm</span></li>
-          <li><span>All / Dock / Map / Tags Arbeitsbereichsansichten</span></li>
+          <li><span>Regular Free enthält keine Docker Probe und kein privates Monitoring</span></li>
           <li><span><strong>Synology</strong> Öffentliche DSM-Asset-Erfassung</span></li>
           <li><span>Mindestintervall: <strong>10 Minuten</strong></span></li>
-          <li><span>Push-Benachrichtigungen bei Alarmen</span></li>
+          <li><span>Push-Alarme · SSL-Ablauferinnerungen</span></li>
           <li><span>Basic <strong>Analyseberichte</strong> — Assets · Speicher · CPU / RAM</span></li>
           <li><span>Visuelles Monitoring-Dashboard</span></li>
         </ul>
@@ -715,14 +724,15 @@
         <ul>
           <li><span><strong>100</strong> öffentliche Monitoring-Ziele</span></li>
           <li><span>Alle Monitoring-Typen einschließlich <strong>UDP, DNS, Domain</strong></span></li>
-          <li><span><strong>5</strong> private Collectors</span></li>
+          <li><span><strong>5</strong> Docker-Probe-Geräte</span></li>
           <li><span><strong>50</strong> private Monitoring-Ziele</span></li>
           <li><span>Proxmox-Infrastrukturintegrationen + private Synology-Erfassung</span></li>
-          <li><span><strong>3</strong> öffentliche Statusseites</span></li>
+          <li><span><strong>3</strong> öffentliche Statusseiten</span></li>
           <li><span><strong>20</strong> Monitore pro Statusseite</span></li>
-          <li><span>Statusseitenfreigabe, Zugangscode, Ablaufzeit und QR-Verifizierung</span></li>
+          <li><span>Eigener Statusseitentitel · dauerhafte Freigabe</span></li>
+          <li><span>Statusseiten-Zugangscode und QR-Verifizierung</span></li>
           <li><span>Mindestintervall: <strong>5 Minuten</strong></span></li>
-          <li><span>Alarme plus Erinnerungen an SSL- und Domainablauf</span></li>
+          <li><span>Push- + <strong>Telegram</strong>-Alarme · SSL-/Domain-Ablauferinnerungen</span></li>
           <li><span>Vollständige Dashboard- und Detailanalyseberichte</span></li>
         </ul>
         <div class="plan-cta" style="position:absolute;bottom:24px;right:24px;display:flex;align-items:center;gap:14px">
@@ -731,6 +741,7 @@
         </div>
       </div>
     </div>
+    <p class="desc" style="margin:24px auto 0"><span>Der Founder Benefit ist eine dauerhafte Kontoberechtigung für berechtigte frühe Konten und kein separater Tarif. Ohne aktives Pro ergänzt er Free um 1 berechtigte Synology Docker Probe und 2 private Monitore. <a href="https://docs.opshome.run/de/free-vs-pro.html" target="_blank" rel="noopener">Vollständige Leistungstabelle anzeigen.</a></span></p>
   </section>
 
   <section class="faq-section" id="faq">
@@ -753,7 +764,7 @@
           
         </summary>
         <div class="faq-answer">
-          <span>Free ist für öffentliches Monitoring ausgelegt und umfasst bis zu <strong>30 öffentliche Monitoring-Ziele</strong>. Pro erhöht das öffentliche Limit und ergänzt privates Monitoring über Docker Probe, private Infrastrukturintegrationen sowie bis zu <strong>5 private Collectors und 50 private Monitoring-Ziele</strong>.</span>
+          <span>Regular Free ist für öffentliches Monitoring ausgelegt und umfasst bis zu <strong>30 öffentliche Monitoring-Ziele</strong>. Pro erhöht das öffentliche Limit und ergänzt privates Monitoring über Docker Probe, private Infrastrukturintegrationen sowie bis zu <strong>5 Docker-Probe-Geräten und 50 privaten Monitoring-Zielen</strong>.</span>
           
           
         </div>
@@ -894,7 +905,7 @@
     <p><span>© 2026 OpsHome NOC™. Alle Rechte vorbehalten. OpsHome NOC™ ist eine Marke ihres Eigentümers.</span></p>
     <ul>
       <li><a href="use-cases.html"><span>Anwendungsfälle</span></a></li>
-      <li><a href="https://docs.opshome.run/release-notes.html" target="_blank" rel="noopener"><span>Änderungsprotokoll</span></a></li>
+      <li><a href="https://docs.opshome.run/de/release-notes.html" target="_blank" rel="noopener"><span>Änderungsprotokoll</span></a></li>
       <li><a href="https://docs.opshome.run" target="_blank" rel="noopener"><span>Docs</span></a></li>
       <li><a href="privacy.html"><span>Datenschutz</span></a></li>
       <li><a href="terms.html"><span>Bedingungen</span></a></li>
@@ -903,30 +914,7 @@
   </div>
 </footer>
 
-<script>
-(function() {
-  var iframe = document.getElementById('product-video');
-  if (!iframe) return;
-
-  function setVideoSource(source) {
-    var useBilibili = source === 'bilibili';
-    var nextSrc = useBilibili ? iframe.dataset.bilibiliSrc : iframe.dataset.youtubeSrc;
-    var nextTitle = useBilibili ? iframe.dataset.bilibiliTitle : iframe.dataset.youtubeTitle;
-    if (nextSrc && iframe.src !== nextSrc) iframe.src = nextSrc;
-    if (nextTitle) iframe.title = nextTitle;
-  }
-
-  fetch('/cdn-cgi/trace', { cache: 'no-store' })
-    .then(function(resp) { return resp.ok ? resp.text() : ''; })
-    .then(function(text) {
-      var match = text.match(/^loc=([A-Z]{2})$/m);
-      setVideoSource(match && match[1] === 'CN' ? 'bilibili' : 'youtube');
-    })
-    .catch(function() {
-      setVideoSource('youtube');
-    });
-})();
-</script>
+<script src="../assets/video-playlist.js?v=20260611"></script>
 
 
 </body></html>

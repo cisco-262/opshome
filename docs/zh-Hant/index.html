@@ -7,6 +7,7 @@
 <link rel="icon" type="image/png" href="assets/images/favicon-256.png" sizes="256x256">
 <link rel="icon" href="assets/images/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/video-playlist.css?v=20260611">
 
 <!-- Open Graph -->
 <meta property="og:title" content="OpsHome NOC - 使用 iPhone 監控你的 Homelab">
@@ -49,7 +50,7 @@
       "name": "免費版和 Pro 版的核心差異是什麼？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Free 主要用於公網監控，支援最多 30 個公網監控目標。Pro 增加更高額度、Docker Probe 私有網路監控、私有基礎設施整合、5 個私有採集節點和最多 50 個私有監控目標。"
+        "text": "普通 Free 主要用於公網監控，支援最多 30 個公網監控目標。Pro 增加更高額度、Docker Probe 私有網路監控、私有基礎設施整合、5 個 Docker Probe 裝置和最多 50 個私有監控目標。"
       }
     },
     {
@@ -439,7 +440,7 @@
     <li><a href="#protocols"><span>監控類型</span></a></li>
     <li><a href="#pricing"><span>方案</span></a></li>
     <li><a href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener"><span>APP STORE</span></a></li>
-    <li><a href="https://docs.opshome.run/release-notes.html" target="_blank" rel="noopener"><span>更新日誌</span></a></li>
+    <li><a href="https://docs.opshome.run/hant/release-notes.html" target="_blank" rel="noopener"><span>更新日誌</span></a></li>
   </ul>
   <div class="lang" aria-label="Language"><a href="/" lang="en">EN</a><a href="/zh-Hant/" class="active" lang="zh-Hant">繁</a><a href="/de/" lang="de">DE</a></div>
 </nav>
@@ -496,10 +497,17 @@
 
   <section class="section" style="padding-top:0;padding-bottom:64px;text-align:center">
     <p class="label">// PRODUCT PREVIEW</p>
-    <div style="position:relative;max-width:860px;margin:0 auto;border-radius:12px;overflow:hidden;border:1px solid var(--border);box-shadow:0 4px 24px rgba(20,121,255,.12)">
-      <div style="position:relative;padding-bottom:56.25%;height:0">
-        <iframe id="product-video" src="about:blank" data-youtube-src="https://www.youtube.com/embed/pMgMqtMeOd4" data-bilibili-src="https://player.bilibili.com/player.html?bvid=BV1b5Et6GE8F&amp;page=1&amp;autoplay=0" data-youtube-title="OpsHome NOC v1.6 and v1.6.1 Video Collection" data-bilibili-title="OpsHome NOC v1.6 and v1.6.1 Video Collection" title="OpsHome NOC v1.6 and v1.6.1 Video Collection" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" style="position:absolute;top:0;left:0;width:100%;height:100%" loading="lazy"></iframe>
-      </div>
+    <div class="video-showcase">
+      <div class="video-stage"><div class="video-frame"><iframe id="product-video" src="about:blank" title="OpsHome NOC v1.6 產品影片" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+      <aside class="video-playlist" aria-label="產品影片播放清單">
+        <div class="video-playlist-head"><strong>版本影片</strong><span>影片結束後自動播放下一部。</span></div>
+        <div class="video-list">
+          <button class="video-item active" type="button" data-youtube-id="pMgMqtMeOd4" data-bilibili-src="https://player.bilibili.com/player.html?bvid=BV1b5Et6GE8F&amp;page=1" data-title="OpsHome NOC v1.6 產品影片"><span class="video-thumb"><img src="../assets/images/video-v16.jpg" alt="" loading="lazy"></span><span><span class="video-item-version">v1.6</span><span class="video-item-title">健康總覽與資產</span></span></button>
+          <button class="video-item" type="button" data-youtube-id="UzBklGOy-Vk" data-bilibili-src="https://player.bilibili.com/player.html?bvid=BV15F7969ExB&amp;page=1" data-title="OpsHome NOC v1.5 產品影片"><span class="video-thumb"><img src="../assets/images/video-v15.jpg" alt="" loading="lazy"></span><span><span class="video-item-version">v1.5</span><span class="video-item-title">私有監控與基礎設施</span></span></button>
+          <button class="video-item" type="button" data-youtube-id="iwlJucCTJLE" data-bilibili-src="https://player.bilibili.com/player.html?bvid=BV19iGE6CE62&amp;page=1" data-title="OpsHome NOC v1.4 產品影片"><span class="video-thumb"><img src="../assets/images/video-v14.jpg" alt="" loading="lazy"></span><span><span class="video-item-version">v1.4</span><span class="video-item-title">工作區、拓撲與小工具</span></span></button>
+        </div>
+        <p class="video-platform-note">YouTube 支援清單循環播放；中國大陸使用 Bilibili 時可從右側清單切換。</p>
+      </aside>
     </div>
   </section>
 
@@ -689,11 +697,12 @@
           <li>HTTP / HTTPS / TCP / SSL / ICMP</li>
           <li><span><strong>1</strong> 個公開狀態頁</span></li>
           <li><span>每個狀態頁 <strong>10</strong> 個監控點</span></li>
+          <li><span>固定狀態頁標題 · 最長分享 <strong>6 個月</strong></span></li>
           <li><span>桌面和鎖屏組件</span></li>
-          <li><span>All / Dock / Map / Tags 工作區視圖</span></li>
+          <li><span>普通 Free 不包含 Docker Probe 或內網監控</span></li>
           <li><span><strong>群暉</strong> DSM 公開資產採集</span></li>
           <li><span>最短間隔：<strong>10 分鐘</strong></span></li>
-          <li><span>告警推播通知</span></li>
+          <li><span>推播告警 · SSL 到期提醒</span></li>
           <li><span>基礎<strong>分析報告</strong> — 資產趨勢 · 儲存 · CPU / 記憶體</span></li>
           <li><span>可視化監控儀表板</span></li>
         </ul>
@@ -715,14 +724,15 @@
         <ul>
           <li><span><strong>100</strong> 個公網監控目標</span></li>
           <li><span>全部監控類型，包含 <strong>UDP、DNS、域名</strong></span></li>
-          <li><span><strong>5</strong> 個私有採集節點</span></li>
+          <li><span><strong>5</strong> 個 Docker Probe 裝置</span></li>
           <li><span><strong>50</strong> 個私有監控目標</span></li>
           <li><span>Proxmox 基礎設施整合 + 群暉私有採集</span></li>
           <li><span><strong>3</strong> 個公開狀態頁</span></li>
           <li><span>每個狀態頁 <strong>20</strong> 個監控點</span></li>
-          <li><span>狀態頁分享、訪問口令、有效期和二維碼驗真</span></li>
+          <li><span>自訂狀態頁標題 · 永久分享</span></li>
+          <li><span>狀態頁存取口令與二維碼驗真</span></li>
           <li><span>最短間隔：<strong>5 分鐘</strong></span></li>
-          <li><span>告警推播，以及 SSL/域名到期提醒</span></li>
+          <li><span>推播 + <strong>Telegram</strong> 告警 · SSL/網域到期提醒</span></li>
           <li><span>完整首頁儀表盤和詳情分析報告</span></li>
         </ul>
         <div class="plan-cta" style="position:absolute;bottom:24px;right:24px;display:flex;align-items:center;gap:14px">
@@ -731,6 +741,7 @@
         </div>
       </div>
     </div>
+    <p class="desc" style="margin:24px auto 0"><span>Founder 權益是授予符合條件早期帳號的永久帳戶權益，不是獨立方案。沒有有效 Pro 時，會在 Free 基礎上保留 1 個符合條件的 Synology Docker Probe 和 2 個內網監控點。<a href="https://docs.opshome.run/hant/free-vs-pro.html" target="_blank" rel="noopener">查看完整權益表。</a></span></p>
   </section>
 
   <section class="faq-section" id="faq">
@@ -755,7 +766,7 @@
         <div class="faq-answer">
           
           
-          <span>Free 主要用於公網監控，支援最多 <strong>30 個公網監控目標</strong>。Pro 提高公網監控額度，並增加 Docker Probe 私有網路監控、私有基礎設施整合、最多 <strong>5 個私有採集節點和 50 個私有監控目標</strong>。</span>
+          <span>普通 Free 主要用於公網監控，支援最多 <strong>30 個公網監控目標</strong>。Pro 提高公網監控額度，並增加 Docker Probe 私有網路監控、私有基礎設施整合、最多 <strong>5 個 Docker Probe 裝置和 50 個私有監控目標</strong>。</span>
         </div>
       </details>
       <details class="faq-item">
@@ -894,7 +905,7 @@
     <p><span>© 2026 OpsHome NOC™。保留所有權利。OpsHome NOC™ 是其所有者的商標。</span></p>
     <ul>
       <li><a href="use-cases.html"><span>使用場景</span></a></li>
-      <li><a href="https://docs.opshome.run/release-notes.html" target="_blank" rel="noopener"><span>更新日誌</span></a></li>
+      <li><a href="https://docs.opshome.run/hant/release-notes.html" target="_blank" rel="noopener"><span>更新日誌</span></a></li>
       <li><a href="https://docs.opshome.run" target="_blank" rel="noopener"><span>文件</span></a></li>
       <li><a href="privacy.html"><span>隱私權政策</span></a></li>
       <li><a href="terms.html"><span>服務條款</span></a></li>
@@ -903,30 +914,7 @@
   </div>
 </footer>
 
-<script>
-(function() {
-  var iframe = document.getElementById('product-video');
-  if (!iframe) return;
-
-  function setVideoSource(source) {
-    var useBilibili = source === 'bilibili';
-    var nextSrc = useBilibili ? iframe.dataset.bilibiliSrc : iframe.dataset.youtubeSrc;
-    var nextTitle = useBilibili ? iframe.dataset.bilibiliTitle : iframe.dataset.youtubeTitle;
-    if (nextSrc && iframe.src !== nextSrc) iframe.src = nextSrc;
-    if (nextTitle) iframe.title = nextTitle;
-  }
-
-  fetch('/cdn-cgi/trace', { cache: 'no-store' })
-    .then(function(resp) { return resp.ok ? resp.text() : ''; })
-    .then(function(text) {
-      var match = text.match(/^loc=([A-Z]{2})$/m);
-      setVideoSource(match && match[1] === 'CN' ? 'bilibili' : 'youtube');
-    })
-    .catch(function() {
-      setVideoSource('youtube');
-    });
-})();
-</script>
+<script src="../assets/video-playlist.js?v=20260611"></script>
 
 
 </body></html>
