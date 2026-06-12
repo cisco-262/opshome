@@ -9,6 +9,10 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://app.opshome.run/zh/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://app.opshome.run/zh-Hant/</loc>
     <priority>1.0</priority>
   </url>
