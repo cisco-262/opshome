@@ -321,10 +321,24 @@
   .plan li{padding:7px 0;border-bottom:1px solid var(--border);color:var(--muted);font-weight:400;font-size:19px}
   .plan li strong{color:var(--text)}
   .plan.pro li{border-bottom-color:rgba(255,255,255,.08);color:rgba(255,255,255,.65);font-weight:400;text-shadow:0 1px 3px rgba(255,255,255,.15)}
-  .plan.pro li strong{color:#92D050;text-shadow:0 1px 3px rgba(255,255,255,.2)}
+  .plan.pro li strong{color:#fbbf24;text-shadow:0 1px 3px rgba(255,255,255,.2)}
   .plan.free li{font-weight:400;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.3)}
   .plan.free li strong{color:var(--accent);text-shadow:0 1px 2px rgba(0,0,0,.2)}
   .plan.free .plan-name,.plan.free .plan-price,.plan.free .plan-note{color:#fff!important;font-weight:900;text-shadow:0 1px 2px rgba(0,0,0,.3)}
+  .founder-spotlight{position:relative;overflow:hidden;max-width:1120px;margin:30px auto 0;padding:28px;border:2px solid #8b5cf6;border-radius:18px;background:linear-gradient(135deg,#faf5ff 0%,#ede9fe 58%,#ffffff 100%);box-shadow:0 16px 40px rgba(109,40,217,.14);text-align:left}
+  .founder-spotlight:after{content:"FOUNDER";position:absolute;right:-20px;top:18px;color:rgba(109,40,217,.07);font-family:var(--mono);font-size:72px;font-weight:900;letter-spacing:.08em;pointer-events:none}
+  .founder-head{position:relative;z-index:1;display:flex;align-items:flex-start;justify-content:space-between;gap:24px}
+  .founder-title{display:flex;align-items:center;gap:14px}
+  .founder-mark{display:inline-flex;align-items:center;justify-content:center;width:58px;height:58px;flex:0 0 58px;border:2px solid #a78bfa;border-radius:16px;background:#6d28d9;color:#f5f3ff;font-family:var(--mono);font-size:24px;font-weight:900;box-shadow:inset 0 0 0 4px rgba(255,255,255,.1)}
+  .founder-kicker{display:inline-flex;padding:5px 10px;border-radius:999px;background:#6d28d9;color:#f5f3ff;font-family:var(--mono);font-size:11px;font-weight:900;letter-spacing:.1em}
+  .founder-title h3{margin:8px 0 0;color:#4c1d95;font-size:26px;line-height:1.2}
+  .founder-permanent{position:relative;z-index:1;padding:8px 12px;border:1px solid #8b5cf6;border-radius:999px;background:#fff;color:#6d28d9;font-size:12px;font-weight:900;white-space:nowrap}
+  .founder-benefits{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:22px 0 16px}
+  .founder-benefit{padding:16px;border:1px solid #c4b5fd;border-radius:12px;background:rgba(255,255,255,.86);color:#4c1d95}
+  .founder-benefit strong{display:block;color:#6d28d9;font-size:22px;line-height:1.2}
+  .founder-benefit span{display:block;margin-top:5px;font-size:14px;font-weight:700;line-height:1.45}
+  .founder-note{position:relative;z-index:1;margin:0;color:#5b21b6;font-size:14px;line-height:1.65}
+  .founder-note a{color:#7c3aed;font-weight:900;text-decoration:underline;text-underline-offset:3px}
   .faq-section{position:relative;z-index:1;max-width:1040px;margin:0 auto;padding:86px 56px}
   .faq-section h2{max-width:760px;font-size:36px}
   .faq-intro{max-width:760px;margin-bottom:34px;color:var(--muted);font-size:18px}
@@ -505,8 +519,8 @@
           <button class="video-item active" type="button" data-youtube-id="pMgMqtMeOd4" data-bilibili-src="https://player.bilibili.com/player.html?bvid=BV1b5Et6GE8F&amp;page=1" data-title="OpsHome NOC v1.6 产品视频"><span class="video-thumb"><img src="../assets/images/video-v16.jpg" alt="" loading="lazy"></span><span><span class="video-item-version">v1.6</span><span class="video-item-title">健康总览与资产</span></span></button>
           <button class="video-item" type="button" data-youtube-id="UzBklGOy-Vk" data-bilibili-src="https://player.bilibili.com/player.html?bvid=BV15F7969ExB&amp;page=1" data-title="OpsHome NOC v1.5 产品视频"><span class="video-thumb"><img src="../assets/images/video-v15.jpg" alt="" loading="lazy"></span><span><span class="video-item-version">v1.5</span><span class="video-item-title">私有监控与基础设施</span></span></button>
           <button class="video-item" type="button" data-youtube-id="iwlJucCTJLE" data-bilibili-src="https://player.bilibili.com/player.html?bvid=BV19iGE6CE62&amp;page=1" data-title="OpsHome NOC v1.4 产品视频"><span class="video-thumb"><img src="../assets/images/video-v14.jpg" alt="" loading="lazy"></span><span><span class="video-item-version">v1.4</span><span class="video-item-title">工作区、拓扑与小工具</span></span></button>
+          <button class="video-item" type="button" data-youtube-id="TlYqvQlFEjo" data-bilibili-src="https://player.bilibili.com/player.html?bvid=BV1v8L26AEZE&amp;page=1" data-title="OpsHome NOC v1.3 产品视频"><span class="video-thumb"><img src="../assets/images/video-v13.jpg" alt="" loading="lazy"></span><span><span class="video-item-version">v1.3</span><span class="video-item-title">状态页与首页</span></span></button>
         </div>
-        <p class="video-platform-note">YouTube 支持列表循环播放；中国大陆使用 Bilibili 时可从右侧列表切换。</p>
       </aside>
     </div>
   </section>
@@ -689,7 +703,7 @@
     <p class="desc" style="margin-left:auto;margin-right:auto"><span>免费开始，无需信用卡。需要更多公网监控、内网监控、基础设施整合和高级可见性时再升级。</span></p>
     <div class="pricing" style="text-align:left">
       <div class="plan free" style="background:linear-gradient(180deg,#92D050 0%,#6ABB65 100%)">
-        <p class="plan-name"><span style="display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:var(--accent);color:#fff;font-size:13px;font-weight:900;letter-spacing:.1em">FREE</span></p>
+        <p class="plan-name"><span style="display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:#15803d;color:#fff;font-size:13px;font-weight:900;letter-spacing:.1em">FREE</span></p>
         <p class="plan-price"><span>免费</span></p>
         <p class="plan-note"><span>无需订阅。</span></p>
         <ul>
@@ -712,12 +726,12 @@
         </div>
       </div>
       <div class="plan pro">
-        <p class="plan-name"><span style="display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:#92D050;color:var(--accent);font-size:16px;font-weight:900;letter-spacing:.1em;text-shadow:0 1px 3px rgba(255,255,255,.3)">PRO</span></p>
+        <p class="plan-name"><span style="display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:#f59e0b;color:#0b1b2e;font-size:16px;font-weight:900;letter-spacing:.1em;text-shadow:0 1px 3px rgba(255,255,255,.3)">PRO</span></p>
         <p class="plan-price" style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:22px;white-space:nowrap">
           <span style="font-size:30px"><span>月付或年付</span></span>
           <span style="text-align:right;font-size:14px;line-height:1.6;opacity:.85">
             <span style="display:block">$2.99 / <span>月</span></span>
-            <span style="display:block">$24.99 / <span>年</span> <span style="font-size:11px;background:#92D050;color:#0b1b2e;font-weight:800;padding:1px 6px;border-radius:999px"><span>最划算</span></span></span>
+            <span style="display:block">$24.99 / <span>年</span> <span style="font-size:11px;background:#f59e0b;color:#0b1b2e;font-weight:800;padding:1px 6px;border-radius:999px"><span>最划算</span></span></span>
           </span>
         </p>
         <p class="plan-note"><span>最终价格会在 App Store 购买确认页显示。</span></p>
@@ -741,7 +755,11 @@
         </div>
       </div>
     </div>
-    <p class="desc" style="margin:24px auto 0"><span>创世用户（Founder）权益是授予符合条件早期账号的永久账户权益，不是独立方案。没有有效 Pro 时，会在 Free 基础上保留 1 个符合条件的群晖 Docker Probe 和 2 个内网监控点。<a href="https://docs.opshome.run/zh/free-vs-pro.html" target="_blank" rel="noopener">查看完整权益表。</a></span></p>
+    <div class="founder-spotlight">
+      <div class="founder-head"><div class="founder-title"><span class="founder-mark">F</span><div><span class="founder-kicker">创世用户 · FOUNDER</span><h3>符合条件的早期用户专属权益</h3></div></div><span class="founder-permanent">永久账户身份</span></div>
+      <div class="founder-benefits"><div class="founder-benefit"><strong>1 个</strong><span>符合条件的群晖 Docker Probe</span></div><div class="founder-benefit"><strong>2 个</strong><span>符合条件的 HTTP / HTTPS / TCP 内网监控点</span></div><div class="founder-benefit"><strong>永久保留</strong><span>Pro 到期后，创世身份和专属额度仍然保留</span></div></div>
+      <p class="founder-note">创世用户是授予符合条件早期账号的永久身份，用于扩展 Free 权益，并不是第三种订阅套餐。<a href="https://docs.opshome.run/zh/free-vs-pro.html" target="_blank" rel="noopener">查看完整权益表。</a></p>
+    </div>
   </section>
 
   <section class="faq-section" id="faq">
