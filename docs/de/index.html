@@ -269,22 +269,34 @@
   .shot{background:transparent;border:0;border-radius:0;overflow:visible;box-shadow:none}
   .shot img{display:block;width:100%;height:auto;filter:drop-shadow(0 14px 24px rgba(15,23,42,.18))}
   .shot-label{text-align:center;color:var(--muted);font-size:14px;font-weight:500;margin-top:12px}
-  .comparison-section{position:relative;z-index:1;max-width:1240px;margin:0 auto;padding:86px 56px}
-  .comparison-section h2{max-width:820px;font-size:36px}
-  .comparison-intro{max-width:780px;margin-bottom:34px;color:var(--muted);font-size:18px}
-  .comparison-table{overflow:hidden;border:1px solid var(--border);border-radius:14px;background:#fff;box-shadow:0 8px 28px rgba(15,23,42,.07)}
-  .comparison-table table{border:0;table-layout:fixed}
-  .comparison-table th{padding:18px 20px;background:#07111f;font-size:13px}
-  .comparison-table th:first-child{width:24%}
-  .comparison-table th:nth-child(2){width:36%}
-  .comparison-table th:last-child{width:40%;background:#0b5fd3}
-  .comparison-table td{padding:20px;border-bottom:1px solid var(--border);font-size:16px;line-height:1.55}
+  .comparison-section{position:relative;z-index:1;max-width:1560px;margin:0 auto;padding:96px 32px}
+  .comparison-section h2{max-width:900px;margin-right:auto;margin-left:auto;text-align:center;font-size:clamp(34px,4vw,52px)}
+  .comparison-section>.label{display:block;text-align:center}
+  .comparison-intro{max-width:980px;margin:0 auto 38px;text-align:center;color:var(--muted);font-size:18px;line-height:1.7}
+  .comparison-table{overflow:hidden;border:1px solid #dbe7f5;border-radius:20px;background:#fff;box-shadow:0 18px 50px rgba(15,23,42,.08)}
+  .comparison-table table{width:100%;border:0;border-collapse:collapse;table-layout:fixed}
+  .comparison-table th{padding:16px 15px;text-align:left;background:#0a1b31;color:#fff;font-family:var(--mono);font-size:11px;line-height:1.4;letter-spacing:.06em}
+  .comparison-table th:first-child{width:12%}
+  .comparison-table th:nth-child(2){width:15%}
+  .comparison-table th:nth-child(3){width:23%}
+  .comparison-table th:nth-child(4){width:23%}
+  .comparison-table th:last-child{width:27%;background:#0b5fd3}
+  .comparison-table td{padding:18px 15px;border-bottom:1px solid #e5edf7;vertical-align:top;color:#475569;font-size:14px;line-height:1.58}
+  .comparison-table td:first-child{color:var(--text);font-size:15px;font-weight:800}
+  .comparison-table td:nth-child(2){color:#1e3a5f;font-weight:700}
+  .comparison-table td:last-child{color:#0b3266;background:#f3f8ff;font-weight:650}
   .comparison-table tbody tr:last-child td{border-bottom:0}
-  .comparison-table td:first-child{color:var(--text);font-weight:800}
-  .comparison-table td:nth-child(2){color:#64748b}
-  .comparison-table td:last-child{color:#0b1b2e;background:#f0f7ff;font-weight:700}
-  .comparison-table tbody tr:hover td{background:#f8fafc}
-  .comparison-table tbody tr:hover td:last-child{background:#e6f2ff}
+  .comparison-table tbody tr:not(.is-opshome):hover td{background:#f8fbff}
+  .comparison-table tbody tr:not(.is-opshome):hover td:last-child{background:#eaf3ff}
+  .comparison-table .is-opshome td{border-top:2px solid #60a5fa;border-bottom-color:#bfdbfe;background:#eaf3ff;color:#12345b}
+  .comparison-table .is-opshome td:first-child{color:#0759bd}
+  .comparison-table .is-opshome td:last-child{background:#dcecff;color:#073b78}
+  .comparison-note{max-width:980px;margin:22px auto 0;text-align:center;color:#64748b;font-size:14px;line-height:1.65}
+  .comparison-actions{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:26px}
+  .comparison-primary{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:13px 22px;border-radius:12px;color:#fff;background:linear-gradient(135deg,#1479ff,#0759bd);box-shadow:0 12px 28px rgba(20,121,255,.24);font-weight:800}
+  .comparison-primary:hover{transform:translateY(-1px);box-shadow:0 16px 34px rgba(20,121,255,.32)}
+  .comparison-secondary{color:#0759bd;font-weight:800}
+  .comparison-secondary::after{content:"\2192";margin-left:8px}
   .pricing{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;align-items:stretch}
   .plan{
     position:relative;
@@ -408,8 +420,18 @@
     .tag{font-size:15px;padding:7px 14px}
     .monitor-table{overflow-x:auto}
     .monitor-matrix .monitor-table table{min-width:560px}
-    .comparison-table{overflow-x:auto}
-    .comparison-table table{min-width:760px}
+    .comparison-table{overflow:visible;border:0;background:transparent;box-shadow:none}
+    .comparison-table table,.comparison-table tbody{display:block;width:100%}
+    .comparison-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+    .comparison-table tbody{display:grid;gap:18px}
+    .comparison-table tr{display:block;overflow:hidden;border:1px solid #dbe7f5;border-radius:16px;background:#fff;box-shadow:0 10px 28px rgba(15,23,42,.07)}
+    .comparison-table td{display:grid;grid-template-columns:minmax(130px,.34fr) 1fr;gap:18px;width:auto!important;padding:14px 18px;border-bottom:1px solid #e5edf7;background:#fff!important;font-size:14px}
+    .comparison-table td::before{content:attr(data-label);color:#0759bd;font-family:var(--mono);font-size:10px;font-weight:900;letter-spacing:.06em;text-transform:uppercase}
+    .comparison-table td:first-child{padding-top:18px;font-size:18px}
+    .comparison-table td:last-child{padding-bottom:18px;border-bottom:0;background:#f3f8ff!important}
+    .comparison-table .is-opshome{border:2px solid #60a5fa}
+    .comparison-table .is-opshome td{border-top:0;background:#eff6ff!important}
+    .comparison-table .is-opshome td:last-child{background:#dcecff!important}
     .trust-item{font-size:13px;padding:10px}
     .plan{padding:24px}
     .plan-cta{display:none!important}
@@ -436,6 +458,8 @@
     .faq-item summary{padding:18px;font-size:15px}
     .faq-answer{padding:0 18px 18px;font-size:15px}
     .comparison-section h2,.faq-section h2{font-size:28px}
+    .comparison-table td{grid-template-columns:1fr;gap:6px;padding:13px 16px}
+    .comparison-actions{align-items:stretch;flex-direction:column;text-align:center}
     footer{padding-top:46px;padding-bottom:46px}
     footer ul{grid-template-columns:1fr;text-align:center;gap:12px}
     footer a{justify-content:center;font-size:16px}
@@ -468,7 +492,7 @@
 <main>
   <section class="hero noc-story-hero">
     <div class="noc-carousel" data-hero-carousel data-duration="10000" role="region" aria-roledescription="Karussell" aria-label="OpsHome NOC Produktgeschichte" tabindex="0">
-      <div class="noc-carousel-topline"><span class="noc-carousel-brand">OPSHOME NOC · APP STORE</span><a class="noc-carousel-release" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">V1.9 VERFÜGBAR</a></div>
+      <div class="noc-carousel-topline"><div class="noc-carousel-store-group"><span class="noc-carousel-brand">OPSHOME NOC · APP STORE</span><a class="noc-carousel-store-badge" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" aria-label="OpsHome NOC im App Store laden"><img src="assets/images/app-store-badge.svg" alt="Im App Store laden"></a></div><a class="noc-carousel-release" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">V1.9 VERFÜGBAR</a></div>
       <div class="noc-carousel-stage" aria-live="off">
         <article class="noc-slide is-active" aria-label="1 von 5"><div class="noc-slide-copy"><span class="noc-slide-chapter">01 · ÜBERBLICK</span><h1>Dein gesamter Homelab-Stack im Blick</h1><p>Sieh öffentliche Dienste, private Assets, VMs, Container und Speicher in einer Ansicht.</p><a class="noc-slide-cta" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">Jetzt starten</a></div><div class="noc-slide-visual"><img src="assets/images/hero-carousel/full-stack-20260620.webp" alt="OpsHome NOC Gesamtübersicht mit öffentlichen Diensten, Docker Probe, Proxmox, Linux, NAS, Containern und virtuellen Maschinen" width="1400" height="788" fetchpriority="high"></div></article>
         <article class="noc-slide" aria-label="2 von 5" aria-hidden="true" inert><div class="noc-slide-copy"><span class="noc-slide-chapter">02 · PUBLIC SERVICES</span><h1>Halte öffentliche Dienste online</h1><p>Erkenne Ausfälle von Websites, Logins, SSL, Domains und APIs vor deinen Nutzern.</p><a class="noc-slide-cta" href="#protocols">Mehr erfahren</a></div><div class="noc-slide-visual"><img src="assets/images/hero-carousel/public-services-20260620.webp" alt="Monitoring öffentlicher Homelab-Dienste, SSL, Domains, APIs, NAS, Mini-PC und Router" width="1400" height="788" loading="lazy"></div></article>
@@ -559,7 +583,7 @@
     <p class="label">// APP-SCREENSHOTS</p>
     <h2 style="font-size:clamp(20px,2.5vw,32px);margin-left:auto;margin-right:auto"><span>Entwickelt für die Art, wie Homelab-Nutzer ihren Status wirklich prüfen.</span></h2>
     <div class="screens">
-      <div><div class="shot"><img src="assets/images/showcase-home-20260608.png" alt="OpsHome NOC Dashboard mit privatem Monitoring"></div><p class="shot-label"><span>Dashboard</span></p></div>
+      <div><div class="shot"><img src="assets/images/showcase-home-20260620.png" alt="OpsHome NOC Dashboard mit privatem Monitoring"></div><p class="shot-label"><span>Dashboard</span></p></div>
       <div><div class="shot"><img src="assets/images/showcase-assets-20260608.png" alt="OpsHome NOC Arbeitsbereich für Synology- und Proxmox-VE-Assets"></div><p class="shot-label"><span>Assets</span></p></div>
       <div><div class="shot"><img src="assets/images/showcase-map-20260608.png" alt="OpsHome NOC Topologiekarte"></div><p class="shot-label"><span>Topologiekarte</span></p></div>
       <div><div class="shot"><img src="assets/images/showcase-pve-20260608.png" alt="OpsHome NOC Leistungs- und Arbeitsspeicherdetails für Proxmox VE"></div><p class="shot-label"><span>Proxmox VE</span></p></div>
@@ -568,55 +592,17 @@
   </section>
 
   <section class="comparison-section" id="comparison">
-    <p class="label">// WARUM OPSHOME</p>
-    <h2>
-      <span>Andere Lösungen im Vergleich zu OpsHome.</span>
-      
-      
-    </h2>
-    <p class="comparison-intro">
-      <span>Für alle, die den Homelab-Status direkt auf dem iPhone prüfen möchten, ohne einen komplexen Monitoring-Stack zu warten oder eingehende Zugriffe zu öffnen.</span>
-      
-      
-    </p>
-    <div class="comparison-table">
-      <table>
-        <thead>
-          <tr>
-            <th><span>Ansatz</span></th>
-            <th><span>Typische Hürde</span></th>
-            <th><span>So löst es OpsHome NOC</span></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>UptimeRobot</td>
-            <td><span>Hauptsächlich auf die Überwachung öffentlicher Endpunkte ausgerichtet.</span></td>
-            <td><span>Vereint öffentliches Monitoring und private Netzwerksichtbarkeit in einer iPhone-App.</span></td>
-          </tr>
-          <tr>
-            <td>Uptime Kuma</td>
-            <td><span>Erfordert Self-Hosting und Wartung; Fernzugriff benötigt meist VPN, Reverse Proxy oder einen anderen Zugangsweg.</span></td>
-            <td><span>Docker Probe verbindet sich ausgehend mit OpsHome Cloud; eingehende Portfreigaben sind nicht erforderlich.</span></td>
-          </tr>
-          <tr>
-            <td>Prometheus / Grafana</td>
-            <td><span>Komplexe Konfiguration, schwächere mobile Nutzung und laufender Wartungsaufwand.</span></td>
-            <td><span>iPhone-first und schlank, mit sofort nutzbaren Dashboards, Alarmen, Assets und Berichten.</span></td>
-          </tr>
-          <tr>
-            <td><span>VPN + Admin-Oberflächen</span></td>
-            <td><span>VPN verbinden, jede Oberfläche öffnen und Systeme einzeln manuell prüfen.</span></td>
-            <td><span>Eine App öffnen und aktuellen Status, Probleme, Assets und Benachrichtigungen sehen.</span></td>
-          </tr>
-          <tr>
-            <td><span>NAS- oder Dienstports veröffentlichen</span></td>
-            <td><span>Erzeugt zusätzliche eingehende Angriffsfläche und Sicherheitsrisiken.</span></td>
-            <td><span>Privates Monitoring verwendet ausgehende Docker-Probe-Verbindungen statt eingehende Zugriffe zu öffnen.</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <p class="label">// WARUM OPSHOME</p><h2>Für Homelab-Transparenz entwickelt</h2>
+    <p class="comparison-intro">OpsHome NOC vereint öffentliche Prüfungen, private Docker-Probe-Assets, NAS, Proxmox, Linux-Hosts, Container, VMs und Ressourcenzustand in einer Mobile-First-Ansicht.</p>
+    <div class="comparison-table"><table><thead><tr><th>Tool</th><th>Am besten für</th><th>Stärken</th><th>Homelab-Kompromiss</th><th>Position von OpsHome NOC</th></tr></thead><tbody>
+      <tr><td data-label="Tool">UptimeRobot</td><td data-label="Am besten für">Öffentliches Uptime-Monitoring</td><td data-label="Stärken">Einfache externe Prüfungen für Websites, Ports, SSL und Domains.</td><td data-label="Homelab-Kompromiss">Zeigt zuverlässig, ob ein öffentlicher Dienst ausfällt, aber nicht, was dahinter im Homelab geschieht.</td><td data-label="OpsHome NOC Position">Verbindet öffentliche Prüfungen mit privaten Assets und zeigt Endpunkt und internen Homelab-Zustand.</td></tr>
+      <tr><td data-label="Tool">Uptime Kuma</td><td data-label="Am besten für">Selbst gehostetes Uptime-Monitoring</td><td data-label="Stärken">Open Source, flexibel und bei Homelab-Nutzern beliebt.</td><td data-label="Homelab-Kompromiss">Konzentriert sich vor allem auf Monitorstatus und Statusseiten. Mobile-First-Assettransparenz steht nicht im Mittelpunkt.</td><td data-label="OpsHome NOC Position">Bietet eine Mobile-First-Ansicht für öffentliche Prüfungen, Docker-Probe-Assets, NAS, Proxmox, Linux, Container und VMs.</td></tr>
+      <tr><td data-label="Tool">Netdata</td><td data-label="Am besten für">Echtzeit-Hosttelemetrie</td><td data-label="Stärken">Detaillierte Echtzeitmetriken für CPU, Arbeitsspeicher, Datenträger, Netzwerk und Prozesse.</td><td data-label="Homelab-Kompromiss">Sehr leistungsfähig, aber dicht für Nutzer, die vor allem einen schnellen Homelab-Überblick möchten.</td><td data-label="OpsHome NOC Position">Fokussiert leichte, aggregierte Homelab-Transparenz statt tiefer Telemetrie pro Host.</td></tr>
+      <tr><td data-label="Tool">Prometheus / Grafana</td><td data-label="Am besten für">Professionelle Observability-Stacks</td><td data-label="Stärken">Leistungsfähige Metrikerfassung, Dashboards, Alarmierung und Anpassung.</td><td data-label="Homelab-Kompromiss">Benötigt Einrichtung, Exporter, Dashboards und laufende Wartung.</td><td data-label="OpsHome NOC Position">Eine einfachere Mobile-First-Sicht für Homelab-Nutzer, die keinen vollständigen Monitoring-Stack aufbauen und warten möchten.</td></tr>
+      <tr class="is-opshome"><td data-label="Tool">OpsHome NOC</td><td data-label="Am besten für">Mobile-First-Homelab-Observability</td><td data-label="Stärken">Öffentliches Monitoring, private Docker-Probe-Sicht, NAS, Proxmox, Linux-Hosts, Container, VMs, CPU, Arbeitsspeicher, Speicher, SSL und Domainzustand in einer App.</td><td data-label="Homelab-Kompromiss">Nicht als Ersatz für Enterprise-Observability-Plattformen oder tiefgehende Metriksysteme gedacht.</td><td data-label="OpsHome NOC Position">Die fehlende mobile Sichtbarkeitsebene für Homelab-Nutzer.</td></tr>
+    </tbody></table></div>
+    <p class="comparison-note">OpsHome NOC ersetzt keine professionellen Monitoring-Stacks. Es ist eine leichte, Mobile-First-Sichtbarkeitsebene für Homelab-Nutzer.</p>
+    <div class="comparison-actions"><a class="comparison-primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">Homelab-Monitoring starten</a><a class="comparison-secondary" href="https://docs.opshome.run/docker-probe-linux.html" target="_blank" rel="noopener">So funktioniert Docker Probe</a></div>
   </section>
 
   <section class="section" id="pricing" style="text-align:center">
