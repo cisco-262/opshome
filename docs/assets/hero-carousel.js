@@ -17,7 +17,6 @@
       this.rafId = null;
       this.paused = false;
       this.pointerStartX = null;
-      this.reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
       this.tick = this.tick.bind(this);
       this.onKeyDown = this.onKeyDown.bind(this);
@@ -39,10 +38,6 @@
       });
       this.root.addEventListener("mouseenter", () => this.pause());
       this.root.addEventListener("mouseleave", () => this.resume());
-      this.root.addEventListener("focusin", () => this.pause());
-      this.root.addEventListener("focusout", event => {
-        if (!this.root.contains(event.relatedTarget)) this.resume();
-      });
       this.root.addEventListener("keydown", this.onKeyDown);
       this.root.addEventListener("pointerdown", this.onPointerDown, { passive: true });
       this.root.addEventListener("pointerup", this.onPointerUp, { passive: true });
@@ -59,7 +54,7 @@
         this.destroy();
         return;
       }
-      if (!this.paused && !document.hidden && !this.reducedMotion.matches) {
+      if (!this.paused && !document.hidden) {
         if (this.lastFrame !== null) this.elapsed += Math.min(timestamp - this.lastFrame, 250);
         if (this.elapsed >= this.duration) this.goTo(this.index + 1, false);
         this.updateActiveProgress();
