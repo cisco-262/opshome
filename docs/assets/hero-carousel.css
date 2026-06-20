@@ -32,6 +32,36 @@
   padding: 4px 8px 16px;
 }
 
+.noc-carousel-store-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.noc-carousel-store-badge {
+  display: inline-flex;
+  flex: 0 0 auto;
+  border-radius: 7px;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.noc-carousel-store-badge img {
+  display: block;
+  width: auto;
+  height: 34px;
+}
+
+.noc-carousel-store-badge:hover {
+  opacity: .88;
+  transform: translateY(-1px);
+}
+
+.noc-carousel-store-badge:focus-visible {
+  outline: 2px solid #93c5fd;
+  outline-offset: 3px;
+}
+
 .noc-carousel-brand,
 .noc-carousel-release {
   display: inline-flex;
@@ -265,6 +295,8 @@
   .noc-carousel { padding: 10px; border-radius: 22px; }
   .noc-carousel-topline { padding: 5px 4px 12px; }
   .noc-carousel-brand, .noc-carousel-release { font-size: 9px; }
+  .noc-carousel-store-group { gap: 8px; }
+  .noc-carousel-store-badge img { height: 27px; }
   .noc-carousel-stage { min-height: 710px; border-radius: 16px; }
   .noc-slide { gap: 22px; padding: 30px 18px 20px; }
   .noc-slide-chapter { margin-bottom: 14px; }
