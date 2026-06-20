@@ -1,7 +1,7 @@
 (() => {
   "use strict";
 
-  const DURATION_DEFAULT = 8000;
+  const DURATION_DEFAULT = 10000;
 
   class HeroCarousel {
     constructor(root) {
