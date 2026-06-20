@@ -183,6 +183,7 @@
   .hero-phone{position:relative;width:min(100%,440px);filter:drop-shadow(0 36px 45px rgba(0,0,0,.48)) drop-shadow(0 0 40px rgba(20,121,255,.2));transform:rotate(2deg)}
   .hero-phone img{display:block;width:100%;height:auto}
   .hero-visual-note{position:absolute;left:-28px;bottom:10%;padding:12px 16px;border:1px solid rgba(255,255,255,.14);border-radius:12px;background:rgba(8,20,36,.88);box-shadow:0 14px 36px rgba(0,0,0,.3);backdrop-filter:blur(12px);font-family:var(--mono);font-size:12px;color:#dbeafe}
+  .hero-visual-note span,.hero-visual-note strong{white-space:nowrap}
   .hero-visual-note strong{display:block;margin-top:2px;color:#4ade80;font-size:18px}
   .hero-logo{width:188px;height:188px;margin-bottom:22px}
   .eyebrow{font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:.18em;border:1px solid rgba(20,121,255,.22);background:#fff;padding:6px 14px;margin-bottom:26px;border-radius:999px}
@@ -403,7 +404,6 @@
     .comparison-section h2,.faq-section h2{font-size:32px}
     .grid,.pricing,.trust-panel{grid-template-columns:1fr}
     .screens{grid-template-columns:repeat(2,1fr)}
-    #how-it-works .grid{grid-template-columns:1fr}
     .eyebrow-tags .block-en,.eyebrow-tags .block-zh,.eyebrow-tags .block-hant{gap:8px}
     .tag{font-size:15px;padding:7px 14px}
     .monitor-table{overflow-x:auto}
@@ -411,7 +411,6 @@
     .comparison-table{overflow-x:auto}
     .comparison-table table{min-width:760px}
     .trust-item{font-size:13px;padding:10px}
-    #how-it-works{text-align:center}
     .plan{padding:24px}
     .plan-cta{display:none!important}
     #pricing .cta-bottom{padding:20px 22px;flex-direction:column;text-align:center;gap:16px}
@@ -450,6 +449,7 @@
     h2{font-size:clamp(20px,6vw,36px)}
   }
 </style>
+<link rel="stylesheet" href="assets/hero-carousel.css?v=20260620">
 </head>
 <body>
 <nav>
@@ -466,56 +466,17 @@
 </nav>
 
 <main>
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-copy">
-        <div class="hero-badges">
-          <div class="hero-status">
-            <span class="hero-status-dot" aria-hidden="true"></span>
-            <span>Im App Store erhältlich</span>
-          </div>
-          <a class="hero-release" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" aria-label="OpsHome NOC V1.9 im App Store laden">
-            <span class="hero-release-new">NEU</span>
-            <span>V1.9 jetzt verfügbar</span>
-          </a>
-        </div>
-        <h1>
-          OpsHome NOC<sup class="tm">™</sup>
-          <span class="hero-headline">Erkenne Homelab-Probleme, ohne zuerst ein VPN zu öffnen.</span>
-          
-          
-        </h1>
-        <p>
-          <span>Überwache Websites, NAS, Docker, Linux, Synology und Proxmox VE direkt auf deinem iPhone. <strong>Keine eingehende Portfreigabe erforderlich.</strong></span>
-          
-          
-        </p>
-        <div class="actions">
-          <a class="hero-store-link" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" aria-label="OpsHome NOC im App Store laden">
-            <img src="assets/images/app-store-badge.svg" alt="Im App Store laden">
-          </a>
-          <a class="hero-qr" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" aria-label="OpsHome NOC im App Store öffnen">
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&amp;data=https%3A%2F%2Fapps.apple.com%2Fus%2Fapp%2Fopshome-noc%2Fid6763890679" alt="QR-Code zum Laden von OpsHome NOC aus dem App Store" width="96" height="96" loading="lazy">
-            <span>Zum Download scannen</span>
-            
-            
-          </a>
-        </div>
-        <p class="hero-support">
-          <span>Synology · Proxmox VE · Linux · Docker · Websites · Private Dienste</span>
-          
-          
-        </p>
+  <section class="hero noc-story-hero">
+    <div class="noc-carousel" data-hero-carousel data-duration="8000" role="region" aria-roledescription="Karussell" aria-label="OpsHome NOC Produktgeschichte" tabindex="0">
+      <div class="noc-carousel-topline"><span class="noc-carousel-brand">OPSHOME NOC · APP STORE</span><a class="noc-carousel-release" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">V1.9 VERFÜGBAR</a></div>
+      <div class="noc-carousel-stage" aria-live="off">
+        <article class="noc-slide is-active" aria-label="1 von 5"><div class="noc-slide-copy"><span class="noc-slide-chapter">01 · ÜBERBLICK</span><h1>Dein gesamter Homelab-Stack im Blick</h1><p>Sieh öffentliche Dienste, private Assets, VMs, Container und Speicher in einer Ansicht.</p><a class="noc-slide-cta" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">Jetzt starten</a></div><div class="noc-slide-visual"><img src="assets/images/hero-carousel/full-stack-20260620.webp" alt="OpsHome NOC Gesamtübersicht mit öffentlichen Diensten, Docker Probe, Proxmox, Linux, NAS, Containern und virtuellen Maschinen" width="1100" height="966" fetchpriority="high"></div></article>
+        <article class="noc-slide" aria-label="2 von 5" aria-hidden="true" inert><div class="noc-slide-copy"><span class="noc-slide-chapter">02 · PUBLIC SERVICES</span><h1>Halte öffentliche Dienste online</h1><p>Erkenne Ausfälle von Websites, Logins, SSL, Domains und APIs vor deinen Nutzern.</p><a class="noc-slide-cta" href="#protocols">Mehr erfahren</a></div><div class="noc-slide-visual"><img src="assets/images/hero-carousel/public-services-20260620.webp" alt="Monitoring öffentlicher Homelab-Dienste, SSL, Domains, APIs, NAS, Mini-PC und Router" width="1100" height="948" loading="lazy"></div></article>
+        <article class="noc-slide" aria-label="3 von 5" aria-hidden="true" inert><div class="noc-slide-copy"><span class="noc-slide-chapter">03 · PRIVATE HOMELAB</span><h1>Sieh in dein privates Homelab</h1><p>Docker Probe zeigt interne Dienste und Assets ohne eingehende Portfreigaben.</p><a class="noc-slide-cta" href="#features">Mehr erfahren</a></div><div class="noc-slide-visual"><img src="assets/images/hero-carousel/private-homelab-20260620.webp" alt="Privates Docker-Probe-Monitoring für Synology NAS, Proxmox, Ubuntu, Container und virtuelle Maschinen" width="1100" height="931" loading="lazy"></div></article>
+        <article class="noc-slide" aria-label="4 von 5" aria-hidden="true" inert><div class="noc-slide-copy"><span class="noc-slide-chapter">04 · VIRTUALISIERUNG</span><h1>Verstehe jede Virtualisierungsebene</h1><p>Verfolge Proxmox-Nodes, VM-Zustand, Ressourcendruck, Speicher und Warnungen gemeinsam.</p><a class="noc-slide-cta" href="#features">Assets ansehen</a></div><div class="noc-slide-visual"><img src="assets/images/hero-carousel/virtualization-20260620.webp" alt="Proxmox-Monitoring mit Nodes, virtuellen Maschinen, CPU, Arbeitsspeicher, Speicher, Netzwerk und Warnungen" width="1100" height="923" loading="lazy"></div></article>
+        <article class="noc-slide" aria-label="5 von 5" aria-hidden="true" inert><div class="noc-slide-copy"><span class="noc-slide-chapter">05 · INFRASTRUKTUR</span><h1>Halte Kerninfrastruktur gesund</h1><p>Überwache NAS, Linux-Hosts, Container, Datenträger und dauerhafte Dienste vom iPhone.</p><a class="noc-slide-cta" href="#pricing">Jetzt starten</a></div><div class="noc-slide-visual"><img src="assets/images/hero-carousel/infrastructure-20260620.webp" alt="Infrastruktur-Monitoring für NAS, Linux, Container, CPU, Arbeitsspeicher, Speicher, Datenträger und Dienste" width="1100" height="883" loading="lazy"></div></article>
       </div>
-      <div class="hero-visual">
-        <div class="hero-phone">
-          <img src="assets/images/hero-iphone-20260620.webp" alt="OpsHome NOC Dashboard auf einem iPhone mit fehlgeschlagenem HTTP-Check sowie öffentlichen, privaten und Homelab-Assets">
-        </div>
-        <div class="hero-visual-note">
-          <span>NOC-Status</span>
-          <strong>100 % betriebsbereit</strong>
-        </div>
-      </div>
+      <div class="noc-carousel-controls"><button class="noc-carousel-arrow" type="button" data-carousel-previous aria-label="Vorherige Folie">&#8592;</button><div class="noc-carousel-progress" aria-label="Fortschritt"><button class="noc-progress-segment" type="button" aria-label="Zum Überblick" aria-current="step"><span class="noc-progress-track"><span class="noc-progress-fill"></span></span></button><button class="noc-progress-segment" type="button" aria-label="Zu öffentlichen Diensten"><span class="noc-progress-track"><span class="noc-progress-fill"></span></span></button><button class="noc-progress-segment" type="button" aria-label="Zum privaten Homelab"><span class="noc-progress-track"><span class="noc-progress-fill"></span></span></button><button class="noc-progress-segment" type="button" aria-label="Zur Virtualisierung"><span class="noc-progress-track"><span class="noc-progress-fill"></span></span></button><button class="noc-progress-segment" type="button" aria-label="Zur Infrastruktur"><span class="noc-progress-track"><span class="noc-progress-fill"></span></span></button></div><button class="noc-carousel-arrow" type="button" data-carousel-next aria-label="Nächste Folie">&#8594;</button></div>
     </div>
   </section>
 
@@ -536,47 +497,6 @@
     </div>
   </section>
 
-  <section class="section" style="padding-top:0;padding-bottom:64px">
-    <div style="max-width:1040px;margin:0 auto;text-align:center">
-      <p class="label">// PRODUCT COVERAGE</p>
-      <h2 style="font-size:clamp(18px,2vw,28px);margin-bottom:14px">
-        <span>Eine Ansicht für öffentliche Dienste, private Assets, Container, NAS und Virtualisierung.</span>
-      </h2>
-      <p style="max-width:720px;margin:0 auto 24px;color:var(--muted);font-size:17px;line-height:1.8">
-        <span>OpsHome NOC macht den Zustand deines Homelabs sichtbar, ohne die App in eine schwere Enterprise-Konsole zu verwandeln.</span>
-      </p>
-      <figure style="max-width:980px;margin:0 auto;border:1px solid var(--border);border-radius:18px;overflow:hidden;box-shadow:0 16px 48px rgba(20,121,255,.14);background:#fff">
-        <img src="../assets/images/noc-commercial-overview-20260619.webp" alt="OpsHome NOC Funktionsuebersicht fuer Public Monitoring, private Assets, Linux-Geraete, NAS, Container, Virtualisierung und Multi-Protokoll-Checks" loading="lazy" style="display:block;width:100%;height:auto">
-      </figure>
-    </div>
-  </section>
-
-  <section class="section" id="how-it-works" style="padding-bottom:0;text-align:center">
-    <p class="label">// SO FUNKTIONIERT ES</p>
-    <h2><span>So funktioniert OpsHome NOC</span></h2>
-    <p class="desc" style="margin-left:auto;margin-right:auto"><span>OpsHome NOC ist keine isolierte App, sondern ein vollständiger SaaS-Dienst aus drei zusammenarbeitenden Komponenten.</span></p>
-    <div style="max-width:500px;margin:0 auto 48px;border-radius:12px;overflow:hidden;border:1px solid var(--border);box-shadow:0 4px 24px rgba(20,121,255,.1)">
-      <img src="assets/images/how-to-work.gif" alt="So funktioniert OpsHome NOC" style="display:block;width:100%;height:auto">
-    </div>
-    <div class="grid">
-      <div class="card">
-        <div class="icon"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"></rect><path d="M12 18h.01"></path></svg></div>
-        <h3><span>iPhone App</span></h3>
-        <p><span>Deine Steuerzentrale. Zeigt Echtzeitdaten, Topologiekarten und Assets an und sendet Push-Benachrichtigungen.</span></p>
-      </div>
-      <div class="card">
-        <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 16 0"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><circle cx="12" cy="12" r="3"></circle><path d="M12 4v2"></path></svg></div>
-        <h3><span>OpsHome Cloud</span></h3>
-        <p><span>Das SaaS-Rückgrat. Übernimmt Datenspeicherung, Topologieerstellung, Benachrichtigungen und Statusseiten.</span></p>
-      </div>
-      <div class="card">
-        <div class="icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg></div>
-        <h3><span>Docker Probe</span></h3>
-        <p><span>Ein schlanker Agent für dein Heimnetz. Er erfasst den Status privater Dienste und sendet ihn an die Cloud, ohne Portfreigaben.</span></p>
-      </div>
-    </div>
-    <p style="text-align:center;max-width:760px;margin:0 auto;color:var(--muted);font-size:17px;font-weight:600"><span>Mit Docker Probe siehst du dein gesamtes Homelab in Echtzeit auf dem iPhone, ohne einen internen Port offenzulegen.</span></p>
-  </section>
 
   <section class="section" id="features" style="text-align:center">
     <p class="label">// FUNKTIONEN</p>
@@ -935,6 +855,7 @@
   </div>
 </footer>
 
+<script src="assets/hero-carousel.js?v=20260620"></script>
 <script src="../assets/video-playlist.js?v=20260614-v17"></script>
 
 

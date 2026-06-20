@@ -183,6 +183,7 @@
   .hero-phone{position:relative;width:min(100%,440px);filter:drop-shadow(0 36px 45px rgba(0,0,0,.48)) drop-shadow(0 0 40px rgba(20,121,255,.2));transform:rotate(2deg)}
   .hero-phone img{display:block;width:100%;height:auto}
   .hero-visual-note{position:absolute;left:-28px;bottom:10%;padding:12px 16px;border:1px solid rgba(255,255,255,.14);border-radius:12px;background:rgba(8,20,36,.88);box-shadow:0 14px 36px rgba(0,0,0,.3);backdrop-filter:blur(12px);font-family:var(--mono);font-size:12px;color:#dbeafe}
+  .hero-visual-note span,.hero-visual-note strong{white-space:nowrap}
   .hero-visual-note strong{display:block;margin-top:2px;color:#4ade80;font-size:18px}
   .hero-logo{width:188px;height:188px;margin-bottom:22px}
   .eyebrow{font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:.18em;border:1px solid rgba(20,121,255,.22);background:#fff;padding:6px 14px;margin-bottom:26px;border-radius:999px}
@@ -403,7 +404,6 @@
     .comparison-section h2,.faq-section h2{font-size:32px}
     .grid,.pricing,.trust-panel{grid-template-columns:1fr}
     .screens{grid-template-columns:repeat(2,1fr)}
-    #how-it-works .grid{grid-template-columns:1fr}
     .eyebrow-tags .block-en,.eyebrow-tags .block-zh,.eyebrow-tags .block-hant{gap:8px}
     .tag{font-size:15px;padding:7px 14px}
     .monitor-table{overflow-x:auto}
@@ -411,7 +411,6 @@
     .comparison-table{overflow-x:auto}
     .comparison-table table{min-width:760px}
     .trust-item{font-size:13px;padding:10px}
-    #how-it-works{text-align:center}
     .plan{padding:24px}
     .plan-cta{display:none!important}
     #pricing .cta-bottom{padding:20px 22px;flex-direction:column;text-align:center;gap:16px}
@@ -450,6 +449,7 @@
     h2{font-size:clamp(20px,6vw,36px)}
   }
 </style>
+<link rel="stylesheet" href="assets/hero-carousel.css?v=20260620">
 </head>
 <body>
 <nav>
@@ -466,56 +466,17 @@
 </nav>
 
 <main>
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-copy">
-        <div class="hero-badges">
-          <div class="hero-status">
-            <span class="hero-status-dot" aria-hidden="true"></span>
-            <span>現已上架 App Store</span>
-          </div>
-          <a class="hero-release" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" aria-label="前往 App Store 下載 OpsHome NOC V1.9">
-            <span class="hero-release-new">NEW</span>
-            <span>V1.9 全新上線</span>
-          </a>
-        </div>
-        <h1>
-          OpsHome NOC<sup class="tm">™</sup>
-          
-          
-          <span class="hero-headline">無需連接 VPN，也能第一時間發現 Homelab 問題。</span>
-        </h1>
-        <p>
-          
-          
-          <span>使用 iPhone 監控網站、NAS、Docker、Linux、Synology 和 Proxmox VE。<strong>無需開放內網入站連接埠。</strong></span>
-        </p>
-        <div class="actions">
-          <a class="hero-store-link" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" aria-label="Download OpsHome NOC on the App Store">
-            <img src="assets/images/app-store-badge.svg" alt="Download on the App Store">
-          </a>
-          <a class="hero-qr" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" aria-label="Open OpsHome NOC in the App Store">
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&amp;data=https%3A%2F%2Fapps.apple.com%2Fus%2Fapp%2Fopshome-noc%2Fid6763890679" alt="QR code for downloading OpsHome NOC from the App Store" width="96" height="96" loading="lazy">
-            
-            
-            <span>掃碼下載</span>
-          </a>
-        </div>
-        <p class="hero-support">
-          
-          
-          <span>Synology · Proxmox VE · Linux · Docker · 網站 · 私有服務</span>
-        </p>
+  <section class="hero noc-story-hero">
+    <div class="noc-carousel" data-hero-carousel data-duration="8000" role="region" aria-roledescription="輪播圖" aria-label="OpsHome NOC 產品故事" tabindex="0">
+      <div class="noc-carousel-topline"><span class="noc-carousel-brand">OPSHOME NOC · APP STORE</span><a class="noc-carousel-release" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">V1.9 已上線</a></div>
+      <div class="noc-carousel-stage" aria-live="off">
+        <article class="noc-slide is-active" aria-label="第 1 張，共 5 張"><div class="noc-slide-copy"><span class="noc-slide-chapter">01 · 全局總覽</span><h1>一屏看清整個 Homelab</h1><p>統一查看公網服務、私有資產、虛擬機、容器和儲存狀態。</p><a class="noc-slide-cta" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">立即開始</a></div><div class="noc-slide-visual"><img src="assets/images/hero-carousel/full-stack-20260620.webp" alt="OpsHome NOC 全棧總覽，連接公網服務、Docker Probe、Proxmox、Linux、NAS、容器和虛擬機" width="1100" height="966" fetchpriority="high"></div></article>
+        <article class="noc-slide" aria-label="第 2 張，共 5 張" aria-hidden="true" inert><div class="noc-slide-copy"><span class="noc-slide-chapter">02 · 公網服務</span><h1>讓公網服務持續在線</h1><p>在用戶發現之前掌握網站、登入頁、SSL、網域和 API 異常。</p><a class="noc-slide-cta" href="#protocols">了解更多</a></div><div class="noc-slide-visual"><img src="assets/images/hero-carousel/public-services-20260620.webp" alt="公網服務監控，覆蓋 Homelab 入口、SSL、網域、API、NAS、迷你主機和路由器" width="1100" height="948" loading="lazy"></div></article>
+        <article class="noc-slide" aria-label="第 3 張，共 5 張" aria-hidden="true" inert><div class="noc-slide-copy"><span class="noc-slide-chapter">03 · 私有網絡</span><h1>看見私有 Homelab 內部</h1><p>Docker Probe 無需開放入站連接埠，即可呈現內部服務與資產。</p><a class="noc-slide-cta" href="#features">了解更多</a></div><div class="noc-slide-visual"><img src="assets/images/hero-carousel/private-homelab-20260620.webp" alt="Docker Probe 私有監控，覆蓋 Synology NAS、Proxmox、Ubuntu、容器和虛擬機" width="1100" height="931" loading="lazy"></div></article>
+        <article class="noc-slide" aria-label="第 4 張，共 5 張" aria-hidden="true" inert><div class="noc-slide-copy"><span class="noc-slide-chapter">04 · 虛擬化</span><h1>理解每一層虛擬化狀態</h1><p>集中追蹤 Proxmox 節點、虛擬機健康、資源壓力、儲存和告警。</p><a class="noc-slide-cta" href="#features">查看資產</a></div><div class="noc-slide-visual"><img src="assets/images/hero-carousel/virtualization-20260620.webp" alt="Proxmox 虛擬化監控，展示節點、虛擬機、CPU、記憶體、儲存、網絡和告警" width="1100" height="923" loading="lazy"></div></article>
+        <article class="noc-slide" aria-label="第 5 張，共 5 張" aria-hidden="true" inert><div class="noc-slide-copy"><span class="noc-slide-chapter">05 · 基礎設施</span><h1>保持核心基礎設施健康</h1><p>透過 iPhone 查看 NAS、Linux、容器、磁碟和常駐服務。</p><a class="noc-slide-cta" href="#pricing">立即開始</a></div><div class="noc-slide-visual"><img src="assets/images/hero-carousel/infrastructure-20260620.webp" alt="基礎設施監控，覆蓋 NAS、Linux、容器、CPU、記憶體、儲存、磁碟和服務" width="1100" height="883" loading="lazy"></div></article>
       </div>
-      <div class="hero-visual">
-        <div class="hero-phone">
-          <img src="assets/images/hero-iphone-20260620.webp" alt="iPhone 上的 OpsHome NOC 總覽，展示公網檢測異常、私有檢測和 Homelab 資產狀態">
-        </div>
-        <div class="hero-visual-note">
-          <span>NOC 健康度</span>
-          <strong>100% Operational</strong>
-        </div>
-      </div>
+      <div class="noc-carousel-controls"><button class="noc-carousel-arrow" type="button" data-carousel-previous aria-label="上一張">&#8592;</button><div class="noc-carousel-progress" aria-label="故事進度"><button class="noc-progress-segment" type="button" aria-label="查看全局總覽" aria-current="step"><span class="noc-progress-track"><span class="noc-progress-fill"></span></span></button><button class="noc-progress-segment" type="button" aria-label="查看公網服務"><span class="noc-progress-track"><span class="noc-progress-fill"></span></span></button><button class="noc-progress-segment" type="button" aria-label="查看私有網絡"><span class="noc-progress-track"><span class="noc-progress-fill"></span></span></button><button class="noc-progress-segment" type="button" aria-label="查看虛擬化"><span class="noc-progress-track"><span class="noc-progress-fill"></span></span></button><button class="noc-progress-segment" type="button" aria-label="查看基礎設施"><span class="noc-progress-track"><span class="noc-progress-fill"></span></span></button></div><button class="noc-carousel-arrow" type="button" data-carousel-next aria-label="下一張">&#8594;</button></div>
     </div>
   </section>
 
@@ -536,47 +497,6 @@
     </div>
   </section>
 
-  <section class="section" style="padding-top:0;padding-bottom:64px">
-    <div style="max-width:1040px;margin:0 auto;text-align:center">
-      <p class="label">// PRODUCT COVERAGE</p>
-      <h2 style="font-size:clamp(18px,2vw,28px);margin-bottom:14px">
-        <span>一個視圖覆蓋公網服務、私有資產、容器、NAS 與虛擬化。</span>
-      </h2>
-      <p style="max-width:720px;margin:0 auto 24px;color:var(--muted);font-size:17px;line-height:1.8">
-        <span>OpsHome NOC 讓 Homelab 健康狀態更容易看清，而不是把手機 App 做成笨重的企業控制台。</span>
-      </p>
-      <figure style="max-width:980px;margin:0 auto;border:1px solid var(--border);border-radius:18px;overflow:hidden;box-shadow:0 16px 48px rgba(20,121,255,.14);background:#fff">
-        <img src="../assets/images/noc-commercial-overview-20260619.webp" alt="OpsHome NOC 產品功能圖，展示公網監控、私有資產、Linux 裝置、NAS、容器、虛擬化和多協議檢測" loading="lazy" style="display:block;width:100%;height:auto">
-      </figure>
-    </div>
-  </section>
-
-  <section class="section" id="how-it-works" style="padding-bottom:0;text-align:center">
-    <p class="label">// HOW IT WORKS</p>
-    <h2><span>OpsHome NOC 是如何運作的</span></h2>
-    <p class="desc" style="margin-left:auto;margin-right:auto"><span>OpsHome NOC 不是單機 App，而是由三個部分協同運作的完整 SaaS 服務。</span></p>
-    <div style="max-width:500px;margin:0 auto 48px;border-radius:12px;overflow:hidden;border:1px solid var(--border);box-shadow:0 4px 24px rgba(20,121,255,.1)">
-      <img src="assets/images/how-to-work.gif" alt="How OpsHome NOC Works" style="display:block;width:100%;height:auto">
-    </div>
-    <div class="grid">
-      <div class="card">
-        <div class="icon"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"></rect><path d="M12 18h.01"></path></svg></div>
-        <h3><span>iPhone App</span></h3>
-        <p><span>你的控制中心。負責顯示即時數據、拓撲圖、資產視圖和接收告警推播。</span></p>
-      </div>
-      <div class="card">
-        <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 16 0"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><circle cx="12" cy="12" r="3"></circle><path d="M12 4v2"></path></svg></div>
-        <h3><span>OpsHome Cloud</span></h3>
-        <p><span>雲端 SaaS 服務。負責數據存儲、拓撲圖生成、告警推播和狀態頁。</span></p>
-      </div>
-      <div class="card">
-        <div class="icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg></div>
-        <h3><span>Docker Probe</span></h3>
-        <p><span>你部署在內網的輕量探針。採集私有服務狀態並安全傳送至雲端，無需暴露任何連接埠。</span></p>
-      </div>
-    </div>
-    <p style="text-align:center;max-width:760px;margin:0 auto;color:var(--muted);font-size:17px;font-weight:600"><span>透過 Docker Probe，你的 iPhone 可以即時看到整個 homelab 的狀態，完全不暴露任何內網連接埠。</span></p>
-  </section>
 
   <section class="section" id="features" style="text-align:center">
     <p class="label">// FEATURES</p>
@@ -935,6 +855,7 @@
   </div>
 </footer>
 
+<script src="assets/hero-carousel.js?v=20260620"></script>
 <script src="../assets/video-playlist.js?v=20260614-v17"></script>
 
 
