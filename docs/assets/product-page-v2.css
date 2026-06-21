@@ -25,7 +25,8 @@
 .product-redesign h1,.product-redesign h2,.product-redesign h3{color:var(--pr-ink)}
 .product-redesign h2{margin:0 0 20px;font-size:clamp(28px,4vw,42px);font-weight:600;line-height:1.12;letter-spacing:-.035em}
 .product-redesign .pr-copy>p,.product-redesign .pr-lead{max-width:520px;color:var(--pr-muted);font-size:16px;line-height:1.7}
-.product-redesign .pr-feature{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:64px;align-items:center}
+.product-redesign .pr-feature{display:grid;grid-template-columns:1fr;gap:40px;align-items:center}
+.product-redesign .pr-feature .pr-copy{max-width:760px}
 .product-redesign .pr-feature.pr-reverse .pr-media{order:-1}
 .product-redesign .pr-media img{
   display:block;
@@ -62,7 +63,7 @@
 
 .product-redesign .pr-center{text-align:center}
 .product-redesign .pr-center .pr-lead{margin-right:auto;margin-left:auto}
-.product-redesign .pr-wide-image{display:block;width:min(920px,100%);margin:38px auto 30px;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.1)}
+.product-redesign .pr-wide-image{display:block;width:min(644px,70%);margin:38px auto 30px;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.1)}
 .product-redesign .pr-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:960px;margin:0 auto}
 .product-redesign .pr-card{padding:28px;border:1px solid var(--pr-border);border-radius:14px;background:#fff;text-align:left;box-shadow:0 8px 24px rgba(15,35,55,.06)}
 .product-redesign .pr-card-icon{font-size:28px}
