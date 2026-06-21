@@ -1,0 +1,125 @@
+.product-redesign{
+  --pr-bg:#ffffff;
+  --pr-alt:#f8f8f8;
+  --pr-ink:#0b1b2e;
+  --pr-muted:#526274;
+  --pr-blue:#1479ff;
+  --pr-border:#dce5ef;
+  overflow:hidden;
+  background:var(--pr-bg);
+  color:var(--pr-ink);
+}
+.product-redesign *{box-sizing:border-box}
+.product-redesign .pr-section{padding:80px 40px}
+.product-redesign .pr-section.pr-alt{background:var(--pr-alt)}
+.product-redesign .pr-inner{width:min(1180px,100%);margin:0 auto}
+.product-redesign .pr-eyebrow{
+  margin:0 0 16px;
+  color:var(--pr-blue);
+  font-family:var(--mono);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.product-redesign h1,.product-redesign h2,.product-redesign h3{color:var(--pr-ink)}
+.product-redesign h2{margin:0 0 20px;font-size:clamp(28px,4vw,42px);font-weight:600;line-height:1.12;letter-spacing:-.035em}
+.product-redesign .pr-copy>p,.product-redesign .pr-lead{max-width:520px;color:var(--pr-muted);font-size:16px;line-height:1.7}
+.product-redesign .pr-feature{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:64px;align-items:center}
+.product-redesign .pr-feature.pr-reverse .pr-media{order:-1}
+.product-redesign .pr-media img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:12px;
+  box-shadow:0 8px 32px rgba(0,0,0,.1);
+}
+.product-redesign .pr-media figcaption{margin-top:10px;color:#64748b;font-size:12px;line-height:1.5;text-align:center}
+.product-redesign .pr-points{display:grid;gap:12px;margin-top:28px}
+.product-redesign .pr-point{display:flex;align-items:flex-start;gap:12px;color:#263b52;font-size:15px;line-height:1.55}
+.product-redesign .pr-point-icon{width:24px;flex:0 0 24px;text-align:center}
+
+.product-redesign .pr-hero{
+  padding:82px 40px 70px;
+  background:linear-gradient(145deg,#06101e,#0b1d34 58%,#071426);
+  text-align:center;
+}
+.product-redesign .pr-hero .pr-inner{width:min(1280px,100%)}
+.product-redesign .pr-hero-kicker{margin-bottom:18px;color:#93c5fd;font-family:var(--mono);font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.product-redesign .pr-hero h1{max-width:940px;margin:0 auto 22px;color:#fff;font-size:clamp(42px,7vw,78px);line-height:1;letter-spacing:-.05em}
+.product-redesign .pr-hero-subtitle{max-width:720px;margin:0 auto;color:#dbeafe;font-size:clamp(18px,2vw,24px);line-height:1.55}
+.product-redesign .pr-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin:30px 0 44px}
+.product-redesign .pr-button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:13px 22px;border:1px solid #5aa0ff;border-radius:10px;font-family:var(--mono);font-size:13px;font-weight:800}
+.product-redesign .pr-button-primary{background:var(--pr-blue);color:#fff;box-shadow:0 12px 30px rgba(20,121,255,.3)}
+.product-redesign .pr-button-secondary{background:rgba(255,255,255,.06);color:#dbeafe}
+.product-redesign .pr-hero-visual{overflow:hidden;border:1px solid rgba(255,255,255,.25);border-radius:18px;background:#eef6ff;box-shadow:0 28px 70px rgba(0,0,0,.35)}
+.product-redesign .pr-hero-visual img{display:block;width:100%;height:auto;object-fit:cover}
+
+.product-redesign .pr-code{margin:26px 0 8px;padding:16px;overflow:auto;border:1px solid #d5dee8;border-radius:8px;background:#eef2f6;color:#10243b;text-align:left}
+.product-redesign .pr-code code{font-family:"Space Mono Local",Consolas,monospace;font-size:13px;line-height:1.7}
+.product-redesign .pr-code-note{color:#6b7280;font-size:13px}
+.product-redesign .pr-text-link{display:inline-flex;margin-top:24px;color:#075fce;font-weight:800}
+
+.product-redesign .pr-center{text-align:center}
+.product-redesign .pr-center .pr-lead{margin-right:auto;margin-left:auto}
+.product-redesign .pr-wide-image{display:block;width:min(920px,100%);margin:38px auto 30px;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.1)}
+.product-redesign .pr-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:960px;margin:0 auto}
+.product-redesign .pr-card{padding:28px;border:1px solid var(--pr-border);border-radius:14px;background:#fff;text-align:left;box-shadow:0 8px 24px rgba(15,35,55,.06)}
+.product-redesign .pr-card-icon{font-size:28px}
+.product-redesign .pr-card h3{margin:12px 0 10px;font-size:21px}
+.product-redesign .pr-card p{margin:0;color:var(--pr-muted);font-size:15px;line-height:1.7}
+
+.product-redesign .pr-pricing{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;max-width:980px;margin:40px auto 0;text-align:left}
+.product-redesign .pr-plan{position:relative;padding:32px;border:1px solid var(--pr-border);border-radius:16px;background:#fff;box-shadow:0 12px 34px rgba(15,35,55,.08)}
+.product-redesign .pr-plan-pro{border:2px solid var(--pr-blue);background:#091a30;color:#fff}
+.product-redesign .pr-plan-badge{position:absolute;top:18px;right:18px;padding:5px 10px;border-radius:999px;background:#1479ff;color:#fff;font-size:11px;font-weight:800}
+.product-redesign .pr-plan-name{font-family:var(--mono);font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.product-redesign .pr-plan-price{margin:12px 0 2px;font-size:38px;font-weight:800;line-height:1.1}
+.product-redesign .pr-plan-subline{min-height:48px;color:#64748b;font-size:14px}
+.product-redesign .pr-plan-pro .pr-plan-name,.product-redesign .pr-plan-pro .pr-plan-price{color:#fff}
+.product-redesign .pr-plan-pro .pr-plan-subline{color:#b9c8dc}
+.product-redesign .pr-plan ul{display:grid;gap:10px;margin:22px 0 26px;padding:0;list-style:none}
+.product-redesign .pr-plan li{color:#334155;font-size:15px;line-height:1.5}
+.product-redesign .pr-plan-pro li{color:#dbeafe}
+.product-redesign .pr-plan-footnote{margin:0 0 24px;padding:15px 0 0;border-top:1px solid var(--pr-border);color:#6b7280;font-size:13px;line-height:1.5}
+.product-redesign .pr-plan .pr-button{width:100%}
+.product-redesign .pr-founder{max-width:980px;margin:24px auto 0;padding:18px 22px;border:1px solid #d8c8f8;border-radius:12px;background:#faf7ff;color:#58427a;font-size:14px;line-height:1.65;text-align:left}
+.product-redesign .pr-founder a{color:#6d28d9;font-weight:800}
+
+.product-redesign .pr-faq{max-width:900px;margin:36px auto 0;text-align:left}
+.product-redesign .pr-faq details{margin-bottom:12px;overflow:hidden;border:1px solid var(--pr-border);border-radius:12px;background:#fff}
+.product-redesign .pr-faq summary{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 22px;color:var(--pr-ink);font-size:16px;font-weight:750;cursor:pointer;list-style:none}
+.product-redesign .pr-faq summary::-webkit-details-marker{display:none}
+.product-redesign .pr-faq summary::after{content:"+";color:var(--pr-blue);font-size:22px}
+.product-redesign .pr-faq details[open] summary::after{content:"−"}
+.product-redesign .pr-faq-answer{padding:0 22px 20px;color:var(--pr-muted);font-size:15px;line-height:1.7}
+.product-redesign .pr-faq-answer a{color:#075fce;font-weight:750}
+
+.product-redesign .pr-footer-cta{background:#071426;color:#fff}
+.product-redesign .pr-footer-cta h2{color:#fff}
+.product-redesign .pr-footer-cta .pr-lead{color:#cbd5e1}
+.product-redesign .pr-footer-actions{display:flex;align-items:center;justify-content:center;gap:22px;margin-top:30px}
+.product-redesign .pr-store-badge{height:52px;width:auto}
+.product-redesign .pr-qr{display:flex;align-items:center;gap:12px;color:#dbeafe;font-size:12px}
+.product-redesign .pr-qr img{width:88px;height:88px;padding:5px;border-radius:8px;background:#fff}
+
+@media(max-width:768px){
+  nav{padding:12px 14px;gap:10px}
+  .brand{gap:7px;font-size:12px}
+  .brand img{width:46px;height:46px}
+  .lang{gap:2px;padding:3px}
+  .lang a{padding:5px 6px}
+  .product-redesign .pr-section{padding:48px 20px}
+  .product-redesign .pr-feature,.product-redesign .pr-pricing,.product-redesign .pr-cards{grid-template-columns:1fr;gap:32px}
+  .product-redesign .pr-feature .pr-media,.product-redesign .pr-feature.pr-reverse .pr-media{order:-1}
+  .product-redesign .pr-hero{padding:56px 20px 48px}
+  .product-redesign .pr-hero-visual img{max-height:380px;object-fit:contain}
+  .product-redesign .pr-actions{margin-bottom:32px}
+  .product-redesign .pr-plan-subline{min-height:0}
+}
+
+@media(max-width:480px){
+  .product-redesign .pr-actions{align-items:stretch;flex-direction:column}
+  .product-redesign .pr-footer-actions{flex-direction:column}
+  .product-redesign .pr-qr{display:none}
+}
