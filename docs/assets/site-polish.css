@@ -52,6 +52,7 @@ body{
 .noc-slide-docs:hover{color:#fff}
 
 .interface-intro{max-width:760px;margin:0 auto 30px;color:#bfdbfe;font-size:17px;line-height:1.7}
+.video-intro{max-width:680px;margin:0 auto 26px;color:#475569;font-size:18px;font-weight:650;line-height:1.6}
 .trust-signals{
   display:grid;
   grid-template-columns:repeat(4,minmax(0,1fr));
@@ -122,6 +123,22 @@ body{
 .monitor-table,.comparison-table,.plan,.trust-panel,.faq-item{box-shadow:0 16px 42px rgba(15,43,73,.08)}
 .comparison-section{padding-top:112px;padding-bottom:112px}
 .comparison-intro{max-width:840px}
+.comparison-table th:first-child{width:20%}
+.comparison-table th:nth-child(2){width:34%}
+.comparison-table th:nth-child(3),.comparison-table th:last-child{width:46%;background:#0a1b31}
+.comparison-table td:last-child{background:#fff;color:#475569;font-weight:400}
+.comparison-table tbody tr:not(.is-opshome):hover td:last-child{background:#f8fbff}
+.plan-footnote{
+  margin:18px 0 70px;
+  padding:11px 13px;
+  border:1px solid rgba(255,255,255,.34);
+  border-radius:8px;
+  background:rgba(15,23,42,.16);
+  color:#fff;
+  font-size:13px;
+  font-weight:700;
+  line-height:1.5;
+}
 
 .founder-title{align-items:flex-start}
 .founder-title>div{display:flex;flex-direction:column;align-items:flex-start}
