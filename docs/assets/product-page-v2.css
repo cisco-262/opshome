@@ -63,7 +63,7 @@
 
 .product-redesign .pr-center{text-align:center}
 .product-redesign .pr-center .pr-lead{margin-right:auto;margin-left:auto}
-.product-redesign .pr-wide-image{display:block;width:min(644px,70%);height:auto;margin:38px auto 30px;border-radius:12px;object-fit:contain;box-shadow:0 8px 32px rgba(0,0,0,.1)}
+.product-redesign .pr-wide-image{display:block;width:min(644px,70%);height:auto;margin:38px auto 30px;border-radius:0;object-fit:contain;filter:drop-shadow(0 14px 28px rgba(0,0,0,.16))}
 .product-redesign .pr-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:960px;margin:0 auto}
 .product-redesign .pr-card{padding:28px;border:1px solid var(--pr-border);border-radius:14px;background:#fff;text-align:left;box-shadow:0 8px 24px rgba(15,35,55,.06)}
 .product-redesign .pr-card-icon{font-size:28px}
