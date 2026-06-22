@@ -7,7 +7,6 @@
 <link rel="icon" type="image/png" href="../assets/images/favicon-256.png" sizes="256x256">
 <link rel="icon" href="../assets/images/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
-<link rel="stylesheet" href="../assets/video-playlist.css?v=20260611">
 
 <!-- Open Graph -->
 <meta property="og:title" content="OpsHome NOC - Homelab-Monitoring für das iPhone">
@@ -121,12 +120,12 @@
 }</script>
 
 <style>
-  @font-face{font-family:"Space Mono Local";src:url("../assets/fonts/SpaceMono-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
-  @font-face{font-family:"Space Mono Local";src:url("../assets/fonts/SpaceMono-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
-  @font-face{font-family:"Noto Sans SC Local";src:url("../assets/fonts/NotoSansSC-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
-  @font-face{font-family:"Noto Sans SC Local";src:url("../assets/fonts/NotoSansSC-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
-  @font-face{font-family:"Noto Sans TC Local";src:url("../assets/fonts/NotoSansTC-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
-  @font-face{font-family:"Noto Sans TC Local";src:url("../assets/fonts/NotoSansTC-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
+  @font-face{font-family:"Space Mono Local";src:url("assets/fonts/SpaceMono-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+  @font-face{font-family:"Space Mono Local";src:url("assets/fonts/SpaceMono-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
+  @font-face{font-family:"Noto Sans SC Local";src:url("assets/fonts/NotoSansSC-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+  @font-face{font-family:"Noto Sans SC Local";src:url("assets/fonts/NotoSansSC-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
+  @font-face{font-family:"Noto Sans TC Local";src:url("assets/fonts/NotoSansTC-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+  @font-face{font-family:"Noto Sans TC Local";src:url("assets/fonts/NotoSansTC-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
   :root {
     --bg:#f8fafc; --bg2:#eaf4ff; --surface:#ffffff; --border:#d7e8f8;
     --accent:#1479ff; --accent2:#0b5fd3; --text:#0b1b2e; --muted:#334155; --soft:#102033;
@@ -269,34 +268,6 @@
   .shot{background:transparent;border:0;border-radius:0;overflow:visible;box-shadow:none}
   .shot img{display:block;width:100%;height:auto;filter:drop-shadow(0 14px 24px rgba(15,23,42,.18))}
   .shot-label{text-align:center;color:var(--muted);font-size:14px;font-weight:500;margin-top:12px}
-  .comparison-section{position:relative;z-index:1;max-width:1560px;margin:0 auto;padding:96px 32px}
-  .comparison-section h2{max-width:900px;margin-right:auto;margin-left:auto;text-align:center;font-size:clamp(34px,4vw,52px)}
-  .comparison-section>.label{display:block;text-align:center}
-  .comparison-intro{max-width:980px;margin:0 auto 38px;text-align:center;color:var(--muted);font-size:18px;line-height:1.7}
-  .comparison-table{overflow:hidden;border:1px solid #dbe7f5;border-radius:20px;background:#fff;box-shadow:0 18px 50px rgba(15,23,42,.08)}
-  .comparison-table table{width:100%;border:0;border-collapse:collapse;table-layout:fixed}
-  .comparison-table th{padding:16px 15px;text-align:left;background:#0a1b31;color:#fff;font-family:var(--mono);font-size:11px;line-height:1.4;letter-spacing:.06em}
-  .comparison-table th:first-child{width:12%}
-  .comparison-table th:nth-child(2){width:15%}
-  .comparison-table th:nth-child(3){width:23%}
-  .comparison-table th:nth-child(4){width:23%}
-  .comparison-table th:last-child{width:27%;background:#0b5fd3}
-  .comparison-table td{padding:18px 15px;border-bottom:1px solid #e5edf7;vertical-align:top;color:#475569;font-size:14px;line-height:1.58}
-  .comparison-table td:first-child{color:var(--text);font-size:15px;font-weight:800}
-  .comparison-table td:nth-child(2){color:#1e3a5f;font-weight:700}
-  .comparison-table td:last-child{color:#0b3266;background:#f3f8ff;font-weight:650}
-  .comparison-table tbody tr:last-child td{border-bottom:0}
-  .comparison-table tbody tr:not(.is-opshome):hover td{background:#f8fbff}
-  .comparison-table tbody tr:not(.is-opshome):hover td:last-child{background:#eaf3ff}
-  .comparison-table .is-opshome td{border-top:2px solid #60a5fa;border-bottom-color:#bfdbfe;background:#eaf3ff;color:#12345b}
-  .comparison-table .is-opshome td:first-child{color:#0759bd}
-  .comparison-table .is-opshome td:last-child{background:#dcecff;color:#073b78}
-  .comparison-note{max-width:980px;margin:22px auto 0;text-align:center;color:#64748b;font-size:14px;line-height:1.65}
-  .comparison-actions{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:26px}
-  .comparison-primary{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:13px 22px;border-radius:12px;color:#fff;background:linear-gradient(135deg,#1479ff,#0759bd);box-shadow:0 12px 28px rgba(20,121,255,.24);font-weight:800}
-  .comparison-primary:hover{transform:translateY(-1px);box-shadow:0 16px 34px rgba(20,121,255,.32)}
-  .comparison-secondary{color:#0759bd;font-weight:800}
-  .comparison-secondary::after{content:"\2192";margin-left:8px}
   .pricing{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;align-items:stretch}
   .plan{
     position:relative;
@@ -315,7 +286,7 @@
     box-shadow:0 4px 28px rgba(245,158,11,.14);
   }
   .plan.pro:after{
-    content:"IDEAL FÜR PRIVATES MONITORING";
+    content:"BEST FOR PRIVATE MONITORING";
     position:absolute;
     top:20px;
     right:20px;
@@ -412,26 +383,13 @@
     .hero-visual{max-width:430px;margin:0 auto}
     .hero-phone{transform:none}
     .section{padding:64px 22px}
-    .comparison-section{padding:64px 22px}
-    .comparison-section h2,.faq-section h2{font-size:32px}
+    .faq-section h2{font-size:32px}
     .grid,.pricing,.trust-panel{grid-template-columns:1fr}
     .screens{grid-template-columns:repeat(2,1fr)}
     .eyebrow-tags .block-en,.eyebrow-tags .block-zh,.eyebrow-tags .block-hant{gap:8px}
     .tag{font-size:15px;padding:7px 14px}
     .monitor-table{overflow-x:auto}
     .monitor-matrix .monitor-table table{min-width:560px}
-    .comparison-table{overflow:visible;border:0;background:transparent;box-shadow:none}
-    .comparison-table table,.comparison-table tbody{display:block;width:100%}
-    .comparison-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-    .comparison-table tbody{display:grid;gap:18px}
-    .comparison-table tr{display:block;overflow:hidden;border:1px solid #dbe7f5;border-radius:16px;background:#fff;box-shadow:0 10px 28px rgba(15,23,42,.07)}
-    .comparison-table td{display:grid;grid-template-columns:minmax(130px,.34fr) 1fr;gap:18px;width:auto!important;padding:14px 18px;border-bottom:1px solid #e5edf7;background:#fff!important;font-size:14px}
-    .comparison-table td::before{content:attr(data-label);color:#0759bd;font-family:var(--mono);font-size:10px;font-weight:900;letter-spacing:.06em;text-transform:uppercase}
-    .comparison-table td:first-child{padding-top:18px;font-size:18px}
-    .comparison-table td:last-child{padding-bottom:18px;border-bottom:0;background:#f3f8ff!important}
-    .comparison-table .is-opshome{border:2px solid #60a5fa}
-    .comparison-table .is-opshome td{border-top:0;background:#eff6ff!important}
-    .comparison-table .is-opshome td:last-child{background:#dcecff!important}
     .trust-item{font-size:13px;padding:10px}
     .plan{padding:24px}
     .plan-cta{display:none!important}
@@ -457,9 +415,7 @@
     .download-cta-qr{display:none}
     .faq-item summary{padding:18px;font-size:15px}
     .faq-answer{padding:0 18px 18px;font-size:15px}
-    .comparison-section h2,.faq-section h2{font-size:28px}
-    .comparison-table td{grid-template-columns:1fr;gap:6px;padding:13px 16px}
-    .comparison-actions{align-items:stretch;flex-direction:column;text-align:center}
+    .faq-section h2{font-size:28px}
     footer{padding-top:46px;padding-bottom:46px}
     footer ul{grid-template-columns:1fr;text-align:center;gap:12px}
     footer a{justify-content:center;font-size:16px}
@@ -473,379 +429,158 @@
     h2{font-size:clamp(20px,6vw,36px)}
   }
 </style>
-<link rel="stylesheet" href="../assets/hero-carousel.css?v=20260620">
-<link rel="stylesheet" href="../assets/site-polish.css?v=20260621-conversion">
+<link rel="stylesheet" href="assets/product-page-v2.css?v=20260621-transparent-phone">
 </head>
 <body>
 <nav>
-  <a class="brand" href="/de/"><img src="../assets/images/brand-logo.png" alt="OpsHome NOC logo"><span>OpsHome <strong>NOC</strong><sup class="tm">™</sup></span></a>
+  <a class="brand" href="/"><img src="assets/images/brand-logo.png" alt="OpsHome NOC logo"><span>OpsHome <strong>NOC</strong><sup class="tm">™</sup></span></a>
   <ul class="navlinks">
     <li><a href="#features"><span>FUNKTIONEN</span></a></li>
     <li><a href="#protocols"><span>MONITORING</span></a></li>
     <li><a href="#pricing"><span>PREISE</span></a></li>
     <li><a href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener"><span>APP STORE</span></a></li>
-    <li><a href="https://docs.opshome.run/de/" target="_blank" rel="noopener"><span>DOCS</span></a></li>
+    <li><a href="https://docs.opshome.run/de/" target="_blank" rel="noopener"><span>DOKU</span></a></li>
   </ul>
   <div class="lang" aria-label="Sprache"><a href="/" lang="en">EN</a><a href="/zh/" lang="zh-Hans">简</a><a href="/zh-Hant/" lang="zh-Hant">繁</a><a href="/de/" class="active" lang="de">DE</a></div>
 </nav>
 
-<main>
-  <section class="hero noc-story-hero">
-    <div class="noc-carousel" data-hero-carousel data-duration="10000" role="region" aria-roledescription="Karussell" aria-label="OpsHome NOC Produktgeschichte" tabindex="0">
-      <div class="noc-carousel-topline"><div class="noc-carousel-store-group"><span class="noc-carousel-brand">OPSHOME NOC · DEINE PERSÖNLICHE NETZWERKLEITSTELLE</span><a class="noc-carousel-store-badge" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" aria-label="OpsHome NOC im App Store laden"><img src="../assets/images/app-store-badge.svg" alt="Im App Store laden"></a></div><a class="noc-carousel-release" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">V1.9 VERFÜGBAR</a></div>
-      <div class="noc-carousel-stage" aria-live="off">
-        <article class="noc-slide is-active" aria-label="1 von 5"><div class="noc-slide-copy"><span class="noc-slide-chapter">IPHONE-KONTROLLZENTRALE</span><h1>Dein Homelab. Auf einen Blick.</h1><p>Du bist unterwegs. Läuft zu Hause noch alles? OpsHome zeigt es dir auf einen Blick—ohne VPN, SSH oder Laptop.</p><div class="noc-slide-actions"><a class="noc-slide-cta" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">Im App Store ansehen</a><a class="noc-slide-docs" href="https://docs.opshome.run/de/" target="_blank" rel="noopener">Dokumentation lesen</a></div></div><div class="noc-slide-visual"><img src="../assets/images/hero-carousel/full-stack-20260620.webp" alt="OpsHome NOC Gesamtübersicht mit öffentlichen Diensten, Docker Probe, Proxmox, Linux, NAS, Containern und virtuellen Maschinen" width="1400" height="788" fetchpriority="high"></div></article>
-        <article class="noc-slide" aria-label="2 von 5" aria-hidden="true" inert><div class="noc-slide-copy"><span class="noc-slide-chapter">02 · PUBLIC SERVICES</span><h1>Halte öffentliche Dienste online</h1><p>Erkenne Ausfälle von Websites, Logins, SSL, Domains und APIs vor deinen Nutzern.</p><a class="noc-slide-cta" href="#protocols">Mehr erfahren</a></div><div class="noc-slide-visual"><img src="../assets/images/hero-carousel/public-services-20260620.webp" alt="Monitoring öffentlicher Homelab-Dienste, SSL, Domains, APIs, NAS, Mini-PC und Router" width="1400" height="788" loading="lazy"></div></article>
-        <article class="noc-slide" aria-label="3 von 5" aria-hidden="true" inert><div class="noc-slide-copy"><span class="noc-slide-chapter">03 · PRIVATE HOMELAB</span><h1>Sieh in dein privates Homelab</h1><p>Docker Probe zeigt interne Dienste und Assets ohne eingehende Portfreigaben.</p><a class="noc-slide-cta" href="#features">Mehr erfahren</a></div><div class="noc-slide-visual"><img src="../assets/images/hero-carousel/private-homelab-20260620.webp" alt="Privates Docker-Probe-Monitoring für Synology NAS, Proxmox, Ubuntu, Container und virtuelle Maschinen" width="1400" height="788" loading="lazy"></div></article>
-        <article class="noc-slide" aria-label="4 von 5" aria-hidden="true" inert><div class="noc-slide-copy"><span class="noc-slide-chapter">04 · VIRTUALISIERUNG</span><h1>Verstehe jede Virtualisierungsebene</h1><p>Verfolge Proxmox-Nodes, VM-Zustand, Ressourcendruck, Speicher und Warnungen gemeinsam.</p><a class="noc-slide-cta" href="#features">Assets ansehen</a></div><div class="noc-slide-visual"><img src="../assets/images/hero-carousel/virtualization-20260620.webp" alt="Proxmox-Monitoring mit Nodes, virtuellen Maschinen, CPU, Arbeitsspeicher, Speicher, Netzwerk und Warnungen" width="1400" height="788" loading="lazy"></div></article>
-        <article class="noc-slide" aria-label="5 von 5" aria-hidden="true" inert><div class="noc-slide-copy"><span class="noc-slide-chapter">05 · INFRASTRUKTUR</span><h1>Halte Kerninfrastruktur gesund</h1><p>Überwache NAS, Linux-Hosts, Container, Datenträger und dauerhafte Dienste vom iPhone.</p><a class="noc-slide-cta" href="#pricing">Jetzt starten</a></div><div class="noc-slide-visual"><img src="../assets/images/hero-carousel/infrastructure-20260620.webp" alt="Infrastruktur-Monitoring für NAS, Linux, Container, CPU, Arbeitsspeicher, Speicher, Datenträger und Dienste" width="1400" height="788" loading="lazy"></div></article>
+<main class="product-redesign">
+  <section class="pr-hero">
+    <div class="pr-inner">
+      <p class="pr-hero-kicker">OpsHome NOC · Deine persönliche Netzwerkleitstelle</p>
+      <h1>Dein Homelab. Nur einen Blick entfernt.</h1>
+      <p class="pr-hero-subtitle">Du bist unterwegs. Läuft zu Hause noch alles?<br>OpsHome zeigt es dir in Sekunden – ohne VPN, SSH oder Laptop.</p>
+      <div class="pr-actions">
+        <a class="pr-button pr-button-primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">Kostenlos im App Store laden</a>
+        <a class="pr-button pr-button-secondary" href="https://docs.opshome.run/de/" target="_blank" rel="noopener">Dokumentation lesen →</a>
       </div>
-      <div class="noc-carousel-controls"><button class="noc-carousel-arrow" type="button" data-carousel-previous aria-label="Vorherige Folie">&#8592;</button><div class="noc-carousel-progress" aria-label="Fortschritt"><button class="noc-progress-segment" type="button" aria-label="Zum Überblick" aria-current="step"><span class="noc-progress-track"><span class="noc-progress-fill"></span></span></button><button class="noc-progress-segment" type="button" aria-label="Zu öffentlichen Diensten"><span class="noc-progress-track"><span class="noc-progress-fill"></span></span></button><button class="noc-progress-segment" type="button" aria-label="Zum privaten Homelab"><span class="noc-progress-track"><span class="noc-progress-fill"></span></span></button><button class="noc-progress-segment" type="button" aria-label="Zur Virtualisierung"><span class="noc-progress-track"><span class="noc-progress-fill"></span></span></button><button class="noc-progress-segment" type="button" aria-label="Zur Infrastruktur"><span class="noc-progress-track"><span class="noc-progress-fill"></span></span></button></div><button class="noc-carousel-arrow" type="button" data-carousel-next aria-label="Nächste Folie">&#8594;</button></div>
+      <div class="pr-hero-visual"><img src="https://app.opshome.run/assets/images/hero-carousel/full-stack-20260620.webp" alt="OpsHome NOC Gesamtübersicht für das Homelab" width="1400" height="788" loading="lazy"></div>
     </div>
   </section>
 
-
-  <section class="section wide" id="screenshots" style="text-align:center">
-    <p class="label">Produktoberfläche</p>
-    <h2 style="font-size:clamp(20px,2.5vw,32px);margin-left:auto;margin-right:auto"><span>Entwickelt für die Art, wie Homelab-Nutzer ihren Status wirklich prüfen.</span></h2>
-    <p class="interface-intro">Aktuelle App-Oberflächen für Gesundheitsübersicht, Infrastrukturdiagnose, Topologie und Widgets—damit du das Produkt siehst, statt nur Funktionsversprechen zu lesen.</p>
-    <div class="trust-signals"><div class="trust-signal"><strong>NUR AUSGEHEND</strong><span>Keine eingehenden Ports oder offenen Admin-Oberflächen</span></div><div class="trust-signal"><strong>ETWA 1 MINUTE</strong><span>Private Docker-Probe-Abfrage mit Pro</span></div><div class="trust-signal"><strong>UNTERSTÜTZTE INFRASTRUKTUR</strong><span>Proxmox, Synology, Linux, Docker und VMs</span></div><div class="trust-signal"><strong>LAUFENDE PRÜFUNGEN</strong><span>Monitoring läuft bei geschlossener App weiter</span></div></div>
-    <div class="screens">
-      <div><div class="shot"><img src="../assets/images/showcase-home-20260620.webp" alt="OpsHome NOC Dashboard mit privatem Monitoring"></div><p class="shot-label"><span>Dashboard</span></p></div>
-      <div><div class="shot"><img src="../assets/images/showcase-assets-20260608.webp" alt="OpsHome NOC Arbeitsbereich für Synology- und Proxmox-VE-Assets"></div><p class="shot-label"><span>Assets</span></p></div>
-      <div><div class="shot"><img src="../assets/images/showcase-map-20260608.webp" alt="OpsHome NOC Topologiekarte"></div><p class="shot-label"><span>Topologiekarte</span></p></div>
-      <div><div class="shot"><img src="../assets/images/showcase-pve-20260608.webp" alt="OpsHome NOC Leistungs- und Arbeitsspeicherdetails für Proxmox VE"></div><p class="shot-label"><span>Proxmox VE</span></p></div>
-      <div><div class="shot"><img src="../assets/images/showcase-widgets-20260608.webp" alt="OpsHome NOC iOS-Widgets"></div><p class="shot-label"><span>Widgets</span></p></div>
+  <section class="pr-section" id="features">
+    <div class="pr-inner pr-feature">
+      <div class="pr-copy">
+        <p class="pr-eyebrow">Öffentliches Monitoring</p>
+        <h2>Erfahre sofort, wenn ein öffentlicher Dienst ausfällt</h2>
+        <p>OpsHome überwacht Websites, APIs, Anmeldeseiten, SSL-Zertifikate und Domains rund um die Uhr aus der Cloud. Du erhältst eine Push-Nachricht, bevor deine Nutzer den Fehler bemerken.</p>
+        <div class="pr-points">
+          <div class="pr-point"><span class="pr-point-icon">⚡</span><span>HTTP, HTTPS, TCP, ICMP, SSL, DNS, Domain, UDP</span></div>
+          <div class="pr-point"><span class="pr-point-icon">🕐</span><span>Mit Pro Prüfintervalle ab 5 Minuten</span></div>
+          <div class="pr-point"><span class="pr-point-icon">🔔</span><span>Push-Alarme + Telegram-Benachrichtigungen</span></div>
+        </div>
+      </div>
+      <div class="pr-media"><img src="https://app.opshome.run/assets/images/hero-carousel/public-services-20260620.webp" alt="Öffentliches Monitoring für Websites, APIs, SSL und Domains" width="1400" height="788" loading="lazy"></div>
     </div>
   </section>
 
-
-  <section class="section" style="padding-top:0;padding-bottom:64px;text-align:center">
-    <p class="label">Produktübersicht</p>
-    <p class="video-intro">Keine Lust zu lesen? Sieh dir in 2 Minuten an, was OpsHome kann.</p>
-    <div class="video-showcase">
-      <div class="video-stage"><div class="video-frame"><iframe id="product-video" src="about:blank" title="OpsHome NOC Product Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
-      <aside class="video-playlist" aria-label="Produktvideo-Wiedergabeliste">
-        <div class="video-playlist-head"><strong>PRODUKTVIDEOS</strong><span>Das nächste Video startet automatisch.</span></div>
-        <div class="video-list">
-          <button class="video-item active" type="button" data-youtube-id="UzBklGOy-Vk" data-bilibili-src="https://player.bilibili.com/player.html?bvid=BV15F7969ExB&amp;page=1" data-title="OpsHome NOC ? Privates Monitoring &amp; Infrastruktur"><span class="video-thumb"><img src="../assets/images/video-v15.jpg" alt="" loading="lazy"></span><span><span class="video-item-title">Privates Monitoring &amp; Infrastruktur</span></span></button>
-          <button class="video-item" type="button" data-youtube-id="CgJefIYKkr8" data-bilibili-src="https://player.bilibili.com/player.html?bvid=BV1MHJP6VEjP&amp;page=1" data-title="OpsHome NOC ? Synology, Container &amp; Trends"><span class="video-thumb"><img src="../assets/images/video-v17.jpg" alt="" loading="lazy"></span><span><span class="video-item-title">Synology, Container &amp; Trends</span></span></button>
-          <button class="video-item" type="button" data-youtube-id="pMgMqtMeOd4" data-bilibili-src="https://player.bilibili.com/player.html?bvid=BV1b5Et6GE8F&amp;page=1" data-title="OpsHome NOC ? Gesundheitsübersicht &amp; Assets"><span class="video-thumb"><img src="../assets/images/video-v16.jpg" alt="" loading="lazy"></span><span><span class="video-item-title">Gesundheitsübersicht &amp; Assets</span></span></button>
-          <button class="video-item" type="button" data-youtube-id="iwlJucCTJLE" data-bilibili-src="https://player.bilibili.com/player.html?bvid=BV19iGE6CE62&amp;page=1" data-title="OpsHome NOC ? Arbeitsbereich, Topologie &amp; Widgets"><span class="video-thumb"><img src="../assets/images/video-v14.jpg" alt="" loading="lazy"></span><span><span class="video-item-title">Arbeitsbereich, Topologie &amp; Widgets</span></span></button>
-          <button class="video-item" type="button" data-youtube-id="TlYqvQlFEjo" data-bilibili-src="https://player.bilibili.com/player.html?bvid=BV1v8L26AEZE&amp;page=1" data-title="OpsHome NOC ? Statusseiten &amp; Dashboard"><span class="video-thumb"><img src="../assets/images/video-v13.jpg" alt="" loading="lazy"></span><span><span class="video-item-title">Statusseiten &amp; Dashboard</span></span></button>
+  <section class="pr-section pr-alt" id="protocols">
+    <div class="pr-inner pr-feature pr-reverse">
+      <div class="pr-copy">
+        <p class="pr-eyebrow">Privates Netzwerk · Docker Probe</p>
+        <h2>Sieh in dein privates Homelab<br>ohne einen einzigen Port zu öffnen</h2>
+        <p>Ein Docker-Befehl auf deinem Server genügt. Der Probe verbindet sich ausschließlich ausgehend mit OpsHome Cloud – dein Heimnetz bleibt für das Internet unsichtbar, für dich aber vollständig sichtbar.</p>
+        <pre class="pr-code"><code>docker run -d opshome/probe:latest \
+  -e TOKEN=your_probe_token</code></pre>
+        <p class="pr-code-note">Dauert etwa 2 Minuten. Keine Portweiterleitung erforderlich.</p>
+        <div class="pr-points">
+          <div class="pr-point"><span class="pr-point-icon">🔒</span><span>Nur ausgehend – keine eingehende Freigabe</span></div>
+          <div class="pr-point"><span class="pr-point-icon">🐳</span><span>Überwacht Docker-Container, NAS-Oberflächen und interne HTTP/HTTPS/TCP-Dienste</span></div>
+          <div class="pr-point"><span class="pr-point-icon">⏱</span><span>Mit Pro etwa 1 Minute Prüfintervall</span></div>
         </div>
-      </aside>
+        <a class="pr-text-link" href="https://docs.opshome.run/de/docker-probe-linux.html" target="_blank" rel="noopener">→ Docker-Probe-Bereitstellungsanleitung ansehen</a>
+      </div>
+      <div class="pr-media"><img src="https://app.opshome.run/assets/images/hero-carousel/private-homelab-20260620.webp" alt="Privates Homelab-Monitoring mit Docker Probe" width="1400" height="788" loading="lazy"></div>
     </div>
   </section>
 
-
-  <section class="section" id="features" style="text-align:center">
-    <p class="label">Kernfunktionen</p>
-    <h2 style="font-size:clamp(20px,2.5vw,32px);margin-left:auto;margin-right:auto"><span>Die iPhone-First-Steuerzentrale für dein Homelab.</span></h2>
-    <p class="desc" style="margin-left:auto;margin-right:auto"><span>OpsHome NOC verbindet öffentliches Monitoring, Einblick in private Netzwerke, Infrastrukturintegrationen und verständliche Statusfreigaben für NAS, Docker, Homelabs und kleine Produktionsumgebungen.</span></p>
-
-    <div class="feature-group">
-      <p class="feature-group-label"><span>Privates Netzwerk</span></p>
-      <div class="grid">
-        <div class="card" style="border-top-color:#16a34a"><div class="icon" style="background:#f0fdf4"><svg viewBox="0 0 24 24" style="stroke:#16a34a"><rect x="3" y="4" width="18" height="14" rx="2"></rect><path d="M7 20h10"></path><path d="M9 8h6"></path><path d="M9 12h3"></path></svg></div><h3><span>Privates Monitoring</span></h3><p><span>Überwache NAS-Oberflächen, Docker-Dienste und interne HTTP-, HTTPS- und TCP-Ziele, ohne dein Heimnetz zu öffnen.</span></p></div>
-        <div class="card" style="border-top-color:#16a34a"><div class="icon" style="background:#f0fdf4"><svg viewBox="0 0 24 24" style="stroke:#16a34a"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8"></path><path d="M12 17v4"></path><path d="M7 7h.01"></path><path d="M11 7h6"></path><path d="M7 11h.01"></path><path d="M11 11h6"></path></svg></div><h3><span>Infrastruktur-Assets</span></h3><p><span>Synology NAS, Docker-Container und Proxmox VE: CPU, Arbeitsspeicher, Festplatten-I/O, Temperatur und Containerstatus ohne Veröffentlichung der Verwaltungsoberflächen.</span></p></div>
-        <div class="card" style="border-top-color:#7c3aed"><div class="icon" style="background:#f5f3ff"><svg viewBox="0 0 24 24" style="stroke:#7c3aed"><circle cx="12" cy="5" r="2"></circle><circle cx="6" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle><path d="M12 7v4"></path><path d="M12 11 6 16"></path><path d="M12 11l6 5"></path></svg></div><h3><span>Topologiekarte</span></h3><p><span>Eine visuelle Karte von der Cloud bis zu privaten Netzwerken zeigt, wo jeder Dienst läuft und wie er überwacht wird.</span></p></div>
+  <section class="pr-section">
+    <div class="pr-inner pr-feature">
+      <div class="pr-copy">
+        <p class="pr-eyebrow">Infrastruktur-Assets</p>
+        <h2>Proxmox, Synology, Linux und Docker<br>an einem Ort</h2>
+        <p>Mehr als reine Verfügbarkeitsprüfungen: OpsHome zeigt CPU-Last, Arbeitsspeicher, Datenträgerzustand, VM- und Containerstatus sowie Temperaturen deiner echten Infrastruktur – ohne zusätzlichen Dashboard-Stack.</p>
+        <div class="pr-points">
+          <div class="pr-point"><span class="pr-point-icon">🖥</span><span>Proxmox VE – Nodes, VMs, Speicher und Alarme</span></div>
+          <div class="pr-point"><span class="pr-point-icon">🗄</span><span>Synology NAS – Volumes, Pakete und Temperaturen</span></div>
+          <div class="pr-point"><span class="pr-point-icon">🐧</span><span>Linux-Hosts – CPU, Arbeitsspeicher, Datenträger und Dienste</span></div>
+          <div class="pr-point"><span class="pr-point-icon">🐳</span><span>Docker – Containerzustand und Ressourcennutzung</span></div>
+        </div>
       </div>
+      <figure class="pr-media"><img src="https://app.opshome.run/assets/images/hero-carousel/virtualization-20260620.webp" alt="Proxmox-VE-Nodes, virtuelle Maschinen, Ressourcen und Alarme" width="1400" height="788" loading="lazy"><figcaption>Proxmox-VE-Integration – Nodes, VMs, Ressourcen und Alarme auf einen Blick</figcaption></figure>
     </div>
+  </section>
 
-    <div class="feature-group">
-      <p class="feature-group-label"><span>Öffentliches Monitoring</span></p>
-      <div class="grid grid-2">
-        <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path><path d="M8 5v14"></path></svg></div><h3><span>Monitoring-Arbeitsbereich</span></h3><p><span>Die Ansichten All, Dock, Map und Tags trennen öffentliche Prüfungen vom privaten Netzwerk-Monitoring.</span></p></div>
-        <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg></div><h3><span>Alarme &amp; Analyse</span></h3><p><span>Push-Alarme, Telegram, Vorfallverlauf, Uptime-Blöcke, SSL- und Domainrisiken sowie verständliche Analysen helfen dir, schnell zu reagieren.</span></p></div>
-      </div>
-    </div>
-
-    <div class="feature-group">
-      <p class="feature-group-label"><span>Visualisierung &amp; Freigabe</span></p>
-      <div class="grid grid-2">
-        <div class="card"><div class="icon" style="background:#fff7ed"><svg viewBox="0 0 24 24" style="stroke:#ea580c"><rect x="5" y="3" width="14" height="18" rx="3"></rect><path d="M9 7h6"></path><path d="M9 11h6"></path><path d="M9 15h3"></path></svg></div><h3><span>iOS-Widgets</span></h3><p><span>Widgets für Home- und Sperrbildschirm zeigen den Homelab-Status, ohne dass du die App öffnen musst.</span></p></div>
-        <div class="card"><div class="icon" style="background:#f0fdf4"><svg viewBox="0 0 24 24" style="stroke:#16a34a"><path d="M4 6h16v12H4z"></path><path d="M8 10h8"></path><path d="M8 14h5"></path></svg></div><h3><span>Statusseiten</span></h3><p><span>Teile den Status öffentlicher Dienste mit Zugangscodes, Ablaufzeiten, QR-Verifizierung und Maskierung privater Ziele.</span></p></div>
+  <section class="pr-section pr-center pr-alt">
+    <div class="pr-inner">
+      <p class="pr-eyebrow">Alarme &amp; Verlauf</p>
+      <h2>Schnelle Alarme. Klarer Verlauf. Einfaches Teilen.</h2>
+      <p class="pr-lead">Bei einem Ausfall informiert dich OpsHome sofort. Nach der Wiederherstellung siehst du genau, wie lange der Dienst nicht verfügbar war.</p>
+      <img class="pr-wide-image" src="assets/images/noc-pic.png" alt="OpsHome NOC Homelab-Zustand auf dem iPhone" width="1370" height="2732" loading="lazy">
+      <div class="pr-cards">
+        <article class="pr-card"><span class="pr-card-icon">🔔</span><h3>Push- &amp; Telegram-Alarme</h3><p>Sofortige iOS-Push-Nachrichten und Telegram-Meldungen bei Ausfall oder Wiederherstellung. Erinnerungen an SSL- und Domain-Ablauf helfen, Zertifikatsprobleme rechtzeitig zu vermeiden.</p></article>
+        <article class="pr-card"><span class="pr-card-icon">📋</span><h3>Statusseiten zum Teilen</h3><p>Erstelle eine öffentliche Statusseite für Teams oder Nutzer. Schütze sie mit Zugangscode, lege eine Laufzeit fest und verifiziere sie per QR-Code. Private Ziele bleiben verborgen.</p></article>
       </div>
     </div>
   </section>
 
-  <section class="section monitor-matrix" id="protocols" style="text-align:center">
-    <p class="label">Monitoring-Umfang</p>
-    <h2 style="font-size:clamp(20px,2.5vw,32px);margin-left:auto;margin-right:auto"><span>Monitoring-Typen und Tarifzugriff.</span></h2>
-    <div class="monitor-table" style="max-width:860px;margin-left:auto;margin-right:auto">
-      <table>
-        <colgroup><col style="width:14%"><col style="width:58%"><col style="width:14%"><col style="width:14%"></colgroup>
-        <thead><tr><th><span>Type</span></th><th><span>Beschreibung</span></th><th style="text-align:center">FREE</th><th style="text-align:center">PRO</th></tr></thead>
-        <tbody>
-          <tr class="group-row"><td colspan="4"><span>Cloud-Monitoring</span></td></tr>
-          <tr><td>HTTP</td><td><span>Erkennung von HTTP-Statuscodes und Analysehinweise.</span></td><td style="text-align:center;color:#16a34a;font-size:20px;font-weight:700">✓</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
-          <tr><td>HTTPS</td><td><span>HTTPS-Erreichbarkeit und Erkennung von Statuscodes.</span></td><td style="text-align:center;color:#16a34a;font-size:20px;font-weight:700">✓</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
-          <tr><td>TCP</td><td><span>Verbindungsprüfung benutzerdefinierter Ports ohne feste Portbeschränkung.</span></td><td style="text-align:center;color:#16a34a;font-size:20px;font-weight:700">✓</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
-          <tr><td>ICMP</td><td><span>Host-Erreichbarkeit per Ping.</span></td><td style="text-align:center;color:#16a34a;font-size:20px;font-weight:700">✓</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
-          <tr class="group-row"><td colspan="4"><span>Sicherheit &amp; Domain</span></td></tr>
-          <tr><td>SSL</td><td><span>Prüfung von Zertifikatsgültigkeit, CN, Aussteller und Hostnamenübereinstimmung.</span></td><td style="text-align:center;color:#16a34a;font-size:20px;font-weight:700">✓</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
-          <tr><td>DNS</td><td><span>DNS-Antwortprüfung und Validierung von A- und MX-Einträgen.</span></td><td style="text-align:center;color:var(--muted);font-size:18px">—</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
-          <tr><td><span>Domain</span></td><td><span>Überwachung des Ablaufs von Domainregistrierungen.</span></td><td style="text-align:center;color:var(--muted);font-size:18px">—</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
-          <tr><td>UDP</td><td><span>UDP-Antwortprüfungen für unterstützte Payloads.</span></td><td style="text-align:center;color:var(--muted);font-size:18px">—</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
-          <tr class="group-row"><td colspan="4"><span>Privates Netzwerk</span></td></tr>
-          <tr><td><span>Privates Monitoring</span></td><td><span>Private Docker-, NAS- und interne HTTP-, HTTPS- und TCP-Prüfungen ohne eingehenden Zugriff offenzulegen.</span></td><td style="text-align:center;color:var(--muted);font-size:18px">—</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
-        </tbody>
-      </table>
+  <section class="pr-section pr-center" id="pricing">
+    <div class="pr-inner">
+      <p class="pr-eyebrow">Tarife</p>
+      <h2>Kostenlos starten. Bei Bedarf upgraden.</h2>
+      <p class="pr-lead">Keine Kreditkarte erforderlich. Der endgültige Preis wird vor dem Kauf im App Store bestätigt.</p>
+      <div class="pr-pricing">
+        <article class="pr-plan">
+          <p class="pr-plan-name">Free</p><p class="pr-plan-price">$0</p><p class="pr-plan-subline">Kein Abonnement erforderlich</p>
+          <ul><li>✓ 30 öffentliche Monitoring-Ziele</li><li>✓ HTTP / HTTPS / TCP / SSL / ICMP</li><li>✓ 1 öffentliche Statusseite</li><li>✓ Widgets für Home- und Sperrbildschirm</li><li>✓ Push-Alarme · SSL-Ablauferinnerungen</li><li>✓ Visuelles Monitoring-Dashboard</li></ul>
+          <p class="pr-plan-footnote">ℹ Privates Monitoring und Docker Probe erfordern Pro.</p>
+          <a class="pr-button pr-button-primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">Kostenlos laden</a>
+        </article>
+        <article class="pr-plan pr-plan-pro">
+          <span class="pr-plan-badge">Am beliebtesten</span><p class="pr-plan-name">Pro</p><p class="pr-plan-price">$2.99 / Monat</p><p class="pr-plan-subline">oder $24.99 / Jahr · Bestes Angebot<br>Für anspruchsvolle Homelab-Enthusiasten</p>
+          <ul><li>✓ 100 öffentliche Monitoring-Ziele</li><li>✓ Alle Monitoring-Typen einschließlich UDP, DNS und Domain</li><li>✓ 5 Docker-Probe-Geräte · 50 private Ziele</li><li>✓ Unbegrenzte Containeranzahl pro Synology Docker Probe</li><li>✓ Privates Prüfintervall etwa 1 Minute</li><li>✓ Proxmox VE + private Synology-Integrationen</li><li>✓ Öffentliches Prüfintervall ab 5 Minuten</li><li>✓ 3 öffentliche Statusseiten + Zugangscodes + QR</li><li>✓ Push- + Telegram-Alarme</li><li>✓ Vollständige Analyseberichte</li></ul>
+          <a class="pr-button pr-button-primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">Pro laden</a>
+        </article>
+      </div>
+      <p class="pr-founder"><strong>Vorteil für frühe Unterstützer</strong> – Berechtigte frühe Konten erhalten dauerhaft die Founder-Kennzeichnung mit 1 berechtigten Synology Docker Probe, unbegrenzter Containeranzahl auf diesem Probe und 2 privaten Monitoren – auch nach Ablauf von Pro. <a href="https://docs.opshome.run/de/free-vs-pro.html" target="_blank" rel="noopener">Vollständige Leistungstabelle ansehen →</a></p>
     </div>
   </section>
 
-  <section class="comparison-section" id="comparison">
-    <p class="label">Warum OpsHome</p><h2>Für Homelab-Transparenz entwickelt</h2>
-    <p class="comparison-intro">OpsHome NOC vereint öffentliche Prüfungen, private Docker-Probe-Assets, NAS, Proxmox, Linux-Hosts, Container, VMs und Ressourcenzustand in einer Mobile-First-Ansicht.</p>
-    <div class="comparison-table"><table><thead><tr><th>Tool</th><th>Was es gut kann</th><th>Wo es im Homelab an Grenzen stößt</th></tr></thead><tbody>
-<tr><td data-label="Tool">UptimeRobot</td><td data-label="Was es gut kann">Zeigt, ob ein öffentlicher Dienst erreichbar ist.</td><td data-label="Wo es an Grenzen stößt">Zeigt nicht, was im privaten Netzwerk geschieht.</td></tr>
-<tr><td data-label="Tool">Uptime Kuma</td><td data-label="Was es gut kann">Flexibel, selbst gehostet und mit aktiver Community.</td><td data-label="Wo es an Grenzen stößt">Mobile Abläufe und Infrastruktur-Assets stehen nicht im Mittelpunkt.</td></tr>
-<tr><td data-label="Tool">Netdata</td><td data-label="Was es gut kann">Äußerst detaillierte Metriken für einzelne Hosts.</td><td data-label="Wo es an Grenzen stößt">Zu viele Informationen für einen schnellen Gesundheitscheck.</td></tr>
-<tr><td data-label="Tool">Prometheus / Grafana</td><td data-label="Was es gut kann">Leistungsfähiger Observability-Stack auf Enterprise-Niveau.</td><td data-label="Wo es an Grenzen stößt">Benötigt laufende Einrichtung und Wartung; nicht auf Homelab-Einfachheit ausgelegt.</td></tr>
-</tbody></table></div>    <p class="comparison-note">OpsHome NOC liegt zwischen einfachem Uptime-Check und vollständigem Observability-Stack: öffentlicher Status plus private Homelab-Sicht auf dem iPhone, ohne Dashboards zu warten.</p>
-    <div class="comparison-actions"><a class="comparison-primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">Homelab-Monitoring starten</a><a class="comparison-secondary" href="https://docs.opshome.run/docker-probe-linux.html" target="_blank" rel="noopener">So funktioniert Docker Probe</a></div>
-  </section>
-
-  <section class="section" id="pricing" style="text-align:center">
-    <p class="label">Tarife</p>
-    <h2 style="font-size:clamp(20px,2.5vw,32px);margin-left:auto;margin-right:auto"><span>Kostenlos starten. Bei Bedarf upgraden.</span></h2>
-    <p class="desc" style="margin-left:auto;margin-right:auto"><span>Starte kostenlos und ohne Kreditkarte. Wechsle zu Pro, wenn du mehr öffentliche Monitore, privates Netzwerk-Monitoring, Infrastrukturintegrationen und erweiterte Einblicke benötigst.</span></p>
-    <div class="pricing" style="text-align:left">
-      <div class="plan free" style="background:linear-gradient(180deg,#92D050 0%,#6ABB65 100%)">
-        <p class="plan-name"><span style="display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:#15803d;color:#fff;font-size:13px;font-weight:900;letter-spacing:.1em">FREE</span></p>
-        <p class="plan-price"><span>Free</span></p>
-        <p class="plan-note"><span>Kein Abonnement erforderlich.</span></p>
-        <ul>
-          <li><span><strong>30</strong> öffentliche Monitoring-Ziele</span></li>
-          <li>HTTP / HTTPS / TCP / SSL / ICMP</li>
-          <li><span><strong>1</strong> öffentliche Statusseite</span></li>
-          <li><span><strong>10</strong> Monitore pro Statusseite</span></li>
-          <li><span>Fester Statusseitentitel · Freigabe bis zu <strong>6 Monaten</strong></span></li>
-          <li><span>Widgets für Home- und Sperrbildschirm</span></li>
-          <li><span><strong>Synology</strong> Öffentliche DSM-Asset-Erfassung</span></li>
-          <li><span>Mindestintervall für öffentliches Monitoring: <strong>10 Minuten</strong></span></li>
-          <li><span>Push-Alarme · SSL-Ablauferinnerungen</span></li>
-          <li><span>Basic <strong>Analyseberichte</strong> — Assets · Speicher · CPU / RAM</span></li>
-          <li><span>Visuelles Monitoring-Dashboard</span></li>
-        </ul>
-        <p class="plan-footnote">ⓘ Privates Monitoring und Docker Probe erfordern Pro.</p>
-        <div class="plan-cta" style="position:absolute;bottom:24px;right:24px;display:flex;align-items:center;gap:14px">
-          <p style="margin:0;font-size:12px;font-weight:600;color:#fff;opacity:.85"><span>Ideal für den Einstieg</span></p>
-          <a class="btn primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" style="display:inline-block;background:#fff;color:var(--accent);border-color:#fff;white-space:nowrap"><span>Kostenlos laden</span></a>
-        </div>
+  <section class="pr-section pr-center pr-alt">
+    <div class="pr-inner">
+      <p class="pr-eyebrow">FAQ</p><h2>Häufig gestellte Fragen</h2>
+      <div class="pr-faq">
+        <details><summary>Was ist der Unterschied zwischen Free und Pro?</summary><div class="pr-faq-answer">Free umfasst bis zu 30 öffentliche Monitoring-Ziele, eine öffentliche Statusseite, Widgets und Push-Alarme. Pro erhöht die Limits und ergänzt privates Docker-Probe-Monitoring, private Infrastrukturintegrationen, Telegram und erweiterte Berichte.</div></details>
+        <details><summary>Ist Docker Probe sicher?</summary><div class="pr-faq-answer">Docker Probe verbindet sich ausschließlich ausgehend und nimmt keine eingehenden Anfragen an. Er erreicht nur ausdrücklich konfigurierte Dienste im Docker-Netzwerk. Prüfe vor der Installation den veröffentlichten Bereitstellungsbefehl.</div></details>
+        <details><summary>Ist Docker Probe schwierig zu installieren?</summary><div class="pr-faq-answer">Führe den bereitgestellten Docker-Befehl aus und gib das Token aus OpsHome ein. Mit Docker-Grundkenntnissen ist die Einrichtung meist in wenigen Minuten erledigt. <a href="https://docs.opshome.run/de/docker-probe-linux.html" target="_blank" rel="noopener">Bereitstellungsanleitung ansehen.</a></div></details>
+        <details><summary>Läuft das Monitoring bei geschlossener iPhone-App weiter?</summary><div class="pr-faq-answer">Ja. Die Prüfungen laufen über OpsHome Cloud oder Docker Probe weiter. Die iPhone-App dient zum Anzeigen von Status, Berichten und Benachrichtigungen.</div></details>
+        <details><summary>Wie werden Monitoring-Daten übertragen?</summary><div class="pr-faq-answer">Docker Probe sendet unterstützte Dienststatus- und Infrastrukturmetriken über eine verschlüsselte HTTPS-Verbindung an die OpsHome Cloud API.</div></details>
+        <details><summary>Sind meine Daten sicher und wo werden sie gespeichert?</summary><div class="pr-faq-answer">Monitoring-Status und unterstützte Infrastrukturmetriken werden durch gehostete OpsHome-Cloud-Infrastruktur und Datenbankanbieter verarbeitet. OpsHome benötigt keine NAS-Dateien, Dokumente, Fotos oder Zahlungskartendaten.</div></details>
+        <details><summary>Kann ich mein Pro-Abonnement jederzeit kündigen?</summary><div class="pr-faq-answer">Ja. Verwalte oder kündige das Abonnement in den Apple-ID-Abonnementeinstellungen. Pro bleibt bis zum Ende des bezahlten Abrechnungszeitraums verfügbar.</div></details>
+        <details><summary>Warum wird der endgültige Preis im App Store bestätigt?</summary><div class="pr-faq-answer">Apple zeigt vor dem Kauf lokale Währung, Steuern, verfügbare Angebote, Testzeiträume und die endgültige Zahlungsbestätigung. OpsHome erhält oder speichert keine Zahlungskartendaten.</div></details>
+        <details><summary>Kann ich OpsHome auf mehreren Geräten oder mit Familienfreigabe verwenden?</summary><div class="pr-faq-answer">Du kannst auf einem anderen unterstützten Gerät dasselbe „Mit Apple anmelden“-Konto verwenden und einen aktiven Pro-Kauf wiederherstellen. Familienfreigabe ist derzeit nicht im veröffentlichten Leistungsumfang enthalten.</div></details>
+        <details><summary>Reicht ein Prüfintervall von einer Minute?</summary><div class="pr-faq-answer">Für die meisten Homelabs reicht es, einen Ausfall innerhalb einer Minute zu erkennen. Mit Pro prüft Docker Probe private Dienste etwa jede Minute, öffentliches Monitoring frühestens alle 5 Minuten. Für sekundengenaue Alarme produktionskritischer Dienste ist ein spezialisiertes lokales Alarmsystem erforderlich.</div></details>
+        <details><summary>Was passiert, wenn OpsHome Cloud selbst ausfällt?</summary><div class="pr-faq-answer">Öffentliches Cloud-Monitoring würde pausieren und Docker-Probe-Heartbeats erreichten die Cloud nicht mehr. Wir überwachen unsere Infrastruktur, veröffentlichen aber kein formales SLA. Nutze für kritische Dienste zusätzlich einen unabhängigen Alarmweg.</div></details>
       </div>
-      <div class="plan pro">
-        <p class="plan-name"><span style="display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:#f59e0b;color:#0b1b2e;font-size:16px;font-weight:900;letter-spacing:.1em;text-shadow:0 1px 3px rgba(255,255,255,.3)">PRO</span></p>
-        <p class="plan-price" style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:22px;white-space:nowrap">
-          <span style="font-size:30px"><span>Monatlich oder jährlich</span></span>
-          <span style="text-align:right;font-size:14px;line-height:1.6;opacity:.85">
-            <span style="display:block">$2.99 / <span>Monat</span></span>
-            <span style="display:block">$24.99 / <span>Jahr</span> <span style="font-size:11px;background:#f59e0b;color:#0b1b2e;font-weight:800;padding:1px 6px;border-radius:999px"><span>BESTES ANGEBOT</span></span></span>
-          </span>
-        </p>
-        <p class="plan-note"><span>Der endgültige Preis wird vor dem Kauf im App Store angezeigt.</span></p>
-        <ul>
-          <li><span><strong>100</strong> öffentliche Monitoring-Ziele</span></li>
-          <li><span>Alle Monitoring-Typen einschließlich <strong>UDP, DNS, Domain</strong></span></li>
-          <li><span><strong>3</strong> öffentliche Statusseiten</span></li>
-          <li><span><strong>20</strong> Monitore pro Statusseite</span></li>
-          <li><span>Eigener Statusseitentitel · dauerhafte Freigabe</span></li>
-          <li><span>Statusseiten-Zugangscode und QR-Verifizierung</span></li>
-          <li><span>Widgets für Home- und Sperrbildschirm</span></li>
-          <li><span><strong>5</strong> Docker-Probe-Geräte · <strong>50</strong> private Monitoring-Ziele</span></li>
-          <li><span>Docker-Probe-Abfrage im privaten Netz ca. <strong>1 Minute</strong></span></li>
-          <li><span>Öffentliche/private Synology-Erfassung + Proxmox-Infrastrukturintegrationen</span></li>
-          <li><span>Mindestintervall für öffentliches Monitoring: <strong>5 Minuten</strong></span></li>
-          <li><span>Push- + <strong>Telegram</strong>-Alarme · SSL-/Domain-Ablauferinnerungen</span></li>
-          <li><span>Vollständige <strong>Analyseberichte</strong> — Assets · Speicher · CPU / RAM</span></li>
-          <li><span>Erweitertes visuelles Monitoring-Dashboard</span></li>
-        </ul>
-        <div class="plan-cta" style="position:absolute;bottom:24px;right:24px;display:flex;align-items:center;gap:14px">
-          <p style="margin:0;font-size:12px;font-weight:600;color:rgba(255,255,255,.7)"><span>Für anspruchsvolle Homelab-Enthusiasten</span></p>
-          <a class="btn primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" style="white-space:nowrap"><span>Pro laden</span></a>
-        </div>
-      </div>
-    </div>
-    <div class="founder-spotlight">
-      <div class="founder-head"><div class="founder-title"><div><span class="founder-kicker">VORTEIL FÜR FRÜHE UNTERSTÜTZER</span><h3>Ein dauerhaftes Dankeschön an berechtigte frühe Nutzer</h3></div></div><span class="founder-permanent">FOUNDER-IDENTITÄT</span></div>
-      <div class="founder-benefits"><div class="founder-benefit"><strong>1</strong><span>Berechtigter Synology Docker Probe</span></div><div class="founder-benefit"><strong>2</strong><span>Berechtigte private HTTP-, HTTPS- oder TCP-Monitore</span></div><div class="founder-benefit"><strong>Dauerhaft</strong><span>Founder-Kennzeichnung und Kontingent bleiben nach Pro-Ablauf erhalten</span></div></div>
-      <p class="founder-note">Founder ist eine dauerhafte Kontokennzeichnung für berechtigte frühe Konten. Sie erweitert Free und ist kein dritter Abonnementtarif. <a href="https://docs.opshome.run/de/free-vs-pro.html" target="_blank" rel="noopener">Vollständige Leistungstabelle anzeigen.</a></p>
     </div>
   </section>
 
-  <section class="faq-section" id="faq">
-    <p class="label">FAQ</p>
-    <h2>
-      <span>Häufig gestellte Fragen.</span>
-      
-      
-    </h2>
-    <p class="faq-intro">
-      <span>Klare Antworten zu Sicherheit, Datenübertragung, Tarifen und unterstützter Infrastruktur.</span>
-      
-      
-    </p>
-    <div class="faq-list">
-      <details class="faq-item">
-        <summary>
-          <span>Was ist der wichtigste Unterschied zwischen Free und Pro?</span>
-          
-          
-        </summary>
-        <div class="faq-answer">
-          <span>Regular Free ist für öffentliches Monitoring ausgelegt und umfasst bis zu <strong>30 öffentliche Monitoring-Ziele</strong>. Pro erhöht das öffentliche Limit und ergänzt privates Monitoring über Docker Probe, private Infrastrukturintegrationen sowie bis zu <strong>5 Docker-Probe-Geräten und 50 privaten Monitoring-Zielen</strong>.</span>
-          
-          
-        </div>
-      </details>
-      <details class="faq-item">
-        <summary>
-          <span>Kann ich mein Pro-Abonnement jederzeit kündigen?</span>
-          
-          
-        </summary>
-        <div class="faq-answer">
-          <span><strong>Ja.</strong> Du kannst jederzeit über die Apple-ID-Abonnementeinstellungen kündigen. Pro bleibt bis zum Ende des bereits bezahlten Abrechnungszeitraums verfügbar. Das Löschen der App oder deines OpsHome-Kontos beendet das App-Store-Abonnement nicht.</span>
-          
-          
-        </div>
-      </details>
-      <details class="faq-item">
-        <summary>
-          <span>Ist Docker Probe schwierig zu installieren?</span>
-          
-          
-        </summary>
-        <div class="faq-answer">
-          <span>Folge der Dokumentation und führe die angegebenen Docker-Befehle aus. Wer mit den Grundlagen von Docker vertraut ist, kann die Installation meist in <strong>wenigen Minuten</strong>.</span>
-          
-          
-          <a class="faq-link" href="https://docs.opshome.run/docker-probe-linux.html" target="_blank" rel="noopener">Bereitstellungsanleitung und Video ansehen</a>
-          
-          
-        </div>
-      </details>
-      <details class="faq-item">
-        <summary>
-          <span>Sind meine Daten sicher und wo werden sie gespeichert?</span>
-          
-          
-        </summary>
-        <div class="faq-answer">
-          <span>Unterstützte Monitoring-Status- und Infrastrukturmetriken werden über <strong>verschlüsseltes HTTPS</strong> übertragen und durch gehostete OpsHome-Cloud-Infrastruktur und Datenbankanbieter verarbeitet. OpsHome verlangt keinen Upload von NAS-Dateien, Dokumenten, Fotos oder Zahlungskartendaten.</span>
-          
-          
-        </div>
-      </details>
-      <details class="faq-item">
-        <summary>
-          <span>Warum wird der endgültige Abonnementpreis im App Store bestätigt?</span>
-          
-          
-        </summary>
-        <div class="faq-answer">
-          <span>Apple zeigt vor dem Kauf die endgültige lokale Währung, Steuern, verfügbare Angebote, Testzeiträume und Zahlungsbestätigung für deine App-Store-Region. OpsHome erhält oder speichert keine Zahlungskartendaten.</span>
-          
-          
-        </div>
-      </details>
-      <details class="faq-item">
-        <summary>
-          <span>Kann ich OpsHome auf mehreren Geräten oder mit der Familienfreigabe verwenden?</span>
-          
-          
-        </summary>
-        <div class="faq-answer">
-          <span>Du kannst dich auf einem anderen unterstützten Gerät mit demselben <strong>„Mit Apple anmelden“-Account</strong> anmelden und einen aktiven Pro-Kauf bei Bedarf wiederherstellen. Die Familienfreigabe ist derzeit nicht im veröffentlichten OpsHome-Leistungsumfang enthalten.</span>
-          
-          
-        </div>
-      </details>
-      <details class="faq-item">
-        <summary>
-          <span>Ist Docker Probe sicher?</span>
-          
-          
-        </summary>
-        <div class="faq-answer">
-          <span>Docker Probe stellt ausschließlich ausgehende Verbindungen her und nimmt keine eingehenden Anfragen an. Es erreicht nur die ausdrücklich konfigurierten Dienste im Docker-Netzwerk, weshalb keine Ports geöffnet werden müssen. Prüfe vor der Installation die bereitgestellten Bereitstellungsbefehle.</span>
-          
-          
-        </div>
-      </details>
-      <details class="faq-item">
-        <summary>
-          <span>Wie werden Monitoring-Daten übertragen?</span>
-          
-          
-        </summary>
-        <div class="faq-answer">
-          <span>Docker Probe erfasst unterstützte Dienststatus- und Infrastrukturmetriken und sendet sie über eine <strong>verschlüsseltes HTTPS connection</strong>.</span>
-          
-          
-        </div>
-      </details>
-      <details class="faq-item">
-        <summary>
-          <span>Läuft das Monitoring weiter, wenn die iPhone-App geschlossen ist?</span>
-          
-          
-        </summary>
-        <div class="faq-answer">
-          <span><strong>Ja.</strong> Die Prüfungen laufen über OpsHome Cloud oder Docker Probe weiter. Die iPhone-App dient zum Anzeigen von Status, Berichten und Benachrichtigungen.</span>
-          
-          
-        </div>
-      </details>
-      <details class="faq-item"><summary><span>Reicht eine Abfrage pro Minute, wenn ein Dienst jederzeit ausfallen kann?</span></summary><div class="faq-answer"><span>Pro prüft private Ziele über Docker Probe ungefähr einmal pro Minute. Für die meisten Homelabs reicht es, einen Ausfall innerhalb einer Minute zu erkennen. Wenn du Warnungen im Sekundentakt benötigst, ist OpsHome nicht das richtige Werkzeug; nutze dafür ein spezialisiertes Echtzeit-Alarmsystem.</span></div></details>
-      <details class="faq-item"><summary><span>Was passiert, wenn OpsHome Cloud selbst nicht verfügbar ist?</span></summary><div class="faq-answer"><span>Das öffentliche Monitoring stoppt und private Docker-Probe-Heartbeats erreichen die Cloud nicht. Unsere Infrastruktur wird überwacht, wir versprechen jedoch kein SLA. Nutze für kritische Systeme einen unabhängigen zweiten Alarmweg.</span></div></details>    </div>
-  </section>
-
-  <section class="download-cta">
-    <div class="download-cta-inner">
-      <div class="download-cta-copy">
-        <h2>
-        <span>Bereit, den Echtzeitstatus deines gesamten Homelabs zu sehen?</span>
-        
-        
-        </h2>
-        <p>
-          <span>Überwache Synology, Proxmox, Docker und alle privaten Assets sicher auf dem iPhone.</span>
-          
-          
-        </p>
-      </div>
-      <div class="download-cta-actions">
-        <a class="download-cta-store" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" aria-label="Im App Store laden">
-          <img src="../assets/images/app-store-badge.svg" alt="Im App Store laden">
-        </a>
-        <a class="download-cta-qr" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" aria-label="OpsHome NOC im App Store öffnen">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&amp;data=https%3A%2F%2Fapps.apple.com%2Fus%2Fapp%2Fopshome-noc%2Fid6763890679" alt="QR-Code zum Laden von OpsHome NOC aus dem App Store" width="104" height="104" loading="lazy">
-          <span>Zum Download scannen</span>
-          
-          
-        </a>
-      </div>
-    </div>
+  <section class="pr-section pr-center pr-footer-cta">
+    <div class="pr-inner"><h2>Bereit, dein gesamtes Homelab auf einen Blick zu sehen?</h2><p class="pr-lead">Überwache Synology, Proxmox, Docker und alle privaten Assets sicher vom iPhone.</p><div class="pr-footer-actions"><a href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener"><img class="pr-store-badge" src="https://app.opshome.run/assets/images/app-store-badge.svg" alt="Im App Store laden" loading="lazy"></a><a class="pr-qr" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener"><img src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&amp;data=https%3A%2F%2Fapps.apple.com%2Fus%2Fapp%2Fopshome-noc%2Fid6763890679" alt="QR-Code zur OpsHome-NOC-Seite im App Store" width="88" height="88" loading="lazy"><span>Zum Download scannen</span></a></div></div>
   </section>
 </main>
 
 <footer>
   <div class="footer-inner">
-    <p><span>© 2026 OpsHome NOC™. Alle Rechte vorbehalten. OpsHome NOC™ ist eine Marke ihres Eigentümers.</span></p>
+    <p><span>© 2026 OpsHome NOC™. Alle Rechte vorbehalten. OpsHome NOC™ ist eine Marke ihres Inhabers.</span></p>
     <ul>
-      <li><a href="https://docs.opshome.run/de/release-notes.html" target="_blank" rel="noopener"><span>Änderungsprotokoll</span></a></li>
-      <li><a href="https://docs.opshome.run" target="_blank" rel="noopener"><span>Docs</span></a></li>
-        <li><a href="../privacy.html"><span>Datenschutz</span></a></li>
-        <li><a href="../terms.html"><span>Bedingungen</span></a></li>
+      <li><a href="https://docs.opshome.run/de/release-notes.html" target="_blank" rel="noopener"><span>Versionshinweise</span></a></li>
+      <li><a href="https://docs.opshome.run/de/" target="_blank" rel="noopener"><span>Doku</span></a></li>
+      <li><a href="privacy.html"><span>Datenschutz</span></a></li>
+      <li><a href="terms.html"><span>AGB</span></a></li>
       <li><a href="mailto:opshome@outlook.com"><span>opshome@outlook.com</span></a></li>
     </ul>
   </div>
 </footer>
-
-<script src="../assets/hero-carousel.js?v=20260620-2"></script>
-<script src="../assets/video-playlist.js?v=20260614-v17"></script>
-
 
 </body></html>

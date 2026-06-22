@@ -7,7 +7,6 @@
 <link rel="icon" type="image/png" href="../assets/images/favicon-256.png" sizes="256x256">
 <link rel="icon" href="../assets/images/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
-<link rel="stylesheet" href="../assets/video-playlist.css?v=20260611">
 
 <!-- Open Graph -->
 <meta property="og:title" content="OpsHome NOC - 使用 iPhone 監控你的 Homelab">
@@ -121,12 +120,12 @@
 }</script>
 
 <style>
-  @font-face{font-family:"Space Mono Local";src:url("../assets/fonts/SpaceMono-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
-  @font-face{font-family:"Space Mono Local";src:url("../assets/fonts/SpaceMono-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
-  @font-face{font-family:"Noto Sans SC Local";src:url("../assets/fonts/NotoSansSC-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
-  @font-face{font-family:"Noto Sans SC Local";src:url("../assets/fonts/NotoSansSC-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
-  @font-face{font-family:"Noto Sans TC Local";src:url("../assets/fonts/NotoSansTC-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
-  @font-face{font-family:"Noto Sans TC Local";src:url("../assets/fonts/NotoSansTC-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
+  @font-face{font-family:"Space Mono Local";src:url("assets/fonts/SpaceMono-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+  @font-face{font-family:"Space Mono Local";src:url("assets/fonts/SpaceMono-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
+  @font-face{font-family:"Noto Sans SC Local";src:url("assets/fonts/NotoSansSC-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+  @font-face{font-family:"Noto Sans SC Local";src:url("assets/fonts/NotoSansSC-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
+  @font-face{font-family:"Noto Sans TC Local";src:url("assets/fonts/NotoSansTC-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+  @font-face{font-family:"Noto Sans TC Local";src:url("assets/fonts/NotoSansTC-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
   :root {
     --bg:#f8fafc; --bg2:#eaf4ff; --surface:#ffffff; --border:#d7e8f8;
     --accent:#1479ff; --accent2:#0b5fd3; --text:#0b1b2e; --muted:#334155; --soft:#102033;
@@ -269,34 +268,6 @@
   .shot{background:transparent;border:0;border-radius:0;overflow:visible;box-shadow:none}
   .shot img{display:block;width:100%;height:auto;filter:drop-shadow(0 14px 24px rgba(15,23,42,.18))}
   .shot-label{text-align:center;color:var(--muted);font-size:14px;font-weight:500;margin-top:12px}
-  .comparison-section{position:relative;z-index:1;max-width:1560px;margin:0 auto;padding:96px 32px}
-  .comparison-section h2{max-width:900px;margin-right:auto;margin-left:auto;text-align:center;font-size:clamp(34px,4vw,52px)}
-  .comparison-section>.label{display:block;text-align:center}
-  .comparison-intro{max-width:980px;margin:0 auto 38px;text-align:center;color:var(--muted);font-size:18px;line-height:1.7}
-  .comparison-table{overflow:hidden;border:1px solid #dbe7f5;border-radius:20px;background:#fff;box-shadow:0 18px 50px rgba(15,23,42,.08)}
-  .comparison-table table{width:100%;border:0;border-collapse:collapse;table-layout:fixed}
-  .comparison-table th{padding:16px 15px;text-align:left;background:#0a1b31;color:#fff;font-family:var(--mono);font-size:11px;line-height:1.4;letter-spacing:.06em}
-  .comparison-table th:first-child{width:12%}
-  .comparison-table th:nth-child(2){width:15%}
-  .comparison-table th:nth-child(3){width:23%}
-  .comparison-table th:nth-child(4){width:23%}
-  .comparison-table th:last-child{width:27%;background:#0b5fd3}
-  .comparison-table td{padding:18px 15px;border-bottom:1px solid #e5edf7;vertical-align:top;color:#475569;font-size:14px;line-height:1.58}
-  .comparison-table td:first-child{color:var(--text);font-size:15px;font-weight:800}
-  .comparison-table td:nth-child(2){color:#1e3a5f;font-weight:700}
-  .comparison-table td:last-child{color:#0b3266;background:#f3f8ff;font-weight:650}
-  .comparison-table tbody tr:last-child td{border-bottom:0}
-  .comparison-table tbody tr:not(.is-opshome):hover td{background:#f8fbff}
-  .comparison-table tbody tr:not(.is-opshome):hover td:last-child{background:#eaf3ff}
-  .comparison-table .is-opshome td{border-top:2px solid #60a5fa;border-bottom-color:#bfdbfe;background:#eaf3ff;color:#12345b}
-  .comparison-table .is-opshome td:first-child{color:#0759bd}
-  .comparison-table .is-opshome td:last-child{background:#dcecff;color:#073b78}
-  .comparison-note{max-width:980px;margin:22px auto 0;text-align:center;color:#64748b;font-size:14px;line-height:1.65}
-  .comparison-actions{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:26px}
-  .comparison-primary{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:13px 22px;border-radius:12px;color:#fff;background:linear-gradient(135deg,#1479ff,#0759bd);box-shadow:0 12px 28px rgba(20,121,255,.24);font-weight:800}
-  .comparison-primary:hover{transform:translateY(-1px);box-shadow:0 16px 34px rgba(20,121,255,.32)}
-  .comparison-secondary{color:#0759bd;font-weight:800}
-  .comparison-secondary::after{content:"\2192";margin-left:8px}
   .pricing{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;align-items:stretch}
   .plan{
     position:relative;
@@ -412,26 +383,13 @@
     .hero-visual{max-width:430px;margin:0 auto}
     .hero-phone{transform:none}
     .section{padding:64px 22px}
-    .comparison-section{padding:64px 22px}
-    .comparison-section h2,.faq-section h2{font-size:32px}
+    .faq-section h2{font-size:32px}
     .grid,.pricing,.trust-panel{grid-template-columns:1fr}
     .screens{grid-template-columns:repeat(2,1fr)}
     .eyebrow-tags .block-en,.eyebrow-tags .block-zh,.eyebrow-tags .block-hant{gap:8px}
     .tag{font-size:15px;padding:7px 14px}
     .monitor-table{overflow-x:auto}
     .monitor-matrix .monitor-table table{min-width:560px}
-    .comparison-table{overflow:visible;border:0;background:transparent;box-shadow:none}
-    .comparison-table table,.comparison-table tbody{display:block;width:100%}
-    .comparison-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-    .comparison-table tbody{display:grid;gap:18px}
-    .comparison-table tr{display:block;overflow:hidden;border:1px solid #dbe7f5;border-radius:16px;background:#fff;box-shadow:0 10px 28px rgba(15,23,42,.07)}
-    .comparison-table td{display:grid;grid-template-columns:minmax(130px,.34fr) 1fr;gap:18px;width:auto!important;padding:14px 18px;border-bottom:1px solid #e5edf7;background:#fff!important;font-size:14px}
-    .comparison-table td::before{content:attr(data-label);color:#0759bd;font-family:var(--mono);font-size:10px;font-weight:900;letter-spacing:.06em;text-transform:uppercase}
-    .comparison-table td:first-child{padding-top:18px;font-size:18px}
-    .comparison-table td:last-child{padding-bottom:18px;border-bottom:0;background:#f3f8ff!important}
-    .comparison-table .is-opshome{border:2px solid #60a5fa}
-    .comparison-table .is-opshome td{border-top:0;background:#eff6ff!important}
-    .comparison-table .is-opshome td:last-child{background:#dcecff!important}
     .trust-item{font-size:13px;padding:10px}
     .plan{padding:24px}
     .plan-cta{display:none!important}
@@ -457,9 +415,7 @@
     .download-cta-qr{display:none}
     .faq-item summary{padding:18px;font-size:15px}
     .faq-answer{padding:0 18px 18px;font-size:15px}
-    .comparison-section h2,.faq-section h2{font-size:28px}
-    .comparison-table td{grid-template-columns:1fr;gap:6px;padding:13px 16px}
-    .comparison-actions{align-items:stretch;flex-direction:column;text-align:center}
+    .faq-section h2{font-size:28px}
     footer{padding-top:46px;padding-bottom:46px}
     footer ul{grid-template-columns:1fr;text-align:center;gap:12px}
     footer a{justify-content:center;font-size:16px}
@@ -473,380 +429,158 @@
     h2{font-size:clamp(20px,6vw,36px)}
   }
 </style>
-<link rel="stylesheet" href="../assets/hero-carousel.css?v=20260620">
-<link rel="stylesheet" href="../assets/site-polish.css?v=20260621-conversion">
+<link rel="stylesheet" href="assets/product-page-v2.css?v=20260621-transparent-phone">
 </head>
 <body>
 <nav>
-  <a class="brand" href="/zh-Hant/"><img src="../assets/images/brand-logo.png" alt="OpsHome NOC logo"><span>OpsHome <strong>NOC</strong><sup class="tm">™</sup></span></a>
+  <a class="brand" href="/"><img src="assets/images/brand-logo.png" alt="OpsHome NOC logo"><span>OpsHome <strong>NOC</strong><sup class="tm">™</sup></span></a>
   <ul class="navlinks">
-    <li><a href="#features"><span>功能特性</span></a></li>
-    <li><a href="#protocols"><span>監控類型</span></a></li>
-    <li><a href="#pricing"><span>方案</span></a></li>
+    <li><a href="#features"><span>功能</span></a></li>
+    <li><a href="#protocols"><span>監控</span></a></li>
+    <li><a href="#pricing"><span>價格</span></a></li>
     <li><a href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener"><span>APP STORE</span></a></li>
-    <li><a href="https://docs.opshome.run/hant/" target="_blank" rel="noopener"><span>使用文件</span></a></li>
+    <li><a href="https://docs.opshome.run/hant/" target="_blank" rel="noopener"><span>文件</span></a></li>
   </ul>
-  <div class="lang" aria-label="Language"><a href="/" lang="en">EN</a><a href="/zh/" lang="zh-Hans">简</a><a href="/zh-Hant/" class="active" lang="zh-Hant">繁</a><a href="/de/" lang="de">DE</a></div>
+  <div class="lang" aria-label="語言"><a href="/" lang="en">EN</a><a href="/zh/" lang="zh-Hans">简</a><a href="/zh-Hant/" class="active" lang="zh-Hant">繁</a><a href="/de/" lang="de">DE</a></div>
 </nav>
 
-<main>
-  <section class="hero noc-story-hero">
-    <div class="noc-carousel" data-hero-carousel data-duration="10000" role="region" aria-roledescription="輪播圖" aria-label="OpsHome NOC 產品故事" tabindex="0">
-      <div class="noc-carousel-topline"><div class="noc-carousel-store-group"><span class="noc-carousel-brand">OPSHOME NOC · 你的個人網路維運中心</span><a class="noc-carousel-store-badge" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" aria-label="在 App Store 下載 OpsHome NOC"><img src="../assets/images/app-store-badge.svg" alt="在 App Store 下載"></a></div><a class="noc-carousel-release" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">V1.9 已上線</a></div>
-      <div class="noc-carousel-stage" aria-live="off">
-        <article class="noc-slide is-active" aria-label="第 1 張，共 5 張"><div class="noc-slide-copy"><span class="noc-slide-chapter">IPHONE 行動控制中心</span><h1>Homelab 狀態，一眼盡知</h1><p>出門之後，家中的服務還正常嗎？OpsHome 讓你一眼確認——無需 VPN、SSH 或電腦。</p><div class="noc-slide-actions"><a class="noc-slide-cta" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">前往 App Store</a><a class="noc-slide-docs" href="https://docs.opshome.run/hant/" target="_blank" rel="noopener">查看使用文件</a></div></div><div class="noc-slide-visual"><img src="../assets/images/hero-carousel/full-stack-20260620.webp" alt="OpsHome NOC 全棧總覽，連接公網服務、Docker Probe、Proxmox、Linux、NAS、容器和虛擬機" width="1400" height="788" fetchpriority="high"></div></article>
-        <article class="noc-slide" aria-label="第 2 張，共 5 張" aria-hidden="true" inert><div class="noc-slide-copy"><span class="noc-slide-chapter">02 · 公網服務</span><h1>讓公網服務持續在線</h1><p>在用戶發現之前掌握網站、登入頁、SSL、網域和 API 異常。</p><a class="noc-slide-cta" href="#protocols">了解更多</a></div><div class="noc-slide-visual"><img src="../assets/images/hero-carousel/public-services-20260620.webp" alt="公網服務監控，覆蓋 Homelab 入口、SSL、網域、API、NAS、迷你主機和路由器" width="1400" height="788" loading="lazy"></div></article>
-        <article class="noc-slide" aria-label="第 3 張，共 5 張" aria-hidden="true" inert><div class="noc-slide-copy"><span class="noc-slide-chapter">03 · 私有網絡</span><h1>看見私有 Homelab 內部</h1><p>Docker Probe 無需開放入站連接埠，即可呈現內部服務與資產。</p><a class="noc-slide-cta" href="#features">了解更多</a></div><div class="noc-slide-visual"><img src="../assets/images/hero-carousel/private-homelab-20260620.webp" alt="Docker Probe 私有監控，覆蓋 Synology NAS、Proxmox、Ubuntu、容器和虛擬機" width="1400" height="788" loading="lazy"></div></article>
-        <article class="noc-slide" aria-label="第 4 張，共 5 張" aria-hidden="true" inert><div class="noc-slide-copy"><span class="noc-slide-chapter">04 · 虛擬化</span><h1>理解每一層虛擬化狀態</h1><p>集中追蹤 Proxmox 節點、虛擬機健康、資源壓力、儲存和告警。</p><a class="noc-slide-cta" href="#features">查看資產</a></div><div class="noc-slide-visual"><img src="../assets/images/hero-carousel/virtualization-20260620.webp" alt="Proxmox 虛擬化監控，展示節點、虛擬機、CPU、記憶體、儲存、網絡和告警" width="1400" height="788" loading="lazy"></div></article>
-        <article class="noc-slide" aria-label="第 5 張，共 5 張" aria-hidden="true" inert><div class="noc-slide-copy"><span class="noc-slide-chapter">05 · 基礎設施</span><h1>保持核心基礎設施健康</h1><p>透過 iPhone 查看 NAS、Linux、容器、磁碟和常駐服務。</p><a class="noc-slide-cta" href="#pricing">立即開始</a></div><div class="noc-slide-visual"><img src="../assets/images/hero-carousel/infrastructure-20260620.webp" alt="基礎設施監控，覆蓋 NAS、Linux、容器、CPU、記憶體、儲存、磁碟和服務" width="1400" height="788" loading="lazy"></div></article>
+<main class="product-redesign">
+  <section class="pr-hero">
+    <div class="pr-inner">
+      <p class="pr-hero-kicker">OpsHome NOC · 你的個人網路維運中心</p>
+      <h1>你的 Homelab，一眼盡知。</h1>
+      <p class="pr-hero-subtitle">出門之後，家中的服務還正常嗎？<br>OpsHome 讓你幾秒確認，無需 VPN、SSH 或電腦。</p>
+      <div class="pr-actions">
+        <a class="pr-button pr-button-primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">在 App Store 免費下載</a>
+        <a class="pr-button pr-button-secondary" href="https://docs.opshome.run/hant/" target="_blank" rel="noopener">閱讀文件 →</a>
       </div>
-      <div class="noc-carousel-controls"><button class="noc-carousel-arrow" type="button" data-carousel-previous aria-label="上一張">&#8592;</button><div class="noc-carousel-progress" aria-label="故事進度"><button class="noc-progress-segment" type="button" aria-label="查看全局總覽" aria-current="step"><span class="noc-progress-track"><span class="noc-progress-fill"></span></span></button><button class="noc-progress-segment" type="button" aria-label="查看公網服務"><span class="noc-progress-track"><span class="noc-progress-fill"></span></span></button><button class="noc-progress-segment" type="button" aria-label="查看私有網絡"><span class="noc-progress-track"><span class="noc-progress-fill"></span></span></button><button class="noc-progress-segment" type="button" aria-label="查看虛擬化"><span class="noc-progress-track"><span class="noc-progress-fill"></span></span></button><button class="noc-progress-segment" type="button" aria-label="查看基礎設施"><span class="noc-progress-track"><span class="noc-progress-fill"></span></span></button></div><button class="noc-carousel-arrow" type="button" data-carousel-next aria-label="下一張">&#8594;</button></div>
+    <div class="pr-hero-visual"><img src="https://app.opshome.run/assets/images/hero-carousel/full-stack-20260620.webp" alt="OpsHome NOC Homelab 全棧監控總覽" width="1400" height="788" loading="lazy"></div>
     </div>
   </section>
 
-
-  <section class="section wide" id="screenshots" style="text-align:center">
-    <p class="label">產品介面</p>
-    <h2 style="font-size:clamp(20px,2.5vw,32px);margin-left:auto;margin-right:auto"><span>為 Homelab 使用者真實查看狀態的方式而設計。</span></h2>
-    <p class="interface-intro">直接查看目前 App 的健康總覽、基礎設施診斷、拓撲和桌面小工具介面，而不只是閱讀功能描述。</p>
-    <div class="trust-signals"><div class="trust-signal"><strong>僅出站連線</strong><span>無需開放入站連接埠或暴露管理面板</span></div><div class="trust-signal"><strong>約 1 分鐘</strong><span>Pro 的 Docker Probe 私網輪詢週期</span></div><div class="trust-signal"><strong>支援的基礎設施</strong><span>Proxmox、群暉、Linux、Docker 和虛擬機</span></div><div class="trust-signal"><strong>持續檢測</strong><span>關閉 App 後監控仍會繼續</span></div></div>
-    <div class="screens">
-      <div><div class="shot"><img src="../assets/images/showcase-home-20260620.webp" alt="OpsHome NOC dashboard with private monitoring"></div><p class="shot-label"><span>首頁總覽</span></p></div>
-      <div><div class="shot"><img src="../assets/images/showcase-assets-20260608.webp" alt="OpsHome NOC Synology and Proxmox VE assets workspace"></div><p class="shot-label"><span>資產</span></p></div>
-      <div><div class="shot"><img src="../assets/images/showcase-map-20260608.webp" alt="OpsHome NOC topology map"></div><p class="shot-label"><span>拓撲地圖</span></p></div>
-      <div><div class="shot"><img src="../assets/images/showcase-pve-20260608.webp" alt="OpsHome NOC Proxmox VE performance and memory details"></div><p class="shot-label"><span>Proxmox VE</span></p></div>
-      <div><div class="shot"><img src="../assets/images/showcase-widgets-20260608.webp" alt="OpsHome NOC iOS widgets"></div><p class="shot-label"><span>桌面組件</span></p></div>
+  <section class="pr-section" id="features">
+    <div class="pr-inner pr-feature">
+      <div class="pr-copy">
+        <p class="pr-eyebrow">公網監控</p>
+        <h2>公網服務發生故障，第一時間知道</h2>
+        <p>OpsHome 透過雲端全天候監控網站、API、登入頁、SSL 憑證和網域。在使用者發現異常前，你會先收到推播通知。</p>
+        <div class="pr-points">
+          <div class="pr-point"><span class="pr-point-icon">⚡</span><span>HTTP, HTTPS, TCP, ICMP, SSL, DNS, Domain, UDP</span></div>
+          <div class="pr-point"><span class="pr-point-icon">🕐</span><span>Pro 最短 5 分鐘輪詢</span></div>
+          <div class="pr-point"><span class="pr-point-icon">🔔</span><span>推播告警 + Telegram 通知</span></div>
+        </div>
+      </div>
+      <div class="pr-media"><img src="https://app.opshome.run/assets/images/hero-carousel/public-services-20260620.webp" alt="網站、API、SSL 和網域的公網服務監控" width="1400" height="788" loading="lazy"></div>
     </div>
   </section>
 
-
-  <section class="section" style="padding-top:0;padding-bottom:64px;text-align:center">
-    <p class="label">產品演示</p>
-    <p class="video-intro">不想讀長文？用 2 分鐘看看它實際能做什麼。</p>
-    <div class="video-showcase">
-      <div class="video-stage"><div class="video-frame"><iframe id="product-video" src="about:blank" title="OpsHome NOC Product Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
-      <aside class="video-playlist" aria-label="產品影片播放清單">
-        <div class="video-playlist-head"><strong>產品影片</strong><span>影片結束後自動播放下一部。</span></div>
-        <div class="video-list">
-          <button class="video-item active" type="button" data-youtube-id="UzBklGOy-Vk" data-bilibili-src="https://player.bilibili.com/player.html?bvid=BV15F7969ExB&amp;page=1" data-title="OpsHome NOC ? 私有監控與基礎設施"><span class="video-thumb"><img src="../assets/images/video-v15.jpg" alt="" loading="lazy"></span><span><span class="video-item-title">私有監控與基礎設施</span></span></button>
-          <button class="video-item" type="button" data-youtube-id="CgJefIYKkr8" data-bilibili-src="https://player.bilibili.com/player.html?bvid=BV1MHJP6VEjP&amp;page=1" data-title="OpsHome NOC ? 群暉、容器與趨勢"><span class="video-thumb"><img src="../assets/images/video-v17.jpg" alt="" loading="lazy"></span><span><span class="video-item-title">群暉、容器與趨勢</span></span></button>
-          <button class="video-item" type="button" data-youtube-id="pMgMqtMeOd4" data-bilibili-src="https://player.bilibili.com/player.html?bvid=BV1b5Et6GE8F&amp;page=1" data-title="OpsHome NOC ? 健康總覽與資產"><span class="video-thumb"><img src="../assets/images/video-v16.jpg" alt="" loading="lazy"></span><span><span class="video-item-title">健康總覽與資產</span></span></button>
-          <button class="video-item" type="button" data-youtube-id="iwlJucCTJLE" data-bilibili-src="https://player.bilibili.com/player.html?bvid=BV19iGE6CE62&amp;page=1" data-title="OpsHome NOC ? 工作區、拓撲與小工具"><span class="video-thumb"><img src="../assets/images/video-v14.jpg" alt="" loading="lazy"></span><span><span class="video-item-title">工作區、拓撲與小工具</span></span></button>
-          <button class="video-item" type="button" data-youtube-id="TlYqvQlFEjo" data-bilibili-src="https://player.bilibili.com/player.html?bvid=BV1v8L26AEZE&amp;page=1" data-title="OpsHome NOC ? 狀態頁與首頁"><span class="video-thumb"><img src="../assets/images/video-v13.jpg" alt="" loading="lazy"></span><span><span class="video-item-title">狀態頁與首頁</span></span></button>
+  <section class="pr-section pr-alt" id="protocols">
+    <div class="pr-inner pr-feature pr-reverse">
+      <div class="pr-copy">
+        <p class="pr-eyebrow">私有網路 · Docker Probe</p>
+        <h2>看見私有 Homelab 內部<br>無需開放任何入站連接埠</h2>
+        <p>在伺服器上執行一條 Docker 指令即可部署。Probe 只主動連線 OpsHome Cloud，讓家庭網路繼續對公網隱藏，同時完整呈現在你眼前。</p>
+        <pre class="pr-code"><code>docker run -d opshome/probe:latest \
+  -e TOKEN=your_probe_token</code></pre>
+            <p class="pr-code-note">大約 2 分鐘完成，無需連接埠轉送。</p>
+        <div class="pr-points">
+          <div class="pr-point"><span class="pr-point-icon">🔒</span><span>僅出站連線，不暴露任何入站連接埠</span></div>
+          <div class="pr-point"><span class="pr-point-icon">🐳</span><span>監控 Docker 容器、NAS 面板及內網 HTTP/HTTPS/TCP 服務</span></div>
+          <div class="pr-point"><span class="pr-point-icon">⏱</span><span>Pro 約 1 分鐘輪詢一次</span></div>
         </div>
-      </aside>
+        <a class="pr-text-link" href="https://docs.opshome.run/hant/docker-probe-linux.html" target="_blank" rel="noopener">→ 查看 Docker Probe 部署指南</a>
+      </div>
+      <div class="pr-media"><img src="https://app.opshome.run/assets/images/hero-carousel/private-homelab-20260620.webp" alt="Docker Probe 私有 Homelab 監控" width="1400" height="788" loading="lazy"></div>
     </div>
   </section>
 
-
-  <section class="section" id="features" style="text-align:center">
-    <p class="label">核心能力</p>
-    <h2 style="font-size:clamp(20px,2.5vw,32px);margin-left:auto;margin-right:auto"><span>屬於 Homelab 的 iPhone 優先控制室。</span></h2>
-    <p class="desc" style="margin-left:auto;margin-right:auto"><span>聚焦公網監控、私有網路可見性、基礎設施整合和清晰的狀態分享，覆蓋 NAS、Docker、Homelab 和小型生產端點。</span></p>
-
-    <div class="feature-group">
-      <p class="feature-group-label"><span>私有網路</span></p>
-      <div class="grid">
-        <div class="card" style="border-top-color:#16a34a"><div class="icon" style="background:#f0fdf4"><svg viewBox="0 0 24 24" style="stroke:#16a34a"><rect x="3" y="4" width="18" height="14" rx="2"></rect><path d="M7 20h10"></path><path d="M9 8h6"></path><path d="M9 12h3"></path></svg></div><h3><span>私有網路監控</span></h3><p><span>無需開放家庭網路連接埠，即可監控 NAS 面板、Docker 服務和內網 HTTP/HTTPS/TCP 目標。</span></p></div>
-        <div class="card" style="border-top-color:#16a34a"><div class="icon" style="background:#f0fdf4"><svg viewBox="0 0 24 24" style="stroke:#16a34a"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8"></path><path d="M12 17v4"></path><path d="M7 7h.01"></path><path d="M11 7h6"></path><path d="M7 11h.01"></path><path d="M11 11h6"></path></svg></div><h3><span>基礎設施資產</span></h3><p><span>Synology NAS、Docker 容器和 Proxmox VE 的 CPU、記憶體、磁碟 I/O、溫度和容器健康，無需暴露管理介面。</span></p></div>
-        <div class="card" style="border-top-color:#7c3aed"><div class="icon" style="background:#f5f3ff"><svg viewBox="0 0 24 24" style="stroke:#7c3aed"><circle cx="12" cy="5" r="2"></circle><circle cx="6" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle><path d="M12 7v4"></path><path d="M12 11 6 16"></path><path d="M12 11l6 5"></path></svg></div><h3><span>拓撲地圖</span></h3><p><span>Cloud 到 Private Networks 的可視化拓撲，讓服務位置和監控來源一目了然。</span></p></div>
+  <section class="pr-section">
+    <div class="pr-inner pr-feature">
+      <div class="pr-copy">
+        <p class="pr-eyebrow">基礎設施資產</p>
+        <h2>Proxmox、群暉、Linux、Docker<br>集中在一個頁面</h2>
+        <p>不止於可用性檢測。OpsHome 直接呈現真實基礎設施的 CPU 負載、記憶體使用、磁碟健康、虛擬機狀態、容器狀態和溫度，無需額外部署儀表板。</p>
+        <div class="pr-points">
+          <div class="pr-point"><span class="pr-point-icon">🖥</span><span>Proxmox VE：節點、虛擬機、儲存和告警</span></div>
+          <div class="pr-point"><span class="pr-point-icon">🗄</span><span>群暉 NAS：儲存卷、套件和溫度</span></div>
+          <div class="pr-point"><span class="pr-point-icon">🐧</span><span>Linux 主機：CPU、記憶體、磁碟和服務</span></div>
+          <div class="pr-point"><span class="pr-point-icon">🐳</span><span>Docker：容器健康與資源使用</span></div>
+        </div>
       </div>
+        <figure class="pr-media"><img src="https://app.opshome.run/assets/images/hero-carousel/virtualization-20260620.webp" alt="Proxmox VE 節點、虛擬機、資源和告警" width="1400" height="788" loading="lazy"><figcaption>Proxmox VE 整合：節點、虛擬機、資源和告警一目了然</figcaption></figure>
     </div>
+  </section>
 
-    <div class="feature-group">
-      <p class="feature-group-label"><span>公網監測</span></p>
-      <div class="grid grid-2">
-        <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path><path d="M8 5v14"></path></svg></div><h3><span>監控工作區</span></h3><p><span>All、Dock、Map、Tags 視圖清晰區分公網檢測和私有網路監控。</span></p></div>
-        <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg></div><h3><span>告警與分析</span></h3><p><span>推播告警、Telegram、事件歷史、在線率色塊、SSL/域名風險和易讀分析，幫助你快速處置。</span></p></div>
-      </div>
-    </div>
-
-    <div class="feature-group">
-      <p class="feature-group-label"><span>可視化與分享</span></p>
-      <div class="grid grid-2">
-        <div class="card"><div class="icon" style="background:#fff7ed"><svg viewBox="0 0 24 24" style="stroke:#ea580c"><rect x="5" y="3" width="14" height="18" rx="3"></rect><path d="M9 7h6"></path><path d="M9 11h6"></path><path d="M9 15h3"></path></svg></div><h3><span>iOS 組件</span></h3><p><span>桌面和鎖屏組件讓 Homelab 狀態不打開 App 也能快速掃一眼。</span></p></div>
-        <div class="card"><div class="icon" style="background:#f0fdf4"><svg viewBox="0 0 24 24" style="stroke:#16a34a"><path d="M4 6h16v12H4z"></path><path d="M8 10h8"></path><path d="M8 14h5"></path></svg></div><h3><span>公開狀態頁</span></h3><p><span>可分享公開狀態頁，支援訪問口令、有效期、二維碼驗真和私有目標脫敏。</span></p></div>
+  <section class="pr-section pr-center pr-alt">
+    <div class="pr-inner">
+      <p class="pr-eyebrow">告警與歷史</p>
+      <h2>快速告警，清晰歷史，輕鬆分享。</h2>
+      <p class="pr-lead">服務故障時立即通知；恢復後準確查看中斷持續時間。</p>
+      <img class="pr-wide-image" src="assets/images/noc-pic.png" alt="iPhone 上的 OpsHome NOC Homelab 健康總覽" width="1370" height="2732" loading="lazy">
+      <div class="pr-cards">
+        <article class="pr-card"><span class="pr-card-icon">🔔</span><h3>推播與 Telegram 告警</h3><p>服務離線或恢復時立即傳送 iOS 推播和 Telegram 訊息。SSL 與網域到期提醒幫助你提前處理憑證風險。</p></article>
+        <article class="pr-card"><span class="pr-card-icon">📋</span><h3>用於分享的狀態頁</h3><p>為團隊或使用者建立公開狀態頁，可設定存取密碼、分享期限並透過二維碼驗真；私有目標始終不會公開。</p></article>
       </div>
     </div>
   </section>
 
-  <section class="section monitor-matrix" id="protocols" style="text-align:center">
-    <p class="label">監測範圍</p>
-    <h2 style="font-size:clamp(20px,2.5vw,32px);margin-left:auto;margin-right:auto"><span>監控類型和方案權限。</span></h2>
-    <div class="monitor-table" style="max-width:860px;margin-left:auto;margin-right:auto">
-      <table>
-        <colgroup><col style="width:14%"><col style="width:58%"><col style="width:14%"><col style="width:14%"></colgroup>
-        <thead><tr><th><span>類型</span></th><th><span>說明</span></th><th style="text-align:center">FREE</th><th style="text-align:center">PRO</th></tr></thead>
-        <tbody>
-          <tr class="group-row"><td colspan="4"><span>公網檢測</span></td></tr>
-          <tr><td>HTTP</td><td><span>HTTP 狀態碼檢測與分析提示。</span></td><td style="text-align:center;color:#16a34a;font-size:20px;font-weight:700">✓</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
-          <tr><td>HTTPS</td><td><span>HTTPS 可達性與狀態碼檢測。</span></td><td style="text-align:center;color:#16a34a;font-size:20px;font-weight:700">✓</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
-          <tr><td>TCP</td><td><span>自訂連接埠連通性檢測，不限制固定連接埠。</span></td><td style="text-align:center;color:#16a34a;font-size:20px;font-weight:700">✓</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
-          <tr><td>ICMP</td><td><span>類似 Ping 的主機可達性檢測。</span></td><td style="text-align:center;color:#16a34a;font-size:20px;font-weight:700">✓</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
-          <tr class="group-row"><td colspan="4"><span>安全與域名</span></td></tr>
-          <tr><td>SSL</td><td><span>證書有效期、CN、頒發者和主機名稱匹配檢測。</span></td><td style="text-align:center;color:#16a34a;font-size:20px;font-weight:700">✓</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
-          <tr><td>DNS</td><td><span>DNS 回應檢測與 A/MX 記錄校驗。</span></td><td style="text-align:center;color:var(--muted);font-size:18px">—</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
-          <tr><td><span>域名</span></td><td><span>域名註冊到期監測。</span></td><td style="text-align:center;color:var(--muted);font-size:18px">—</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
-          <tr><td>UDP</td><td><span>對支援的載荷進行 UDP 回應檢測。</span></td><td style="text-align:center;color:var(--muted);font-size:18px">—</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
-          <tr class="group-row"><td colspan="4"><span>私有網路</span></td></tr>
-          <tr><td><span>私有網路監控</span></td><td><span>無需暴露入站存取，即可檢測私有 Docker、NAS 和內網 HTTP/HTTPS/TCP 服務。</span></td><td style="text-align:center;color:var(--muted);font-size:18px">—</td><td style="text-align:center;color:#f59e0b;font-size:20px;font-weight:700">✓</td></tr>
-        </tbody>
-      </table>
+  <section class="pr-section pr-center" id="pricing">
+    <div class="pr-inner">
+      <p class="pr-eyebrow">方案</p>
+      <h2>免費開始，需要更多時再升級。</h2>
+      <p class="pr-lead">無需信用卡，最終價格以 App Store 購買確認頁為准。</p>
+      <div class="pr-pricing">
+        <article class="pr-plan">
+          <p class="pr-plan-name">Free</p><p class="pr-plan-price">$0</p><p class="pr-plan-subline">無需訂閱</p>
+          <ul><li>✓ 30 個公網監控目標</li><li>✓ HTTP / HTTPS / TCP / SSL / ICMP</li><li>✓ 1 個公開狀態頁</li><li>✓ 桌面與鎖屏小工具</li><li>✓ 推播告警 · SSL 到期提醒</li><li>✓ 可视化監控儀表板</li></ul>
+          <p class="pr-plan-footnote">ℹ 私網監控和 Docker Probe 需要 Pro。</p>
+          <a class="pr-button pr-button-primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">免費下載</a>
+        </article>
+        <article class="pr-plan pr-plan-pro">
+          <span class="pr-plan-badge">最受歡迎</span><p class="pr-plan-name">Pro</p><p class="pr-plan-price">$2.99 / 月</p><p class="pr-plan-subline">或 $24.99 / 年 · 最划算<br>為認真使用 Homelab 的你而設</p>
+          <ul><li>✓ 100 個公網監控目標</li><li>✓ 全部監控類型，包括 UDP、DNS 和網域</li><li>✓ 5 個 Docker Probe 裝置 · 50 個私網監控目標</li><li>✓ 單個群暉 Docker Probe 支援的容器數量不限</li><li>✓ 私網輪詢約 1 分鐘</li><li>✓ Proxmox VE + 群暉私網整合</li><li>✓ 公網監控最短 5 分鐘輪詢</li><li>✓ 3 個公開狀態頁 + 存取口令 + 二維碼</li><li>✓ 推播 + Telegram 告警</li><li>✓ 完整分析報告</li></ul>
+          <a class="pr-button pr-button-primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">取得 Pro</a>
+        </article>
+      </div>
+      <p class="pr-founder"><strong>早期支持者權益</strong>：符合條件的早期帳號將永久保留 Founder 身分，包括 1 個符合條件的群暉 Docker Probe（容器數量不限）和 2 個私網監控點，即使 Pro 到期仍然保留。 <a href="https://docs.opshome.run/hant/free-vs-pro.html" target="_blank" rel="noopener">查看完整權益表 →</a></p>
     </div>
   </section>
 
-  <section class="comparison-section" id="comparison">
-    <p class="label">為什麼選擇 OpsHome</p>
-    <h2>專為 Homelab 可見性而設計</h2>
-    <p class="comparison-intro">OpsHome NOC 將公網檢測、Docker Probe 私有資產、NAS、Proxmox、Linux 主機、容器、虛擬機和資源健康整合到一个行動優先視圖中。</p>
-    <div class="comparison-table"><table><thead><tr><th>工具</th><th>它擅長什麼</th><th>對 Homelab 用戶的不足</th></tr></thead><tbody>
-<tr><td data-label="工具">UptimeRobot</td><td data-label="它擅長什麼">判斷公網服務是否在線。</td><td data-label="它不擅長什麼">不知道私有網路內部發生了什麼。</td></tr>
-<tr><td data-label="工具">Uptime Kuma</td><td data-label="它擅長什麼">自託管靈活，社群活躍。</td><td data-label="它不擅長什麼">行動端體驗較弱，查看基礎設施資產不方便。</td></tr>
-<tr><td data-label="工具">Netdata</td><td data-label="它擅長什麼">提供非常詳細的單機指標。</td><td data-label="它不擅長什麼">資訊密度高，不適合快速掃一眼整體健康狀態。</td></tr>
-<tr><td data-label="工具">Prometheus / Grafana</td><td data-label="它擅長什麼">功能全面的企業級可觀測性技術棧。</td><td data-label="它不擅長什麼">需要持續建置和維護，並非圍繞 Homelab 的簡單體驗設計。</td></tr>
-</tbody></table></div>    <p class="comparison-note">OpsHome NOC 位於簡單在線檢測與完整可觀測性技術棧之間：在 iPhone 上同時查看公網狀態和私有 Homelab，無需維護複雜儀表板。</p>
-    <div class="comparison-actions"><a class="comparison-primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">開始監控你的 Homelab</a><a class="comparison-secondary" href="https://docs.opshome.run/docker-probe-linux.html" target="_blank" rel="noopener">瞭解 Docker Probe 如何運作</a></div>
-  </section>
-
-  <section class="section" id="pricing" style="text-align:center">
-    <p class="label">方案</p>
-    <h2 style="font-size:clamp(20px,2.5vw,32px);margin-left:auto;margin-right:auto"><span>免費開始，需要更多時再升級。</span></h2>
-    <p class="desc" style="margin-left:auto;margin-right:auto"><span>免費開始，無需信用卡。需要更多公網監控、私有網路監控、基礎設施整合和進階可見性時再升級。</span></p>
-    <div class="pricing" style="text-align:left">
-      <div class="plan free" style="background:linear-gradient(180deg,#92D050 0%,#6ABB65 100%)">
-        <p class="plan-name"><span style="display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:#15803d;color:#fff;font-size:13px;font-weight:900;letter-spacing:.1em">FREE</span></p>
-        <p class="plan-price"><span>免費</span></p>
-        <p class="plan-note"><span>無需訂閱。</span></p>
-        <ul>
-          <li><span><strong>30</strong> 個公網監控目標</span></li>
-          <li>HTTP / HTTPS / TCP / SSL / ICMP</li>
-          <li><span><strong>1</strong> 個公開狀態頁</span></li>
-          <li><span>每個狀態頁 <strong>10</strong> 個監控點</span></li>
-          <li><span>固定狀態頁標題 · 最長分享 <strong>6 個月</strong></span></li>
-          <li><span>桌面和鎖屏組件</span></li>
-          <li><span><strong>群暉</strong> DSM 公開資產採集</span></li>
-          <li><span>公網監控最短間隔：<strong>10 分鐘</strong></span></li>
-          <li><span>推播告警 · SSL 到期提醒</span></li>
-          <li><span>基礎<strong>分析報告</strong> — 資產趨勢 · 儲存 · CPU / 記憶體</span></li>
-          <li><span>可視化監控儀表板</span></li>
-        </ul>
-        <p class="plan-footnote">ⓘ 私網監控和 Docker Probe 需要 Pro。</p>
-        <div class="plan-cta" style="position:absolute;bottom:24px;right:24px;display:flex;align-items:center;gap:14px">
-          <p style="margin:0;font-size:12px;font-weight:600;color:#fff;opacity:.85"><span>適合入門體驗</span></p>
-          <a class="btn primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" style="display:inline-block;background:#fff;color:var(--accent);border-color:#fff;white-space:nowrap"><span>免費下載</span></a>
-        </div>
+  <section class="pr-section pr-center pr-alt">
+    <div class="pr-inner">
+      <p class="pr-eyebrow">FAQ</p><h2>常見問題</h2>
+      <div class="pr-faq">
+        <details><summary>Free 與 Pro 有什麼差異？</summary><div class="pr-faq-answer">Free 包含最多 30 個公網監控目標、1 個公開狀態頁、小工具和推播告警。Pro 提高額度，並增加 Docker Probe 私網監控、私有基礎設施整合、Telegram 和進階報告。</div></details>
+        <details><summary>Docker Probe 安全嗎？</summary><div class="pr-faq-answer">Docker Probe 只主動建立出站連線，不接受入站請求。它僅存取你在 Docker 網路中明確設定的服務，安裝前可以審查公開的部署指令。</div></details>
+        <details><summary>Docker Probe 難安裝嗎？</summary><div class="pr-faq-answer">執行提供的 Docker 部署指令並輸入 OpsHome Token。熟悉基礎 Docker 操作的使用者通常幾分鐘即可完成。 <a href="https://docs.opshome.run/hant/docker-probe-linux.html" target="_blank" rel="noopener">查看部署指南。</a></div></details>
+        <details><summary>關閉 iPhone App 後監控還會繼續嗎？</summary><div class="pr-faq-answer">會。檢測由 OpsHome Cloud 或 Docker Probe 持續執行，iPhone App 用於查看狀態、報告和通知。</div></details>
+        <details><summary>監控資料如何傳輸？</summary><div class="pr-faq-answer">Docker Probe 透過加密 HTTPS 連線，將受支援的服務狀態和基礎設施指標傳送到 OpsHome Cloud API。</div></details>
+        <details><summary>我的資料安全嗎？儲存在哪裡？</summary><div class="pr-faq-answer">監控狀態和受支援的基礎設施指標由 OpsHome Cloud 託管基礎設施及資料庫服務處理。OpsHome 不需要你的 NAS 檔案、文件、相片或付款卡資訊。</div></details>
+        <details><summary>可以隨時取消 Pro 訂閱嗎？</summary><div class="pr-faq-answer">可以。在 Apple ID 訂閱設定中管理或取消，Pro 權益會持續到已付費週期結束。</div></details>
+        <details><summary>為什麼最終訂閱價格要在 App Store 確認？</summary><div class="pr-faq-answer">Apple 會在購買前顯示當地貨幣、稅費、适用優惠、試用和最終付款確認。OpsHome 不接收或儲存付款卡信息。</div></details>
+        <details><summary>可以在多台裝置上使用或進行家庭共享嗎？</summary><div class="pr-faq-answer">你可以在其他受支援裝置上使用同一個「透過 Apple 登入」帳號，並恢復有效的 Pro 購買。目前公開權益不包含家庭共享。</div></details>
+        <details><summary>1 分鐘輪詢夠快嗎？服務可能隨時故障。</summary><div class="pr-faq-answer">對大多數 Homelab 情境，一分鐘內發現故障通常足夠。Pro 的 Docker Probe 約每分鐘輪詢私網服務，公網監控最短 5 分鐘。如果關鍵生產服務需要秒級告警，請使用專用的本地告警系統。</div></details>
+        <details><summary>如果 OpsHome Cloud 本身無法使用會怎樣？</summary><div class="pr-faq-answer">公網監控將暫停，Docker Probe 心跳也無法到達雲端。我們會監控基礎設施，但不提供正式 SLA。關鍵服務應搭配獨立的備用告警方式。</div></details>
       </div>
-      <div class="plan pro">
-        <p class="plan-name"><span style="display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:#f59e0b;color:#0b1b2e;font-size:16px;font-weight:900;letter-spacing:.1em;text-shadow:0 1px 3px rgba(255,255,255,.3)">PRO</span></p>
-        <p class="plan-price" style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:22px;white-space:nowrap">
-          <span style="font-size:30px"><span>月付或年付</span></span>
-          <span style="text-align:right;font-size:14px;line-height:1.6;opacity:.85">
-            <span style="display:block">$2.99 / <span>月</span></span>
-            <span style="display:block">$24.99 / <span>年</span> <span style="font-size:11px;background:#f59e0b;color:#0b1b2e;font-weight:800;padding:1px 6px;border-radius:999px"><span>最划算</span></span></span>
-          </span>
-        </p>
-        <p class="plan-note"><span>最終價格會在 App Store 購買確認頁顯示。</span></p>
-        <ul>
-          <li><span><strong>100</strong> 個公網監控目標</span></li>
-          <li><span>全部監控類型，包含 <strong>UDP、DNS、域名</strong></span></li>
-          <li><span><strong>3</strong> 個公開狀態頁</span></li>
-          <li><span>每個狀態頁 <strong>20</strong> 個監控點</span></li>
-          <li><span>自訂狀態頁標題 · 永久分享</span></li>
-          <li><span>狀態頁存取口令與二維碼驗真</span></li>
-          <li><span>桌面和鎖屏組件</span></li>
-          <li><span><strong>5</strong> 個 Docker Probe 裝置 · <strong>50</strong> 個私有監控目標</span></li>
-          <li><span>Docker Probe 內網輪詢約 <strong>1 分鐘</strong></span></li>
-          <li><span>群暉公開/私有採集 + Proxmox 基礎設施整合</span></li>
-          <li><span>公網監控最短間隔：<strong>5 分鐘</strong></span></li>
-          <li><span>推播 + <strong>Telegram</strong> 告警 · SSL/網域到期提醒</span></li>
-          <li><span>完整<strong>分析報告</strong> — 資產趨勢 · 儲存 · CPU / 記憶體</span></li>
-          <li><span>進階可視化監控儀表板</span></li>
-        </ul>
-        <div class="plan-cta" style="position:absolute;bottom:24px;right:24px;display:flex;align-items:center;gap:14px">
-          <p style="margin:0;font-size:12px;font-weight:600;color:rgba(255,255,255,.7)"><span>為認真玩 homelab 的你而生</span></p>
-          <a class="btn primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" style="white-space:nowrap"><span>取得 Pro</span></a>
-        </div>
-      </div>
-    </div>
-    <div class="founder-spotlight">
-      <div class="founder-head"><div class="founder-title"><div><span class="founder-kicker">早期支持者權益</span><h3>感謝符合條件的早期用戶長期支持</h3></div></div><span class="founder-permanent">永久 FOUNDER 身分</span></div>
-      <div class="founder-benefits"><div class="founder-benefit"><strong>1 個</strong><span>符合條件的群暉 Docker Probe</span></div><div class="founder-benefit"><strong>2 個</strong><span>符合條件的 HTTP / HTTPS / TCP 內網監控點</span></div><div class="founder-benefit"><strong>永久保留</strong><span>Pro 到期後，創世身分和專屬額度仍然保留</span></div></div>
-      <p class="founder-note">創世用戶是授予符合條件早期帳號的永久身分，用於擴展 Free 權益，並不是第三種訂閱方案。<a href="https://docs.opshome.run/hant/free-vs-pro.html" target="_blank" rel="noopener">查看完整權益表。</a></p>
     </div>
   </section>
 
-  <section class="faq-section" id="faq">
-    <p class="label">常見問題</p>
-    <h2>
-      
-      
-      <span>常見問題</span>
-    </h2>
-    <p class="faq-intro">
-      
-      
-      <span>了解安全性、資料傳輸、方案額度和支援的基礎設施。</span>
-    </p>
-    <div class="faq-list">
-      <details class="faq-item">
-        <summary>
-          
-          
-          <span>免費版和 Pro 版的核心差異是什麼？</span>
-        </summary>
-        <div class="faq-answer">
-          
-          
-          <span>普通 Free 主要用於公網監控，支援最多 <strong>30 個公網監控目標</strong>。Pro 提高公網監控額度，並增加 Docker Probe 私有網路監控、私有基礎設施整合、最多 <strong>5 個 Docker Probe 裝置和 50 個私有監控目標</strong>。</span>
-        </div>
-      </details>
-      <details class="faq-item">
-        <summary>
-          
-          
-          <span>可以隨時取消 Pro 訂閱嗎？</span>
-        </summary>
-        <div class="faq-answer">
-          
-          
-          <span><strong>可以。</strong>你可以在 Apple ID 的訂閱設定中隨時取消。取消後，Pro 權益會持續到目前已付費週期結束。刪除 App 或刪除 OpsHome 帳戶不會自動取消 App Store 訂閱。</span>
-        </div>
-      </details>
-      <details class="faq-item">
-        <summary>
-          
-          
-          <span>Docker Probe 難安裝嗎？</span>
-        </summary>
-        <div class="faq-answer">
-          
-          
-          <span>按照文件執行提供的 Docker 部署指令即可。熟悉基礎 Docker 操作的使用者通常可在<strong>幾分鐘內</strong>完成安裝。</span>
-          
-          
-          <a class="faq-link" href="https://docs.opshome.run/hant/docker-probe-linux.html" target="_blank" rel="noopener">查看部署指南與影片</a>
-        </div>
-      </details>
-      <details class="faq-item">
-        <summary>
-          
-          
-          <span>我的資料安全嗎？資料儲存在哪裡？</span>
-        </summary>
-        <div class="faq-answer">
-          
-          
-          <span>受支援的監控狀態和基礎設施指標透過<strong>加密 HTTPS</strong>傳輸，並由 OpsHome Cloud 的託管基礎設施和資料庫服務處理。OpsHome 不要求上傳 NAS 檔案、文件、照片，也不會接收或儲存付款卡資料。</span>
-        </div>
-      </details>
-      <details class="faq-item">
-        <summary>
-          
-          
-          <span>為什麼最終價格要在 App Store 確認？</span>
-        </summary>
-        <div class="faq-answer">
-          
-          
-          <span>Apple 會根據你的 App Store 地區，在購買前顯示當地貨幣、稅費、適用優惠、試用和最終付款資訊。OpsHome 不接收或儲存付款卡資料。</span>
-        </div>
-      </details>
-      <details class="faq-item">
-        <summary>
-          
-          
-          <span>支援多裝置或家人共享嗎？</span>
-        </summary>
-        <div class="faq-answer">
-          
-          
-          <span>你可以在另一台受支援裝置上使用同一個<strong>「透過 Apple 登入」帳戶</strong>，並在需要時恢復有效的 Pro 購買。目前公開的 OpsHome 方案權益不包含家人共享。</span>
-        </div>
-      </details>
-      <details class="faq-item">
-        <summary>
-          
-          
-          <span>Docker Probe 安全嗎？</span>
-        </summary>
-        <div class="faq-answer">
-          
-          
-          <span>Docker Probe 只主動建立出站連線，不接受任何入站請求。它只能存取你在 Docker 網路中明確設定的服務，因此不需要開放連接埠。安裝前可以先審查網站提供的部署指令。</span>
-        </div>
-      </details>
-      <details class="faq-item">
-        <summary>
-          
-          
-          <span>監控資料如何傳輸？</span>
-        </summary>
-        <div class="faq-answer">
-          
-          
-          <span>Docker Probe 採集受支援的服務狀態和基礎設施指標，再透過<strong>加密 HTTPS 連線</strong>傳送至 OpsHome Cloud API。</span>
-        </div>
-      </details>
-      <details class="faq-item">
-        <summary>
-          
-          
-          <span>關閉 iPhone App 後監控還會繼續嗎？</span>
-        </summary>
-        <div class="faq-answer">
-          
-          
-          <span><strong>會。</strong>檢測由 OpsHome Cloud 或 Docker Probe 持續執行，iPhone App 用於查看狀態、報告和接收通知。</span>
-        </div>
-      </details>
-      <details class="faq-item"><summary><span>約 1 分鐘的輪詢夠快嗎？服務可能隨時故障。</span></summary><div class="faq-answer"><span>Pro 的 Docker Probe 約每分鐘輪詢一次私網目標。對於大多數 Homelab，在一分鐘內發現故障通常足夠。如果你需要秒級告警，OpsHome 並不是合適的工具，應使用專門的即時告警系統。</span></div></details>
-      <details class="faq-item"><summary><span>如果 OpsHome Cloud 本身無法使用會怎樣？</span></summary><div class="faq-answer"><span>公網監控會停止，私網 Docker Probe 的心跳也無法到達雲端。我們的基礎設施有監控，但不承諾 SLA。對於關鍵業務，請設定獨立的備用告警路徑。</span></div></details>    </div>
-  </section>
-
-  <section class="download-cta">
-    <div class="download-cta-inner">
-      <div class="download-cta-copy">
-        <h2>
-        
-        
-        <span>想即時掌握你整個 homelab 的狀態嗎？</span>
-        </h2>
-        <p>
-          
-          
-          <span>透過 iPhone 安全監控 Synology、Proxmox、Docker 和所有私有資產。</span>
-        </p>
-      </div>
-      <div class="download-cta-actions">
-        <a class="download-cta-store" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" aria-label="Download on the App Store">
-          <img src="../assets/images/app-store-badge.svg" alt="Download on the App Store">
-        </a>
-        <a class="download-cta-qr" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener" aria-label="Open OpsHome NOC in the App Store">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&amp;data=https%3A%2F%2Fapps.apple.com%2Fus%2Fapp%2Fopshome-noc%2Fid6763890679" alt="QR code for downloading OpsHome NOC from the App Store" width="104" height="104" loading="lazy">
-          
-          
-          <span>掃碼下載</span>
-        </a>
-      </div>
-    </div>
+  <section class="pr-section pr-center pr-footer-cta">
+    <div class="pr-inner"><h2>準備好一眼看清整個 Homelab 了嗎？</h2><p class="pr-lead">透過 iPhone 安全監控群暉、Proxmox、Docker 和所有私有資產。</p><div class="pr-footer-actions"><a href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener"><img class="pr-store-badge" src="https://app.opshome.run/assets/images/app-store-badge.svg" alt="在 App Store 下載" loading="lazy"></a><a class="pr-qr" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener"><img src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&amp;data=https%3A%2F%2Fapps.apple.com%2Fus%2Fapp%2Fopshome-noc%2Fid6763890679" alt="OpsHome NOC App Store 頁面二維碼" width="88" height="88" loading="lazy"><span>掃碼下載</span></a></div></div>
   </section>
 </main>
 
 <footer>
   <div class="footer-inner">
-    <p><span>© 2026 OpsHome NOC™。保留所有權利。OpsHome NOC™ 是其所有者的商標。</span></p>
+    <p><span>© 2026 OpsHome NOC™。保留所有權利。OpsHome NOC™ 是其所有者的商标。</span></p>
     <ul>
       <li><a href="https://docs.opshome.run/hant/release-notes.html" target="_blank" rel="noopener"><span>更新日誌</span></a></li>
-      <li><a href="https://docs.opshome.run" target="_blank" rel="noopener"><span>文件</span></a></li>
-        <li><a href="../privacy.html"><span>隱私權政策</span></a></li>
-        <li><a href="../terms.html"><span>服務條款</span></a></li>
-      <li><a href="mailto:opshome@outlook.com"><span>聯絡信箱</span></a></li>
+      <li><a href="https://docs.opshome.run/hant/" target="_blank" rel="noopener"><span>文件</span></a></li>
+      <li><a href="privacy.html"><span>隱私</span></a></li>
+      <li><a href="terms.html"><span>條款</span></a></li>
+      <li><a href="mailto:opshome@outlook.com"><span>opshome@outlook.com</span></a></li>
     </ul>
   </div>
 </footer>
-
-<script src="../assets/hero-carousel.js?v=20260620-2"></script>
-<script src="../assets/video-playlist.js?v=20260614-v17"></script>
-
 
 </body></html>
