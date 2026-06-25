@@ -533,16 +533,16 @@
         <article class="pr-plan">
           <p class="pr-plan-name">Free</p><p class="pr-plan-price">$0</p><p class="pr-plan-subline">無需訂閱</p>
           <ul><li>✓ 30 個公網監控目標</li><li>✓ HTTP / HTTPS / TCP / SSL / ICMP</li><li>✓ 1 個公開狀態頁</li><li>✓ 桌面與鎖屏小工具</li><li>✓ 推播告警 · SSL 到期提醒</li><li>✓ 可视化監控儀表板</li></ul>
-          <p class="pr-plan-footnote">ℹ 私網監控和 Docker Probe 需要 Pro。</p>
+          <p class="pr-plan-footnote">ℹ 普通 Free 不含 Docker Probe；符合條件的 Founder 帳號永久保留 1 個群暉 Docker Probe、最多 100 個容器可見額度和 2 個內網監控點。</p>
           <a class="pr-button pr-button-primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">免費下載</a>
         </article>
         <article class="pr-plan pr-plan-pro">
           <span class="pr-plan-badge">最受歡迎</span><p class="pr-plan-name">Pro</p><p class="pr-plan-price">$2.99 / 月</p><p class="pr-plan-subline">或 $24.99 / 年 · 最划算<br>為認真使用 Homelab 的你而設</p>
-          <ul><li>✓ 100 個公網監控目標</li><li>✓ 全部監控類型，包括 UDP、DNS 和網域</li><li>✓ 5 個 Docker Probe 裝置 · 50 個私網監控目標</li><li>✓ 單個群暉 Docker Probe 支援的容器數量不限</li><li>✓ 私網輪詢約 1 分鐘</li><li>✓ Proxmox VE + 群暉私網整合</li><li>✓ 公網監控最短 5 分鐘輪詢</li><li>✓ 3 個公開狀態頁 + 存取口令 + 二維碼</li><li>✓ 推播 + Telegram 告警</li><li>✓ 完整分析報告</li></ul>
+          <ul><li>✓ 100 個公網監控目標</li><li>✓ 全部監控類型，包括 UDP、DNS 和網域</li><li>✓ 5 個 Docker Probe 裝置 · 50 個私網監控目標</li><li>✓ 個人使用不設固定 Docker 容器可見數量上限</li><li>✓ 私網輪詢約 1 分鐘</li><li>✓ Proxmox VE + 群暉私網整合</li><li>✓ 公網監控最短 5 分鐘輪詢</li><li>✓ 3 個公開狀態頁 + 存取口令 + 二維碼</li><li>✓ 推播 + Telegram 告警</li><li>✓ 完整分析報告</li></ul>
           <a class="pr-button pr-button-primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">取得 Pro</a>
         </article>
       </div>
-      <p class="pr-founder"><strong>早期支持者權益</strong>：符合條件的早期帳號將永久保留 Founder 身分，包括 1 個符合條件的群暉 Docker Probe（容器數量不限）和 2 個私網監控點，即使 Pro 到期仍然保留。 <a href="https://docs.opshome.run/hant/free-vs-pro.html" target="_blank" rel="noopener">查看完整權益表 →</a></p>
+      <p class="pr-founder"><strong>早期支持者權益</strong>：符合條件的早期帳號將永久保留 Founder 身分，包括 1 個符合條件的群暉 Docker Probe、最多 100 個 Docker 容器可見額度和 2 個私網監控點，即使 Pro 到期仍然保留。 <a href="https://docs.opshome.run/hant/free-vs-pro.html" target="_blank" rel="noopener">查看完整權益表 →</a></p>
     </div>
   </section>
 
@@ -550,7 +550,7 @@
     <div class="pr-inner">
       <p class="pr-eyebrow">FAQ</p><h2>常見問題</h2>
       <div class="pr-faq">
-        <details><summary>Free 與 Pro 有什麼差異？</summary><div class="pr-faq-answer">Free 包含最多 30 個公網監控目標、1 個公開狀態頁、小工具和推播告警。Pro 提高額度，並增加 Docker Probe 私網監控、私有基礎設施整合、Telegram 和進階報告。</div></details>
+        <details><summary>Free 與 Pro 有什麼差異？</summary><div class="pr-faq-answer">普通 Free 主要提供公網監控；符合條件的 Founder 帳號額外永久保留 1 個群暉 Docker Probe、最多 100 個 Docker 容器可見額度和 2 個內網監控點。Pro 支援最多 5 個 Docker Probe、完整基礎設施可見性、個人使用不設固定容器可見數量上限和進階 Insight。</div></details>
         <details><summary>Docker Probe 安全嗎？</summary><div class="pr-faq-answer">Docker Probe 只主動建立出站連線，不接受入站請求。它僅存取你在 Docker 網路中明確設定的服務，安裝前可以審查公開的部署指令。</div></details>
         <details><summary>Docker Probe 難安裝嗎？</summary><div class="pr-faq-answer">執行提供的 Docker 部署指令並輸入 OpsHome Token。熟悉基礎 Docker 操作的使用者通常幾分鐘即可完成。 <a href="https://docs.opshome.run/hant/docker-probe-linux.html" target="_blank" rel="noopener">查看部署指南。</a></div></details>
         <details><summary>關閉 iPhone App 後監控還會繼續嗎？</summary><div class="pr-faq-answer">會。檢測由 OpsHome Cloud 或 Docker Probe 持續執行，iPhone App 用於查看狀態、報告和通知。</div></details>
