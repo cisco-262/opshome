@@ -49,6 +49,7 @@
 .product-redesign .pr-hero-kicker{margin-bottom:18px;color:#93c5fd;font-family:var(--mono);font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
 .product-redesign .pr-hero h1{max-width:940px;margin:0 auto 22px;color:#fff;font-size:clamp(42px,7vw,78px);line-height:1;letter-spacing:-.05em}
 .product-redesign .pr-hero-subtitle{max-width:720px;margin:0 auto;color:#dbeafe;font-size:clamp(18px,2vw,24px);line-height:1.55}
+.product-redesign .pr-hero-audience{max-width:760px;margin:16px auto 0;color:#bfdbfe;font-size:16px;line-height:1.6}
 .product-redesign .pr-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin:30px 0 44px}
 .product-redesign .pr-button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:13px 22px;border:1px solid #5aa0ff;border-radius:10px;font-family:var(--mono);font-size:13px;font-weight:800}
 .product-redesign .pr-button-primary{background:var(--pr-blue);color:#fff;box-shadow:0 12px 30px rgba(20,121,255,.3)}
