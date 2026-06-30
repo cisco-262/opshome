@@ -70,7 +70,6 @@ For private environments, Pro users can deploy Docker Probe to monitor internal 
 | Docker Probe internal monitor targets | Not included | 50 |
 | Supported protocols | HTTP, HTTPS, TCP, SSL, ICMP | All monitor types |
 | Check interval | 10 min - 1 hr | 5 min - 1 hr |
-| Event history | 14 days | 90 days |
 | Push alert notifications | Included | Included |
 | Expiry reminders | Not included | Included |
 | Analysis report | Basic | Full |
@@ -125,7 +124,6 @@ OpsHome NOC 透過雲端主動檢測目標服務，並將推播告警送達你�
 | Docker 探針內部監控點 | 不支援 | 50 |
 | 支援協議 | HTTP、HTTPS、TCP、SSL、ICMP | 全部監控類型 |
 | 檢測間隔 | 10 分鐘 - 1 小時 | 5 分鐘 - 1 小時 |
-| 事件歷史 | 14 天 | 90 天 |
 | 推播告警 | 支援 | 支援 |
 | 到期提醒 | 不支援 | 支援 |
 | 分析報告 | 基礎版 | 完整版 |
@@ -180,7 +178,6 @@ OpsHome NOC 通过云端主动检测目标服务，并将推送告警送达你�
 | Docker 探针内部监控点 | 不支持 | 50 |
 | 支持协议 | HTTP、HTTPS、TCP、SSL、ICMP | 全部监控类型 |
 | 检测间隔 | 10 分钟 - 1 小时 | 5 分钟 - 1 小时 |
-| 事件历史 | 14 天 | 90 天 |
 | 推送告警 | 支持 | 支持 |
 | 到期提醒 | 不支持 | 支持 |
 | 分析报告 | 基础版 | 完整版 |
