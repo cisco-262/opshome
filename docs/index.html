@@ -21,7 +21,7 @@
 <meta name="twitter:title" content="OpsHome NOC - Homelab NOC Monitoring from Your iPhone">
 <meta name="twitter:description" content="A NOC-style operations view for homelab public services, Docker Probes, Asset Sources, Private Monitors, Synology, Proxmox, Linux hosts, and Docker containers.">
 <meta name="twitter:image" content="https://app.opshome.run/assets/images/og-image.png">
-<link rel="preload" as="image" href="https://app.opshome.run/assets/images/hero-carousel/full-stack-20260620.webp" type="image/webp" fetchpriority="high">
+<link rel="preload" as="image" href="assets/images/hero-carousel/full-stack-20260620.webp" type="image/webp" fetchpriority="high">
 
 <!-- Schema.org -->
 <script type="application/ld+json">{
@@ -120,21 +120,14 @@
   ]
 }</script>
 
-<style>
-  @font-face{font-family:"Space Mono Local";src:url("assets/fonts/SpaceMono-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
-  @font-face{font-family:"Space Mono Local";src:url("assets/fonts/SpaceMono-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
-  @font-face{font-family:"Noto Sans SC Local";src:url("assets/fonts/NotoSansSC-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
-  @font-face{font-family:"Noto Sans SC Local";src:url("assets/fonts/NotoSansSC-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
-  @font-face{font-family:"Noto Sans TC Local";src:url("assets/fonts/NotoSansTC-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
-  @font-face{font-family:"Noto Sans TC Local";src:url("assets/fonts/NotoSansTC-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
-  :root {
+<style>  :root {
     --bg:#f8fafc; --bg2:#eaf4ff; --surface:#ffffff; --border:#d7e8f8;
     --accent:#1479ff; --accent2:#0b5fd3; --text:#0b1b2e; --muted:#334155; --soft:#102033;
     --gold:#f59e0b; --gold-dim:#fbbf24;
     --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-    --sans-hans:"Noto Sans SC Local","PingFang SC","Microsoft YaHei",sans-serif;
-    --sans-hant:"Noto Sans TC Local","PingFang TC","Microsoft JhengHei",sans-serif;
-    --mono:"Noto Sans SC Local","Noto Sans TC Local","Inter","Segoe UI",Roboto,Arial,sans-serif;
+    --sans-hans:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;
+    --sans-hant:"PingFang TC","Microsoft JhengHei","Noto Sans CJK TC",Arial,sans-serif;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -442,7 +435,7 @@
 </script></head>
 <body>
 <nav>
-  <a class="brand" href="/"><img src="assets/images/brand-logo.png" alt="OpsHome NOC logo"><span>OpsHome <strong>NOC</strong><sup class="tm">™</sup></span></a>
+  <a class="brand" href="/"><img src="assets/images/brand-logo.png" alt="OpsHome NOC logo" width="64" height="64" decoding="async"><span>OpsHome <strong>NOC</strong><sup class="tm">™</sup></span></a>
   <ul class="navlinks">
     <li><a href="/docker-probe"><span>DOCKER PROBE</span></a></li>
     <li><a href="/homelab-noc"><span>HOMELAB NOC</span></a></li>
@@ -465,7 +458,7 @@
         <a class="pr-button pr-button-primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">Download Free on App Store</a>
         <a class="pr-button pr-button-secondary" href="https://docs.opshome.run" target="_blank" rel="noopener">Read the Docs →</a>
       </div>
-      <div class="pr-hero-visual"><img src="https://app.opshome.run/assets/images/hero-carousel/full-stack-20260620.webp" alt="OpsHome NOC full-stack homelab overview" width="1400" height="788" loading="eager" fetchpriority="high" decoding="async"></div>
+      <div class="pr-hero-visual"><img src="assets/images/hero-carousel/full-stack-20260620.webp" alt="OpsHome NOC full-stack homelab overview" width="1400" height="788" loading="eager" fetchpriority="high" decoding="async"></div>
     </div>
   </section>
 
@@ -497,7 +490,7 @@
         </div>
         <a class="pr-text-link" href="/docker-probe">Explore Docker Probe →</a>
       </div>
-      <div class="pr-media"><img src="https://app.opshome.run/assets/images/hero-carousel/private-homelab-20260620.webp" alt="Docker Probe private homelab monitoring" width="1400" height="788" loading="lazy"></div>
+      <div class="pr-media"><img src="assets/images/hero-carousel/private-homelab-20260620.webp" alt="Docker Probe private homelab monitoring" width="1400" height="788" loading="lazy" decoding="async"></div>
     </div>
   </section>
 
@@ -515,7 +508,7 @@
         </div>
         <a class="pr-text-link" href="/homelab-noc">Learn about the NOC-style view →</a>
       </div>
-      <figure class="pr-media"><img src="https://app.opshome.run/assets/images/hero-carousel/virtualization-20260620.webp" alt="Proxmox VE nodes, virtual machines, resources, and alerts" width="1400" height="788" loading="lazy"><figcaption>Proxmox VE integration — nodes, VMs, resources, and alerts at a glance</figcaption></figure>
+      <figure class="pr-media"><img src="assets/images/hero-carousel/virtualization-20260620.webp" alt="Proxmox VE nodes, virtual machines, resources, and alerts" width="1400" height="788" loading="lazy" decoding="async"><figcaption>Proxmox VE integration — nodes, VMs, resources, and alerts at a glance</figcaption></figure>
     </div>
   </section>
 
@@ -527,19 +520,19 @@
       <div class="pr-showcase-links">
         <article class="pr-showcase-card">
           <a href="/proxmox-monitoring" aria-label="Open Proxmox Monitoring">
-            <picture><source srcset="assets/images/showcase-pve-20260608.webp" type="image/webp"><img src="assets/images/showcase-pve-20260608.png" alt="OpsHome NOC Proxmox VE monitoring screen on iPhone" width="726" height="1572" loading="lazy"></picture>
+            <picture><source srcset="assets/images/showcase-pve-20260608.webp" type="image/webp"><img src="assets/images/showcase-pve-20260608.png" alt="OpsHome NOC Proxmox VE monitoring screen on iPhone" width="726" height="1572" loading="lazy" decoding="async"></picture>
             <span class="pr-showcase-body"><strong>Proxmox Monitoring</strong><small>Review nodes, VMs, storage, resource state, and alerts.</small></span>
           </a>
         </article>
         <article class="pr-showcase-card">
           <a href="/synology-monitoring" aria-label="Open Synology Monitoring">
-            <picture><source srcset="assets/images/showcase-assets-20260608.webp" type="image/webp"><img src="assets/images/showcase-assets-20260608.png" alt="OpsHome NOC Synology and homelab Asset Sources screen on iPhone" width="812" height="1606" loading="lazy"></picture>
+            <picture><source srcset="assets/images/showcase-assets-20260608.webp" type="image/webp"><img src="assets/images/showcase-assets-20260608.png" alt="OpsHome NOC Synology and homelab Asset Sources screen on iPhone" width="812" height="1606" loading="lazy" decoding="async"></picture>
             <span class="pr-showcase-body"><strong>Synology Monitoring</strong><small>Review NAS health, volumes, packages, and private service context.</small></span>
           </a>
         </article>
         <article class="pr-showcase-card">
           <a href="/linux-server-monitoring" aria-label="Open Linux Server Monitoring">
-            <picture><source srcset="assets/images/linux-server-monitoring-iphone.webp" type="image/webp"><img src="assets/images/linux-server-monitoring-iphone.png" alt="OpsHome NOC Linux server monitoring screen on iPhone" width="1419" height="2796" loading="lazy"></picture>
+            <picture><source srcset="assets/images/linux-server-monitoring-iphone.webp" type="image/webp"><img src="assets/images/linux-server-monitoring-iphone.png" alt="OpsHome NOC Linux server monitoring screen on iPhone" width="1419" height="2796" loading="lazy" decoding="async"></picture>
             <span class="pr-showcase-body"><strong>Linux Server Monitoring</strong><small>Review Linux hosts, services, Docker Probe status, and Private Monitors.</small></span>
           </a>
         </article>
@@ -571,7 +564,7 @@
           <div class="pr-point"><span class="pr-point-icon">•</span><span>Push alerts and Telegram notifications</span></div>
         </div>
       </div>
-      <div class="pr-media"><img src="https://app.opshome.run/assets/images/hero-carousel/public-services-20260620.webp" alt="Public service monitoring for websites, APIs, SSL, and domains" width="1400" height="788" loading="lazy"></div>
+      <div class="pr-media"><img src="assets/images/hero-carousel/public-services-20260620.webp" alt="Public service monitoring for websites, APIs, SSL, and domains" width="1400" height="788" loading="lazy" decoding="async"></div>
     </div>
   </section>
 
@@ -580,7 +573,7 @@
       <p class="pr-eyebrow">Alerts &amp; History</p>
       <h2>Fast alerts. Clear history. Easy sharing.</h2>
       <p class="pr-lead">When something breaks, OpsHome tells you immediately. When it recovers, you see exactly how long it was down.</p>
-      <picture><source srcset="assets/images/noc-pic.webp" type="image/webp"><img class="pr-wide-image" src="assets/images/noc-pic.png" alt="OpsHome NOC homelab health overview on iPhone" width="1370" height="2732" loading="lazy"></picture>
+      <picture><source srcset="assets/images/noc-pic.webp" type="image/webp"><img class="pr-wide-image" src="assets/images/noc-pic.png" alt="OpsHome NOC homelab health overview on iPhone" width="1370" height="2732" loading="lazy" decoding="async"></picture>
       <div class="pr-cards">
         <article class="pr-card"><span class="pr-card-icon">🔔</span><h3>Push &amp; Telegram Alerts</h3><p>Instant iOS push notifications and Telegram messages the moment a service goes offline or recovers. SSL and domain expiry reminders keep you ahead of certificate failures.</p></article>
         <article class="pr-card"><span class="pr-card-icon">📋</span><h3>Status Pages for Sharing</h3><p>Create a public status page for teammates or users. Protect it with an access code, set an expiry window, verify with QR code. Private targets stay masked from public view.</p></article>
@@ -639,7 +632,7 @@
   </section>
 
   <section class="pr-section pr-center pr-footer-cta">
-    <div class="pr-inner"><h2>Ready to see your entire homelab — in one glance?</h2><p class="pr-lead">Securely monitor Synology, Proxmox, Docker, Asset Sources, and Private Monitors from iPhone.</p><div class="pr-footer-actions"><a href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener"><img class="pr-store-badge" src="https://app.opshome.run/assets/images/app-store-badge.svg" alt="Download on the App Store" loading="lazy"></a><a class="pr-qr" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener"><img src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&amp;data=https%3A%2F%2Fapps.apple.com%2Fus%2Fapp%2Fopshome-noc%2Fid6763890679" alt="QR code for OpsHome NOC App Store page" width="88" height="88" loading="lazy"><span>Scan to download</span></a></div></div>
+    <div class="pr-inner"><h2>Ready to see your entire homelab — in one glance?</h2><p class="pr-lead">Securely monitor Synology, Proxmox, Docker, Asset Sources, and Private Monitors from iPhone.</p><div class="pr-footer-actions"><a href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener"><img class="pr-store-badge" src="assets/images/app-store-badge.svg" width="160" height="48" alt="Download on the App Store" loading="lazy"></a><a class="pr-qr" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener"><img src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&amp;data=https%3A%2F%2Fapps.apple.com%2Fus%2Fapp%2Fopshome-noc%2Fid6763890679" alt="QR code for OpsHome NOC App Store page" width="88" height="88" loading="lazy"><span>Scan to download</span></a></div></div>
   </section>
 </main>
 

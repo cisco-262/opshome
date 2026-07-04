@@ -22,6 +22,8 @@
 <meta name="twitter:description" content="Öffentliches und privates Homelab-Monitoring auf dem iPhone mit Docker Probe und ohne eingehende Portfreigaben.">
 <meta name="twitter:image" content="https://app.opshome.run/assets/images/og-image.png">
 
+<link rel="preload" as="image" href="assets/images/hero-carousel/full-stack-20260620.webp" type="image/webp" fetchpriority="high">
+
 <!-- Schema.org -->
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -119,21 +121,14 @@
   ]
 }</script>
 
-<style>
-  @font-face{font-family:"Space Mono Local";src:url("assets/fonts/SpaceMono-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
-  @font-face{font-family:"Space Mono Local";src:url("assets/fonts/SpaceMono-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
-  @font-face{font-family:"Noto Sans SC Local";src:url("assets/fonts/NotoSansSC-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
-  @font-face{font-family:"Noto Sans SC Local";src:url("assets/fonts/NotoSansSC-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
-  @font-face{font-family:"Noto Sans TC Local";src:url("assets/fonts/NotoSansTC-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
-  @font-face{font-family:"Noto Sans TC Local";src:url("assets/fonts/NotoSansTC-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
-  :root {
+<style>  :root {
     --bg:#f8fafc; --bg2:#eaf4ff; --surface:#ffffff; --border:#d7e8f8;
     --accent:#1479ff; --accent2:#0b5fd3; --text:#0b1b2e; --muted:#334155; --soft:#102033;
     --gold:#f59e0b; --gold-dim:#fbbf24;
     --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-    --sans-hans:"Noto Sans SC Local","PingFang SC","Microsoft YaHei",sans-serif;
-    --sans-hant:"Noto Sans TC Local","PingFang TC","Microsoft JhengHei",sans-serif;
-    --mono:"Noto Sans SC Local","Noto Sans TC Local","Inter","Segoe UI",Roboto,Arial,sans-serif;
+    --sans-hans:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;
+    --sans-hant:"PingFang TC","Microsoft JhengHei","Noto Sans CJK TC",Arial,sans-serif;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -441,7 +436,7 @@
 </script></head>
 <body>
 <nav>
-  <a class="brand" href="/"><img src="assets/images/brand-logo.png" alt="OpsHome NOC logo"><span>OpsHome <strong>NOC</strong><sup class="tm">™</sup></span></a>
+  <a class="brand" href="/"><img src="assets/images/brand-logo.png" alt="OpsHome NOC logo" width="64" height="64" decoding="async"><span>OpsHome <strong>NOC</strong><sup class="tm">™</sup></span></a>
   <ul class="navlinks">
     <li><a href="#features"><span>FUNKTIONEN</span></a></li>
     <li><a href="#protocols"><span>MONITORING</span></a></li>
@@ -462,7 +457,7 @@
         <a class="pr-button pr-button-primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">Kostenlos im App Store laden</a>
         <a class="pr-button pr-button-secondary" href="https://docs.opshome.run/de/" target="_blank" rel="noopener">Dokumentation lesen →</a>
       </div>
-      <div class="pr-hero-visual"><img src="https://app.opshome.run/assets/images/hero-carousel/full-stack-20260620.webp" alt="OpsHome NOC Gesamtübersicht für das Homelab" width="1400" height="788" loading="lazy"></div>
+      <div class="pr-hero-visual"><img src="assets/images/hero-carousel/full-stack-20260620.webp" alt="OpsHome NOC Gesamtübersicht für das Homelab" width="1400" height="788" loading="eager" fetchpriority="high" decoding="async"></div>
     </div>
   </section>
 
@@ -478,7 +473,7 @@
           <div class="pr-point"><span class="pr-point-icon">🔔</span><span>Push-Alarme + Telegram-Benachrichtigungen</span></div>
         </div>
       </div>
-      <div class="pr-media"><img src="https://app.opshome.run/assets/images/hero-carousel/public-services-20260620.webp" alt="Öffentliches Monitoring für Websites, APIs, SSL und Domains" width="1400" height="788" loading="lazy"></div>
+      <div class="pr-media"><img src="assets/images/hero-carousel/public-services-20260620.webp" alt="Öffentliches Monitoring für Websites, APIs, SSL und Domains" width="1400" height="788" loading="lazy" decoding="async"></div>
     </div>
   </section>
 
@@ -498,7 +493,7 @@
         </div>
         <a class="pr-text-link" href="https://docs.opshome.run/de/docker-probe-linux.html" target="_blank" rel="noopener">→ Docker-Probe-Bereitstellungsanleitung ansehen</a>
       </div>
-      <div class="pr-media"><img src="https://app.opshome.run/assets/images/hero-carousel/private-homelab-20260620.webp" alt="Privates Homelab-Monitoring mit Docker Probe" width="1400" height="788" loading="lazy"></div>
+      <div class="pr-media"><img src="assets/images/hero-carousel/private-homelab-20260620.webp" alt="Privates Homelab-Monitoring mit Docker Probe" width="1400" height="788" loading="lazy" decoding="async"></div>
     </div>
   </section>
 
@@ -515,7 +510,7 @@
           <div class="pr-point"><span class="pr-point-icon">🐳</span><span>Docker – Containerzustand und Ressourcennutzung</span></div>
         </div>
       </div>
-      <figure class="pr-media"><img src="https://app.opshome.run/assets/images/hero-carousel/virtualization-20260620.webp" alt="Proxmox-VE-Nodes, virtuelle Maschinen, Ressourcen und Alarme" width="1400" height="788" loading="lazy"><figcaption>Proxmox-VE-Integration – Nodes, VMs, Ressourcen und Alarme auf einen Blick</figcaption></figure>
+      <figure class="pr-media"><img src="assets/images/hero-carousel/virtualization-20260620.webp" alt="Proxmox-VE-Nodes, virtuelle Maschinen, Ressourcen und Alarme" width="1400" height="788" loading="lazy" decoding="async"><figcaption>Proxmox-VE-Integration – Nodes, VMs, Ressourcen und Alarme auf einen Blick</figcaption></figure>
     </div>
   </section>
 
@@ -574,7 +569,7 @@
   </section>
 
   <section class="pr-section pr-center pr-footer-cta">
-    <div class="pr-inner"><h2>Bereit, dein gesamtes Homelab auf einen Blick zu sehen?</h2><p class="pr-lead">Überwache Synology, Proxmox, Docker und alle privaten Assets sicher vom iPhone.</p><div class="pr-footer-actions"><a href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener"><img class="pr-store-badge" src="https://app.opshome.run/assets/images/app-store-badge.svg" alt="Im App Store laden" loading="lazy"></a><a class="pr-qr" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener"><img src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&amp;data=https%3A%2F%2Fapps.apple.com%2Fus%2Fapp%2Fopshome-noc%2Fid6763890679" alt="QR-Code zur OpsHome-NOC-Seite im App Store" width="88" height="88" loading="lazy"><span>Zum Download scannen</span></a></div></div>
+    <div class="pr-inner"><h2>Bereit, dein gesamtes Homelab auf einen Blick zu sehen?</h2><p class="pr-lead">Überwache Synology, Proxmox, Docker und alle privaten Assets sicher vom iPhone.</p><div class="pr-footer-actions"><a href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener"><img class="pr-store-badge" src="assets/images/app-store-badge.svg" width="160" height="48" alt="Im App Store laden" loading="lazy"></a><a class="pr-qr" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener"><img src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&amp;data=https%3A%2F%2Fapps.apple.com%2Fus%2Fapp%2Fopshome-noc%2Fid6763890679" alt="QR-Code zur OpsHome-NOC-Seite im App Store" width="88" height="88" loading="lazy"><span>Zum Download scannen</span></a></div></div>
   </section>
 </main>
 
