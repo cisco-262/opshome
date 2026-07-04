@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8"><base href="/"><link rel="alternate" hreflang="en" href="https://app.opshome.run/"><link rel="alternate" hreflang="zh-Hans" href="https://app.opshome.run/zh/"><link rel="alternate" hreflang="zh-Hant" href="https://app.opshome.run/zh-Hant/"><link rel="alternate" hreflang="de" href="https://app.opshome.run/de/"><link rel="alternate" hreflang="x-default" href="https://app.opshome.run/">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OpsHome NOC - Homelab NOC Monitoring from Your iPhone</title>
@@ -21,6 +21,7 @@
 <meta name="twitter:title" content="OpsHome NOC - Homelab NOC Monitoring from Your iPhone">
 <meta name="twitter:description" content="A NOC-style operations view for homelab public services, Docker Probes, Asset Sources, Private Monitors, Synology, Proxmox, Linux hosts, and Docker containers.">
 <meta name="twitter:image" content="https://app.opshome.run/assets/images/og-image.png">
+<link rel="preload" as="image" href="https://app.opshome.run/assets/images/hero-carousel/full-stack-20260620.webp" type="image/webp" fetchpriority="high">
 
 <!-- Schema.org -->
 <script type="application/ld+json">{
@@ -430,7 +431,15 @@
   }
 </style>
 <link rel="stylesheet" href="assets/product-page-v2.css?v=20260621-transparent-phone">
-</head>
+<script type="text/javascript">
+  if (window.location.hostname === "app.opshome.run") {
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xfn17kggxe");
+  }
+</script></head>
 <body>
 <nav>
   <a class="brand" href="/"><img src="assets/images/brand-logo.png" alt="OpsHome NOC logo"><span>OpsHome <strong>NOC</strong><sup class="tm">™</sup></span></a>
@@ -456,7 +465,7 @@
         <a class="pr-button pr-button-primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">Download Free on App Store</a>
         <a class="pr-button pr-button-secondary" href="https://docs.opshome.run" target="_blank" rel="noopener">Read the Docs →</a>
       </div>
-      <div class="pr-hero-visual"><img src="https://app.opshome.run/assets/images/hero-carousel/full-stack-20260620.webp" alt="OpsHome NOC full-stack homelab overview" width="1400" height="788" loading="lazy"></div>
+      <div class="pr-hero-visual"><img src="https://app.opshome.run/assets/images/hero-carousel/full-stack-20260620.webp" alt="OpsHome NOC full-stack homelab overview" width="1400" height="788" loading="eager" fetchpriority="high" decoding="async"></div>
     </div>
   </section>
 
