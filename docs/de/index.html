@@ -483,8 +483,11 @@
         <p class="pr-eyebrow">Privates Netzwerk · Docker Probe</p>
         <h2>Sieh in dein privates Homelab<br>ohne einen einzigen Port zu öffnen</h2>
         <p>Ein Docker-Befehl auf deinem Server genügt. Der Probe verbindet sich ausschließlich ausgehend mit OpsHome Cloud – dein Heimnetz bleibt für das Internet unsichtbar, für dich aber vollständig sichtbar.</p>
-        <pre class="pr-code"><code>docker run -d opshome/probe:latest \
-  -e TOKEN=your_probe_token</code></pre>
+        <pre class="pr-code"><code>docker run -d opshomenoc/opshome-noc:latest \
+  -e OPSHOME_API_URL=replace-with-opshome-api-url \
+  -e OPSHOME_PUBLIC_USER_ID=replace-with-user-id \
+  -e OPSHOME_PROBE_NAME=replace-with-probe-name \
+  -e OPSHOME_PROBE_BOOTSTRAP_TOKEN=replace-with-bootstrap-token</code></pre>
         <p class="pr-code-note">Dauert etwa 2 Minuten. Keine Portweiterleitung erforderlich.</p>
         <div class="pr-points">
           <div class="pr-point"><span class="pr-point-icon">🔒</span><span>Nur ausgehend – keine eingehende Freigabe</span></div>

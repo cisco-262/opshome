@@ -480,8 +480,11 @@
         <p class="pr-eyebrow">Private Network · Docker Probe</p>
         <h2>See inside your private homelab<br>— without opening a single port</h2>
         <p>Deploy Docker Probe on a host that can reach the services you authorize. The Probe makes outbound-only connections to OpsHome Cloud, so your home network stays private while OpsHome can still show useful status and asset health.</p>
-        <pre class="pr-code"><code>docker run -d opshome/probe:latest \
-  -e TOKEN=your_probe_token</code></pre>
+        <pre class="pr-code"><code>docker run -d opshomenoc/opshome-noc:latest \
+  -e OPSHOME_API_URL=replace-with-opshome-api-url \
+  -e OPSHOME_PUBLIC_USER_ID=replace-with-user-id \
+  -e OPSHOME_PROBE_NAME=replace-with-probe-name \
+  -e OPSHOME_PROBE_BOOTSTRAP_TOKEN=replace-with-bootstrap-token</code></pre>
         <p class="pr-code-note">Takes about 2 minutes. No port forwarding required.</p>
         <div class="pr-points">
           <div class="pr-point"><span class="pr-point-icon">•</span><span>Outbound-only design with no inbound port forwarding</span></div>

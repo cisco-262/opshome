@@ -483,8 +483,11 @@
         <p class="pr-eyebrow">私有网络 · Docker Probe</p>
         <h2>看见私有 Homelab 内部<br>无需开放任何入站端口</h2>
         <p>在服务器上执行一条 Docker 命令即可部署。Probe 只主动连接 OpsHome Cloud，让家庭网络继续对公网隐藏，同时完整呈现在你眼前。</p>
-        <pre class="pr-code"><code>docker run -d opshome/probe:latest \
-  -e TOKEN=your_probe_token</code></pre>
+        <pre class="pr-code"><code>docker run -d opshomenoc/opshome-noc:latest \
+  -e OPSHOME_API_URL=replace-with-opshome-api-url \
+  -e OPSHOME_PUBLIC_USER_ID=replace-with-user-id \
+  -e OPSHOME_PROBE_NAME=replace-with-probe-name \
+  -e OPSHOME_PROBE_BOOTSTRAP_TOKEN=replace-with-bootstrap-token</code></pre>
         <p class="pr-code-note">大约 2 分钟完成，无需端口转发。</p>
         <div class="pr-points">
           <div class="pr-point"><span class="pr-point-icon">🔒</span><span>仅出站连接，不暴露任何入站端口</span></div>
