@@ -27,7 +27,7 @@
 .product-redesign *{box-sizing:border-box}
 .product-redesign .pr-section{padding:96px 40px}
 .product-redesign .pr-section.pr-alt{background:var(--pr-alt)}
-.product-redesign .pr-inner{width:min(100% - 40px,1220px);margin:0 auto}
+.product-redesign .pr-inner{width:min(100% - 40px,1280px);margin:0 auto}
 .product-redesign .pr-eyebrow{
   margin:0 0 16px;
   color:var(--pr-blue);
@@ -40,7 +40,7 @@
 .product-redesign h1,.product-redesign h2,.product-redesign h3{color:var(--pr-ink)}
 .product-redesign h2{margin:0 0 20px;font-size:clamp(28px,4vw,42px);font-weight:600;line-height:1.12;letter-spacing:-.035em}
 .product-redesign .pr-copy>p,.product-redesign .pr-lead{max-width:520px;color:var(--pr-muted);font-size:16px;line-height:1.7}
-.product-redesign .pr-feature{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:64px;align-items:center}
+.product-redesign .pr-feature{display:grid;grid-template-columns:minmax(0,.88fr) minmax(0,1.18fr);gap:56px;align-items:center}
 .product-redesign .pr-feature .pr-copy{max-width:560px}
 .product-redesign .pr-feature.pr-reverse .pr-media{order:-1}
 .product-redesign .pr-media img{
@@ -60,8 +60,8 @@
   background:linear-gradient(145deg,#06101e,#0b1d34 58%,#071426);
   text-align:left;
 }
-.product-redesign .pr-hero .pr-inner{width:min(100% - 40px,1280px)}
-.product-redesign .pr-hero-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:center}
+.product-redesign .pr-hero .pr-inner{width:min(100% - 40px,1440px)}
+.product-redesign .pr-hero-grid{display:grid;grid-template-columns:minmax(420px,4.5fr) minmax(0,7.5fr);gap:48px;align-items:center}
 .product-redesign .pr-hero-copy{max-width:600px}
 .product-redesign .pr-hero-kicker{margin-bottom:18px;color:#93c5fd;font-family:var(--mono);font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
 .product-redesign .pr-hero h1{max-width:600px;margin:0 0 22px;color:#fff;font-size:clamp(44px,5.8vw,68px);line-height:1.02;letter-spacing:-.045em}
@@ -106,7 +106,7 @@
 .product-redesign .pr-card h3{margin:12px 0 10px;font-size:21px}
 .product-redesign .pr-card p{margin:0;color:var(--pr-muted);font-size:15px;line-height:1.7}
 .product-redesign .pr-benefits .pr-card{min-height:210px}
-.product-redesign .pr-events{grid-template-columns:minmax(0,1.08fr) minmax(0,1fr)}
+.product-redesign .pr-events{grid-template-columns:minmax(0,1.22fr) minmax(0,.9fr)}
 .product-redesign .pr-event-cards{grid-column:1/-1;margin-top:30px}
 .product-redesign .pr-showcase-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:34px}
 .product-redesign .pr-showcase-card{overflow:hidden;border:1px solid var(--pr-border);border-radius:14px;background:#fff;box-shadow:0 8px 24px rgba(15,35,55,.06)}
@@ -166,7 +166,7 @@
   .product-redesign .pr-hero-copy{max-width:none}
   .product-redesign .pr-hero h1,.product-redesign .pr-hero-subtitle{margin-right:auto;margin-left:auto}
   .product-redesign .pr-actions,.product-redesign .pr-trust-tags{justify-content:center}
-  .product-redesign .pr-hero-visual img{max-height:380px;object-fit:contain}
+  .product-redesign .pr-hero-visual img{max-height:460px;object-fit:contain}
   .product-redesign .pr-wide-image{width:min(360px,82%);margin-top:28px}
   .product-redesign .pr-showcase-card img{height:260px}
   .product-redesign .pr-actions{margin-bottom:32px}
