@@ -58,13 +58,13 @@
 .product-redesign .pr-hero-visual img{display:block;width:100%;height:auto;object-fit:cover}
 
 .product-redesign .pr-code{margin:26px 0 8px;padding:16px;overflow:auto;border:1px solid #d5dee8;border-radius:8px;background:#eef2f6;color:#10243b;text-align:left}
-.product-redesign .pr-code code{font-family:"Space Mono Local",Consolas,monospace;font-size:13px;line-height:1.7}
+.product-redesign .pr-code code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;line-height:1.7}
 .product-redesign .pr-code-note{color:#6b7280;font-size:13px}
 .product-redesign .pr-text-link{display:inline-flex;margin-top:24px;color:#075fce;font-weight:800}
 
 .product-redesign .pr-center{text-align:center}
 .product-redesign .pr-center .pr-lead{margin-right:auto;margin-left:auto}
-.product-redesign .pr-wide-image{display:block;width:min(644px,70%);height:auto;margin:38px auto 30px;border-radius:0;object-fit:contain;filter:drop-shadow(0 14px 28px rgba(0,0,0,.16))}
+.product-redesign .pr-wide-image{display:block;width:min(460px,58%);height:auto;margin:34px auto 26px;border-radius:0;object-fit:contain;filter:drop-shadow(0 12px 22px rgba(0,0,0,.14))}
 .product-redesign .pr-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:960px;margin:0 auto}
 .product-redesign .pr-card{padding:28px;border:1px solid var(--pr-border);border-radius:14px;background:#fff;text-align:left;box-shadow:0 8px 24px rgba(15,35,55,.06)}
 .product-redesign .pr-card-icon{font-size:28px}
@@ -124,6 +124,7 @@
   .product-redesign .pr-feature .pr-media,.product-redesign .pr-feature.pr-reverse .pr-media{order:-1}
   .product-redesign .pr-hero{padding:56px 20px 48px}
   .product-redesign .pr-hero-visual img{max-height:380px;object-fit:contain}
+  .product-redesign .pr-wide-image{width:min(360px,82%);margin-top:28px}
   .product-redesign .pr-showcase-card img{height:260px}
   .product-redesign .pr-actions{margin-bottom:32px}
   .product-redesign .pr-plan-subline{min-height:0}
