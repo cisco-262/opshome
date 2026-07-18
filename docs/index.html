@@ -47,50 +47,10 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is the main difference between Free and Pro?",
+      "name": "Does Docker Probe require port forwarding?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Regular Free includes public monitoring plus a basic private monitoring allowance. Pro adds higher limits, Docker Probe private monitoring, Asset Sources, private infrastructure integrations, 12 Docker Probes, 12 Asset Sources, and up to 50 Private Monitors."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I cancel my Pro subscription at any time?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Cancel through your Apple ID subscription settings. Pro remains available until the end of the current paid billing period. Deleting the app or your OpsHome account does not cancel the subscription."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is Docker Probe difficult to install?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Follow the deployment guide and run the provided Docker commands. Users familiar with basic Docker operations can usually complete installation in a few minutes."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is my data secure, and where is it stored?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Supported status and infrastructure metrics are transmitted over encrypted HTTPS and processed by hosted OpsHome Cloud infrastructure and database providers. OpsHome does not require uploading NAS files, documents, photos, or payment card information."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why is the final subscription price confirmed in the App Store?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Apple displays local currency, taxes, eligible offers, trials, and final billing confirmation before purchase. OpsHome does not receive or store payment card information."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I use OpsHome on multiple devices or with Family Sharing?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Use the same Sign in with Apple account on another supported device and restore an active Pro purchase if needed. Family Sharing is not currently included in the published OpsHome plan entitlement."
+        "text": "No. Docker Probe makes outbound HTTPS connections to OpsHome Cloud. You do not need inbound port forwarding or public access to private management panels."
       }
     },
     {
@@ -98,15 +58,7 @@
       "name": "Is Docker Probe secure?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Docker Probe initiates outbound connections to OpsHome Cloud. It does not require inbound port forwarding or exposing private services directly to the internet."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How is monitoring data transmitted?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Docker Probe sends supported service status and infrastructure metrics to the OpsHome Cloud API over encrypted HTTPS connections."
+        "text": "Docker Probe accepts no inbound requests and reaches only the private services you explicitly configure. Review the generated deployment command and the published security guide before installing it."
       }
     },
     {
@@ -115,6 +67,22 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Yes. Checks continue through OpsHome Cloud or Docker Probe. The iPhone app is used to review status, reports, and notifications."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between Free and Pro?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Regular Free includes public monitoring plus 1 Docker Probe, 1 Asset Source, and 1 Private Monitor for basic private checks. Pro raises public and private monitoring limits and adds broader infrastructure visibility."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does OpsHome replace Prometheus or Grafana?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. OpsHome is an iPhone-first homelab NOC view for quick status, alerts, and private monitoring. Use Prometheus, Grafana, or other on-premise tools when you need deep metrics, custom dashboards, or production-grade alerting."
       }
     }
   ]
@@ -437,39 +405,44 @@
 <nav>
   <a class="brand" href="/"><img src="assets/images/brand-logo.png" alt="OpsHome NOC logo" width="64" height="64" decoding="async"><span>OpsHome <strong>NOC</strong><sup class="tm">™</sup></span></a>
   <ul class="navlinks">
-    <li><a href="/docker-probe"><span>DOCKER PROBE</span></a></li>
-    <li><a href="/homelab-noc"><span>HOMELAB NOC</span></a></li>
-    <li><a href="/private-monitoring"><span>PRIVATE</span></a></li>
-    <li><a href="#pricing"><span>PRICING</span></a></li>
-    <li><a href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener"><span>APP STORE</span></a></li>
-    <li><a href="https://docs.opshome.run" target="_blank" rel="noopener"><span>DOCS</span></a></li>
+    <li><a href="/docker-probe"><span>Product</span></a></li>
+    <li><a href="/homelab-noc"><span>Integrations</span></a></li>
+    <li><a href="#pricing"><span>Pricing</span></a></li>
+    <li><a href="https://docs.opshome.run" target="_blank" rel="noopener"><span>Docs</span></a></li>
   </ul>
+  <a class="nav-cta" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">Download Free</a>
   <div class="lang" aria-label="Language"><a href="/" class="active" lang="en">EN</a><a href="/zh/" lang="zh-Hans">简</a><a href="/zh-Hant/" lang="zh-Hant">繁</a><a href="/de/" lang="de">DE</a></div>
 </nav>
 
 <main class="product-redesign">
   <section class="pr-hero">
-    <div class="pr-inner">
-      <p class="pr-hero-kicker">OpsHome NOC · Your personal Network Operations Center</p>
-      <h1>Homelab NOC Monitoring from Your iPhone</h1>
-      <p class="pr-hero-subtitle">OpsHome NOC gives your homelab a NOC-style operations view for public services, Docker Probes, Asset Sources, Private Monitors, Synology, Proxmox, Linux hosts, and Docker containers — without opening inbound ports.</p>
-      <p class="pr-hero-audience">Built for homelab operators who run NAS, Proxmox, Docker, Linux hosts, and self-hosted services.</p>
-      <div class="pr-actions">
-        <a class="pr-button pr-button-primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">Download Free on App Store</a>
-        <a class="pr-button pr-button-secondary" href="https://docs.opshome.run" target="_blank" rel="noopener">Read the Docs →</a>
+    <div class="pr-inner pr-hero-grid">
+      <div class="pr-hero-copy">
+        <p class="pr-hero-kicker">OpsHome NOC · Your Personal Network Operations Center</p>
+        <h1>Your Homelab.<br>One Glance Away.</h1>
+        <p class="pr-hero-subtitle">Monitor public services, Docker, Proxmox, Synology, Linux hosts, and private services from your iPhone without opening inbound ports.</p>
+        <div class="pr-actions">
+          <a class="pr-button pr-button-primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">Download Free on App Store</a>
+          <a class="pr-button pr-button-secondary" href="#docker-probe">See how it works</a>
+        </div>
+        <div class="pr-trust-tags" aria-label="OpsHome core capabilities"><span>Public Monitoring</span><span>Docker Probe</span><span>Infrastructure</span><span>Alerts</span></div>
       </div>
       <div class="pr-hero-visual"><img src="assets/images/hero-carousel/full-stack-20260620.webp" alt="OpsHome NOC full-stack homelab overview" width="1400" height="788" loading="eager" fetchpriority="high" decoding="async"></div>
     </div>
   </section>
 
-  <section class="pr-section pr-center" id="features">
+  <section class="pr-integration-strip" aria-label="Supported monitoring targets">
+    <div class="pr-inner"><span>Docker</span><span>Proxmox VE</span><span>Synology</span><span>Linux</span><span>HTTP/HTTPS</span><span>SSL</span><span>TCP</span></div>
+  </section>
+
+  <section class="pr-section pr-center pr-benefits" id="features">
     <div class="pr-inner">
       <p class="pr-eyebrow">Not just another uptime monitor</p>
       <h2>Built for homelab operations, not only green and red checks</h2>
-      <p class="pr-lead">OpsHome includes public uptime checks, but it is built for a wider homelab operations view. See Docker Probes, Asset Sources, Private Monitors, Synology, Proxmox, Linux hosts, and Docker containers in one iPhone-first NOC view.</p>
-      <div class="pr-cards">
-        <article class="pr-card"><h3>Private first</h3><p>Use Docker Probe to monitor internal HTTP, HTTPS, TCP Private Monitors and Asset Sources without exposing management panels to the public internet.</p><a class="pr-text-link" href="/private-monitoring">Explore private monitoring →</a></article>
-        <article class="pr-card"><h3>Infrastructure aware</h3><p>Review the health of homelab assets and container events instead of treating every target as a flat uptime endpoint.</p><a class="pr-text-link" href="/homelab-noc">See the homelab NOC view →</a></article>
+      <div class="pr-cards pr-cards-three">
+        <article class="pr-card"><span class="pr-card-icon" aria-hidden="true">01</span><h3>Public + Private</h3><p>See public websites, APIs, SSL, domains, and private services in the same iPhone-first operations view.</p></article>
+        <article class="pr-card"><span class="pr-card-icon" aria-hidden="true">02</span><h3>Private by Design</h3><p>Docker Probe makes outbound connections only, so your private management interfaces do not need public exposure.</p></article>
+        <article class="pr-card"><span class="pr-card-icon" aria-hidden="true">03</span><h3>Infrastructure Aware</h3><p>Review Proxmox, Synology, Linux, Docker, asset status, and events instead of flat uptime dots.</p></article>
       </div>
     </div>
   </section>
@@ -480,16 +453,10 @@
         <p class="pr-eyebrow">Private Network · Docker Probe</p>
         <h2>See inside your private homelab<br>— without opening a single port</h2>
         <p>Deploy Docker Probe on a host that can reach the services you authorize. The Probe makes outbound-only connections to OpsHome Cloud, so your home network stays private while OpsHome can still show useful status and asset health.</p>
-        <pre class="pr-code"><code>docker run -d opshomenoc/opshome-noc:latest \
-  -e OPSHOME_API_URL=replace-with-opshome-api-url \
-  -e OPSHOME_PUBLIC_USER_ID=replace-with-user-id \
-  -e OPSHOME_PROBE_NAME=replace-with-probe-name \
-  -e OPSHOME_PROBE_BOOTSTRAP_TOKEN=replace-with-bootstrap-token</code></pre>
-        <p class="pr-code-note">Takes about 2 minutes. No port forwarding required.</p>
         <div class="pr-points">
-          <div class="pr-point"><span class="pr-point-icon">•</span><span>Outbound-only design with no inbound port forwarding</span></div>
-          <div class="pr-point"><span class="pr-point-icon">•</span><span>Monitors Docker containers, NAS panels, internal HTTP/HTTPS/TCP</span></div>
-          <div class="pr-point"><span class="pr-point-icon">•</span><span>Groups Docker Probes, Private Monitors, and Asset Sources by location</span></div>
+          <div class="pr-point"><span class="pr-point-icon">•</span><span>Outbound HTTPS with no inbound port forwarding</span></div>
+          <div class="pr-point"><span class="pr-point-icon">•</span><span>Private HTTP, HTTPS, TCP, Docker, and asset status</span></div>
+          <div class="pr-point"><span class="pr-point-icon">•</span><span>Deploy in about two minutes with the command generated by the app</span></div>
         </div>
         <a class="pr-text-link" href="/docker-probe">Explore Docker Probe →</a>
       </div>
@@ -502,13 +469,13 @@
       <div class="pr-copy">
         <p class="pr-eyebrow">Infrastructure Assets</p>
         <h2>Proxmox, Synology, Linux, Docker<br>— all in one place</h2>
-        <p>Go beyond uptime checks. OpsHome surfaces CPU load, memory usage, disk health, VM status, container states, and temperature data from your actual infrastructure so you can decide what needs attention quickly.</p>
+        <p>Go beyond uptime checks. OpsHome brings the infrastructure layers that keep a homelab running into the same NOC view.</p>
         <div class="pr-points">
-          <div class="pr-point"><span class="pr-point-icon">•</span><span>Proxmox VE — nodes, VMs, storage, alerts</span></div>
-          <div class="pr-point"><span class="pr-point-icon">•</span><span>Synology NAS — volumes, packages, temperatures</span></div>
-          <div class="pr-point"><span class="pr-point-icon">•</span><span>Linux hosts — CPU, memory, disk, services</span></div>
-          <div class="pr-point"><span class="pr-point-icon">•</span><span>Docker — container health and resource usage</span></div>
+          <div class="pr-point"><span class="pr-point-icon">•</span><span>Nodes, VMs, and storage</span></div>
+          <div class="pr-point"><span class="pr-point-icon">•</span><span>CPU, memory, disk, and temperature</span></div>
+          <div class="pr-point"><span class="pr-point-icon">•</span><span>Containers, services, and alerts</span></div>
         </div>
+        <div class="pr-capability-tags" aria-label="Infrastructure integrations"><span>Proxmox VE</span><span>Synology</span><span>Linux</span><span>Docker</span></div>
         <a class="pr-text-link" href="/homelab-noc">Learn about the NOC-style view →</a>
       </div>
       <figure class="pr-media"><img src="assets/images/hero-carousel/virtualization-20260620.webp" alt="Proxmox VE nodes, virtual machines, resources, and alerts" width="1400" height="788" loading="lazy" decoding="async"><figcaption>Proxmox VE integration — nodes, VMs, resources, and alerts at a glance</figcaption></figure>
@@ -516,70 +483,22 @@
   </section>
 
   <section class="pr-section pr-alt">
-    <div class="pr-inner">
-      <p class="pr-eyebrow">Infrastructure Monitoring</p>
-      <h2>Dedicated views for Proxmox, Synology, and Linux hosts</h2>
-      <p class="pr-lead">Use OpsHome NOC to review the infrastructure layers that keep a homelab running, with Docker Probes, Asset Sources, and Private Monitors connected in one operations view.</p>
-      <div class="pr-showcase-links">
-        <article class="pr-showcase-card">
-          <a href="/proxmox-monitoring" aria-label="Open Proxmox Monitoring">
-            <picture><source srcset="assets/images/showcase-pve-20260608.webp" type="image/webp"><img src="assets/images/showcase-pve-20260608.png" alt="OpsHome NOC Proxmox VE monitoring screen on iPhone" width="726" height="1572" loading="lazy" decoding="async"></picture>
-            <span class="pr-showcase-body"><strong>Proxmox Monitoring</strong><small>Review nodes, VMs, storage, resource state, and alerts.</small></span>
-          </a>
-        </article>
-        <article class="pr-showcase-card">
-          <a href="/synology-monitoring" aria-label="Open Synology Monitoring">
-            <picture><source srcset="assets/images/showcase-assets-20260608.webp" type="image/webp"><img src="assets/images/showcase-assets-20260608.png" alt="OpsHome NOC Synology and homelab Asset Sources screen on iPhone" width="812" height="1606" loading="lazy" decoding="async"></picture>
-            <span class="pr-showcase-body"><strong>Synology Monitoring</strong><small>Review NAS health, volumes, packages, and private service context.</small></span>
-          </a>
-        </article>
-        <article class="pr-showcase-card">
-          <a href="/linux-server-monitoring" aria-label="Open Linux Server Monitoring">
-            <picture><source srcset="assets/images/linux-server-monitoring-iphone.webp" type="image/webp"><img src="assets/images/linux-server-monitoring-iphone.png" alt="OpsHome NOC Linux server monitoring screen on iPhone" width="1419" height="2796" loading="lazy" decoding="async"></picture>
-            <span class="pr-showcase-body"><strong>Linux Server Monitoring</strong><small>Review Linux hosts, services, Docker Probe status, and Private Monitors.</small></span>
-          </a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="pr-section pr-center pr-alt">
-    <div class="pr-inner">
-      <p class="pr-eyebrow">Docker Container Event Timeline</p>
-      <h2>Review restarts, recoveries, abnormal states, and OOM kills</h2>
-      <p class="pr-lead">A Docker container can restart and look healthy again before you notice anything. OpsHome helps you review the event timeline so you can see what changed, when it happened, and whether the service recovered.</p>
-      <div class="pr-cards">
-        <article class="pr-card"><h3>Timeline over snapshots</h3><p>Instead of only showing a current green or red state, OpsHome keeps recent container events visible so quiet failures are easier to spot.</p></article>
-        <article class="pr-card"><h3>Probe-based collection</h3><p>Docker Probe collects supported container state from inside your authorized environment and sends operational status back over outbound HTTPS.</p><a class="pr-text-link" href="/docker-container-monitoring">Monitor Docker containers →</a></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="pr-section">
-    <div class="pr-inner pr-feature">
+    <div class="pr-inner pr-feature pr-events">
+      <div class="pr-media"><img src="assets/images/hero-carousel/public-services-20260620.webp" alt="Public service monitoring for websites, APIs, SSL, and domains" width="1400" height="788" loading="lazy" decoding="async"></div>
       <div class="pr-copy">
-        <p class="pr-eyebrow">Public Monitoring</p>
-        <h2>Public website and API monitoring is included</h2>
-        <p>OpsHome watches your websites, APIs, login pages, SSL certificates, and domains from the cloud. You get a push notification when a public service goes down or recovers.</p>
+        <p class="pr-eyebrow">Events · Public Monitoring · Alerts</p>
+        <h2>Know what changed, when it happened, and whether it recovered</h2>
+        <p>OpsHome combines public monitoring, Docker container event context, alerts, history, and status sharing so the homepage does not need separate feature chapters for each workflow.</p>
         <div class="pr-points">
-          <div class="pr-point"><span class="pr-point-icon">•</span><span>HTTP, HTTPS, TCP, ICMP, SSL, DNS, Domain, UDP</span></div>
-          <div class="pr-point"><span class="pr-point-icon">•</span><span>SSL and domain expiry reminders</span></div>
-          <div class="pr-point"><span class="pr-point-icon">•</span><span>Push alerts and Telegram notifications</span></div>
+          <div class="pr-point"><span class="pr-point-icon">•</span><span>Website, API, HTTP, HTTPS, TCP, ICMP, SSL, DNS, and domain checks</span></div>
+          <div class="pr-point"><span class="pr-point-icon">•</span><span>Docker restarts, recoveries, abnormal states, and OOM kills</span></div>
+          <div class="pr-point"><span class="pr-point-icon">•</span><span>iOS push, Telegram alerts, history, and status pages</span></div>
         </div>
       </div>
-      <div class="pr-media"><img src="assets/images/hero-carousel/public-services-20260620.webp" alt="Public service monitoring for websites, APIs, SSL, and domains" width="1400" height="788" loading="lazy" decoding="async"></div>
-    </div>
-  </section>
-
-  <section class="pr-section pr-center pr-alt">
-    <div class="pr-inner">
-      <p class="pr-eyebrow">Alerts &amp; History</p>
-      <h2>Fast alerts. Clear history. Easy sharing.</h2>
-      <p class="pr-lead">When something breaks, OpsHome tells you immediately. When it recovers, you see exactly how long it was down.</p>
-      <picture><source srcset="assets/images/noc-pic.webp" type="image/webp"><img class="pr-wide-image" src="assets/images/noc-pic.png" alt="OpsHome NOC homelab health overview on iPhone" width="1370" height="2732" loading="lazy" decoding="async"></picture>
-      <div class="pr-cards">
-        <article class="pr-card"><span class="pr-card-icon">🔔</span><h3>Push &amp; Telegram Alerts</h3><p>Instant iOS push notifications and Telegram messages the moment a service goes offline or recovers. SSL and domain expiry reminders keep you ahead of certificate failures.</p></article>
-        <article class="pr-card"><span class="pr-card-icon">📋</span><h3>Status Pages for Sharing</h3><p>Create a public status page for teammates or users. Protect it with an access code, set an expiry window, verify with QR code. Private targets stay masked from public view.</p></article>
+      <div class="pr-cards pr-cards-three pr-event-cards">
+        <article class="pr-card"><h3>Container Events</h3><p>Restart, recovery, abnormal state, and OOM kill context stays visible after a container looks healthy again.</p></article>
+        <article class="pr-card"><h3>Public Monitoring</h3><p>Watch websites, APIs, SSL, domains, and network endpoints from OpsHome Cloud.</p></article>
+        <article class="pr-card"><h3>Alerts &amp; Sharing</h3><p>Use iOS push, Telegram, status pages, access codes, and QR sharing for fast communication.</p></article>
       </div>
     </div>
   </section>
@@ -592,13 +511,12 @@
       <div class="pr-pricing">
         <article class="pr-plan">
           <p class="pr-plan-name">Free</p><p class="pr-plan-price">$0</p><p class="pr-plan-subline">No subscription required</p>
-          <ul><li>✓ 30 public monitor targets</li><li>✓ HTTP / HTTPS / TCP / SSL / ICMP</li><li>✓ 1 Docker Probe · 1 Asset Source · 1 Private Monitor</li><li>✓ 1 public status page</li><li>✓ Home screen &amp; lock screen widgets</li><li>✓ Push alerts · SSL expiry reminders</li><li>✓ Visual Monitoring Dashboard</li></ul>
-          <p class="pr-plan-footnote">ℹ Regular Free includes a basic private monitoring allowance. Eligible Founder accounts retain 3 Docker Probes, 3 Asset Sources, and 3 Private Monitors.</p>
+          <ul><li>✓ 30 public monitor targets</li><li>✓ HTTP / HTTPS / TCP / SSL / ICMP</li><li>✓ 1 Docker Probe · 1 Asset Source · 1 Private Monitor</li><li>✓ 1 public status page</li><li>✓ Push alerts · SSL expiry reminders</li><li>✓ Visual Monitoring Dashboard</li></ul>
           <a class="pr-button pr-button-primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">Get it Free</a>
         </article>
         <article class="pr-plan pr-plan-pro">
           <span class="pr-plan-badge">Most Popular</span><p class="pr-plan-name">Pro</p><p class="pr-plan-price">$2.99 / month</p><p class="pr-plan-subline">or $24.99 / year · Best Value<br>For the serious homelab enthusiast</p>
-          <ul><li>✓ 100 public monitor targets</li><li>✓ All monitor types including UDP, DNS, Domain</li><li>✓ 12 Docker Probes · 12 Asset Sources · 50 Private Monitors</li><li>✓ Docker container visibility included</li><li>✓ ~1 minute private polling</li><li>✓ Proxmox VE + Synology private integrations</li><li>✓ 5-minute minimum public polling interval</li><li>✓ 3 public status pages + access codes + QR</li><li>✓ Push + Telegram alerts</li><li>✓ Full Analysis Reports</li></ul>
+          <ul><li>✓ 100 public monitor targets</li><li>✓ All monitor types including UDP, DNS, Domain</li><li>✓ 12 Docker Probes · 12 Asset Sources · 50 Private Monitors</li><li>✓ Proxmox VE + Synology private integrations</li><li>✓ ~1 minute private polling</li><li>✓ Push + Telegram alerts</li></ul>
           <a class="pr-button pr-button-primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">Get Pro</a>
         </article>
       </div>
@@ -606,36 +524,21 @@
     </div>
   </section>
 
-  <section class="pr-section pr-center pr-alt" aria-labelledby="latest-product-updates">
-    <div class="pr-inner">
-      <p class="pr-eyebrow">Product Updates</p>
-      <h2 id="latest-product-updates">Latest product updates</h2>
-      <p class="pr-lead">OpsHome NOC is actively updated with improvements for Docker Probe, Private Monitors, Asset Sources, Docker container event timelines, Synology, Proxmox, Linux host monitoring, alerts, and homelab NOC workflows.</p>
-      <div class="pr-actions"><a class="pr-button pr-button-secondary" href="https://docs.opshome.run/release-notes.html" target="_blank" rel="noopener">View release log</a></div>
-    </div>
-  </section>
-
   <section class="pr-section pr-center pr-alt">
     <div class="pr-inner">
       <p class="pr-eyebrow">FAQ</p><h2>Frequently asked questions</h2>
       <div class="pr-faq">
-        <details><summary>What's the difference between Free and Pro?</summary><div class="pr-faq-answer">Regular Free includes public monitoring plus 1 Docker Probe, 1 Asset Source, and 1 Private Monitor for basic private checks. Eligible Founder accounts retain 3 of each private allowance. Pro supports 12 Docker Probes, 12 Asset Sources, 50 Private Monitors, full infrastructure visibility, and advanced Insight.</div></details>
-        <details><summary>Is Docker Probe secure?</summary><div class="pr-faq-answer">Docker Probe makes outbound connections only and accepts no inbound requests. It reaches only the services you explicitly configure inside its Docker network. Review the published deployment command before installing it.</div></details>
-        <details><summary>Is Docker Probe difficult to install?</summary><div class="pr-faq-answer">Run the provided Docker deployment command and enter the token from OpsHome. Users familiar with basic Docker operations can usually finish in a few minutes. <a href="https://docs.opshome.run/docker-probe-linux.html" target="_blank" rel="noopener">View the deployment guide.</a></div></details>
+        <details open><summary>Does Docker Probe require port forwarding?</summary><div class="pr-faq-answer">No. Docker Probe makes outbound HTTPS connections to OpsHome Cloud. You do not need inbound port forwarding or public access to private management panels.</div></details>
+        <details><summary>Is Docker Probe secure?</summary><div class="pr-faq-answer">Docker Probe accepts no inbound requests and reaches only the private services you explicitly configure. Review the generated deployment command and the published security guide before installing it.</div></details>
         <details><summary>Does monitoring continue when the iPhone app is closed?</summary><div class="pr-faq-answer">Yes. Checks continue through OpsHome Cloud or Docker Probe. The iPhone app is used to review status, reports, and notifications.</div></details>
-        <details><summary>How is monitoring data transmitted?</summary><div class="pr-faq-answer">Docker Probe sends supported service status and infrastructure metrics to the OpsHome Cloud API through an encrypted HTTPS connection.</div></details>
-        <details><summary>Is my data secure, and where is it stored?</summary><div class="pr-faq-answer">Monitoring status and supported infrastructure metrics are processed by hosted OpsHome Cloud infrastructure and database providers. OpsHome does not require your NAS files, documents, photos, or payment card information.</div></details>
-        <details><summary>Can I cancel my Pro subscription at any time?</summary><div class="pr-faq-answer">Yes. Manage or cancel the subscription in your Apple ID subscription settings. Pro remains available until the end of the paid billing period.</div></details>
-        <details><summary>Why is the final subscription price confirmed in the App Store?</summary><div class="pr-faq-answer">Apple shows the final local currency, taxes, eligible offers, trials, and billing confirmation for your region before purchase. OpsHome does not receive or store your payment card information.</div></details>
-        <details><summary>Can I use OpsHome on multiple devices or with Family Sharing?</summary><div class="pr-faq-answer">You can use the same Sign in with Apple account on another supported device and restore an active Pro purchase. Family Sharing is not currently included in the published plan entitlement.</div></details>
-        <details><summary>Is 1-minute polling fast enough? My services can go down anytime.</summary><div class="pr-faq-answer">For most homelab use cases, detecting an outage within 1 minute is sufficient. Docker Probe polls private services approximately every minute on Pro. Public monitoring runs at a minimum 5-minute interval on Pro. If you need second-level alerting for production-critical services, use a dedicated on-premise alerting system.</div></details>
-        <details><summary>What happens if OpsHome Cloud itself goes down?</summary><div class="pr-faq-answer">Public cloud monitoring would pause, and Docker Probe heartbeats would stop reaching the cloud. We monitor our infrastructure but do not publish a formal SLA. For critical services, pair OpsHome with a secondary alerting method.</div></details>
+        <details><summary>What's the difference between Free and Pro?</summary><div class="pr-faq-answer">Regular Free includes public monitoring plus 1 Docker Probe, 1 Asset Source, and 1 Private Monitor for basic private checks. Pro raises public and private monitoring limits and adds broader infrastructure visibility.</div></details>
+        <details><summary>Does OpsHome replace Prometheus or Grafana?</summary><div class="pr-faq-answer">No. OpsHome is an iPhone-first homelab NOC view for quick status, alerts, and private monitoring. Use Prometheus, Grafana, or other on-premise tools when you need deep metrics, custom dashboards, or production-grade alerting.</div></details>
       </div>
     </div>
   </section>
 
   <section class="pr-section pr-center pr-footer-cta">
-    <div class="pr-inner"><h2>Ready to see your entire homelab — in one glance?</h2><p class="pr-lead">Securely monitor Synology, Proxmox, Docker, Asset Sources, and Private Monitors from iPhone.</p><div class="pr-footer-actions"><a href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener"><img class="pr-store-badge" src="assets/images/app-store-badge.svg" width="160" height="48" alt="Download on the App Store" loading="lazy"></a><a class="pr-qr" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener"><img src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&amp;data=https%3A%2F%2Fapps.apple.com%2Fus%2Fapp%2Fopshome-noc%2Fid6763890679" alt="QR code for OpsHome NOC App Store page" width="88" height="88" loading="lazy"><span>Scan to download</span></a></div></div>
+    <div class="pr-inner"><h2>Ready to see your entire homelab at a glance?</h2><p class="pr-lead">Monitor websites, Docker, NAS, Linux, and Proxmox without exposing private management interfaces.</p><div class="pr-footer-actions"><a href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener"><img class="pr-store-badge" src="assets/images/app-store-badge.svg" width="160" height="48" alt="Download on the App Store" loading="lazy"></a><a class="pr-qr" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener"><img src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&amp;data=https%3A%2F%2Fapps.apple.com%2Fus%2Fapp%2Fopshome-noc%2Fid6763890679" alt="QR code for OpsHome NOC App Store page" width="88" height="88" loading="lazy"><span>Scan to download</span></a></div></div>
   </section>
 </main>
 
