@@ -30,7 +30,7 @@ Monitor public services, private networks, Docker, Proxmox, Synology NAS, Linux 
 
 <br><br>
 
-<img src="/docs/assets/images/IMG_0518-portrait.png" alt="OpsHome NOC iPhone dashboard showing infrastructure health" width="300">
+<img src="/docs/assets/images/new-home.jpg" alt="OpsHome NOC iPhone dashboard showing infrastructure health" width="300">
 
 <br>
 
