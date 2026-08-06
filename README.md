@@ -405,15 +405,6 @@ Pro 可通过 Apple App 内购买订阅月费或年费方案。最终价格和�
 
 ---
 
-## Screenshots / App 畫面 / App 截图
-
-<p align="center">
-  <img src="/docs/assets/images/screen_home.png" alt="OpsHome NOC Home Dashboard" width="220">
-  <img src="/docs/assets/images/screen_monitors.png" alt="OpsHome NOC Monitor List" width="220">
-  <img src="/docs/assets/images/screen_notifications.png" alt="OpsHome NOC Alerts" width="220">
-  <img src="/docs/assets/images/screen_me_web.png" alt="OpsHome NOC Account" width="220">
-</p>
-
 ## App Store
 
 OpsHome NOC is available on the App Store:
