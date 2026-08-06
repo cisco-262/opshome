@@ -4,26 +4,39 @@
 
 # OpsHome NOC
 
-**Personal Infrastructure Operations from Your iPhone**  
-**從 iPhone 查看個人基礎設施運行狀態**  
-**通过 iPhone 查看个人基础设施运行状态**
+**Your Personal Infrastructure NOC on iPhone**  
+**在 iPhone 上管理你的個人基礎設施 NOC**  
+**在 iPhone 上管理你的个人基础设施 NOC**
 
-Monitor homelab services, NAS devices, Docker containers, Proxmox nodes, Linux hosts, public endpoints, and private network assets in one NOC-style view.
+Monitor public services, private networks, Docker, Proxmox, Synology NAS, Linux hosts, websites, certificates, and homelab infrastructure from one NOC-style app.
 
-在同一個 NOC 式視圖中監控 Homelab 服務、NAS、Docker 容器、Proxmox 節點、Linux 主機、公網端點與私有網路資產。
+透過一款 NOC 式 App，集中監控公網服務、私有網路、Docker、Proxmox、Synology NAS、Linux 主機、網站、憑證與 Homelab 基礎設施。
 
-在同一个 NOC 式视图中监控 Homelab 服务、NAS、Docker 容器、Proxmox 节点、Linux 主机、公网端点与私有网络资产。
-
-<a href="https://apps.apple.com/us/app/opshome-noc/id6763890679">
-  <img src="/docs/assets/images/app-store-badge.svg" alt="Download on the App Store" height="56">
-</a>
+通过一款 NOC 风格 App，集中监控公网服务、私有网络、Docker、Proxmox、Synology NAS、Linux 主机、网站、证书和 Homelab 基础设施。
 
 <br>
 
-[English](#english) · [繁體中文](#繁體中文) · [简体中文](#简体中文) · [Documentation](https://docs.opshome.run) · [App Store](https://apps.apple.com/us/app/opshome-noc/id6763890679)
+[![App Store](https://img.shields.io/badge/App_Store-Download-0D96F6?logo=apple&logoColor=white)](https://apps.apple.com/us/app/opshome-noc/id6763890679)
+[![Website](https://img.shields.io/badge/Website-opshome.run-1769AA)](https://opshome.run)
+[![Documentation](https://img.shields.io/badge/Docs-docs.opshome.run-254E70)](https://docs.opshome.run)
+[![Platform](https://img.shields.io/badge/Platform-iPhone-lightgrey?logo=apple)](https://apps.apple.com/us/app/opshome-noc/id6763890679)
+[![Monitoring](https://img.shields.io/badge/Monitoring-Cloud_%2B_Private-success)](https://docs.opshome.run)
+
+<br>
+
+<a href="https://apps.apple.com/us/app/opshome-noc/id6763890679">
+  <img src="/docs/assets/images/app-store-badge.svg" alt="Download OpsHome NOC on the App Store" height="56">
+</a>
+
+<br><br>
+
+<img src="/docs/assets/images/screen_home.png" alt="OpsHome NOC iPhone dashboard showing infrastructure health" width="300">
+
+<br>
+
+[English](#english) · [繁體中文](#繁體中文) · [简体中文](#简体中文) · [Documentation](https://docs.opshome.run) · [Website](https://opshome.run) · [App Store](https://apps.apple.com/us/app/opshome-noc/id6763890679)
 
 </div>
-
 ---
 
 ## English
@@ -404,6 +417,7 @@ Pro 可通过 Apple App 内购买订阅月费或年费方案。最终价格和�
 - [版本记录](https://docs.opshome.run/release-notes.html)
 
 ---
+
 
 ## App Store
 
