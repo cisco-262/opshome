@@ -319,6 +319,8 @@
   .download-cta-qr span{max-width:96px;color:#334155;font-family:var(--mono);font-size:11px;line-height:1.45}
   footer{position:relative;z-index:1;padding:68px 56px;background:#07111f;border-top:1px solid rgba(255,255,255,.1);color:#fff;font-family:var(--mono)}
   .footer-inner{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:minmax(280px,.8fr) minmax(520px,1.2fr);align-items:center;gap:64px}
+  .footer-brandline{display:flex;align-items:center;gap:16px;max-width:520px}
+  .footer-brandline img{width:48px;height:48px;flex:0 0 48px;border-radius:12px}
   footer p{max-width:440px;color:#cbd5e1;font-size:14px;line-height:1.8}
   footer ul{display:grid;grid-template-columns:repeat(3,minmax(120px,1fr));gap:20px 34px;list-style:none}
   footer li{min-width:0}
@@ -362,6 +364,7 @@
     .download-cta-actions{justify-content:center}
     footer{padding:52px 22px}
     .footer-inner{grid-template-columns:1fr;gap:34px;text-align:center}
+    .footer-brandline{justify-content:center;margin:0 auto}
     footer p{max-width:680px;margin:0 auto}
     footer ul{grid-template-columns:repeat(2,minmax(130px,1fr));gap:16px 24px;width:min(100%,520px);margin:0 auto;text-align:left}
   }
@@ -545,7 +548,10 @@
 
 <footer>
   <div class="footer-inner">
-    <p><span>&copy; 2026 OpsHome NOC&trade;. All rights reserved. OpsHome NOC&trade; is a trademark of its owner.</span></p>
+    <div class="footer-brandline">
+      <img src="assets/images/brand-logo.png" alt="OpsHome NOC logo" width="48" height="48" loading="lazy" decoding="async">
+      <p><span>&copy; 2026 OpsHome NOC&trade;. All rights reserved. OpsHome NOC&trade; is a trademark of its owner.</span></p>
+    </div>
     <ul>
       <li><a href="https://docs.opshome.run/release-notes.html" target="_blank" rel="noopener"><span>Release Log</span></a></li>
       <li><a href="https://docs.opshome.run" target="_blank" rel="noopener"><span>Docs</span></a></li>
