@@ -2,10 +2,47 @@
 <meta charset="UTF-8"><base href="/"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Docker Probe for Private Homelab Monitoring - OpsHome NOC</title>
 <meta name="description" content="Monitor private homelab services, Docker containers, NAS, HTTP, HTTPS, and TCP targets through outbound-only Docker Probe connections with OpsHome NOC.">
-<link rel="canonical" href="https://app.opshome.run/docker-probe">
+<link rel="canonical" href="https://app.opshome.run/docker-probe/">
 <link rel="icon" type="image/png" href="assets/images/favicon-256.png" sizes="256x256"><link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
-<meta property="og:title" content="Docker Probe for Private Homelab Monitoring - OpsHome NOC"><meta property="og:description" content="Monitor private homelab services, Asset Sources, and Private Monitors through outbound-only Docker Probe connections."><meta property="og:image" content="https://app.opshome.run/assets/images/og-image.png"><meta property="og:url" content="https://app.opshome.run/docker-probe"><meta property="og:type" content="website"><meta property="og:site_name" content="OpsHome NOC">
+<meta property="og:title" content="Docker Probe for Private Homelab Monitoring - OpsHome NOC"><meta property="og:description" content="Monitor private homelab services, Asset Sources, and Private Monitors through outbound-only Docker Probe connections."><meta property="og:image" content="https://app.opshome.run/assets/images/og-image.png"><meta property="og:url" content="https://app.opshome.run/docker-probe/"><meta property="og:type" content="website"><meta property="og:site_name" content="OpsHome NOC">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Docker Probe for Private Homelab Monitoring - OpsHome NOC"><meta name="twitter:description" content="Monitor private homelab services, Asset Sources, and Private Monitors without inbound port forwarding."><meta name="twitter:image" content="https://app.opshome.run/assets/images/og-image.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://app.opshome.run/docker-probe/#webpage",
+      "url": "https://app.opshome.run/docker-probe/",
+      "name": "Docker Probe for Private Homelab Monitoring - OpsHome NOC",
+      "isPartOf": {
+        "@id": "https://app.opshome.run/#website"
+      },
+      "about": {
+        "@id": "https://app.opshome.run/#softwareapplication"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://app.opshome.run/docker-probe/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "OpsHome NOC",
+          "item": "https://app.opshome.run/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Docker Probe for Private Homelab Monitoring",
+          "item": "https://app.opshome.run/docker-probe/"
+        }
+      ]
+    }
+  ]
+}
+</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does Docker Probe require port forwarding?","acceptedAnswer":{"@type":"Answer","text":"No. Docker Probe uses outbound HTTPS connections and does not require opening inbound ports to your home network."}},{"@type":"Question","name":"Where should I install Docker Probe?","acceptedAnswer":{"@type":"Answer","text":"Install it on a Docker host that can reach the private services you want to monitor, such as a NAS, mini PC, Linux server, or homelab node."}},{"@type":"Question","name":"Can Docker Probe scan any network?","acceptedAnswer":{"@type":"Answer","text":"No. Only use discovery and monitoring on networks, services, and systems you own or are authorized to monitor."}},{"@type":"Question","name":"Does Docker Probe replace Prometheus or Grafana?","acceptedAnswer":{"@type":"Answer","text":"No. OpsHome is a lightweight NOC-style operations view for homelab operators and can complement deeper observability stacks."}}]}</script>
 <link rel="stylesheet" href="assets/seo-pages.css?v=20260629">
 <script type="text/javascript">
@@ -17,7 +54,7 @@
     })(window, document, "clarity", "script", "xfn17kggxe");
   }
 </script></head><body>
-<nav><a class="brand" href="/"><img src="assets/images/brand-logo.png" alt="OpsHome NOC logo"><span>OpsHome <strong>NOC</strong></span></a><ul class="navlinks"><li><a href="/">HOME</a></li><li><a href="/homelab-noc">HOMELAB NOC</a></li><li><a href="/private-monitoring">PRIVATE</a></li><li><a href="/docker-container-monitoring">CONTAINERS</a></li><li><a href="https://domain.opshome.run" target="_blank" rel="noopener">DOMAIN TOOL</a></li><li><a href="https://docs.opshome.run" target="_blank" rel="noopener">DOCS</a></li></ul></nav>
+<nav><a class="brand" href="/"><img src="assets/images/brand-logo.png" alt="OpsHome NOC logo"><span>OpsHome <strong>NOC</strong></span></a><ul class="navlinks"><li><a href="/">HOME</a></li><li><a href="/homelab-noc/">HOMELAB NOC</a></li><li><a href="/private-monitoring/">PRIVATE</a></li><li><a href="/docker-container-monitoring/">CONTAINERS</a></li><li><a href="https://domain.opshome.run" target="_blank" rel="noopener">DOMAIN TOOL</a></li><li><a href="https://docs.opshome.run" target="_blank" rel="noopener">DOCS</a></li></ul></nav>
 <header class="hero"><div class="inner"><p class="eyebrow">Docker Probe</p><h1>Docker Probe for Private Homelab Monitoring</h1><p>Docker Probe lets OpsHome NOC see inside your private homelab without opening inbound ports. Run it on a Docker host that can reach your internal services, then monitor private HTTP, HTTPS, TCP targets, Docker containers, NAS panels, and infrastructure assets from your iPhone.</p><div class="actions"><a class="button primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">Download on App Store</a><a class="button secondary" href="https://docs.opshome.run/docs/docker-probe/install/" target="_blank" rel="noopener">Read Docker Probe Docs</a><a class="button secondary" href="https://docs.opshome.run/docs/docker-probe/security-model/" target="_blank" rel="noopener">Docker Probe Security</a></div></div></header>
 <main>
 <section><div class="inner screenshot-split"><div><h2>See inside your private homelab without opening ports</h2><p>Most homelab services are intentionally private. Your NAS admin panel, Proxmox UI, internal apps, dashboards, Docker services, and Linux hosts usually sit behind NAT, a firewall, or a home router. That is good for security, but it makes normal cloud monitoring difficult because a cloud checker cannot reach Private Monitors that are not public.</p><p>Docker Probe solves that problem by running inside your network. It checks the services and Asset Sources you authorize, then sends supported status and metrics back to OpsHome over outbound HTTPS. Your router does not need a public management port, and your private services do not need to become public just so you can review their state from your phone.</p></div><figure class="screenshot-shot"><picture><source srcset="assets/images/docker-probe-private-monitoring-iphone.webp" type="image/webp"><img src="assets/images/docker-probe-private-monitoring-iphone.png" alt="OpsHome NOC Docker Probe private monitoring on iPhone" width="1419" height="2796" loading="lazy"></picture><figcaption>Docker Probe keeps private homelab services visible without opening inbound ports.</figcaption></figure></div></section>
@@ -30,8 +67,8 @@
   opshomenoc/opshome-noc:latest</code></pre><p>After the probe connects, configure Private Monitors and Asset Sources in OpsHome. Only scan or monitor networks, services, and systems you own or are authorized to operate.</p></div></section>
 <section class="alt"><div class="inner"><h2>What you can monitor</h2><ul class="list"><li>Internal HTTP and HTTPS services inside your network.</li><li>TCP services you own or are authorized to monitor.</li><li>NAS panels, self-hosted dashboards, and internal admin pages.</li><li>Docker containers and supported container health or event states.</li><li>Asset Sources connected to a specific probe.</li><li>Synology, Proxmox, and Linux assets when configured through supported integrations.</li></ul><p>OpsHome presents this information as an iPhone-first operations view. The goal is to answer the practical question quickly: is everything still running, and which part of the homelab needs attention?</p></div></section>
 <section><div class="inner"><h2>FAQ</h2><div class="faq"><details><summary>Does Docker Probe require port forwarding?</summary><div class="answer">No. Docker Probe uses outbound connections and does not require opening inbound ports to your home network.</div></details><details><summary>Where should I install Docker Probe?</summary><div class="answer">Install it on a Docker host that can reach your private services, such as a NAS, mini PC, Linux server, or homelab node.</div></details><details><summary>Can Docker Probe scan any network?</summary><div class="answer">No. Only use discovery and monitoring on networks, services, and systems you own or are authorized to monitor.</div></details><details><summary>Does Docker Probe replace Prometheus or Grafana?</summary><div class="answer">No. OpsHome is a lightweight NOC-style operations view for homelab operators. It can complement deeper observability stacks.</div></details><details><summary>Does Docker Probe access my personal files?</summary><div class="answer">OpsHome does not need your NAS files, photos, documents, or payment card information for monitoring. Grant only the minimum access needed for supported status and infrastructure checks.</div></details></div></div></section>
-<section class="alt"><div class="inner"><h2>Related OpsHome topics</h2><div class="related"><a href="/private-monitoring"><strong>Private Monitoring</strong><span>Monitor internal services without exposing your network.</span></a><a href="/docker-container-monitoring"><strong>Docker Container Monitoring</strong><span>Review restarts, recoveries, abnormal states, and OOM kills.</span></a><a href="/homelab-noc"><strong>Homelab NOC</strong><span>Build a NOC-style operations view for self-hosted infrastructure.</span></a></div></div></section>
+<section class="alt"><div class="inner"><h2>Related OpsHome topics</h2><div class="related"><a href="/private-monitoring/"><strong>Private Monitoring</strong><span>Monitor internal services without exposing your network.</span></a><a href="/docker-container-monitoring/"><strong>Docker Container Monitoring</strong><span>Review restarts, recoveries, abnormal states, and OOM kills.</span></a><a href="/homelab-noc/"><strong>Homelab NOC</strong><span>Build a NOC-style operations view for self-hosted infrastructure.</span></a></div></div></section>
 <section class="cta"><div class="inner"><h2>Use Docker Probe from your iPhone NOC view</h2><p>Install OpsHome NOC, deploy Docker Probe inside your network, and start monitoring authorized private services without opening inbound ports.</p><div class="actions"><a class="button primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">Download on App Store</a><a class="button secondary" href="https://docs.opshome.run/docker-probe-linux.html" target="_blank" rel="noopener">Read Deployment Guide</a></div></div></section>
 </main>
-<footer><div class="footer-inner"><div class="footer-brandline"><img src="../assets/images/brand-logo.png" alt="OpsHome NOC logo" width="42" height="42" loading="lazy" decoding="async"><span>&copy; 2026 OpsHome NOC&trade;. All rights reserved. OpsHome NOC&trade; is a trademark of its owner.</span></div><ul><li><a href="/">Home</a></li><li><a href="/private-monitoring">Private Monitoring</a></li><li><a href="/homelab-noc">Homelab NOC</a></li><li><a href="https://domain.opshome.run">Domain Health Inspector</a></li><li><a href="https://fgt.opshome.run/">NOC for FGT</a></li><li><a href="privacy.html">Privacy</a></li></ul></div></footer>
+<footer><div class="footer-inner"><div class="footer-brandline"><img src="../assets/images/brand-logo.png" alt="OpsHome NOC logo" width="42" height="42" loading="lazy" decoding="async"><span>&copy; 2026 OpsHome NOC&trade;. All rights reserved. OpsHome NOC&trade; is a trademark of its owner.</span></div><ul><li><a href="/">Home</a></li><li><a href="/private-monitoring/">Private Monitoring</a></li><li><a href="/homelab-noc/">Homelab NOC</a></li><li><a href="https://domain.opshome.run">Domain Health Inspector</a></li><li><a href="https://fgt.opshome.run/">NOC for FGT</a></li><li><a href="privacy.html">Privacy</a></li></ul></div></footer>
 </body></html>
