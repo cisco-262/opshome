@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security - OpsHome NOC</title>
+<meta name="description" content="Learn how OpsHome NOC handles monitoring architecture, private probes, account security, and data transparency.">
+<link rel="canonical" href="https://app.opshome.run/security.html">
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;max-width:900px;margin:0 auto;padding:48px 24px;color:#0b1b2e;line-height:1.7;background:#f8fafc}h1{color:#1479ff}h2{margin-top:36px}section{background:#fff;border:1px solid #d7e8f8;border-radius:12px;padding:24px;margin:18px 0}code{background:#eef6ff;padding:2px 6px;border-radius:4px}</style>
+</head>
+<body>
+<h1>OpsHome NOC Security</h1>
+<p>OpsHome NOC is designed for transparent, privacy-conscious infrastructure monitoring. Our goal is to help IT administrators understand what data is processed and why it is needed.</p>
+
+<section><h2>Monitoring Architecture</h2>
+<p>OpsHome NOC uses a hybrid architecture:</p>
+<pre>Your Infrastructure
+        |
+ Docker Probe
+        |
+ Secure outbound connection
+        |
+ OpsHome Cloud API
+        |
+ iPhone App</pre>
+<p>Docker Probe runs inside your environment and communicates outbound. OpsHome NOC does not require inbound port forwarding or public exposure of private management interfaces.</p>
+</section>
+
+<section><h2>Data Handling</h2>
+<p>OpsHome processes information required to provide monitoring, historical analysis, alerts, account management, and service functionality.</p>
+<ul><li>Account and subscription information</li><li>Monitoring configuration</li><li>Asset metadata</li><li>Health metrics and status information</li><li>Operational events and service records</li></ul>
+<p>We do not collect the content of your private applications, files, or business data through Docker Probe monitoring.</p>
+</section>
+
+<section><h2>Account and Access</h2>
+<p>Your OpsHome account is used to securely access services, manage subscriptions, synchronize configuration, and provide historical monitoring features.</p>
+<p>Users control which infrastructure components are connected and are responsible for configuring appropriate permissions in their own environment.</p>
+</section>
+
+<section><h2>Least Privilege Approach</h2>
+<p>OpsHome recommends using dedicated monitoring accounts or limited permissions where supported. Avoid using unnecessary administrative credentials for monitoring integrations.</p>
+</section>
+
+<section><h2>Data Lifecycle</h2>
+<p>Monitoring data retention depends on subscription plans, data types, and service requirements. Retention is managed to support historical views, analysis, troubleshooting, and reliable service operation.</p>
+<p>For details, see our <a href="privacy.html">Privacy Policy</a>.</p>
+</section>
+
+<section><h2>User Control</h2>
+<p>You control which infrastructure is connected to OpsHome NOC, where monitoring components are deployed, and which permissions are granted to monitoring integrations.</p>
+</section>
+
+<p><a href="/">← Back to OpsHome NOC</a></p>
+</body>
+</html>
