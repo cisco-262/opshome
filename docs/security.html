@@ -7,6 +7,11 @@
 <meta name="robots" content="index,follow">
 <meta name="description" content="Learn how OpsHome NOC handles monitoring architecture, private probes, account security, and data transparency.">
 <link rel="canonical" href="https://app.opshome.run/security.html">
+<link rel="alternate" hreflang="en" href="https://app.opshome.run/security.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://app.opshome.run/zh/security.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://app.opshome.run/zh-Hant/security.html">
+<link rel="alternate" hreflang="de" href="https://app.opshome.run/de/security.html">
+<link rel="alternate" hreflang="x-default" href="https://app.opshome.run/security.html">
 <link rel="icon" type="image/png" href="assets/images/favicon-256.png" sizes="256x256">
 <link rel="icon" href="assets/images/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
@@ -38,6 +43,8 @@
   section{margin:34px 0}
   h2{font-family:var(--mono);font-size:21px;margin-bottom:10px;color:var(--soft)}
   p,li{color:var(--muted);font-weight:400}
+  .text-link{color:var(--accent);font-weight:800;text-decoration:none}
+  .text-link:hover{color:#0b5fd3;text-decoration:underline}
   ul{padding-left:22px}
   pre{overflow:auto;margin-top:18px;padding:18px;border:1px solid rgba(20,121,255,.16);border-radius:12px;background:#f3f8ff;color:#102033;font-family:var(--mono);font-size:12px;line-height:1.7}
   .box{border:1px solid var(--border);background:var(--surface);padding:22px;margin-top:18px;border-radius:18px;box-shadow:0 14px 32px rgba(31,91,150,.08)}
@@ -74,7 +81,7 @@
     <li><a href="security.html" aria-current="page"><span>Security</span></a></li>
   </ul>
   <a class="nav-cta" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">Download Free</a>
-  <div class="lang" aria-label="Language"><a href="/" class="active" lang="en">EN</a><a href="/zh/" lang="zh-Hans">&#31616;</a><a href="/zh-Hant/" lang="zh-Hant">&#32321;</a><a href="/de/" lang="de">DE</a></div>
+  <div class="lang" aria-label="Language"><a href="/security.html" class="active" lang="en">EN</a><a href="/zh/security.html" lang="zh-Hans">&#31616;</a><a href="/zh-Hant/security.html" lang="zh-Hant">&#32321;</a><a href="/de/security.html" lang="de">DE</a></div>
 </nav>
 
 <main>
@@ -98,7 +105,7 @@
     <h2>Monitoring Architecture</h2>
     <p>OpsHome NOC uses a hybrid architecture that combines private infrastructure monitoring with public service reachability checks.</p>
     <p>The complete architecture model, including OpsHome Platform, Probe deployment, Inside-Out Health, and Outside-In Reachability, is documented in our technical documentation.</p>
-    <p><a href="https://docs.opshome.run/opshome-noc-architecture.html">View Architecture Overview -&gt;</a></p>
+    <p><a class="text-link" href="https://docs.opshome.run/opshome-noc-architecture.html">View Architecture Overview -&gt;</a></p>
   </section>
 
   <div class="grid">

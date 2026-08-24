@@ -33,15 +33,31 @@
     <lastmod>2026-08-12</lastmod>
   </url>
   <url>
+    <loc>https://app.opshome.run/security.html</loc>
+    <lastmod>2026-08-24</lastmod>
+  </url>
+  <url>
     <loc>https://app.opshome.run/de/</loc>
     <lastmod>2026-08-12</lastmod>
+  </url>
+  <url>
+    <loc>https://app.opshome.run/de/security.html</loc>
+    <lastmod>2026-08-24</lastmod>
   </url>
   <url>
     <loc>https://app.opshome.run/zh/</loc>
     <lastmod>2026-08-12</lastmod>
   </url>
   <url>
+    <loc>https://app.opshome.run/zh/security.html</loc>
+    <lastmod>2026-08-24</lastmod>
+  </url>
+  <url>
     <loc>https://app.opshome.run/zh-Hant/</loc>
     <lastmod>2026-08-12</lastmod>
+  </url>
+  <url>
+    <loc>https://app.opshome.run/zh-Hant/security.html</loc>
+    <lastmod>2026-08-24</lastmod>
   </url>
 </urlset>
