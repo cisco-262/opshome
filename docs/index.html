@@ -166,6 +166,7 @@
   .brand img{width:64px;height:64px}
   .navlinks{display:flex;align-items:center;gap:28px;list-style:none;font-family:var(--sans);font-size:15.5px;font-weight:750;color:var(--muted);letter-spacing:.01em}
   .navlinks a:hover{color:var(--accent)}
+  .mobile-support-link{display:none;color:var(--accent);font-size:14px;font-weight:850;white-space:nowrap}
   .lang{display:flex;gap:4px;padding:4px;border:1px solid var(--border);background:#fff;border-radius:6px}
   .lang a{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--muted);background:transparent;border:0;padding:6px 10px;cursor:pointer}
   .lang a.active{background:var(--accent);color:#fff;border-radius:4px}
@@ -394,6 +395,7 @@
   @media(max-width:900px){
     nav{padding:16px 22px}
     .navlinks{display:none}
+    .mobile-support-link{display:inline-flex}
     .hero{min-height:auto;padding:72px 22px 64px}
     .hero-inner{grid-template-columns:1fr;gap:48px}
     .hero-copy{text-align:center}
@@ -471,6 +473,7 @@
     <li><a href="/support.html"><span>Support</span></a></li>
     <li><a href="/security.html"><span>Security</span></a></li>
   </ul>
+  <a class="mobile-support-link" href="/support.html">Support</a>
   <a class="nav-cta" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">Download Free</a>
   <div class="lang" aria-label="Language"><a href="/" class="active" lang="en">EN</a><a href="/zh/" lang="zh-Hans">&#31616;</a><a href="/zh-Hant/" lang="zh-Hant">&#32321;</a><a href="/de/" lang="de">DE</a></div>
 </nav>
@@ -617,6 +620,7 @@
       <li><a href="https://wifi.opshome.run/"><span>WiFi Health Check</span></a></li>
       <li><a href="https://docs.opshome.run" target="_blank" rel="noopener"><span>Docs</span></a></li>
       <li><a href="https://docs.opshome.run/release-notes.html" target="_blank" rel="noopener"><span>Release Log</span></a></li>
+      <li><a href="/support.html"><span>Support</span></a></li>
       <li><a href="/security.html"><span>Security</span></a></li>
       <li><a href="privacy.html"><span>Privacy</span></a></li>
       <li><a href="terms.html"><span>Terms</span></a></li>
