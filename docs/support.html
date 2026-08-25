@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OpsHome NOC Support Center</title>
+<meta name="description" content="Get help with OpsHome NOC, use the in-app Feedback Center, report issues, request features, and contact the OpsHome team.">
+<link rel="canonical" href="https://app.opshome.run/support.html">
+<link rel="icon" type="image/png" href="assets/images/favicon-256.png" sizes="256x256">
+<link rel="icon" href="assets/images/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+<style>
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #071d36;
+    color: #ffffff;
+}
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 18px 56px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid #d7e8f8;
+}
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #1479ff;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 15px;
+    font-weight: 800;
+}
+.brand img {
+    width: 64px;
+    height: 64px;
+}
+.tm {
+    font-size: 0.42em;
+    line-height: 0;
+    vertical-align: super;
+    margin-left: 2px;
+}
+.navlinks {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+    color: #334155;
+    font-size: 15.5px;
+    font-weight: 750;
+}
+.navlinks a:hover,
+.navlinks a[aria-current="page"] {
+    color: #1479ff;
+}
+.nav-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 9px 14px;
+    border-radius: 8px;
+    background: #1479ff;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 800;
+    white-space: nowrap;
+    box-shadow: 0 10px 24px rgba(20, 121, 255, 0.22);
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.container {
+    max-width: 960px;
+    margin: auto;
+    padding: 48px 24px;
+}
+.hero {
+    text-align: center;
+    padding: 40px 0;
+}
+h1 {
+    font-size: 42px;
+    margin-bottom: 16px;
+}
+.subtitle {
+    font-size: 20px;
+    color: #c8d8ee;
+}
+.card {
+    background: #ffffff;
+    color: #223047;
+    border-radius: 24px;
+    padding: 32px;
+    margin: 24px 0;
+}
+h2 {
+    color: #123b6d;
+    margin-top: 0;
+}
+ul {
+    line-height: 1.9;
+}
+.highlight {
+    background: #0d8fe8;
+    color: white;
+    border-radius: 16px;
+    padding: 20px;
+}
+.feedback-showcase {
+    text-align: center;
+}
+.feedback-showcase p {
+    max-width: 680px;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 1.7;
+}
+.screenshot-frame {
+    max-width: 430px;
+    margin: 28px auto 16px;
+    padding: 18px;
+    border: 1px solid rgba(13, 143, 232, 0.18);
+    border-radius: 28px;
+    background:
+        linear-gradient(180deg, rgba(13, 143, 232, 0.08), rgba(13, 143, 232, 0.02)),
+        #f7fbff;
+    box-shadow: 0 24px 50px rgba(7, 29, 54, 0.18);
+}
+.screenshot-frame img {
+    display: block;
+    width: min(100%, 360px);
+    height: auto;
+    margin: 0 auto;
+    border-radius: 22px;
+    box-shadow: 0 18px 34px rgba(7, 29, 54, 0.24);
+}
+.screenshot-caption {
+    margin: 0;
+    color: #5c6f86;
+    font-size: 14px;
+    font-weight: 600;
+}
+.footer {
+    text-align: center;
+    color: #b7c8df;
+    padding: 32px;
+}
+@media (max-width: 1180px) {
+    .navlinks,
+    .nav-cta {
+        display: none;
+    }
+}
+@media (max-width: 640px) {
+    nav {
+        padding: 16px 22px;
+    }
+    .brand img {
+        width: 48px;
+        height: 48px;
+    }
+    .container {
+        padding: 32px 16px;
+    }
+    h1 {
+        font-size: 34px;
+    }
+    .card {
+        padding: 24px;
+        border-radius: 20px;
+    }
+    .screenshot-frame {
+        max-width: none;
+        padding: 12px;
+        border-radius: 22px;
+    }
+    .screenshot-frame img {
+        width: 100%;
+        max-width: 360px;
+        border-radius: 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+<nav>
+  <a class="brand" href="/"><img src="assets/images/brand-logo.png" alt="OpsHome NOC logo" width="64" height="64" decoding="async"><span>OpsHome <strong>NOC</strong><sup class="tm">&trade;</sup></span></a>
+  <ul class="navlinks">
+    <li><a href="/docker-probe/"><span>Product</span></a></li>
+    <li><a href="/homelab-noc/"><span>Integrations</span></a></li>
+    <li><a href="/#pricing"><span>Pricing</span></a></li>
+    <li><a href="https://docs.opshome.run" target="_blank" rel="noopener"><span>Docs</span></a></li>
+    <li><a href="/support.html" aria-current="page"><span>Support</span></a></li>
+    <li><a href="/security.html"><span>Security</span></a></li>
+  </ul>
+  <a class="nav-cta" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">Download Free</a>
+</nav>
+
+<div class="container">
+
+<section class="hero">
+<h1>OpsHome NOC Support Center</h1>
+<p class="subtitle">
+Get help, report issues, and share feedback directly with the OpsHome team.
+</p>
+<p>
+OpsHome NOC includes an integrated support and feedback system designed
+for self-hosted infrastructure monitoring.
+</p>
+</section>
+
+<div class="card">
+<h2>In-App Support</h2>
+<p>
+The fastest way to contact the OpsHome team is through the built-in feedback system.
+</p>
+
+<div class="highlight">
+Open OpsHome NOC -> Me -> Help & Support -> Feedback Center
+</div>
+
+<p>
+Submit questions, report problems, request features, or ask for assistance
+without leaving the app.
+</p>
+</div>
+
+<div class="card feedback-showcase">
+<h2>Feedback Center in OpsHome NOC</h2>
+<p>
+Submit questions, report issues, request features, and communicate with
+the OpsHome team directly from the app.
+</p>
+<div class="screenshot-frame">
+<img src="/assets/support/feedback-center.png" alt="OpsHome NOC Feedback Center screen" loading="lazy" decoding="async">
+</div>
+<p class="screenshot-caption">
+Feedback Center allows users to submit and track support requests directly inside OpsHome NOC.
+</p>
+</div>
+
+<div class="card">
+<h2>Feedback Categories</h2>
+<ul>
+<li><b>General</b> - Questions, suggestions, and general feedback.</li>
+<li><b>Bug</b> - Report unexpected behavior or technical issues.</li>
+<li><b>Feature</b> - Request improvements or new capabilities.</li>
+<li><b>Billing</b> - Subscription and purchase related questions.</li>
+<li><b>Alert</b> - Monitoring notifications and alert behavior.</li>
+<li><b>Asset</b> - Infrastructure assets and monitored resources.</li>
+<li><b>Account</b> - Account and data management questions.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Track Your Requests</h2>
+<p>
+Each feedback submission is tracked through the OpsHome support workflow.
+</p>
+<ul>
+<li><b>Open</b> - Your request has been received and is waiting for review.</li>
+<li><b>Closed</b> - The request has been reviewed or resolved.</li>
+</ul>
+<p>
+Previous submissions remain available through Submission History.
+</p>
+</div>
+
+<div class="card">
+<h2>Privacy-Focused Support</h2>
+<p>
+Only information that you provide in the feedback form is submitted with your account.
+</p>
+<ul>
+<li>No automatic device information collection</li>
+<li>No automatic system log collection</li>
+<li>No automatic screenshot collection</li>
+<li>No access to personal files</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Help & Guides</h2>
+<p>
+Learn more about OpsHome NOC features, including monitoring results,
+notifications, account management, and infrastructure monitoring concepts.
+</p>
+</div>
+
+<div class="card">
+<h2>Additional Contact</h2>
+<p>
+For business inquiries:</p>
+<p><b>support@opshome.run</b></p>
+</div>
+
+<div class="footer">
+© 2026 OpsHome NOC™. All rights reserved.<br>
+OpsHome NOC™ is a trademark of its owner.
+</div>
+
+</div>
+</body>
+</html>
