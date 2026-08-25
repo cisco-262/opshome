@@ -34,8 +34,8 @@
   .intro{max-width:760px;color:var(--muted);font-size:17px;line-height:1.75}section{margin:34px 0}h2{font-family:var(--mono);font-size:21px;margin-bottom:10px;color:var(--soft)}p,li{color:var(--muted);font-weight:400}.text-link{color:var(--accent);font-weight:800}.text-link:hover{color:#0b5fd3;text-decoration:underline}ul{padding-left:22px}
   .box{border:1px solid var(--border);background:var(--surface);padding:22px;margin-top:18px;border-radius:18px;box-shadow:0 14px 32px rgba(31,91,150,.08)}
   .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:20px}.grid .box{margin-top:0}.box h2{font-size:18px}
-  footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:30px 48px;color:var(--muted);font-family:var(--mono);font-size:12px;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.footer-brandline{display:flex;align-items:center;gap:14px;max-width:520px}.footer-brandline img{width:42px;height:42px;flex:0 0 42px;border-radius:10px}.footer-brandline span{line-height:1.7}
-  @media(max-width:1180px){.navlinks,.nav-cta{display:none}}@media(max-width:680px){nav{padding:16px 22px}.brand img{width:48px;height:48px}main{padding:54px 22px}.grid{grid-template-columns:1fr}.footer-brandline{justify-content:center;margin:0 auto;text-align:center}}
+footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:34px 56px;color:var(--muted);font-family:var(--mono);font-size:12px}.footer-inner{display:flex;align-items:flex-start;justify-content:space-between;gap:28px;max-width:1120px;margin:0 auto}.footer-brandline{display:flex;align-items:center;gap:14px;max-width:520px}.footer-brandline img{width:48px;height:48px;flex:0 0 48px;border-radius:10px}.footer-brandline span{line-height:1.7}footer ul{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:12px 18px;max-width:560px;margin:0;padding:0;list-style:none;line-height:1.4}footer a{color:var(--muted);font-size:12px;font-weight:700}footer a:hover{color:var(--accent)}
+@media(max-width:1180px){.navlinks,.nav-cta{display:none}}@media(max-width:680px){nav{padding:16px 22px}.brand img{width:48px;height:48px}main{padding:54px 22px}.grid{grid-template-columns:1fr}footer{padding:30px 22px}.footer-inner{align-items:center;flex-direction:column;text-align:center}.footer-brandline{justify-content:center;margin:0 auto;text-align:center}footer ul{justify-content:center}}
 </style>
 <script type="text/javascript">
   if (window.location.hostname === "app.opshome.run") {
@@ -56,7 +56,7 @@
     <li><a href="/zh-Hant/#pricing"><span>價格</span></a></li>
     <li><a href="https://fgt.opshome.run/" target="_blank" rel="noopener"><span>NOC FOR FGT</span></a></li>
     <li><a href="https://docs.opshome.run/hant/" target="_blank" rel="noopener"><span>文件</span></a></li>
-    <li><a href="/support.html"><span>支援</span></a></li>
+    <li><a href="/zh-Hant/support.html"><span>支援</span></a></li>
     <li><a href="/zh-Hant/security.html" aria-current="page"><span>安全</span></a></li>
   </ul>
   <a class="nav-cta" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">免費下載</a>
@@ -84,10 +84,10 @@
 </main>
 
 <footer>
-  <div class="footer-brandline"><img src="../assets/images/brand-logo.png" alt="OpsHome NOC logo" width="42" height="42" loading="lazy" decoding="async"><span>&copy; 2026 OpsHome NOC&trade;. All rights reserved. OpsHome NOC&trade; is a trademark of its owner.</span></div>
-  <a href="/privacy.html">隱私政策</a>
-  <a href="/terms.html">服務條款</a>
-  <a href="https://opshome.run/" target="_blank" rel="noopener">OpsHome</a>
+  <div class="footer-inner">
+    <div class="footer-brandline"><img src="../assets/images/brand-logo.png" alt="OpsHome NOC logo" width="48" height="48" loading="lazy" decoding="async"><span>&copy; 2026 OpsHome NOC&trade;. All rights reserved. OpsHome NOC&trade; is a trademark of its owner.</span></div>
+    <ul><li><a href="/zh-Hant/"><span>產品：OpsHome NOC</span></a></li><li><a href="https://fgt.opshome.run/"><span>NOC for FGT</span></a></li><li><a href="https://domain.opshome.run/"><span>Domain Health Inspector</span></a></li><li><a href="https://ssl.opshome.run/zh-cn/"><span>SSL Reminder</span></a></li><li><a href="https://wifi.opshome.run/zh-cn/"><span>WiFi Health Check</span></a></li><li><a href="https://docs.opshome.run/hant/" target="_blank" rel="noopener"><span>文件</span></a></li><li><a href="https://docs.opshome.run/hant/release-notes.html" target="_blank" rel="noopener"><span>更新日誌</span></a></li><li><a href="/zh-Hant/support.html"><span>支援</span></a></li><li><a href="/zh-Hant/security.html"><span>安全</span></a></li><li><a href="/privacy.html"><span>隱私</span></a></li><li><a href="/terms.html"><span>條款</span></a></li><li><a href="mailto:support@opshome.run"><span>support@opshome.run</span></a></li></ul>
+  </div>
 </footer>
 </body>
 </html>
