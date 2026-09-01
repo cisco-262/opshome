@@ -75,7 +75,7 @@
       "name": "Was ist der Unterschied zwischen Free und Pro?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Free umfasst öffentliches Monitoring plus 1 Docker Probe, 1 Asset Source und 1 privaten Monitor. Pro erhöht die öffentlichen und privaten Limits und bietet umfassendere Infrastrukturansichten."
+        "text": "Free umfasst öffentliches Monitoring plus 1 Docker Probe, 1 Infrastruktur-Verbindung und 1 privaten Monitor. Pro erhöht die öffentlichen und privaten Limits und bietet umfassendere Infrastrukturansichten."
       }
     },
     {
@@ -524,16 +524,16 @@
       <div class="pr-pricing">
         <article class="pr-plan">
           <p class="pr-plan-name">Free</p><p class="pr-plan-price">$0</p><p class="pr-plan-subline">Kein Abonnement erforderlich</p>
-          <ul><li>&#10003; 30 öffentliche Monitoring-Ziele</li><li>&#10003; HTTP / HTTPS / TCP / SSL / ICMP</li><li>&#10003; 1 Docker Probe &middot; 1 Asset Source &middot; 1 privater Monitor</li><li>&#10003; 1 öffentliche Statusseite</li><li>&#10003; Push-Alarme &middot; SSL-Ablauferinnerungen</li><li>&#10003; Visuelles Monitoring-Dashboard</li></ul>
+          <ul><li>&#10003; 30 öffentliche Monitoring-Ziele</li><li>&#10003; HTTP / HTTPS / TCP / SSL / ICMP</li><li>&#10003; 1 Docker Probe &middot; 1 Infrastruktur-Verbindung &middot; 1 privater Monitor</li><li>&#10003; 1 öffentliche Statusseite</li><li>&#10003; Push-Alarme &middot; SSL-Ablauferinnerungen</li><li>&#10003; Visuelles Monitoring-Dashboard</li></ul>
           <a class="pr-button pr-button-primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">Kostenlos laden</a>
         </article>
         <article class="pr-plan pr-plan-pro">
           <span class="pr-plan-badge">Am beliebtesten</span><p class="pr-plan-name">Pro</p><p class="pr-plan-price">$2.99 / Monat</p><p class="pr-plan-subline">oder $24.99 / Jahr &middot; Bestes Angebot<br>Für ernsthaftes Monitoring privater Infrastruktur</p>
-          <ul><li>&#10003; 100 öffentliche Monitoring-Ziele</li><li>&#10003; Alle Monitoring-Typen einschließlich UDP, DNS und Domain</li><li>&#10003; 12 Docker Probes &middot; 12 Asset Sources &middot; 50 private Monitore</li><li>&#10003; Proxmox VE + private Synology-Integrationen</li><li>&#10003; Privates Prüfintervall etwa 1 Minute</li><li>&#10003; Push- + Telegram-Alarme</li></ul>
+          <ul><li>&#10003; 100 öffentliche Monitoring-Ziele</li><li>&#10003; Alle Monitoring-Typen einschließlich UDP, DNS und Domain</li><li>&#10003; 12 Docker Probes &middot; 12 Infrastruktur-Verbindungen &middot; 50 private Monitore</li><li>&#10003; Proxmox VE + private Synology-Integrationen</li><li>&#10003; Höhere Prüffrequenz für privates Monitoring</li><li>&#10003; Push- + Telegram-Alarme</li></ul>
           <a class="pr-button pr-button-primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">Pro laden</a>
         </article>
       </div>
-      <p class="pr-founder"><strong>Founder Program</strong> &mdash; Berechtigte frühe Konten erhalten Founder-Vorteile dauerhaft, einschließlich 3 Docker Probes, 3 Asset Sources und 3 privaten Monitoren. Die Founder-Registrierung ist bis zum 1. Mai 2027 verfügbar. <a href="https://docs.opshome.run/de/free-vs-pro.html" target="_blank" rel="noopener">Vollständige Leistungstabelle ansehen &rarr;</a></p>
+      <p class="pr-founder"><strong>Founder Program</strong> &mdash; Berechtigte frühe Konten erhalten Founder-Vorteile dauerhaft, einschließlich 3 Docker Probes, 3 Infrastruktur-Verbindungen und 3 privaten Monitoren. Die Founder-Registrierung ist bis zum 1. Mai 2027 verfügbar. <a href="https://docs.opshome.run/de/free-vs-pro.html" target="_blank" rel="noopener">Vollständige Leistungstabelle ansehen &rarr;</a></p>
     </div>
   </section>
 
@@ -544,7 +544,7 @@
         <details open><summary>Braucht Docker Probe Portweiterleitung?</summary><div class="pr-faq-answer">Nein. Docker Probe nutzt ausgehendes HTTPS zu OpsHome Cloud. Eingehende Portweiterleitung oder öffentliche private Verwaltungsoberflächen sind nicht nötig.</div></details>
         <details><summary>Ist Docker Probe sicher?</summary><div class="pr-faq-answer">Docker Probe nimmt keine eingehenden Anfragen an und erreicht nur die privaten Dienste, die du ausdrücklich konfigurierst. Prüfe vor der Installation den generierten Befehl und die Sicherheitsdokumentation.</div></details>
         <details><summary>Läuft das Monitoring bei geschlossener iPhone-App weiter?</summary><div class="pr-faq-answer">Ja. Die Prüfungen laufen über OpsHome Cloud oder Docker Probe weiter. Die iPhone-App dient zum Anzeigen von Status, Berichten und Benachrichtigungen.</div></details>
-        <details><summary>Was ist der Unterschied zwischen Free und Pro?</summary><div class="pr-faq-answer">Free umfasst öffentliches Monitoring plus 1 Docker Probe, 1 Asset Source und 1 privaten Monitor. Pro erhöht die öffentlichen und privaten Limits und bietet umfassendere Infrastrukturansichten.</div></details>
+        <details><summary>Was ist der Unterschied zwischen Free und Pro?</summary><div class="pr-faq-answer">Free umfasst öffentliches Monitoring plus 1 Docker Probe, 1 Infrastruktur-Verbindung und 1 privaten Monitor. Pro erhöht die öffentlichen und privaten Limits und bietet umfassendere Infrastrukturansichten.</div></details>
         <details><summary>Ersetzt OpsHome Prometheus oder Grafana?</summary><div class="pr-faq-answer">OpsHome ersetzt Prometheus oder Grafana nicht. Es fokussiert mobile-first operative Sichtbarkeit, damit Administratoren den Zustand ihrer Infrastruktur schnell verstehen, ohne komplexe Monitoring-Stacks zu betreiben.</div></details>
         <details><summary>Ist OpsHome nur für Homelab-Nutzer gedacht?</summary><div class="pr-faq-answer">Nein. OpsHome ist für Homelab-Enthusiasten, IT-Administratoren, Netzwerkingenieure und kleine Infrastrukturumgebungen gedacht.</div></details>
       </div>

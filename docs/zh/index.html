@@ -75,7 +75,7 @@
       "name": "Free 和 Pro 有什么区别？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "普通 Free 提供公网监控，并包含 1 个 Docker Probe、1 个资产源和 1 个私网监控点作为基础私网体验。Pro 提升公网和私网监控额度，并提供更完整的基础设施可见性。"
+        "text": "普通 Free 提供公网监控，并包含 1 个 Docker Probe、1 个基础设施连接和 1 个私网监控点作为基础私网体验。Pro 提升公网和私网监控额度，并提供更完整的基础设施可见性。"
       }
     },
     {
@@ -501,7 +501,7 @@
       <div class="pr-copy">
         <p class="pr-eyebrow">事件 · 公网监控 · 告警</p>
         <h2>知道发生了什么、何时发生、是否恢复。</h2>
-        <p>OpsHome 将公网监控、Docker 容器事件、告警、历史和状态分享合并为一个清晰工作流，首页不再堆叠过多功能章节。</p>
+        <p>OpsHome 将公网监控、Docker 容器事件、告警、历史和状态分享整合到同一个运维视图中。</p>
         <div class="pr-points">
           <div class="pr-point"><span class="pr-point-icon">&bull;</span><span>网站、API、HTTP、HTTPS、TCP、ICMP、SSL、DNS 和域名检测</span></div>
           <div class="pr-point"><span class="pr-point-icon">&bull;</span><span>Docker 重启、恢复、异常状态和 OOM Kill</span></div>
@@ -524,16 +524,16 @@
       <div class="pr-pricing">
         <article class="pr-plan">
           <p class="pr-plan-name">Free</p><p class="pr-plan-price">$0</p><p class="pr-plan-subline">无需订阅</p>
-          <ul><li>&#10003; 30 个公网监控目标</li><li>&#10003; HTTP / HTTPS / TCP / SSL / ICMP</li><li>&#10003; 1 个 Docker Probe &middot; 1 个资产源 &middot; 1 个私网监控点</li><li>&#10003; 1 个公开状态页</li><li>&#10003; 推送告警 &middot; SSL 到期提醒</li><li>&#10003; 可视化监控仪表盘</li></ul>
+          <ul><li>&#10003; 30 个公网监控目标</li><li>&#10003; HTTP / HTTPS / TCP / SSL / ICMP</li><li>&#10003; 1 个 Docker Probe &middot; 1 个基础设施连接 &middot; 1 个私网监控点</li><li>&#10003; 1 个公开状态页</li><li>&#10003; 推送告警 &middot; SSL 到期提醒</li><li>&#10003; 可视化监控仪表盘</li></ul>
           <a class="pr-button pr-button-primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">免费下载</a>
         </article>
         <article class="pr-plan pr-plan-pro">
           <span class="pr-plan-badge">最受欢迎</span><p class="pr-plan-name">Pro</p><p class="pr-plan-price">$2.99 / 月</p><p class="pr-plan-subline">或 $24.99 / 年 &middot; 最划算<br>面向认真的私有基础设施监控</p>
-          <ul><li>&#10003; 100 个公网监控目标</li><li>&#10003; 全部监控类型，包括 UDP、DNS 和域名</li><li>&#10003; 12 个 Docker Probe &middot; 12 个资产源 &middot; 50 个私网监控点</li><li>&#10003; Proxmox VE + 群晖私网集成</li><li>&#10003; 私网轮询约 1 分钟</li><li>&#10003; 推送 + Telegram 告警</li></ul>
+          <ul><li>&#10003; 100 个公网监控目标</li><li>&#10003; 全部监控类型，包括 UDP、DNS 和域名</li><li>&#10003; 12 个 Docker Probe &middot; 12 个基础设施连接 &middot; 50 个私网监控点</li><li>&#10003; Proxmox VE + 群晖私网集成</li><li>&#10003; 更高频率的私网监控</li><li>&#10003; 推送 + Telegram 告警</li></ul>
           <a class="pr-button pr-button-primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">获取 Pro</a>
         </article>
       </div>
-      <p class="pr-founder"><strong>Founder Program</strong>：符合条件的早期账号将永久获得 Founder 权益，包括 3 个 Docker Probe、3 个资产源和 3 个私网监控点。Founder 注册开放至 2027 年 5 月 1 日。<a href="https://docs.opshome.run/zh/free-vs-pro.html" target="_blank" rel="noopener">查看完整权益表 &rarr;</a></p>
+      <p class="pr-founder"><strong>Founder Program</strong>：符合条件的早期账号将永久获得 Founder 权益，包括 3 个 Docker Probe、3 个基础设施连接和 3 个私网监控点。Founder 注册开放至 2027 年 5 月 1 日。<a href="https://docs.opshome.run/zh/free-vs-pro.html" target="_blank" rel="noopener">查看完整权益表 &rarr;</a></p>
     </div>
   </section>
 
@@ -544,7 +544,7 @@
         <details open><summary>Docker Probe 是否需要端口转发？</summary><div class="pr-faq-answer">不需要。Docker Probe 通过出站 HTTPS 连接 OpsHome Cloud，不需要入站端口转发，也不需要公开私有管理界面。</div></details>
         <details><summary>Docker Probe 安全吗？</summary><div class="pr-faq-answer">Docker Probe 不接受入站请求，只访问你明确配置的私有服务。安装前可以审查 App 生成的部署命令和公开的安全说明。</div></details>
         <details><summary>关闭 iPhone App 后监控还会继续吗？</summary><div class="pr-faq-answer">会。检测由 OpsHome Cloud 和 Docker Probe 持续执行，iPhone App 用于查看状态、报告和通知。</div></details>
-        <details><summary>Free 和 Pro 有什么区别？</summary><div class="pr-faq-answer">普通 Free 提供公网监控，并包含 1 个 Docker Probe、1 个资产源和 1 个私网监控点作为基础私网体验。Pro 提升公网和私网监控额度，并提供更完整的基础设施可见性。</div></details>
+        <details><summary>Free 和 Pro 有什么区别？</summary><div class="pr-faq-answer">普通 Free 提供公网监控，并包含 1 个 Docker Probe、1 个基础设施连接和 1 个私网监控点作为基础私网体验。Pro 提升公网和私网监控额度，并提供更完整的基础设施可见性。</div></details>
         <details><summary>OpsHome 是否替代 Prometheus 和 Grafana？</summary><div class="pr-faq-answer">OpsHome 不替代 Prometheus 或 Grafana。它专注于移动优先的运维可见性，帮助管理员快速理解基础设施健康状态，而不必维护复杂的监控栈。</div></details>
         <details><summary>OpsHome 只适合 Homelab 用户吗？</summary><div class="pr-faq-answer">不是。OpsHome 面向 Homelab 爱好者、IT 管理员、网络工程师和小型基础设施环境。</div></details>
       </div>

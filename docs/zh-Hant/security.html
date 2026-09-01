@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>安全 - OpsHome NOC</title>
 <meta name="robots" content="index,follow">
-<meta name="description" content="了解 OpsHome NOC 的監控架構、私有探針、帳戶安全、資料處理和使用者控制方式。">
+<meta name="description" content="了解 OpsHome NOC 的私有監控部署、帳戶安全、權限、資料處理和使用者控制方式。">
 <link rel="canonical" href="https://app.opshome.run/zh-Hant/security.html">
 <link rel="alternate" hreflang="en" href="https://app.opshome.run/security.html">
 <link rel="alternate" hreflang="zh-Hans" href="https://app.opshome.run/zh/security.html">
@@ -66,10 +66,10 @@ footer{position:relative;z-index:1;border-top:1px solid rgba(215,232,248,.16);pa
 <main>
   <div class="label">SECURITY</div>
   <h1>OpsHome NOC 安全</h1>
-  <p class="intro">OpsHome NOC 面向透明、重視隱私的基礎設施監控而設計。本頁面說明服務的安全模型、私有探針架構、存取責任和資料生命週期控制。</p>
+  <p class="intro">OpsHome NOC 面向透明、重視隱私的基礎設施監控而設計。本頁面說明服務的安全原則、私有監控部署、存取責任和資料生命週期控制。</p>
 
   <section class="box"><h2>安全原則</h2><p>OpsHome NOC 圍繞透明監控、使用者可控部署和最小權限實務設計。</p><ul><li>透過使用者自行部署的元件監控私有基礎設施</li><li>私有監控環境採用出站連線模型</li><li>清楚說明監控與服務運作所需的資料處理</li><li>由使用者控制已連接的基礎設施和授權權限</li></ul></section>
-  <section class="box"><h2>監控架構</h2><p>OpsHome NOC 採用混合架構，將私有基礎設施監控和公開服務可達性檢查結合起來。</p><p>完整架構模型，包括 OpsHome Platform、Probe 部署、Inside-Out Health 和 Outside-In Reachability，已在技術文件中說明。</p><p><a class="text-link" href="https://docs.opshome.run/opshome-noc-architecture.html">查看架構概覽 -&gt;</a></p></section>
+  <section class="box"><h2>監控方式</h2><p>OpsHome 將雲端公開服務檢測與使用者控制的私有監控元件結合使用。</p><p>私有監控元件使用出站連線，因此無需透過公網開放內部管理入口。</p><p><a class="text-link" href="https://docs.opshome.run/hant/">查看部署與安全說明 -&gt;</a></p></section>
 
   <div class="grid">
     <section class="box"><h2>資料處理</h2><p>OpsHome 會處理提供監控、歷史分析、警示、帳戶管理和服務功能所需的資訊。</p><ul><li>帳戶和訂閱資訊</li><li>監控設定</li><li>資產中繼資料</li><li>健康指標與狀態資訊</li><li>營運事件和服務記錄</li></ul></section>
@@ -78,7 +78,7 @@ footer{position:relative;z-index:1;border-top:1px solid rgba(215,232,248,.16);pa
     <section class="box"><h2>資料生命週期</h2><p>監控資料保留週期取決於訂閱方案、資料類型和服務要求。保留策略用於支援歷史視圖、分析、疑難排解和可靠的服務運作。</p><p>詳情請參閱 <a href="/privacy.html">隱私政策</a>。</p></section>
   </div>
 
-  <section class="box"><h2>技術安全文件</h2><p>可在技術文件中了解 OpsHome NOC 架構、部署模型和監控元件。</p><ul><li><a href="https://docs.opshome.run/opshome-noc-architecture.html">架構概覽</a></li><li><a href="https://docs.opshome.run/hant/">OpsHome 文件</a></li><li><a href="/privacy.html">隱私政策</a></li></ul></section>
+  <section class="box"><h2>安全與部署文件</h2><p>可在文件中了解 Docker Probe 部署、帳戶安全、權限和隱私實務。</p><ul><li><a href="https://docs.opshome.run/hant/">OpsHome 文件</a></li><li><a href="/privacy.html">隱私政策</a></li><li><a href="/zh-Hant/support.html">支援</a></li></ul></section>
   <section class="box"><h2>使用者控制</h2><p>你控制哪些基礎設施連接到 OpsHome NOC、監控元件部署在哪裡，以及授予監控整合哪些權限。</p><p>Docker Probe 監控不會收集你的私有應用、檔案或業務資料內容。</p></section>
 </main>
 

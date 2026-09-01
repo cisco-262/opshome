@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Security - OpsHome NOC</title>
 <meta name="robots" content="index,follow">
-<meta name="description" content="Learn how OpsHome NOC handles monitoring architecture, private probes, account security, and data transparency.">
+<meta name="description" content="Learn how OpsHome NOC handles private monitoring deployment, account security, permissions, and data transparency.">
 <link rel="canonical" href="https://app.opshome.run/security.html">
 <link rel="alternate" hreflang="en" href="https://app.opshome.run/security.html">
 <link rel="alternate" hreflang="zh-Hans" href="https://app.opshome.run/zh/security.html">
@@ -92,7 +92,7 @@
 <main>
   <div class="label">SECURITY</div>
   <h1>OpsHome NOC Security</h1>
-  <p class="intro">OpsHome NOC is designed for transparent, privacy-conscious infrastructure monitoring. This page summarizes the security model, private probe architecture, access responsibilities, and data lifecycle controls used by the service.</p>
+  <p class="intro">OpsHome NOC is designed for transparent, privacy-conscious infrastructure monitoring. This page summarizes security principles, private monitoring deployment, access responsibilities, and data lifecycle controls used by the service.</p>
 
   <section class="box">
     <h2>Security Principles</h2>
@@ -106,10 +106,10 @@
   </section>
 
   <section class="box">
-    <h2>Monitoring Architecture</h2>
-    <p>OpsHome NOC uses a hybrid architecture that combines private infrastructure monitoring with public service reachability checks.</p>
-    <p>The complete architecture model, including OpsHome Platform, Probe deployment, Inside-Out Health, and Outside-In Reachability, is documented in our technical documentation.</p>
-    <p><a class="text-link" href="https://docs.opshome.run/opshome-noc-architecture.html">View Architecture Overview -&gt;</a></p>
+    <h2>Monitoring Approach</h2>
+    <p>OpsHome combines cloud-based public service checks with user-controlled private monitoring components.</p>
+    <p>Private monitoring components use outbound connections so internal services do not need to be exposed through public management ports.</p>
+    <p><a class="text-link" href="https://docs.opshome.run/">View Deployment and Security Guidance -&gt;</a></p>
   </section>
 
   <div class="grid">
@@ -144,12 +144,12 @@
   </div>
 
   <section class="box">
-    <h2>Technical Security Documentation</h2>
-    <p>Learn more about OpsHome NOC architecture, deployment models, and monitoring components in our technical documentation.</p>
+    <h2>Security and Deployment Documentation</h2>
+    <p>Learn more about Docker Probe deployment, account security, permissions, and privacy practices.</p>
     <ul>
-      <li><a href="https://docs.opshome.run/opshome-noc-architecture.html">Architecture Overview</a></li>
       <li><a href="https://docs.opshome.run/">OpsHome Documentation</a></li>
       <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="support.html">Support</a></li>
     </ul>
   </section>
 

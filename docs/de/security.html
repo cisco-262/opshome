@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sicherheit - OpsHome NOC</title>
 <meta name="robots" content="index,follow">
-<meta name="description" content="Erfahre, wie OpsHome NOC Monitoring-Architektur, private Probes, Kontosicherheit, Datenverarbeitung und Nutzerkontrolle behandelt.">
+<meta name="description" content="Erfahre, wie OpsHome NOC privates Monitoring, Kontosicherheit, Berechtigungen, Datenverarbeitung und Nutzerkontrolle behandelt.">
 <link rel="canonical" href="https://app.opshome.run/de/security.html">
 <link rel="alternate" hreflang="en" href="https://app.opshome.run/security.html">
 <link rel="alternate" hreflang="zh-Hans" href="https://app.opshome.run/zh/security.html">
@@ -66,10 +66,10 @@ footer{position:relative;z-index:1;border-top:1px solid rgba(215,232,248,.16);pa
 <main>
   <div class="label">SECURITY</div>
   <h1>OpsHome NOC Sicherheit</h1>
-  <p class="intro">OpsHome NOC ist für transparentes und datenschutzbewusstes Infrastruktur-Monitoring konzipiert. Diese Seite fasst Sicherheitsmodell, private Probe-Architektur, Verantwortlichkeiten beim Zugriff und Datenlebenszyklus zusammen.</p>
+  <p class="intro">OpsHome NOC ist für transparentes und datenschutzbewusstes Infrastruktur-Monitoring konzipiert. Diese Seite fasst Sicherheitsprinzipien, die Bereitstellung privaten Monitorings, Verantwortlichkeiten beim Zugriff und den Datenlebenszyklus zusammen.</p>
 
   <section class="box"><h2>Sicherheitsprinzipien</h2><p>OpsHome NOC setzt auf transparente Überwachung, nutzergesteuerte Bereitstellung und Least-Privilege-Praktiken.</p><ul><li>Private Infrastrukturüberwachung über Komponenten unter Kontrolle des Nutzers</li><li>Outbound-Kommunikationsmodell für private Monitoring-Umgebungen</li><li>Transparente Datenverarbeitung für Monitoring und Servicebetrieb</li><li>Nutzer kontrollieren verbundene Infrastruktur und Berechtigungen</li></ul></section>
-  <section class="box"><h2>Monitoring-Architektur</h2><p>OpsHome NOC nutzt eine hybride Architektur, die private Infrastrukturüberwachung mit Erreichbarkeitsprüfungen öffentlicher Dienste kombiniert.</p><p>Das vollständige Architekturmodell, einschließlich OpsHome Platform, Probe-Bereitstellung, Inside-Out Health und Outside-In Reachability, ist in der technischen Dokumentation beschrieben.</p><p><a class="text-link" href="https://docs.opshome.run/opshome-noc-architecture.html">Architekturübersicht anzeigen -&gt;</a></p></section>
+  <section class="box"><h2>Monitoring-Konzept</h2><p>OpsHome kombiniert cloudbasierte Prüfungen öffentlicher Dienste mit nutzergesteuerten Komponenten für privates Monitoring.</p><p>Private Monitoring-Komponenten nutzen ausgehende Verbindungen, sodass interne Verwaltungsoberflächen nicht öffentlich erreichbar sein müssen.</p><p><a class="text-link" href="https://docs.opshome.run/de/">Hinweise zu Bereitstellung und Sicherheit -&gt;</a></p></section>
 
   <div class="grid">
     <section class="box"><h2>Datenverarbeitung</h2><p>OpsHome verarbeitet Informationen, die für Monitoring, historische Analyse, Warnungen, Kontoverwaltung und Servicefunktionen erforderlich sind.</p><ul><li>Konto- und Abonnementinformationen</li><li>Monitoring-Konfiguration</li><li>Asset-Metadaten</li><li>Health-Metriken und Statusinformationen</li><li>Betriebsereignisse und Servicedatensätze</li></ul></section>
@@ -78,7 +78,7 @@ footer{position:relative;z-index:1;border-top:1px solid rgba(215,232,248,.16);pa
     <section class="box"><h2>Datenlebenszyklus</h2><p>Die Aufbewahrung von Monitoring-Daten hängt von Abonnement, Datentyp und Serviceanforderungen ab. Retention unterstützt Verlaufsansichten, Analyse, Fehlerbehebung und zuverlässigen Servicebetrieb.</p><p>Details findest du in unserer <a href="/privacy.html">Datenschutzerklärung</a>.</p></section>
   </div>
 
-  <section class="box"><h2>Technische Sicherheitsdokumentation</h2><p>Weitere Informationen zu OpsHome NOC Architektur, Bereitstellungsmodellen und Monitoring-Komponenten findest du in der technischen Dokumentation.</p><ul><li><a href="https://docs.opshome.run/opshome-noc-architecture.html">Architekturübersicht</a></li><li><a href="https://docs.opshome.run/de/">OpsHome Dokumentation</a></li><li><a href="/privacy.html">Datenschutzerklärung</a></li></ul></section>
+  <section class="box"><h2>Sicherheits- und Bereitstellungsdokumentation</h2><p>Weitere Informationen zu Docker-Probe-Bereitstellung, Kontosicherheit, Berechtigungen und Datenschutz findest du in der Dokumentation.</p><ul><li><a href="https://docs.opshome.run/de/">OpsHome Dokumentation</a></li><li><a href="/privacy.html">Datenschutzerklärung</a></li><li><a href="/de/support.html">Support</a></li></ul></section>
   <section class="box"><h2>Nutzerkontrolle</h2><p>Du kontrollierst, welche Infrastruktur mit OpsHome NOC verbunden wird, wo Monitoring-Komponenten bereitgestellt werden und welche Berechtigungen Integrationen erhalten.</p><p>Docker Probe Monitoring sammelt nicht den Inhalt deiner privaten Anwendungen, Dateien oder Geschäftsdaten.</p></section>
 </main>
 
