@@ -30,7 +30,7 @@ Monitor public services, private networks, Docker, Proxmox, Synology NAS, Linux 
 
 <br><br>
 
-<img src="/docs/assets/images/new-home.jpg" alt="OpsHome NOC iPhone dashboard showing infrastructure health" width="300">
+<img src="/docs/assets/images/screen_home.png" alt="OpsHome NOC iPhone dashboard showing infrastructure health" width="300">
 
 <br>
 
@@ -63,7 +63,7 @@ OpsHome NOC is designed for homelab users, NAS owners, Docker operators, self-ho
 | --- | --- | --- |
 | **OpsHome Cloud** | Services reachable from the public internet | Websites, APIs, HTTP/HTTPS endpoints, public TCP ports, SSL certificates, DNS records, ICMP reachability, and domain expiry |
 | **Docker Probe** | Services inside a LAN, NAS, Docker network, or private homelab | Internal HTTP/HTTPS services, private TCP services, NAS panels, Proxmox dashboards, Docker services, and targets behind NAT |
-| **Asset Sources** | Infrastructure visibility beyond simple uptime checks | Synology NAS, Proxmox VE nodes, VMs and LXC guests, Linux hosts, Docker hosts and containers, storage, CPU, memory, temperature, network, and health history |
+| **Infrastructure Connections** | Infrastructure visibility beyond simple uptime checks | Synology NAS, Proxmox VE nodes, VMs and LXC guests, Linux hosts, Docker hosts and containers, storage, CPU, memory, temperature, network, and health history |
 
 ### Key Capabilities
 
@@ -89,11 +89,11 @@ Docker Probe is designed to monitor private homelab services without exposing th
 - OpsHome Cloud does not directly connect into your LAN.
 - No inbound firewall rule is required.
 - No public IP, port forwarding, or public reverse proxy is required.
-- A bootstrap token is used for initial registration.
-- Registered probes preserve their identity through the probe state volume.
-- Use least-privilege credentials for supported Asset Sources.
+- Docker Probe securely registers with OpsHome Cloud during deployment.
+- Its required configuration can persist across normal container upgrades when persistent data is preserved.
+- Use least-privilege credentials for supported infrastructure connections.
 
-Docker Probe reports supported monitoring results, heartbeat information, private service status, and configured Asset Source health. It is not intended to upload personal files, NAS documents, payment information, or unrelated private content.
+Docker Probe reports only the operational and monitoring data required to provide private monitoring and infrastructure visibility. It is not intended to upload personal files, NAS documents, payment information, or unrelated private content.
 
 ### Plan Overview
 
@@ -132,11 +132,11 @@ Pro is available as a monthly or yearly subscription through Apple In-App Purcha
 2. Sign in with Apple.
 3. Add one Cloud monitor for a public website, API, certificate, port, or domain-related target.
 4. Deploy Docker Probe for services that are private, internal, or reachable only from your home network.
-5. Add supported Synology, Proxmox, Linux, or Docker Asset Sources.
+5. Add supported Synology, Proxmox, Linux, or Docker infrastructure connections.
 6. Enable push notifications.
 7. Review health, alerts, uptime, events, and analysis reports.
 
-A useful first setup is one public HTTPS monitor plus one private Docker Probe monitor. This provides both outside-in and inside-LAN visibility.
+A useful first setup is one public HTTPS monitor plus one private Docker Probe monitor. This provides visibility into the same service from both the public internet and your private network.
 
 ### Status Pages
 
@@ -194,7 +194,7 @@ OpsHome NOC 適合 Homelab 使用者、NAS 擁有者、Docker 使用者、自架
 | --- | --- | --- |
 | **OpsHome Cloud** | 可從公網存取的服務 | 網站、API、HTTP/HTTPS、公網 TCP 連接埠、SSL 憑證、DNS、ICMP 與網域到期 |
 | **Docker Probe** | LAN、NAS、Docker 網路或私有 Homelab 內的服務 | 內部 HTTP/HTTPS、私有 TCP、NAS 面板、Proxmox 儀表板、Docker 服務與 NAT 後方目標 |
-| **Asset Sources** | 不只需要可用率，還需要基礎設施狀態 | Synology NAS、Proxmox 節點、VM、LXC、Linux 主機、Docker 主機與容器、儲存、CPU、記憶體、溫度、網路與健康歷史 |
+| **基礎設施連線** | 不只需要可用率，還需要基礎設施狀態 | Synology NAS、Proxmox 節點、VM、LXC、Linux 主機、Docker 主機與容器、儲存、CPU、記憶體、溫度、網路與健康歷史 |
 
 ### 核心能力
 
@@ -220,11 +220,11 @@ Docker Probe 用於監控私有 Homelab 服務，不需要把內部服務暴露�
 - OpsHome Cloud 不會直接連入你的 LAN。
 - 不需要新增入站防火牆規則。
 - 不需要公網 IP、連接埠轉發或公開反向代理。
-- 初次註冊時使用 bootstrap token。
-- 註冊完成後，Probe 狀態 Volume 會保留其身分。
-- Asset Source 應使用最小權限憑證。
+- Docker Probe 會在部署期間安全註冊到 OpsHome Cloud。
+- 保留持久化資料時，正常容器升級可保留 Probe 所需設定。
+- 基礎設施連線應使用最小權限憑證。
 
-Docker Probe 只回報支援的監控結果、心跳、私有服務狀態與 Asset Source 健康資料，不用於上傳個人檔案、NAS 文件、付款資訊或其他無關私有內容。
+Docker Probe 只回報支援的監控結果、心跳、私有服務狀態與 基礎設施健康資料，不用於上傳個人檔案、NAS 文件、付款資訊或其他無關私有內容。
 
 ### 方案概覽
 
@@ -263,11 +263,11 @@ Pro 可透過 Apple App 內購買訂閱月費或年費方案。最終價格與�
 2. 使用 Sign in with Apple 登入。
 3. 為公開網站、API、憑證、連接埠或網域資源建立一個 Cloud Monitor。
 4. 為私有、內部或只能從家庭網路存取的服務部署 Docker Probe。
-5. 新增支援的 Synology、Proxmox、Linux 或 Docker Asset Source。
+5. 新增支援的 Synology、Proxmox、Linux 或 Docker 基礎設施連線。
 6. 開啟推播通知。
 7. 查看健康狀態、告警、可用率、事件與分析報告。
 
-建議先建立一個公開 HTTPS Monitor，再建立一個私有 Docker Probe Monitor，以同時取得外部與 LAN 內部視角。
+建議先建立一個公開 HTTPS Monitor，再建立一個私有 Docker Probe Monitor，以同時了解服務從公網與私有網路存取時的狀態。
 
 ### 狀態頁
 
@@ -318,7 +318,7 @@ OpsHome NOC 适合 Homelab 用户、NAS 用户、Docker 运维者、自托管服
 | --- | --- | --- |
 | **OpsHome Cloud** | 可从公网访问的服务 | 网站、API、HTTP/HTTPS、公网 TCP 端口、SSL 证书、DNS、ICMP 和域名到期 |
 | **Docker Probe** | LAN、NAS、Docker 网络或私有 Homelab 中的服务 | 内部 HTTP/HTTPS、私有 TCP、NAS 面板、Proxmox 控制台、Docker 服务和 NAT 后方目标 |
-| **Asset Sources** | 不仅需要可用性，还需要基础设施状态 | Synology NAS、Proxmox 节点、VM、LXC、Linux 主机、Docker 主机和容器、存储、CPU、内存、温度、网络和健康历史 |
+| **基础设施连接** | 不仅需要可用性，还需要基础设施状态 | Synology NAS、Proxmox 节点、VM、LXC、Linux 主机、Docker 主机和容器、存储、CPU、内存、温度、网络和健康历史 |
 
 ### 核心能力
 
@@ -344,11 +344,11 @@ Docker Probe 用于监控私有 Homelab 服务，无需将内部服务暴露到�
 - OpsHome Cloud 不会直接连接到你的 LAN。
 - 不需要新增入站防火墙规则。
 - 不需要公网 IP、端口转发或公开反向代理。
-- 首次注册时使用 bootstrap token。
-- 注册完成后，Probe 状态 Volume 会保留其身份。
-- Asset Source 应使用最小权限凭据。
+- Docker Probe 会在部署期间安全注册到 OpsHome Cloud。
+- 保留持久化数据时，正常容器升级可保留 Probe 所需配置。
+- 基础设施连接应使用最小权限凭据。
 
-Docker Probe 仅上报支持的监控结果、心跳、私有服务状态和 Asset Source 健康数据，不用于上传个人文件、NAS 文档、付款信息或其他无关私有内容。
+Docker Probe 仅上报支持的监控结果、心跳、私有服务状态和 基础设施健康数据，不用于上传个人文件、NAS 文档、付款信息或其他无关私有内容。
 
 ### 方案概览
 
@@ -387,11 +387,11 @@ Pro 可通过 Apple App 内购买订阅月费或年费方案。最终价格和�
 2. 使用 Sign in with Apple 登录。
 3. 为公开网站、API、证书、端口或域名资源创建一个 Cloud Monitor。
 4. 为私有、内部或只能从家庭网络访问的服务部署 Docker Probe。
-5. 添加支持的 Synology、Proxmox、Linux 或 Docker Asset Source。
+5. 添加支持的 Synology、Proxmox、Linux 或 Docker 基础设施连接。
 6. 开启推送通知。
 7. 查看健康状态、告警、可用率、事件和分析报告。
 
-建议先创建一个公开 HTTPS Monitor，再创建一个私有 Docker Probe Monitor，以同时获得外部和 LAN 内部视角。
+建议先创建一个公开 HTTPS Monitor，再创建一个私有 Docker Probe Monitor，以同时了解服务从公网和私有网络访问时的状态。
 
 ### 状态页
 
@@ -418,6 +418,14 @@ Pro 可通过 Apple App 内购买订阅月费或年费方案。最终价格和�
 
 ---
 
+## Screenshots / App 畫面 / App 截图
+
+<p align="center">
+  <img src="/docs/assets/images/screen_home.png" alt="OpsHome NOC Home Dashboard" width="220">
+  <img src="/docs/assets/images/screen_monitors.png" alt="OpsHome NOC Monitor List" width="220">
+  <img src="/docs/assets/images/screen_notifications.png" alt="OpsHome NOC Alerts" width="220">
+  <img src="/docs/assets/images/screen_me_web.png" alt="OpsHome NOC Account" width="220">
+</p>
 
 ## App Store
 
