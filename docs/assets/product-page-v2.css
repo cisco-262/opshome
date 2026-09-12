@@ -1,6 +1,6 @@
 .product-redesign{
-  --pr-bg:#ffffff;
-  --pr-alt:#f8f8f8;
+  --pr-bg:#f7faff;
+  --pr-alt:#eef6ff;
   --pr-ink:#0b1b2e;
   --pr-muted:#526274;
   --pr-blue:#1479ff;
@@ -88,7 +88,7 @@
   font-weight:800;
 }
 .product-redesign .pr-capability-tags span{border-color:#d9e6f4;background:#f6fbff;color:#31516f}
-.product-redesign .pr-integration-strip{padding:22px 40px;border-bottom:1px solid var(--pr-border);background:#fff}
+.product-redesign .pr-integration-strip{padding:22px 40px;border-bottom:1px solid var(--pr-border);background:#f7faff}
 .product-redesign .pr-integration-strip .pr-inner{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px 26px}
 .product-redesign .pr-integration-strip span{color:#31516f;font-size:14px;font-weight:800}
 
