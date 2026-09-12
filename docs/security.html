@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Security - OpsHome NOC</title>
 <meta name="robots" content="index,follow">
-<meta name="description" content="Learn how OpsHome NOC handles private monitoring deployment, account security, permissions, and data transparency.">
+<meta name="description" content="See how OpsHome NOC protects API connections, sensitive credentials, private monitoring boundaries, Docker Probe deployments, and monitoring data.">
 <link rel="canonical" href="https://app.opshome.run/security.html">
 <link rel="alternate" hreflang="en" href="https://app.opshome.run/security.html">
 <link rel="alternate" hreflang="zh-Hans" href="https://app.opshome.run/zh/security.html">
@@ -63,6 +63,7 @@
   @media(max-width:1180px){.navlinks,.nav-cta{display:none}}
   @media(max-width:680px){nav{padding:16px 22px}.brand img{width:48px;height:48px}main{padding:54px 22px}.grid{grid-template-columns:1fr}footer{padding:30px 22px}.footer-inner{align-items:center;flex-direction:column;text-align:center}.footer-brandline{justify-content:center;margin:0 auto;text-align:center}footer ul{justify-content:center}}
 </style>
+<link rel="stylesheet" href="assets/security-page.css">
 <script type="text/javascript">
   if (window.location.hostname === "app.opshome.run") {
     (function(c,l,a,r,i,t,y){
@@ -73,7 +74,7 @@
   }
 </script>
 </head>
-<body>
+<body class="security-doc">
 <nav>
   <a class="brand" href="/"><img src="assets/images/brand-logo.png" alt="OpsHome NOC logo" width="64" height="64" decoding="async"><span>OpsHome <strong>NOC</strong><sup class="tm">&trade;</sup></span></a>
   <ul class="navlinks">
@@ -89,75 +90,125 @@
   <div class="lang" aria-label="Language"><a href="/security.html" class="active" lang="en">EN</a><a href="/zh/security.html" lang="zh-Hans">&#31616;</a><a href="/zh-Hant/security.html" lang="zh-Hant">&#32321;</a><a href="/de/security.html" lang="de">DE</a></div>
 </nav>
 
-<main>
-  <div class="label">SECURITY</div>
-  <h1>OpsHome NOC Security</h1>
-  <p class="intro">OpsHome NOC is designed for transparent, privacy-conscious infrastructure monitoring. This page summarizes security principles, private monitoring deployment, access responsibilities, and data lifecycle controls used by the service.</p>
-
-  <section class="box">
-    <h2>Security Principles</h2>
-    <p>OpsHome NOC is designed around transparent infrastructure monitoring, user-controlled deployment, and least-privilege access practices.</p>
-    <ul>
-      <li>Private infrastructure monitoring through user-controlled components</li>
-      <li>Outbound communication model for private monitoring environments</li>
-      <li>Transparent data handling for monitoring and service operation</li>
-      <li>User-controlled permissions and connected infrastructure</li>
-    </ul>
-  </section>
-
-  <section class="box">
-    <h2>Monitoring Approach</h2>
-    <p>OpsHome combines cloud-based public service checks with user-controlled private monitoring components.</p>
-    <p>Private monitoring components use outbound connections so internal services do not need to be exposed through public management ports.</p>
-    <p><a class="text-link" href="https://docs.opshome.run/">View Deployment and Security Guidance -&gt;</a></p>
-  </section>
-
-  <div class="grid">
-    <section class="box">
-      <h2>Data Handling</h2>
-      <p>OpsHome processes information required to provide monitoring, historical analysis, alerts, account management, and service functionality.</p>
+<main class="security-main">
+  <section class="security-hero" id="top">
+    <div class="security-hero-copy">
+      <p class="security-kicker">Security / Publicly documented controls</p>
+      <h1>Security by architecture.</h1>
+      <p class="security-hero-intro">OpsHome NOC is designed to keep private infrastructure private while making the operational data you need available from your iPhone. This page explains the trust boundaries, connections, credential controls, and user responsibilities behind the service.</p>
+      <p class="security-hero-note">Security controls are documented around verifiable connections, credential protection, and private-network boundaries.</p>
+    </div>
+    <div class="security-hero-panel">
+      <p class="security-hero-panel-label">At a glance</p>
       <ul>
-        <li>Account and subscription information</li>
-        <li>Monitoring configuration</li>
-        <li>Asset metadata</li>
-        <li>Health metrics and status information</li>
-        <li>Operational events and service records</li>
+        <li>HTTPS with TLS 1.2 or higher</li>
+        <li>HSTS and HTTPS enforcement</li>
+        <li>Outbound-only private monitoring</li>
+        <li>Sensitive credentials protected at rest</li>
       </ul>
-    </section>
+    </div>
+  </section>
 
-    <section class="box">
-      <h2>Account Security and Access Control</h2>
-      <p>Your OpsHome account is used to securely access services, manage subscriptions, synchronize configuration, and provide historical monitoring features.</p>
-      <p>Users control which infrastructure components are connected and are responsible for configuring appropriate permissions in their own environment.</p>
-    </section>
+  <div class="security-shell">
+    <aside class="security-toc" aria-label="On this page">
+      <p class="security-toc-title">On this page</p>
+      <ul>
+        <li><a href="#controls">Verified controls</a></li>
+        <li><a href="#data-flow">Data flow</a></li>
+        <li><a href="#transport">Encryption</a></li>
+        <li><a href="#credentials">Credentials</a></li>
+        <li><a href="#probe">Docker Probe</a></li>
+        <li><a href="#access">Access control</a></li>
+        <li><a href="#release-integrity">Release integrity</a></li>
+        <li><a href="#data">Data handling</a></li>
+        <li><a href="#reporting">Reporting</a></li>
+      </ul>
+    </aside>
 
-    <section class="box">
-      <h2>Least Privilege</h2>
-      <p>OpsHome recommends using dedicated monitoring accounts or limited permissions where supported. Avoid using unnecessary administrative credentials for monitoring integrations.</p>
-    </section>
+    <div class="security-content">
+      <section class="security-section" id="controls">
+        <div class="security-section-heading">
+          <div><p class="security-section-kicker">Security posture</p><h2>Controls you can verify</h2></div>
+          <p>These summaries describe the current public configuration and the audited application controls.</p>
+        </div>
+        <div class="security-status-grid">
+          <article class="security-status-card"><span class="status">Verified</span><h3>Transport security</h3><p>HTTPS with TLS 1.2 or higher at the public API edge.</p></article>
+          <article class="security-status-card"><span class="status">Configured</span><h3>HTTPS enforcement</h3><p>HTTP redirects to HTTPS; HSTS is enabled with subdomain coverage.</p></article>
+          <article class="security-status-card"><span class="status">Configured</span><h3>Origin protection</h3><p>Cloudflare connects to the origin using Full (strict) mode.</p></article>
+          <article class="security-status-card"><span class="status">Implemented</span><h3>Credential protection</h3><p>Sensitive server-side credentials use AES-256-GCM before storage.</p></article>
+          <article class="security-status-card"><span class="status">Outbound-only</span><h3>Private monitoring</h3><p>Docker Probe initiates the connection; no inbound port forwarding is required.</p></article>
+          <article class="security-status-card"><span class="status">Digest-published</span><h3>Release integrity</h3><p>Probe releases expose immutable OCI image digests for version pinning.</p></article>
+        </div>
+      </section>
 
-    <section class="box">
-      <h2>Data Lifecycle</h2>
-      <p>Monitoring data retention depends on subscription plans, data types, and service requirements. Retention is managed to support historical views, analysis, troubleshooting, and reliable service operation.</p>
-      <p>For details, see our <a href="privacy.html">Privacy Policy</a>.</p>
-    </section>
+      <section class="security-section" id="data-flow">
+        <div class="security-section-heading"><div><p class="security-section-kicker">Trust boundaries</p><h2>Data flow and trust boundaries</h2></div></div>
+        <div class="security-flow">
+          <figure><img src="assets/images/security-data-flow.svg" alt="Data flow between the iPhone App, OpsHome Cloud, Docker Probe, private services, and public services" width="1200" height="690" loading="lazy" decoding="async"><figcaption>The App connects to OpsHome Cloud over HTTPS. Docker Probe runs inside your private LAN and initiates an outbound HTTPS connection to the Cloud. The Probe reaches only the private targets you authorize.</figcaption></figure>
+          <div class="security-note">This diagram highlights the connections and trust boundaries that support monitoring, status, events, history, and alerts.</div>
+        </div>
+      </section>
+
+      <section class="security-section" id="transport">
+        <div class="security-section-heading"><div><p class="security-section-kicker">Encryption in transit</p><h2>Protected connections</h2></div></div>
+        <div class="security-control-grid">
+          <article class="security-control-card"><h3>Backend API</h3><p>The OpsHome backend API is served over HTTPS. The Cloudflare edge requires TLS 1.2 or higher, and HTTP requests are redirected to HTTPS.</p></article>
+          <article class="security-control-card"><h3>HSTS and origin connection</h3><p>HSTS is enabled with <code>includeSubDomains</code>. Cloudflare uses Full (strict) mode to encrypt the connection to the origin and validate the origin certificate.</p></article>
+          <article class="security-control-card"><h3>Independent check</h3><p>The public API certificate and TLS configuration can be checked with an external TLS inspection service. The result applies to the tested public API endpoint only.</p><div class="security-link-row"><a class="security-link" href="https://www.ssl.org/ssl-checker.html" target="_blank" rel="noopener">Check a public TLS endpoint &rarr;</a></div></article>
+        </div>
+      </section>
+
+      <section class="security-section" id="credentials">
+        <div class="security-section-heading"><div><p class="security-section-kicker">Credential protection</p><h2>Secrets are handled separately from ordinary monitoring data</h2></div></div>
+        <div class="security-control-grid">
+          <article class="security-control-card"><h3>Server-side secrets</h3><p>Sensitive server-side credentials, including Probe registration and authentication secrets, are encrypted before database storage using AES-256-GCM.</p></article>
+          <article class="security-control-card"><h3>iOS credentials</h3><p>Authentication tokens stored by the iOS app are protected using Apple Keychain Services.</p><p>Users should still grant only the permissions needed for the infrastructure integrations they choose to connect.</p></article>
+        </div>
+      </section>
+
+      <section class="security-section" id="probe">
+        <div class="security-section-heading"><div><p class="security-section-kicker">Private monitoring</p><h2>Docker Probe without inbound exposure</h2></div><p>The Probe is placed inside the network it needs to observe.</p></div>
+        <div class="security-control-grid">
+          <article class="security-control-card"><h3>Outbound-only communication</h3><p>Docker Probe runs inside your authorized private network and initiates outbound HTTPS connections to OpsHome Cloud. OpsHome Cloud does not directly connect into your LAN.</p></article>
+          <article class="security-control-card"><h3>No public management interface required</h3><p>You do not need to open inbound firewall ports, configure port forwarding, or publish a private management panel through a reverse proxy.</p></article>
+          <article class="security-control-card"><h3>Local scope remains yours</h3><p>The Probe can reach the private services you configure, such as Proxmox, Synology, Docker, Linux, HTTP, HTTPS, or TCP targets. Choose targets and permissions carefully.</p></article>
+          <article class="security-control-card"><h3>Operational data</h3><p>Probe monitoring reports health, status, events, and limited asset metadata so you can understand your connected infrastructure.</p></article>
+        </div>
+        <div class="security-link-row"><a class="security-link" href="https://docs.opshome.run/docs/docker-probe/security-model/" target="_blank" rel="noopener">Read the Docker Probe security model &rarr;</a><a class="security-link" href="https://docs.opshome.run/docs/docker-probe/install/" target="_blank" rel="noopener">View deployment guidance &rarr;</a></div>
+      </section>
+
+      <section class="security-section" id="access">
+        <div class="security-section-heading"><div><p class="security-section-kicker">Access control</p><h2>Users control the connected infrastructure</h2></div></div>
+        <div class="security-control-grid">
+          <article class="security-control-card"><h3>Authenticated account context</h3><p>Requests are evaluated in the authenticated account context. Users control which infrastructure components are connected to OpsHome and which permissions are granted.</p></article>
+          <article class="security-control-card"><h3>Least privilege</h3><p>Use dedicated monitoring accounts or limited permissions where supported. Avoid using unnecessary administrator credentials for monitoring integrations.</p></article>
+          <article class="security-control-card"><h3>Public status pages</h3><p>Optional public status pages are designed to show selected status information without exposing private IP addresses, hostnames, URLs, container names, internal paths, API keys, or Probe identifiers.</p></article>
+          <article class="security-control-card"><h3>Shared responsibility</h3><p>Users are responsible for the local host, Docker installation, credentials, permissions, network policy, and targets selected for monitoring.</p></article>
+        </div>
+      </section>
+
+      <section class="security-section" id="release-integrity">
+        <div class="security-section-heading"><div><p class="security-section-kicker">Release integrity</p><h2>Pin an exact Docker Probe image</h2></div></div>
+        <p>Docker Probe releases are published with immutable OCI image digests. A deployment can pin an exact image version instead of relying only on a mutable tag.</p>
+        <pre class="security-code"><code>docker pull opshomenoc/opshome-noc@sha256:&lt;published-digest&gt;</code></pre>
+        <div class="security-note">An image digest identifies the exact image content used for deployment. View the current public image tags and digests on Docker Hub.</div>
+        <div class="security-link-row"><a class="security-link" href="https://hub.docker.com/r/opshomenoc/opshome-noc/tags" target="_blank" rel="noopener">View Docker Probe releases &rarr;</a></div>
+      </section>
+
+      <section class="security-section" id="data">
+        <div class="security-section-heading"><div><p class="security-section-kicker">Data handling</p><h2>What the service processes</h2></div><p>Only the information needed for monitoring and service operation is described here.</p></div>
+        <div class="security-table-wrap"><table class="security-table"><thead><tr><th>Data category</th><th>Purpose</th></tr></thead><tbody><tr><td>Account and subscription information</td><td>Sign-in, account management, and subscription features.</td></tr><tr><td>Monitoring configuration</td><td>Run the checks and deliver the views you configure.</td></tr><tr><td>Asset metadata</td><td>Organize connected infrastructure and show relationships.</td></tr><tr><td>Health metrics and status</td><td>Current state, history, trends, and health summaries.</td></tr><tr><td>Operational events and service records</td><td>Incidents, recoveries, alerts, and troubleshooting context.</td></tr></tbody></table></div>
+        <div class="security-note">Docker Probe focuses on health, status, events, and limited asset metadata required for monitoring.</div>
+      </section>
+
+      <section class="security-section" id="reporting">
+        <div class="security-section-heading"><div><p class="security-section-kicker">Documentation and contact</p><h2>Questions or security concerns</h2></div></div>
+        <div class="security-contact"><div><h3>Contact OpsHome support</h3><p>For security-related questions or suspected issues, contact <a href="mailto:support@opshome.run">support@opshome.run</a>.</p></div><a class="security-link" href="mailto:support@opshome.run">Send an email &rarr;</a></div>
+        <div class="security-link-row"><a class="security-link" href="https://docs.opshome.run/" target="_blank" rel="noopener">OpsHome Documentation &rarr;</a><a class="security-link" href="privacy.html">Privacy Policy &rarr;</a><a class="security-link" href="support.html">Support &rarr;</a></div>
+        <p class="security-doc-footer">This page summarizes the current service design and selected public configuration. For data retention, deletion, and user rights, see the <a href="privacy.html">Privacy Policy</a>.</p>
+      </section>
+    </div>
   </div>
-
-  <section class="box">
-    <h2>Security and Deployment Documentation</h2>
-    <p>Learn more about Docker Probe deployment, account security, permissions, and privacy practices.</p>
-    <ul>
-      <li><a href="https://docs.opshome.run/">OpsHome Documentation</a></li>
-      <li><a href="privacy.html">Privacy Policy</a></li>
-      <li><a href="support.html">Support</a></li>
-    </ul>
-  </section>
-
-  <section class="box">
-    <h2>User Control</h2>
-    <p>You control which infrastructure is connected to OpsHome NOC, where monitoring components are deployed, and which permissions are granted to monitoring integrations.</p>
-    <p>Docker Probe monitoring does not collect the content of your private applications, files, or business data.</p>
-  </section>
 </main>
 
 <footer>
