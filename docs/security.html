@@ -155,11 +155,10 @@
           <article class="security-control-card"><h3>Backend API</h3><p>The OpsHome backend API is served over HTTPS, and the Cloudflare edge requires TLS 1.2 or higher.</p></article>
           <article class="security-control-card"><h3>HSTS and origin connection</h3><p>HSTS is enabled with <code>includeSubDomains</code>. Cloudflare uses Full (strict) mode to encrypt the connection to the origin and validate the origin certificate.</p></article>
         </div>
-        <div class="security-proof-grid">
-          <figure class="security-proof-shot"><div class="security-proof-frame"><img src="assets/images/ssllabs-a-plus-result.png" alt="SSL Labs report result showing an A+ grade" width="300" height="210" loading="lazy" decoding="async"></div><figcaption>SSL Labs public report result: A+.</figcaption></figure>
-          <figure class="security-proof-shot"><div class="security-proof-frame"><img src="assets/images/securityheaders-a-result.png" alt="SecurityHeaders.com report result showing a Grade A" width="300" height="210" loading="lazy" decoding="async"></div><figcaption>SecurityHeaders.com result: Grade A.</figcaption></figure>
+        <div class="security-control-grid security-verification-grid">
+          <article class="security-control-card security-verification-card"><h3>SSL Labs · TLS result</h3><img class="security-grade-image" src="assets/images/ssllabs-a-plus-result.svg" alt="SSL Labs A+ grade" width="300" height="210" loading="lazy" decoding="async"><div class="security-link-row"><a class="security-link" href="https://www.ssllabs.com/ssltest/analyze.html?d=app.opshome.run" target="_blank" rel="noopener">Open the public SSL Labs report <span aria-hidden="true">↗</span></a></div></article>
+          <article class="security-control-card security-verification-card"><h3>SecurityHeaders.com · HTTP header result</h3><img class="security-grade-image" src="assets/images/securityheaders-a-result.svg" alt="SecurityHeaders.com Grade A" width="300" height="210" loading="lazy" decoding="async"></article>
         </div>
-        <div class="security-link-row"><a class="security-link" href="https://www.ssllabs.com/ssltest/analyze.html?d=app.opshome.run" target="_blank" rel="noopener">Open the public SSL Labs report <span aria-hidden="true">↗</span></a></div>
       </section>
 
       <section class="security-section" id="credentials">
