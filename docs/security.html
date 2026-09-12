@@ -18,7 +18,7 @@
 <style>
   @font-face{font-family:"Space Mono Local";src:url("assets/fonts/SpaceMono-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
   @font-face{font-family:"Space Mono Local";src:url("assets/fonts/SpaceMono-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
-  :root{--bg:#f6fbff;--surface:#ffffff;--border:#d7e8f8;--accent:#1479ff;--accent2:#38bdf8;--text:#0b1b2e;--muted:#334155;--soft:#102033;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;--mono:"Space Mono Local","Inter","Segoe UI",Roboto,Arial,sans-serif}
+  :root{--bg:#f6fbff;--surface:#ffffff;--border:#d7e8f8;--accent:#1479ff;--accent2:#38bdf8;--text:#0b1b2e;--muted:#334155;--soft:#102033;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--mono:"Space Mono Local","Inter","Segoe UI",Roboto,Arial,sans-serif}
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:#071d36;color:#ffffff;font-family:var(--sans);line-height:1.8}
   body:before{display:none}
@@ -102,7 +102,7 @@
       <p class="security-hero-panel-label">At a glance</p>
       <ul>
         <li>HTTPS with TLS 1.2 or higher</li>
-        <li>HSTS and HTTPS enforcement</li>
+        <li>HSTS enabled</li>
         <li>Outbound-only private monitoring</li>
         <li>Sensitive credentials protected at rest</li>
       </ul>
@@ -133,7 +133,7 @@
         </div>
         <div class="security-status-grid">
           <article class="security-status-card"><span class="status">Verified</span><h3>Transport security</h3><p>HTTPS with TLS 1.2 or higher at the public API edge.</p></article>
-          <article class="security-status-card"><span class="status">Configured</span><h3>HTTPS enforcement</h3><p>HTTP redirects to HTTPS; HSTS is enabled with subdomain coverage.</p></article>
+          <article class="security-status-card"><span class="status">Configured</span><h3>HSTS</h3><p>HSTS is enabled with subdomain coverage.</p></article>
           <article class="security-status-card"><span class="status">Configured</span><h3>Origin protection</h3><p>Cloudflare connects to the origin using Full (strict) mode.</p></article>
           <article class="security-status-card"><span class="status">Implemented</span><h3>Credential protection</h3><p>Sensitive server-side credentials use AES-256-GCM before storage.</p></article>
           <article class="security-status-card"><span class="status">Outbound-only</span><h3>Private monitoring</h3><p>Docker Probe initiates the connection; no inbound port forwarding is required.</p></article>
@@ -152,10 +152,14 @@
       <section class="security-section" id="transport">
         <div class="security-section-heading"><div><p class="security-section-kicker">Encryption in transit</p><h2>Protected connections</h2></div></div>
         <div class="security-control-grid">
-          <article class="security-control-card"><h3>Backend API</h3><p>The OpsHome backend API is served over HTTPS. The Cloudflare edge requires TLS 1.2 or higher, and HTTP requests are redirected to HTTPS.</p></article>
+          <article class="security-control-card"><h3>Backend API</h3><p>The OpsHome backend API is served over HTTPS, and the Cloudflare edge requires TLS 1.2 or higher.</p></article>
           <article class="security-control-card"><h3>HSTS and origin connection</h3><p>HSTS is enabled with <code>includeSubDomains</code>. Cloudflare uses Full (strict) mode to encrypt the connection to the origin and validate the origin certificate.</p></article>
-          <article class="security-control-card"><h3>Independent check</h3><p>The public API certificate and TLS configuration can be checked with an external TLS inspection service. The result applies to the tested public API endpoint only.</p><div class="security-link-row"><a class="security-link" href="https://www.ssl.org/ssl-checker.html" target="_blank" rel="noopener">Check a public TLS endpoint &rarr;</a></div></article>
         </div>
+        <div class="security-proof-grid">
+          <figure class="security-proof-shot"><div class="security-proof-frame"><img src="assets/images/ssllabs-a-plus-result.png" alt="SSL Labs report result showing an A+ grade" width="300" height="210" loading="lazy" decoding="async"></div><figcaption>SSL Labs public report result: A+.</figcaption></figure>
+          <figure class="security-proof-shot"><div class="security-proof-frame"><img src="assets/images/securityheaders-a-result.png" alt="SecurityHeaders.com report result showing a Grade A" width="300" height="210" loading="lazy" decoding="async"></div><figcaption>SecurityHeaders.com result: Grade A.</figcaption></figure>
+        </div>
+        <div class="security-link-row"><a class="security-link" href="https://www.ssllabs.com/ssltest/analyze.html?d=app.opshome.run" target="_blank" rel="noopener">Open the public SSL Labs report <span aria-hidden="true">↗</span></a></div>
       </section>
 
       <section class="security-section" id="credentials">
