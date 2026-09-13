@@ -147,6 +147,12 @@
 .product-redesign .pr-footer-cta{background:#071426;color:#fff}
 .product-redesign .pr-footer-cta h2{color:#fff}
 .product-redesign .pr-footer-cta .pr-lead{color:#cbd5e1}
+.product-redesign .pr-status-page-feature{display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,340px);gap:56px;align-items:center}
+.product-redesign .pr-status-page-copy{max-width:620px}
+.product-redesign .pr-status-page-copy>p{max-width:560px}
+.product-redesign .pr-status-page-media{display:flex;justify-content:center;align-items:center;margin:0}
+.product-redesign .pr-status-page-media img{display:block;width:auto;max-width:100%;max-height:500px;height:auto;filter:drop-shadow(0 24px 30px rgba(15,23,42,.22))}
+.product-redesign .pr-status-page-media figcaption{max-width:280px;margin:12px auto 0;color:#64748b;font-size:12px;line-height:1.5;text-align:center}
 .product-redesign .pr-footer-actions{display:flex;align-items:center;justify-content:center;gap:22px;margin-top:30px}
 .product-redesign .pr-store-badge{height:52px;width:auto}
 .product-redesign .pr-qr{display:flex;align-items:center;gap:12px;color:#dbeafe;font-size:12px}
@@ -161,13 +167,14 @@
   .lang a{padding:5px 6px}
   .product-redesign .pr-section{padding:64px 20px}
   .product-redesign .pr-inner,.product-redesign .pr-hero .pr-inner{width:min(100% - 32px,1220px)}
-  .product-redesign .pr-feature,.product-redesign .pr-pricing,.product-redesign .pr-cards,.product-redesign .pr-cards-three,.product-redesign .pr-showcase-links,.product-redesign .pr-hero-grid{grid-template-columns:1fr;gap:32px}
+  .product-redesign .pr-feature,.product-redesign .pr-pricing,.product-redesign .pr-cards,.product-redesign .pr-cards-three,.product-redesign .pr-showcase-links,.product-redesign .pr-hero-grid,.product-redesign .pr-status-page-feature{grid-template-columns:1fr;gap:32px}
   .product-redesign .pr-feature .pr-media,.product-redesign .pr-feature.pr-reverse .pr-media{order:-1}
   .product-redesign .pr-hero{padding:60px 20px 52px;text-align:center}
   .product-redesign .pr-hero-copy{max-width:none}
   .product-redesign .pr-hero h1,.product-redesign .pr-hero-subtitle{margin-right:auto;margin-left:auto}
   .product-redesign .pr-actions,.product-redesign .pr-trust-tags{justify-content:center}
   .product-redesign .pr-hero-visual img{max-height:460px;object-fit:contain}
+  .product-redesign .pr-status-page-media img{max-height:520px}
   .product-redesign .pr-wide-image{width:min(360px,82%);margin-top:28px}
   .product-redesign .pr-showcase-card img{height:260px}
   .product-redesign .pr-actions{margin-bottom:32px}
