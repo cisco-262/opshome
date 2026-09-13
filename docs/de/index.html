@@ -46,54 +46,13 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Braucht Docker Probe Portweiterleitung?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Nein. Docker Probe nutzt ausgehendes HTTPS zu OpsHome Cloud. Eingehende Portweiterleitung oder öffentliche private Verwaltungsoberflächen sind nicht nötig."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Ist Docker Probe sicher?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Docker Probe nimmt keine eingehenden Anfragen an und erreicht nur die privaten Dienste, die du ausdrücklich konfigurierst. Prüfe vor der Installation den generierten Befehl und die Sicherheitsdokumentation."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Läuft das Monitoring bei geschlossener iPhone-App weiter?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Ja. Die Prüfungen laufen über OpsHome Cloud oder Docker Probe weiter. Die iPhone-App dient zum Anzeigen von Status, Berichten und Benachrichtigungen."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Was ist der Unterschied zwischen Free und Pro?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Free umfasst öffentliches Monitoring plus 1 Docker Probe, 1 Infrastruktur-Verbindung und 1 privaten Monitor. Pro erhöht die öffentlichen und privaten Limits und bietet umfassendere Infrastrukturansichten."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Warum nicht einfach Uptime Kuma selbst hosten?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Uptime Kuma ist eine gute selbst gehostete Option. OpsHome richtet sich an Nutzer, die mobiles Monitoring möchten, ohne den Monitoring-Dienst selbst zu hosten und zu warten. Die Cloud-Schicht wird für dich betrieben, damit du dich auf dein Homelab konzentrieren kannst."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Ist OpsHome nur für Homelab-Nutzer gedacht?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Nein. OpsHome ist für Homelab-Enthusiasten, IT-Administratoren, Netzwerkingenieure und kleine Infrastrukturumgebungen gedacht."
-      }
-    }
+    {"@type":"Question","name":"Kann ich NAS oder Proxmox überwachen, ohne sie öffentlich ins Internet zu stellen?","acceptedAnswer":{"@type":"Answer","text":"Ja. Installiere Docker Probe in deinem Netzwerk und konfiguriere die privaten Dienste oder Infrastruktur-Ziele, die sie erreichen soll. Die Probe startet eine ausgehende HTTPS-Verbindung; eingehende Ports oder ein öffentliches Management-Panel sind nicht nötig."}},
+    {"@type":"Question","name":"Braucht Docker Probe Portweiterleitung?","acceptedAnswer":{"@type":"Answer","text":"Nein. Docker Probe startet ausgehende HTTPS-Verbindungen zur OpsHome Cloud. Für die privaten Ziele, die sie prüft, brauchst du weder Portweiterleitung noch einen Reverse Proxy."}},
+    {"@type":"Question","name":"Was sehe ich auf meinem iPhone?","acceptedAnswer":{"@type":"Answer","text":"In der mobilen NOC-Ansicht siehst du öffentliche Dienste, private Service-Checks, unterstützte Infrastruktur-Assets, Alarme, Incidents, Wiederherstellungen und Monitoring-Verlauf an einem Ort."}},
+    {"@type":"Question","name":"Läuft das Monitoring bei geschlossener iPhone-App weiter?","acceptedAnswer":{"@type":"Answer","text":"Ja. Die Prüfungen laufen über OpsHome Cloud oder Docker Probe weiter. Die iPhone-App dient zum Anzeigen von Status, Berichten und Benachrichtigungen."}},
+    {"@type":"Question","name":"Kann ich eine Statusseite mit Familie, Team oder Nutzern teilen?","acceptedAnswer":{"@type":"Answer","text":"Ja. Statusseiten teilen ausgewählte Service-Status, Verfügbarkeitszusammenfassungen und aktuelle Incidents über einen öffentlichen Link. Die OpsHome-iOS-App kann zudem den QR-Code eines geteilten Berichts scannen und prüfen, ob er von einer offiziellen OpsHome-Datenquelle stammt."}},
+    {"@type":"Question","name":"Was ist der Unterschied zwischen Free und Pro?","acceptedAnswer":{"@type":"Answer","text":"Free umfasst öffentliches Monitoring plus 1 Docker Probe, 1 Infrastruktur-Verbindung und 1 privaten Monitor. Pro erhöht die öffentlichen und privaten Limits und bietet umfassendere Infrastrukturansichten."}},
+    {"@type":"Question","name":"Warum nicht einfach Uptime Kuma selbst hosten?","acceptedAnswer":{"@type":"Answer","text":"Uptime Kuma ist ein großartiger selbst gehosteter Monitor. OpsHome bietet eine mobile NOC-Ansicht für öffentliche Dienste, private Infrastruktur, Assets, Events und Alarme, während OpsHome Cloud die Monitoring-Schicht betreibt."}}
   ]
 }</script>
 
@@ -403,7 +362,7 @@
     h2{font-size:clamp(20px,6vw,36px)}
   }
 </style>
-<link rel="stylesheet" href="assets/product-page-v2.css?v=20260718-homepage-layout-v5">
+<link rel="stylesheet" href="assets/product-page-v2.css?v=20260913-p0-scenarios">
 <script type="text/javascript">
   if (window.location.hostname === "app.opshome.run") {
     (function(c,l,a,r,i,t,y){
@@ -447,14 +406,15 @@
   <section class="pr-hero">
     <div class="pr-inner pr-hero-grid">
       <div class="pr-hero-copy">
-        <p class="pr-hero-kicker">OpsHome NOC &middot; Mobile Monitoring für dein Homelab</p>
+        <p class="pr-hero-kicker">OpsHome NOC &middot; Mobile Transparenz für dein Homelab</p>
         <h1>Dein Homelab,<br>endlich gut überwacht.</h1>
-        <p class="pr-hero-subtitle">Du bist unterwegs und weißt nicht, was passiert? OpsHome überwacht Proxmox, Synology, Docker und öffentliche Dienste, damit dein iPhone dich informiert, wenn etwas Aufmerksamkeit braucht.</p>
+        <p class="pr-hero-subtitle">Überwache öffentliche Dienste und private Infrastruktur in einer mobilen NOC-Ansicht. Behalte Proxmox, Synology, Docker, Linux-Hosts und die darauf laufenden Dienste auf deinem iPhone im Blick.</p>
+        <p class="pr-hero-audience">Entwickelt für Homelabs, selbst gehostete Dienste und kleine Infrastrukturteams.</p>
         <div class="pr-actions">
           <a class="pr-button pr-button-primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">Kostenlos starten</a>
           <a class="pr-button pr-button-secondary" href="#docker-probe">So funktioniert es</a>
         </div>
-        <div class="pr-trust-tags" aria-label="OpsHome Kernfunktionen"><span>Mobile NOC</span><span>Homelab-Monitoring</span><span>Docker Probe</span><span>Alerts</span></div>
+        <div class="pr-trust-tags" aria-label="OpsHome Kernfunktionen"><span>Public + Private</span><span>Infrastruktur-Assets</span><span>Docker Probe</span><span>Events &amp; Alarme</span></div>
       </div>
       <div class="pr-hero-visual"><img src="assets/images/hero-carousel/full-stack-20260620.webp" alt="OpsHome NOC Gesamtübersicht für das Homelab" width="1400" height="788" loading="eager" fetchpriority="high" decoding="async"></div>
     </div>
@@ -462,6 +422,20 @@
 
   <section class="pr-integration-strip" aria-label="Unterstützte Monitoring-Ziele">
     <div class="pr-inner"><span>Docker</span><span>Proxmox VE</span><span>VMware vSphere</span><span>Synology</span><span>Linux</span><span>HTTP/HTTPS</span><span>SSL</span><span>TCP</span></div>
+  </section>
+
+  <section class="pr-section pr-center pr-scenarios" id="scenarios">
+    <div class="pr-inner">
+      <p class="pr-eyebrow">Die Systeme hinter deinem Alltag</p>
+      <h2>Beginne mit dem Teil deines Stacks, auf den sich Menschen verlassen.</h2>
+      <p class="pr-lead">OpsHome bringt öffentliche Dienste, private Dienste und Infrastruktur-Assets eines Homelabs oder kleinen Betriebs in eine mobile Ansicht.</p>
+      <div class="pr-cards pr-cards-four">
+        <article class="pr-card"><span class="pr-card-icon" aria-hidden="true">01</span><h3>NAS &amp; Storage</h3><p>Behalte die Dienste und Infrastruktur-Signale rund um deine Synology- und Storage-Umgebung im Blick, auch wenn du unterwegs bist.</p><a class="pr-text-link" href="/synology-monitoring/">NAS-Monitoring ansehen &rarr;</a></article>
+        <article class="pr-card"><span class="pr-card-icon" aria-hidden="true">02</span><h3>Virtualisierung</h3><p>Sieh Proxmox VE, VMware vSphere, VMs, Ressourcen, Storage und die unterstützten Dienste in einer NOC-Ansicht.</p><a class="pr-text-link" href="/proxmox-monitoring/">Virtualisierung ansehen &rarr;</a></article>
+        <article class="pr-card"><span class="pr-card-icon" aria-hidden="true">03</span><h3>Docker &amp; Linux</h3><p>Verfolge Container, Linux-Hosts, private Dienste und die Events, die zeigen, ob eine Wiederherstellung wirklich Bestand hatte.</p><a class="pr-text-link" href="/docker-probe/">Docker Probe ansehen &rarr;</a></article>
+        <article class="pr-card"><span class="pr-card-icon" aria-hidden="true">04</span><h3>Websites &amp; SOHO</h3><p>Überwache Websites, APIs, Zertifikate, Domains und ausgewählte Dienste, auf die Kunden, Familie oder Teammitglieder angewiesen sind.</p><a class="pr-text-link" href="#features">Service-Monitoring ansehen &rarr;</a></article>
+      </div>
+    </div>
   </section>
 
   <section class="pr-section pr-center pr-alt" id="homelab-pain">
@@ -477,10 +451,11 @@
     <div class="pr-inner">
       <p class="pr-eyebrow">Nicht nur ein weiterer Uptime-Monitor</p>
       <h2>Monitoring nicht länger verwalten. Deine Infrastruktur verstehen.</h2>
-      <div class="pr-cards pr-cards-three">
-        <article class="pr-card"><span class="pr-card-icon" aria-hidden="true">01</span><h3>Public + Private Visibility</h3><p>Überwache Websites, APIs, SSL, Domains, Docker, NAS, Proxmox und Linux in einer operativen Ansicht.</p></article>
-        <article class="pr-card"><span class="pr-card-icon" aria-hidden="true">02</span><h3>Für private Netzwerke entwickelt</h3><p>Docker Probe verbindet sich ausgehend per HTTPS, sodass private Umgebungen in deinem Netzwerk bleiben.</p></article>
-        <article class="pr-card"><span class="pr-card-icon" aria-hidden="true">03</span><h3>Operativer Kontext</h3><p>Gesundheitsstatus, Ereignisse, Verlauf, Wiederherstellungen und Alarme zusammen sehen.</p></article>
+      <div class="pr-cards pr-cards-four">
+        <article class="pr-card"><span class="pr-card-icon" aria-hidden="true">01</span><h3>Öffentliche Dienste</h3><p>Überwache Websites, APIs, HTTP, HTTPS, TCP, SSL, DNS und Domains aus der OpsHome Cloud.</p></article>
+        <article class="pr-card"><span class="pr-card-icon" aria-hidden="true">02</span><h3>Private Dienste</h3><p>Docker Probe erreicht nur die HTTP-, HTTPS-, TCP-, Docker- und Asset-Ziele, die du innerhalb deines Netzwerks freigibst.</p></article>
+        <article class="pr-card"><span class="pr-card-icon" aria-hidden="true">03</span><h3>Infrastruktur-Assets</h3><p>Sieh unterstützten Proxmox-, Synology-, Linux-, Docker- und VMware-Kontext neben den Diensten, die darauf laufen.</p></article>
+        <article class="pr-card"><span class="pr-card-icon" aria-hidden="true">04</span><h3>Incidents &amp; Verlauf</h3><p>Halte Statusänderungen, Wiederherstellungen, Container-Events, Alarme und Verlauf zusammen für nützlichen operativen Kontext.</p></article>
       </div>
     </div>
   </section>
@@ -489,8 +464,8 @@
     <div class="pr-inner pr-feature pr-reverse">
       <div class="pr-copy">
         <p class="pr-eyebrow">Privates Netzwerk &middot; Docker Probe</p>
-        <h2>In dein privates Netzwerk sehen<br>ohne einen Port zu öffnen</h2>
-        <p>Installiere Docker Probe in deinem LAN. Die Probe verbindet sich ausgehend per HTTPS mit OpsHome Cloud. Private Dienste bleiben in deinem Netzwerk, während du Service-Status, Assets und Infrastrukturzustand auf dem iPhone siehst.</p>
+        <h2>Privates Monitoring, ohne private Dienste öffentlich zu machen.</h2>
+        <p>Installiere Docker Probe auf einem Host in deinem LAN. Sie baut eine ausgehende HTTPS-Verbindung zu OpsHome Cloud auf und erreicht nur die Dienste und Assets, die du autorisierst.</p>
         <div class="pr-points">
           <div class="pr-point"><span class="pr-point-icon">&bull;</span><span>Ausgehendes HTTPS, keine Portweiterleitung</span></div>
           <div class="pr-point"><span class="pr-point-icon">&bull;</span><span>Privates HTTP-, HTTPS-, TCP-, Docker- und Asset-Monitoring</span></div>
@@ -507,7 +482,7 @@
       <div class="pr-copy">
         <p class="pr-eyebrow">Infrastruktur-Assets</p>
         <h2>Deine Infrastruktur,<br>vereint in einer NOC-Ansicht.</h2>
-        <p>Mehr als Uptime-Prüfungen: Sieh Proxmox VE und VMware vSphere zusammen mit Synology, Linux, Docker und den darauf laufenden Diensten — in einer mobilen NOC-Ansicht.</p>
+        <p>Vom einzelnen Check zum nützlichen Infrastruktur-Bild: Sieh Proxmox VE und VMware vSphere zusammen mit Synology, Linux, Docker und den darauf laufenden Diensten.</p>
         <div class="pr-points">
           <div class="pr-point"><span class="pr-point-icon">&bull;</span><span>Nodes, VMs, Storage und Dienste</span></div>
           <div class="pr-point"><span class="pr-point-icon">&bull;</span><span>CPU, Arbeitsspeicher, Datenträger und Temperatur</span></div>
@@ -525,7 +500,7 @@
       <div class="pr-copy">
         <p class="pr-eyebrow">Events · Public Monitoring · Alerts</p>
         <h2>Wissen, was sich geändert hat — und ob es wieder läuft.</h2>
-        <p>OpsHome hält Public Monitoring, Docker-Container-Ereignisse, Alarme, Verlauf und Statusseiten in einer operativen Ansicht zusammen.</p>
+        <p>OpsHome hält Public Monitoring, Docker-Container-Ereignisse, Alarme, Verlauf und Statusseiten zusammen, damit auch eine kurze Störung ihren Kontext behält.</p>
         <div class="pr-points">
           <div class="pr-point"><span class="pr-point-icon">&bull;</span><span>Website, API, HTTP, HTTPS, TCP, ICMP, SSL, DNS und Domain</span></div>
           <div class="pr-point"><span class="pr-point-icon">&bull;</span><span>Docker-Restarts, Recoveries, abnormal states und OOM kills</span></div>
@@ -551,14 +526,30 @@
     </div>
   </section>
 
+  <section class="pr-section pr-center pr-security-strip">
+    <div class="pr-inner">
+      <p class="pr-eyebrow">Sicherheit durch Verbindungsdesign</p>
+      <h2>Behalte die Transparenz. Bewahre deine Netzwerkgrenze.</h2>
+      <p class="pr-lead">Die öffentliche App und API verwenden HTTPS; Docker Probe startet die Verbindung aus deinem Netzwerk heraus. Details zu Kontrollen und Architektur stehen auf der Security-Seite.</p>
+      <div class="pr-security-evidence">
+        <div><strong>TLS 1.2+</strong><span>HTTPS für öffentliche App- und API-Verbindungen.</span></div>
+        <div><strong>HSTS</strong><span>HTTPS wird für den öffentlichen Endpunkt erzwungen.</span></div>
+        <div><strong>Ausgehende Probe</strong><span>Docker Probe benötigt keine eingehende Portweiterleitung.</span></div>
+        <div><strong>Autorisierte Ziele</strong><span>Die Probe prüft nur die von dir konfigurierten Dienste.</span></div>
+      </div>
+      <a class="pr-text-link" href="/de/security.html">Security ansehen &rarr;</a>
+    </div>
+  </section>
+
   <section class="pr-section pr-center" id="pricing">
     <div class="pr-inner">
       <p class="pr-eyebrow">Tarife</p>
-      <h2>Dein Homelab kostenlos überwachen.</h2>
-      <p class="pr-lead">Starte mit dem Kern-Monitoring. Keine Kreditkarte erforderlich.</p>
+      <h2>Überwache das Wesentliche kostenlos.</h2>
+      <p class="pr-lead">Starte mit Transparenz für öffentliche Dienste und dein privates Homelab. Kein Abonnement und keine Kreditkarte erforderlich.</p>
+      <p class="pr-founder"><strong>Werde Founder. Sichere dir deine Vorteile dauerhaft.</strong> Registriere dich vor dem 1. Mai 2027 und erhalte dauerhaft 3 Docker Probes, 3 Infrastruktur-Verbindungen und 3 private Monitore. <a href="https://docs.opshome.run/de/free-vs-pro.html" target="_blank" rel="noopener">Vollständige Leistungstabelle ansehen &rarr;</a></p>
       <div class="pr-pricing">
         <article class="pr-plan">
-          <p class="pr-plan-name">Free</p><p class="pr-plan-price">$0</p><p class="pr-plan-subline">Kein Abonnement erforderlich</p>
+          <p class="pr-plan-name">Free</p><p class="pr-plan-price">$0</p><p class="pr-plan-subline">Kein Abonnement erforderlich<br>Überwache die wichtigsten Teile deines Homelabs.</p>
           <ul><li>&#10003; 30 öffentliche Monitoring-Ziele</li><li>&#10003; HTTP / HTTPS / TCP / SSL / ICMP</li><li>&#10003; 1 Docker Probe &middot; 1 Infrastruktur-Verbindung &middot; 1 privater Monitor</li><li>&#10003; 1 öffentliche Statusseite</li><li>&#10003; Push-Alarme &middot; SSL-Ablauferinnerungen</li><li>&#10003; Visuelles Monitoring-Dashboard</li></ul>
           <a class="pr-button pr-button-primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">Kostenlos laden</a>
         </article>
@@ -568,7 +559,6 @@
           <a class="pr-button pr-button-primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">Pro laden</a>
         </article>
       </div>
-      <p class="pr-founder"><strong>Werde Founder. Sichere dir deine Vorteile dauerhaft.</strong> Registriere dich vor dem 1. Mai 2027 und erhalte dauerhaft 3 Docker Probes, 3 Infrastruktur-Verbindungen und 3 private Monitore. <a href="https://docs.opshome.run/de/free-vs-pro.html" target="_blank" rel="noopener">Vollständige Leistungstabelle ansehen &rarr;</a></p>
     </div>
   </section>
 
@@ -576,12 +566,13 @@
     <div class="pr-inner">
       <p class="pr-eyebrow">FAQ</p><h2>Häufig gestellte Fragen</h2>
       <div class="pr-faq">
-        <details open><summary>Braucht Docker Probe Portweiterleitung?</summary><div class="pr-faq-answer">Nein. Docker Probe nutzt ausgehendes HTTPS zu OpsHome Cloud. Eingehende Portweiterleitung oder öffentliche private Verwaltungsoberflächen sind nicht nötig.</div></details>
-        <details><summary>Ist Docker Probe sicher?</summary><div class="pr-faq-answer">Docker Probe nimmt keine eingehenden Anfragen an und erreicht nur die privaten Dienste, die du ausdrücklich konfigurierst. Prüfe vor der Installation den generierten Befehl und die Sicherheitsdokumentation.</div></details>
+        <details open><summary>Kann ich NAS oder Proxmox überwachen, ohne sie öffentlich ins Internet zu stellen?</summary><div class="pr-faq-answer">Ja. Installiere Docker Probe in deinem Netzwerk und konfiguriere die privaten Dienste oder Infrastruktur-Ziele, die sie erreichen soll. Die Probe startet eine ausgehende HTTPS-Verbindung; eingehende Ports oder ein öffentliches Management-Panel sind nicht nötig.</div></details>
+        <details><summary>Braucht Docker Probe Portweiterleitung?</summary><div class="pr-faq-answer">Nein. Docker Probe startet ausgehende HTTPS-Verbindungen zur OpsHome Cloud. Für die privaten Ziele, die sie prüft, brauchst du weder Portweiterleitung noch einen Reverse Proxy.</div></details>
+        <details><summary>Was sehe ich auf meinem iPhone?</summary><div class="pr-faq-answer">In der mobilen NOC-Ansicht siehst du öffentliche Dienste, private Service-Checks, unterstützte Infrastruktur-Assets, Alarme, Incidents, Wiederherstellungen und Monitoring-Verlauf an einem Ort.</div></details>
         <details><summary>Läuft das Monitoring bei geschlossener iPhone-App weiter?</summary><div class="pr-faq-answer">Ja. Die Prüfungen laufen über OpsHome Cloud oder Docker Probe weiter. Die iPhone-App dient zum Anzeigen von Status, Berichten und Benachrichtigungen.</div></details>
+        <details><summary>Kann ich eine Statusseite mit Familie, Team oder Nutzern teilen?</summary><div class="pr-faq-answer">Ja. Statusseiten teilen ausgewählte Service-Status, Verfügbarkeitszusammenfassungen und aktuelle Incidents über einen öffentlichen Link. Die OpsHome-iOS-App kann zudem den QR-Code eines geteilten Berichts scannen und prüfen, ob er von einer offiziellen OpsHome-Datenquelle stammt.</div></details>
         <details><summary>Was ist der Unterschied zwischen Free und Pro?</summary><div class="pr-faq-answer">Free umfasst öffentliches Monitoring plus 1 Docker Probe, 1 Infrastruktur-Verbindung und 1 privaten Monitor. Pro erhöht die öffentlichen und privaten Limits und bietet umfassendere Infrastrukturansichten.</div></details>
-        <details><summary>Warum nicht einfach Uptime Kuma selbst hosten?</summary><div class="pr-faq-answer">Uptime Kuma ist eine gute selbst gehostete Option. OpsHome richtet sich an Nutzer, die mobiles Monitoring möchten, ohne den Monitoring-Dienst selbst zu hosten und zu warten. Die Cloud-Schicht wird für dich betrieben, damit du dich auf dein Homelab konzentrieren kannst.</div></details>
-        <details><summary>Ist OpsHome nur für Homelab-Nutzer gedacht?</summary><div class="pr-faq-answer">Nein. OpsHome ist für Homelab-Enthusiasten, IT-Administratoren, Netzwerkingenieure und kleine Infrastrukturumgebungen gedacht.</div></details>
+        <details><summary>Warum nicht einfach Uptime Kuma selbst hosten?</summary><div class="pr-faq-answer">Uptime Kuma ist ein großartiger selbst gehosteter Monitor. OpsHome bietet eine mobile NOC-Ansicht für öffentliche Dienste, private Infrastruktur, Assets, Events und Alarme, während OpsHome Cloud die Monitoring-Schicht betreibt.</div></details>
       </div>
     </div>
   </section>
