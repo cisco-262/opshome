@@ -27,7 +27,7 @@
   .brand{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:15px;font-weight:800;letter-spacing:.02em;color:var(--accent)}
   sup.tm{font-size:.42em;line-height:0;vertical-align:super;margin-left:2px;letter-spacing:0}
   .brand img{width:64px;height:64px}
-  .navlinks{display:flex;align-items:center;gap:28px;list-style:none;font-family:var(--sans);font-size:15.5px;font-weight:750;color:var(--muted);letter-spacing:.01em}
+  .navlinks{display:flex;align-items:center;gap:28px;list-style:none;font-family:var(--sans);font-size:15px;font-weight:800;line-height:1.2;color:var(--muted);letter-spacing:.01em}
   .navlinks a:hover{color:var(--accent)}
   .navlinks a[aria-current="page"]{color:var(--accent)}
   .nav-cta{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:10px 16px;border-radius:10px;background:var(--accent);color:#fff;font-size:14px;font-weight:800;white-space:nowrap;box-shadow:0 10px 24px rgba(20,121,255,.22)}
@@ -63,7 +63,7 @@
   @media(max-width:900px){.navlinks,.nav-cta{display:none}}
   @media(max-width:900px){nav{padding:16px 22px}.brand img{width:54px;height:54px}main{padding:54px 22px}.grid{grid-template-columns:1fr}footer{padding:30px 22px}.footer-inner{align-items:center;flex-direction:column;text-align:center}.footer-brandline{justify-content:center;margin:0 auto;text-align:center}footer ul{justify-content:center}}
 </style>
-<link rel="stylesheet" href="assets/security-page.css">
+<link rel="stylesheet" href="assets/security-page.css?v=20260913-nav-unified">
 <script type="text/javascript">
   if (window.location.hostname === "app.opshome.run") {
     (function(c,l,a,r,i,t,y){
@@ -80,7 +80,7 @@
   <ul class="navlinks">
     <li><a href="/security.html" aria-current="page"><span>Security</span></a></li>
     <li><a href="/private-monitoring/"><span>Private Monitoring</span></a></li>
-    <li><a href="/homelab-noc/"><span>Integrations</span></a></li>
+    <li><a href="/homelab-noc/"><span>Infrastructure</span></a></li>
     <li><a href="/status-pages/"><span>Status Pages</span></a></li>
     <li><a href="/#pricing"><span>Pricing</span></a></li>
     <li><a href="/support.html"><span>Support</span></a></li>

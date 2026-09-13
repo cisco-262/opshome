@@ -46,13 +46,54 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type":"Question","name":"可以不暴露到網際網路就監控 NAS 或 Proxmox 嗎？","acceptedAnswer":{"@type":"Answer","text":"可以。在網路內部部署 Docker Probe，再設定需要存取的私有服務或基礎設施目標即可。Probe 透過出站 HTTPS 主動連線，不需要開放入站連接埠，也不需要公開管理面板。"}},
-    {"@type":"Question","name":"Docker Probe 是否需要連接埠轉送？","acceptedAnswer":{"@type":"Answer","text":"不需要。Docker Probe 透過出站 HTTPS 主動連線 OpsHome Cloud。它檢查的私有目標不需要入站連接埠轉送或反向代理。"}},
-    {"@type":"Question","name":"可以在 iPhone 上看到什麼？","acceptedAnswer":{"@type":"Answer","text":"行動端 NOC 可集中查看公網服務、私有服務檢測、受支援的基礎設施資產、告警、事件、復原情況和監控歷史。"}},
-    {"@type":"Question","name":"關閉 iPhone App 後監控還會繼續嗎？","acceptedAnswer":{"@type":"Answer","text":"會。檢測由 OpsHome Cloud 和 Docker Probe 持續執行，iPhone App 用於查看狀態、報告和通知。"}},
-    {"@type":"Question","name":"可以把狀態頁分享給家人、團隊成員或使用者嗎？","acceptedAnswer":{"@type":"Answer","text":"可以。狀態頁透過一個公開連結分享選定服務的狀態、可用率摘要和近期事件。OpsHome iOS App 也可以掃描已分享報告的 QR Code，檢查它是否來自 OpsHome 官方資料來源。"}},
-    {"@type":"Question","name":"Free 和 Pro 有什麼差異？","acceptedAnswer":{"@type":"Answer","text":"普通 Free 提供公網監控，並包含 1 個 Docker Probe、1 個基礎設施連線和 1 個私網監控點作為基礎私網體驗。Pro 提升公網和私網監控額度，並提供更完整的基礎設施可見性。"}},
-    {"@type":"Question","name":"為什麼不用自託管的 Uptime Kuma？","acceptedAnswer":{"@type":"Answer","text":"Uptime Kuma 是優秀的自託管監控工具。OpsHome 提供行動端 NOC 視圖，將公網服務、私有基礎設施、資產、事件和告警匯集在一起，同時由 OpsHome Cloud 運行監控層。"}}
+    {
+      "@type": "Question",
+      "name": "Docker Probe 是否需要連接埠轉送？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不需要。Docker Probe 透過出站 HTTPS 連線 OpsHome Cloud，不需要入站連接埠轉送，也不需要公開私有管理介面。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Docker Probe 安全嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Docker Probe 不接受入站請求，只存取你明確設定的私有服務。安裝前可以審查 App 產生的部署指令和公開的安全說明。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "關閉 iPhone App 後監控還會繼續嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "會。檢測由 OpsHome Cloud 和 Docker Probe 持續執行，iPhone App 用於查看狀態、報告和通知。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Free 和 Pro 有什麼差異？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "普通 Free 提供公網監控，並包含 1 個 Docker Probe、1 個基礎設施連線和 1 個私網監控點作為基礎私網體驗。Pro 提升公網和私網監控額度，並提供更完整的基礎設施可見性。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "為什麼不用自託管的 Uptime Kuma？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Uptime Kuma 是一個不錯的自託管選項。OpsHome 面向希望直接獲得行動端監控、而不必自行託管和維護監控服務的使用者。雲端監控層由 OpsHome 負責，你可以專注於自己的 Homelab。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "OpsHome 只適合 Homelab 使用者嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不是。OpsHome 面向 Homelab 愛好者、IT 管理員、網路工程師和小型基礎設施環境。"
+      }
+    }
   ]
 }</script>
 
@@ -76,7 +117,7 @@
   .brand{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:15px;font-weight:800;letter-spacing:.02em;color:var(--accent)}
   sup.tm{font-size:.42em;line-height:0;vertical-align:super;margin-left:2px;letter-spacing:0}
   .brand img{width:64px;height:64px}
-  .navlinks{display:flex;align-items:center;gap:28px;list-style:none;font-family:var(--sans);font-size:15.5px;font-weight:750;color:var(--muted);letter-spacing:.01em}
+  .navlinks{display:flex;align-items:center;gap:28px;list-style:none;font-family:var(--sans);font-size:15px;font-weight:800;line-height:1.2;color:var(--muted);letter-spacing:.01em}
   .navlinks a:hover{color:var(--accent)}
   .lang{display:flex;gap:4px;padding:4px;border:1px solid var(--border);background:#fff;border-radius:6px}
   .lang a{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--muted);background:transparent;border:0;padding:6px 10px;cursor:pointer}
@@ -362,7 +403,7 @@
     h2{font-size:clamp(20px,6vw,36px)}
   }
 </style>
-<link rel="stylesheet" href="assets/product-page-v2.css?v=20260913-p0-scenarios">
+<link rel="stylesheet" href="assets/product-page-v2.css?v=20260913-nav-unified">
 <script type="text/javascript">
   if (window.location.hostname === "app.opshome.run") {
     (function(c,l,a,r,i,t,y){
@@ -393,7 +434,7 @@
   <ul class="navlinks">
     <li><a href="/zh-Hant/security.html"><span>安全</span></a></li>
     <li><a href="/private-monitoring/"><span>私有監控</span></a></li>
-    <li><a href="/homelab-noc/"><span>整合</span></a></li>
+    <li><a href="/homelab-noc/"><span>基礎設施</span></a></li>
     <li><a href="/zh-Hant/status-pages/"><span>狀態頁</span></a></li>
     <li><a href="#pricing"><span>價格</span></a></li>
     <li><a href="/zh-Hant/support.html"><span>支援</span></a></li>
@@ -406,15 +447,14 @@
   <section class="pr-hero">
     <div class="pr-inner pr-hero-grid">
       <div class="pr-hero-copy">
-        <p class="pr-hero-kicker">OpsHome NOC &middot; 為 Homelab 提供行動端可見性</p>
+        <p class="pr-hero-kicker">OpsHome NOC &middot; 面向 Homelab 的行動監控</p>
         <h1>你的 Homelab，<br>終於有人替你盯著了。</h1>
-        <p class="pr-hero-subtitle">在一個行動端 NOC 中查看公網服務與私有基礎設施。讓 Proxmox、Synology、Docker、Linux 主機及其承載的服務，始終在 iPhone 上清楚可見。</p>
-        <p class="pr-hero-audience">為 Homelab、自架服務和小型基礎設施團隊而設計。</p>
+        <p class="pr-hero-subtitle">出差或不在家時，不必再猜測基礎設施發生了什麼。OpsHome 監控你的 Proxmox、Synology、Docker 和公網服務，讓 iPhone 在需要關注時及時通知你。</p>
         <div class="pr-actions">
           <a class="pr-button pr-button-primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">免費取得</a>
           <a class="pr-button pr-button-secondary" href="#docker-probe">了解運作方式</a>
         </div>
-        <div class="pr-trust-tags" aria-label="OpsHome 核心能力"><span>公網 + 私網</span><span>基礎設施資產</span><span>Docker Probe</span><span>事件與告警</span></div>
+        <div class="pr-trust-tags" aria-label="OpsHome 核心能力"><span>行動 NOC</span><span>Homelab 監控</span><span>Docker Probe</span><span>告警</span></div>
       </div>
       <div class="pr-hero-visual"><img src="assets/images/hero-carousel/full-stack-20260620.webp" alt="OpsHome NOC Homelab 全棧監控總覽" width="1400" height="788" loading="eager" fetchpriority="high" decoding="async"></div>
     </div>
@@ -422,20 +462,6 @@
 
   <section class="pr-integration-strip" aria-label="支援的監控對象">
     <div class="pr-inner"><span>Docker</span><span>Proxmox VE</span><span>VMware vSphere</span><span>Synology</span><span>Linux</span><span>HTTP/HTTPS</span><span>SSL</span><span>TCP</span></div>
-  </section>
-
-  <section class="pr-section pr-center pr-scenarios" id="scenarios">
-    <div class="pr-inner">
-      <p class="pr-eyebrow">支撐你日常的系統</p>
-      <h2>先從人們真正依賴的那部分基礎設施開始。</h2>
-      <p class="pr-lead">OpsHome 將 Homelab 或小型營運背後的公網服務、私有服務和基礎設施資產匯集到一個行動端視圖。</p>
-      <div class="pr-cards pr-cards-four">
-        <article class="pr-card"><span class="pr-card-icon" aria-hidden="true">01</span><h3>NAS 與儲存</h3><p>即使不在家，也能持續掌握 Synology 和儲存環境周邊的服務狀態與基礎設施訊號。</p><a class="pr-text-link" href="/synology-monitoring/">了解 NAS 監控 &rarr;</a></article>
-        <article class="pr-card"><span class="pr-card-icon" aria-hidden="true">02</span><h3>虛擬化</h3><p>在一個 NOC 風格視圖中查看 Proxmox VE、VMware vSphere、虛擬機、資源、儲存及其承載的服務。</p><a class="pr-text-link" href="/proxmox-monitoring/">了解虛擬化監控 &rarr;</a></article>
-        <article class="pr-card"><span class="pr-card-icon" aria-hidden="true">03</span><h3>Docker 與 Linux</h3><p>追蹤容器、Linux 主機、私有服務，以及能夠說明復原是否真正穩定的事件。</p><a class="pr-text-link" href="/docker-probe/">了解 Docker Probe &rarr;</a></article>
-        <article class="pr-card"><span class="pr-card-icon" aria-hidden="true">04</span><h3>網站與 SOHO</h3><p>持續觀察客戶、家人或團隊成員依賴的網站、API、憑證、網域和選定服務。</p><a class="pr-text-link" href="#features">了解服務監控 &rarr;</a></article>
-      </div>
-    </div>
   </section>
 
   <section class="pr-section pr-center pr-alt" id="homelab-pain">
@@ -451,11 +477,10 @@
     <div class="pr-inner">
       <p class="pr-eyebrow">不只是另一個可用性監控</p>
       <h2>停止維護監控工具，開始真正理解你的基礎設施。</h2>
-      <div class="pr-cards pr-cards-four">
-        <article class="pr-card"><span class="pr-card-icon" aria-hidden="true">01</span><h3>公網服務</h3><p>透過 OpsHome Cloud 監控網站、API、HTTP、HTTPS、TCP、SSL、DNS 和網域檢測。</p></article>
-        <article class="pr-card"><span class="pr-card-icon" aria-hidden="true">02</span><h3>私有服務</h3><p>Docker Probe 只會存取你在網路內部授權的 HTTP、HTTPS、TCP、Docker 和資產目標。</p></article>
-        <article class="pr-card"><span class="pr-card-icon" aria-hidden="true">03</span><h3>基礎設施資產</h3><p>將受支援的 Proxmox、Synology、Linux、Docker 和 VMware 資訊與其承載的服務一併查看。</p></article>
-        <article class="pr-card"><span class="pr-card-icon" aria-hidden="true">04</span><h3>事件與歷史</h3><p>把狀態變化、復原、容器事件、告警和近期歷史放在一起，獲得有意義的維運上下文。</p></article>
+      <div class="pr-cards pr-cards-three">
+        <article class="pr-card"><span class="pr-card-icon" aria-hidden="true">01</span><h3>公網 + 私網可見性</h3><p>在一個維運視圖中監控網站、API、SSL、網域、Docker、NAS、Proxmox 和 Linux。</p></article>
+        <article class="pr-card"><span class="pr-card-icon" aria-hidden="true">02</span><h3>面向私有網路設計</h3><p>Docker Probe 透過 HTTPS 主動出站連線，讓私有環境繼續留在你的網路內部。</p></article>
+        <article class="pr-card"><span class="pr-card-icon" aria-hidden="true">03</span><h3>維運上下文</h3><p>把健康狀態、事件、歷史、恢復情況和告警放在一起查看。</p></article>
       </div>
     </div>
   </section>
@@ -464,8 +489,8 @@
     <div class="pr-inner pr-feature pr-reverse">
       <div class="pr-copy">
         <p class="pr-eyebrow">私有網路 · Docker Probe</p>
-        <h2>監控私有網路，不必把私有服務公開到網際網路。</h2>
-        <p>在 LAN 內的一台主機部署 Docker Probe。它會透過出站 HTTPS 主動連線 OpsHome Cloud，並且只存取你授權的服務和資產。</p>
+        <h2>看見你的私有網路內部<br>無需開放任何連接埠。</h2>
+        <p>在 LAN 內部署 Docker Probe。Probe 透過出站 HTTPS 連線 OpsHome Cloud，讓私有服務繼續留在你的網路內部，同時在手機上查看服務狀態、資產資訊和基礎設施健康。</p>
         <div class="pr-points">
           <div class="pr-point"><span class="pr-point-icon">&bull;</span><span>出站 HTTPS，無需入站連接埠轉送</span></div>
           <div class="pr-point"><span class="pr-point-icon">&bull;</span><span>私網 HTTP、HTTPS、TCP、Docker 和資產監控</span></div>
@@ -482,7 +507,7 @@
       <div class="pr-copy">
         <p class="pr-eyebrow">基礎設施資產</p>
         <h2>你的基礎設施，<br>統一到一個 NOC 視圖。</h2>
-        <p>從零散檢測走向完整的基礎設施視圖。在手機上同時查看 Proxmox VE、VMware vSphere、Synology、Linux、Docker 以及它們承載的服務。</p>
+        <p>超越基礎可用性檢查。在手機上同時查看 Proxmox VE、VMware vSphere、Synology、Linux、Docker 以及它們承載的服務。</p>
         <div class="pr-points">
           <div class="pr-point"><span class="pr-point-icon">&bull;</span><span>節點、虛擬機、儲存和服務</span></div>
           <div class="pr-point"><span class="pr-point-icon">&bull;</span><span>CPU、記憶體、磁碟和溫度</span></div>
@@ -500,7 +525,7 @@
       <div class="pr-copy">
         <p class="pr-eyebrow">事件 · 公網監控 · 告警</p>
         <h2>知道發生了什麼，也知道它是否已經恢復。</h2>
-        <p>OpsHome 將公網監控、Docker 容器事件、告警、歷史和狀態分享集中在一起，讓短暫故障也有清楚上下文。</p>
+        <p>OpsHome 將公網監控、Docker 容器事件、告警、歷史和狀態分享集中在同一個維運視圖中。</p>
         <div class="pr-points">
           <div class="pr-point"><span class="pr-point-icon">&bull;</span><span>網站、API、HTTP、HTTPS、TCP、ICMP、SSL、DNS 和網域檢測</span></div>
           <div class="pr-point"><span class="pr-point-icon">&bull;</span><span>Docker 重啟、恢復、異常狀態和 OOM Kill</span></div>
@@ -526,30 +551,14 @@
     </div>
   </section>
 
-  <section class="pr-section pr-center pr-security-strip">
-    <div class="pr-inner">
-      <p class="pr-eyebrow">以連線方式守住邊界</p>
-      <h2>保持可見性，也保持網路邊界。</h2>
-      <p class="pr-lead">公開 App 與 API 使用 HTTPS；Docker Probe 則從你的網路內部主動發起連線。可在安全頁面查看相關控制項和架構說明。</p>
-      <div class="pr-security-evidence">
-        <div><strong>TLS 1.2+</strong><span>公開 App 與 API 連線使用 HTTPS。</span></div>
-        <div><strong>HSTS</strong><span>公開端點強制使用 HTTPS。</span></div>
-        <div><strong>僅出站 Probe</strong><span>Docker Probe 不需要入站連接埠轉送。</span></div>
-        <div><strong>授權目標</strong><span>Probe 只檢測你設定的服務。</span></div>
-      </div>
-      <a class="pr-text-link" href="/zh-Hant/security.html">查看安全說明 &rarr;</a>
-    </div>
-  </section>
-
   <section class="pr-section pr-center" id="pricing">
     <div class="pr-inner">
       <p class="pr-eyebrow">方案</p>
-      <h2>免費開始看護最關鍵的服務。</h2>
-      <p class="pr-lead">從公網服務和私有 Homelab 的核心可見性開始，無需訂閱，也無需信用卡。</p>
-      <p class="pr-founder"><strong>成為 Founder，永久鎖定專屬權益。</strong> 在 2027 年 5 月 1 日前註冊，即可永久獲得 3 個 Docker Probe、3 個基礎設施連線和 3 個私網監控點。<a href="https://docs.opshome.run/hant/free-vs-pro.html" target="_blank" rel="noopener">查看完整權益表 &rarr;</a></p>
+      <h2>免費監控你的 Homelab。</h2>
+      <p class="pr-lead">從核心監控體驗開始，無需信用卡。</p>
       <div class="pr-pricing">
         <article class="pr-plan">
-          <p class="pr-plan-name">Free</p><p class="pr-plan-price">$0</p><p class="pr-plan-subline">無需訂閱<br>免費監控 Homelab 的核心服務。</p>
+          <p class="pr-plan-name">Free</p><p class="pr-plan-price">$0</p><p class="pr-plan-subline">無需訂閱</p>
           <ul><li>&#10003; 30 個公網監控目標</li><li>&#10003; HTTP / HTTPS / TCP / SSL / ICMP</li><li>&#10003; 1 個 Docker Probe &middot; 1 個基礎設施連線 &middot; 1 個私網監控點</li><li>&#10003; 1 個公開狀態頁</li><li>&#10003; 推播告警 &middot; SSL 到期提醒</li><li>&#10003; 可視化監控儀表板</li></ul>
           <a class="pr-button pr-button-primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">免費下載</a>
         </article>
@@ -559,6 +568,7 @@
           <a class="pr-button pr-button-primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">取得 Pro</a>
         </article>
       </div>
+      <p class="pr-founder"><strong>成為 Founder，永久鎖定專屬權益。</strong> 在 2027 年 5 月 1 日前註冊，即可永久獲得 3 個 Docker Probe、3 個基礎設施連線和 3 個私網監控點。<a href="https://docs.opshome.run/hant/free-vs-pro.html" target="_blank" rel="noopener">查看完整權益表 &rarr;</a></p>
     </div>
   </section>
 
@@ -566,13 +576,12 @@
     <div class="pr-inner">
       <p class="pr-eyebrow">FAQ</p><h2>常見問題</h2>
       <div class="pr-faq">
-        <details open><summary>可以不暴露到網際網路就監控 NAS 或 Proxmox 嗎？</summary><div class="pr-faq-answer">可以。在網路內部部署 Docker Probe，再設定需要存取的私有服務或基礎設施目標即可。Probe 透過出站 HTTPS 主動連線，不需要開放入站連接埠，也不需要公開管理面板。</div></details>
-        <details><summary>Docker Probe 是否需要連接埠轉送？</summary><div class="pr-faq-answer">不需要。Docker Probe 透過出站 HTTPS 主動連線 OpsHome Cloud。它檢查的私有目標不需要入站連接埠轉送或反向代理。</div></details>
-        <details><summary>可以在 iPhone 上看到什麼？</summary><div class="pr-faq-answer">行動端 NOC 可集中查看公網服務、私有服務檢測、受支援的基礎設施資產、告警、事件、復原情況和監控歷史。</div></details>
+        <details open><summary>Docker Probe 是否需要連接埠轉送？</summary><div class="pr-faq-answer">不需要。Docker Probe 透過出站 HTTPS 連線 OpsHome Cloud，不需要入站連接埠轉送，也不需要公開私有管理介面。</div></details>
+        <details><summary>Docker Probe 安全嗎？</summary><div class="pr-faq-answer">Docker Probe 不接受入站請求，只存取你明確設定的私有服務。安裝前可以審查 App 產生的部署指令和公開的安全說明。</div></details>
         <details><summary>關閉 iPhone App 後監控還會繼續嗎？</summary><div class="pr-faq-answer">會。檢測由 OpsHome Cloud 和 Docker Probe 持續執行，iPhone App 用於查看狀態、報告和通知。</div></details>
-        <details><summary>可以把狀態頁分享給家人、團隊成員或使用者嗎？</summary><div class="pr-faq-answer">可以。狀態頁透過一個公開連結分享選定服務的狀態、可用率摘要和近期事件。OpsHome iOS App 也可以掃描已分享報告的 QR Code，檢查它是否來自 OpsHome 官方資料來源。</div></details>
         <details><summary>Free 和 Pro 有什麼差異？</summary><div class="pr-faq-answer">普通 Free 提供公網監控，並包含 1 個 Docker Probe、1 個基礎設施連線和 1 個私網監控點作為基礎私網體驗。Pro 提升公網和私網監控額度，並提供更完整的基礎設施可見性。</div></details>
-        <details><summary>為什麼不用自託管的 Uptime Kuma？</summary><div class="pr-faq-answer">Uptime Kuma 是優秀的自託管監控工具。OpsHome 提供行動端 NOC 視圖，將公網服務、私有基礎設施、資產、事件和告警匯集在一起，同時由 OpsHome Cloud 運行監控層。</div></details>
+        <details><summary>為什麼不用自託管的 Uptime Kuma？</summary><div class="pr-faq-answer">Uptime Kuma 是一個不錯的自託管選項。OpsHome 面向希望直接獲得行動端監控、而不必自行託管和維護監控服務的使用者。雲端監控層由 OpsHome 負責，你可以專注於自己的 Homelab。</div></details>
+        <details><summary>OpsHome 只適合 Homelab 使用者嗎？</summary><div class="pr-faq-answer">不是。OpsHome 面向 Homelab 愛好者、IT 管理員、網路工程師和小型基礎設施環境。</div></details>
       </div>
     </div>
   </section>
