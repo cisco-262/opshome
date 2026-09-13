@@ -1,5 +1,6 @@
 /* OpsHome NOC Security page — shared layout for all locales */
 .security-doc{background:#f6fbff;color:#0b1b2e;line-height:1.72}
+.security-doc .navlinks{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;font-size:15px;font-weight:800;line-height:1.2;letter-spacing:.01em;color:#334155}
 .security-doc:before{display:none}
 .security-doc nav{box-shadow:0 10px 32px rgba(31,91,150,.08)}
 .security-doc main.security-main{max-width:1240px;margin:0 auto;padding:54px 32px 96px}
