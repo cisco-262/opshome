@@ -76,4 +76,20 @@
     <loc>https://app.opshome.run/zh-Hant/status-pages/</loc>
     <lastmod>2026-09-13</lastmod>
   </url>
+  <url>
+    <loc>https://app.opshome.run/console/</loc>
+    <lastmod>2026-09-16</lastmod>
+  </url>
+  <url>
+    <loc>https://app.opshome.run/zh/console/</loc>
+    <lastmod>2026-09-16</lastmod>
+  </url>
+  <url>
+    <loc>https://app.opshome.run/zh-Hant/console/</loc>
+    <lastmod>2026-09-16</lastmod>
+  </url>
+  <url>
+    <loc>https://app.opshome.run/de/console/</loc>
+    <lastmod>2026-09-16</lastmod>
+  </url>
 </urlset>
