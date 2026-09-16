@@ -16,9 +16,7 @@
 <link rel="icon" href="assets/images/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
 <style>
-  @font-face{font-family:"Space Mono Local";src:url("assets/fonts/SpaceMono-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
-  @font-face{font-family:"Space Mono Local";src:url("assets/fonts/SpaceMono-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
-  :root{--bg:#f6fbff;--surface:#ffffff;--border:#d7e8f8;--accent:#1479ff;--accent2:#38bdf8;--text:#0b1b2e;--muted:#334155;--soft:#102033;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--mono:"Space Mono Local","Inter","Segoe UI",Roboto,Arial,sans-serif}
+  :root{--bg:#f6fbff;--surface:#ffffff;--border:#d7e8f8;--accent:#1479ff;--accent2:#38bdf8;--text:#0b1b2e;--muted:#334155;--soft:#102033;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:#071d36;color:#ffffff;font-family:var(--sans);line-height:1.8}
   body:before{display:none}
@@ -63,7 +61,7 @@
   @media(max-width:900px){.navlinks,.nav-cta{display:none}}
   @media(max-width:900px){nav{padding:16px 22px}.brand img{width:54px;height:54px}main{padding:54px 22px}.grid{grid-template-columns:1fr}footer{padding:30px 22px}.footer-inner{align-items:center;flex-direction:column;text-align:center}.footer-brandline{justify-content:center;margin:0 auto;text-align:center}footer ul{justify-content:center}}
 </style>
-<link rel="stylesheet" href="assets/security-page.css?v=20260913-nav-weight-fix">
+<link rel="stylesheet" href="assets/security-page.css?v=20260916-layout-unified">
 <script type="text/javascript">
   if (window.location.hostname === "app.opshome.run") {
     (function(c,l,a,r,i,t,y){
@@ -90,7 +88,7 @@
 </nav>
 
 <main class="security-main">
-  <section class="security-hero" id="top">
+  <section class="security-hero" id="top"><div class="security-hero-inner">
     <div class="security-hero-copy">
       <p class="security-kicker">Security / Publicly documented controls</p>
       <h1>Security by architecture.</h1>
@@ -106,7 +104,7 @@
         <li>Sensitive credentials protected at rest</li>
       </ul>
     </div>
-  </section>
+  </div></section>
 
   <div class="security-shell">
     <aside class="security-toc" aria-label="On this page">
@@ -120,7 +118,7 @@
         <li><a href="#access">Access control</a></li>
         <li><a href="#release-integrity">Release integrity</a></li>
         <li><a href="#data">Data handling</a></li>
-        <li><a href="#reporting">Reporting</a></li>
+        <li><a href="#verification">Verification</a></li><li><a href="#reporting">Reporting</a></li>
       </ul>
     </aside>
 
@@ -154,10 +152,7 @@
           <article class="security-control-card"><h3>Backend API</h3><p>The OpsHome backend API is served over HTTPS, and the Cloudflare edge requires TLS 1.2 or higher.</p></article>
           <article class="security-control-card"><h3>HSTS and origin connection</h3><p>HSTS is enabled with <code>includeSubDomains</code>. Cloudflare uses Full (strict) mode to encrypt the connection to the origin and validate the origin certificate.</p></article>
         </div>
-        <div class="security-control-grid security-verification-grid">
-          <article class="security-control-card security-verification-card"><h3>SSL Labs · TLS result</h3><img class="security-grade-image" src="assets/images/ssllabs-a-plus-result.svg" alt="SSL Labs A+ grade" width="300" height="210" loading="lazy" decoding="async"><div class="security-link-row"><a class="security-link" href="https://www.ssllabs.com/ssltest/analyze.html?d=app.opshome.run" target="_blank" rel="noopener">Open the public SSL Labs report <span aria-hidden="true">↗</span></a></div></article>
-          <article class="security-control-card security-verification-card"><h3>SecurityHeaders.com · HTTP header result</h3><img class="security-grade-image" src="assets/images/securityheaders-a-result.svg" alt="SecurityHeaders.com Grade A" width="300" height="210" loading="lazy" decoding="async"></article>
-        </div>
+        
       </section>
 
       <section class="security-section" id="credentials">
@@ -203,7 +198,10 @@
         <div class="security-note">Docker Probe focuses on health, status, events, and limited asset metadata required for monitoring.</div>
       </section>
 
-      <section class="security-section" id="reporting">
+      <section class="security-section security-verification-section" id="verification"><div class="security-section-heading"><div><p class="security-section-kicker">Public verification</p><h2>Security controls you can verify independently</h2></div><p>Public TLS and HTTP header reports provide an external view of the current public configuration.</p></div><div class="security-control-grid security-verification-grid">
+          <article class="security-control-card security-verification-card"><h3>SSL Labs · TLS result</h3><img class="security-grade-image" src="assets/images/ssllabs-a-plus-result.svg" alt="SSL Labs A+ grade" width="300" height="210" loading="lazy" decoding="async"><div class="security-link-row"><a class="security-link" href="https://www.ssllabs.com/ssltest/analyze.html?d=app.opshome.run" target="_blank" rel="noopener">Open the public SSL Labs report <span aria-hidden="true">↗</span></a></div></article>
+          <article class="security-control-card security-verification-card"><h3>SecurityHeaders.com · HTTP header result</h3><img class="security-grade-image" src="assets/images/securityheaders-a-result.svg" alt="SecurityHeaders.com Grade A" width="300" height="210" loading="lazy" decoding="async"></article>
+        </div></section><section class="security-section" id="reporting">
         <div class="security-section-heading"><div><p class="security-section-kicker">Documentation and contact</p><h2>Questions or security concerns</h2></div></div>
         <div class="security-contact"><div><h3>Contact OpsHome support</h3><p>For security-related questions or suspected issues, contact <a href="mailto:support@opshome.run">support@opshome.run</a>.</p></div><a class="security-link" href="mailto:support@opshome.run">Send an email &rarr;</a></div>
         <div class="security-link-row"><a class="security-link" href="https://docs.opshome.run/" target="_blank" rel="noopener">OpsHome Documentation &rarr;</a><a class="security-link" href="privacy.html">Privacy Policy &rarr;</a><a class="security-link" href="support.html">Support &rarr;</a></div>
