@@ -138,7 +138,7 @@ The Console is intended for observation and investigation. It does not turn the 
 
 <div align="center">
 
-<img src="assets/images/console/overview-dark.png" alt="OpsHome Console overview in dark mode" width="820">
+<img src="/docs/assets/images/console/overview-dark.png" alt="OpsHome Console overview in dark mode" width="820">
 
 </div>
 
