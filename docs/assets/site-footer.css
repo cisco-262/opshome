@@ -1,4 +1,4 @@
-/* Unified OpsHome site footer — 2026-09-18 */
+/* Unified OpsHome site footer — 2026-09-18 · product matrix */
 .site-footer,
 .site-footer *{box-sizing:border-box}
 .site-footer{
@@ -103,22 +103,22 @@
 }
 .site-footer__link:hover{color:#fff;transform:translateX(2px)}
 .site-footer__product-icon{
-  width:20px;
-  height:20px;
-  flex:0 0 20px;
+  width:22px;
+  height:22px;
+  flex:0 0 22px;
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  border-radius:6px;
+  border-radius:7px;
   overflow:hidden;
-  background:#0b1d33;
-  border:1px solid rgba(148,163,184,.18);
+  background:transparent;
+  border:0;
   color:#dbeafe;
   font-size:8px;
   font-weight:700;
   letter-spacing:-.02em;
 }
-.site-footer__product-icon img{width:100%;height:100%;display:block;object-fit:cover}
+.site-footer__product-icon img{width:100%;height:100%;display:block;object-fit:contain;border-radius:inherit}
 .site-footer__bottom-wrap{border-top:1px solid rgba(148,163,184,.13)}
 .site-footer__bottom{
   width:min(1180px,calc(100% - 64px));
