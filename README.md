@@ -1,468 +1,506 @@
 <div align="center">
 
-<img src="/docs/assets/images/brand-logo.png" alt="OpsHome NOC Logo" width="120">
+<img src="assets/images/brand-logo.png" alt="OpsHome NOC Logo" width="120">
 
 # OpsHome NOC
 
-**Your Personal Infrastructure NOC on iPhone**  
-**在 iPhone 上管理你的個人基礎設施 NOC**  
-**在 iPhone 上管理你的个人基础设施 NOC**
+**Mobile + Web NOC for self-hosted infrastructure**  
+**面向自托管基础设施的移动端 + Web NOC**  
+**面向自架基礎設施的行動端 + Web NOC**
 
-Monitor public services, private networks, Docker, Proxmox, Synology NAS, Linux hosts, websites, certificates, and homelab infrastructure from one NOC-style app.
-
-透過一款 NOC 式 App，集中監控公網服務、私有網路、Docker、Proxmox、Synology NAS、Linux 主機、網站、憑證與 Homelab 基礎設施。
-
-通过一款 NOC 风格 App，集中监控公网服务、私有网络、Docker、Proxmox、Synology NAS、Linux 主机、网站、证书和 Homelab 基础设施。
+Monitor public services, private networks, Proxmox, VMware, Synology, Linux, Docker, websites, SSL, domains, incidents, and infrastructure health from one operational view.
 
 <br>
 
 [![App Store](https://img.shields.io/badge/App_Store-Download-0D96F6?logo=apple&logoColor=white)](https://apps.apple.com/us/app/opshome-noc/id6763890679)
-[![Website](https://img.shields.io/badge/Website-opshome.run-1769AA)](https://opshome.run)
+[![Website](https://img.shields.io/badge/Website-app.opshome.run-1769AA)](https://app.opshome.run)
+[![Console](https://img.shields.io/badge/Console-console.opshome.run-16803A)](https://console.opshome.run)
 [![Documentation](https://img.shields.io/badge/Docs-docs.opshome.run-254E70)](https://docs.opshome.run)
-[![Platform](https://img.shields.io/badge/Platform-iPhone-lightgrey?logo=apple)](https://apps.apple.com/us/app/opshome-noc/id6763890679)
-[![Monitoring](https://img.shields.io/badge/Monitoring-Cloud_%2B_Private-success)](https://docs.opshome.run)
+[![Platform](https://img.shields.io/badge/Platform-iOS_%2B_Web-lightgrey?logo=apple)](https://app.opshome.run)
 
 <br>
 
 <a href="https://apps.apple.com/us/app/opshome-noc/id6763890679">
-  <img src="/docs/assets/images/app-store-badge.svg" alt="Download OpsHome NOC on the App Store" height="56">
+  <img src="assets/images/app-store-badge.svg" alt="Download OpsHome NOC on the App Store" height="56">
 </a>
 
 <br><br>
 
-<img src="/docs/assets/images/noc-pic.png" alt="OpsHome NOC iPhone dashboard showing infrastructure health" width="300">
+<img src="assets/images/homelab-noc-overview-iphone.png" alt="OpsHome NOC infrastructure overview on iPhone" width="300">
 
 <br>
 
-[English](#english) · [繁體中文](#繁體中文) · [简体中文](#简体中文) · [Documentation](https://docs.opshome.run) · [Website](https://opshome.run) · [App Store](https://apps.apple.com/us/app/opshome-noc/id6763890679)
+[Website](https://app.opshome.run) · [Console](https://console.opshome.run) · [Documentation](https://docs.opshome.run) · [App Store](https://apps.apple.com/us/app/opshome-noc/id6763890679) · [Security](https://app.opshome.run/security.html) · [Support](https://app.opshome.run/support.html)
 
 </div>
+
 ---
 
-## English
+## Overview
 
-### Overview
+**OpsHome NOC** is a lightweight operations platform for homelabs, self-hosted services, NAS environments, and small always-on infrastructure.
 
-**OpsHome NOC** gives personal infrastructure a compact Network Operations Center view on iPhone.
+It combines an **iPhone-first NOC app** with a **read-only Web Console**, so the same environment can be reviewed from a phone, desktop browser, tablet, or wall display.
 
-It combines:
+OpsHome brings together:
 
-- Public checks performed by OpsHome Cloud
-- Private monitoring through Docker Probe
-- Infrastructure asset views for Synology NAS, Proxmox VE, Linux hosts, and Docker
-- Push alerts, incident history, uptime, health summaries, and analysis reports
-- Location-aware topology and Map grouping
-- Shareable public status pages
-- Home Screen and Lock Screen widgets
+- Public service monitoring from OpsHome Cloud
+- Private network monitoring through Docker Probe
+- Infrastructure visibility for Proxmox VE, VMware vSphere, Synology NAS, Linux, and Docker
+- Current health, availability, utilization, storage, workload, and event context
+- Incident workspace and recovery history
+- Public status pages
+- Push notifications and supported alert integrations
+- Sign in with Apple
 
-OpsHome NOC is designed for homelab users, NAS owners, Docker operators, self-hosted service maintainers, and people who manage personal websites or small always-on services.
+OpsHome is designed for people who want a clear operational view without turning their monitoring system into another infrastructure project to maintain.
 
-### Monitoring Sources
+## Current Architecture
 
-| Source | Best for | Supported examples |
+| Layer | Purpose | Examples |
 | --- | --- | --- |
-| **OpsHome Cloud** | Services reachable from the public internet | Websites, APIs, HTTP/HTTPS endpoints, public TCP ports, SSL certificates, DNS records, ICMP reachability, and domain expiry |
-| **Docker Probe** | Services inside a LAN, NAS, Docker network, or private homelab | Internal HTTP/HTTPS services, private TCP services, NAS panels, Proxmox dashboards, Docker services, and targets behind NAT |
-| **Infrastructure Connections** | Infrastructure visibility beyond simple uptime checks | Synology NAS, Proxmox VE nodes, VMs and LXC guests, Linux hosts, Docker hosts and containers, storage, CPU, memory, temperature, network, and health history |
+| **OpsHome Cloud** | Public monitoring and account services | HTTP, HTTPS, TCP, UDP, SSL, DNS, ICMP, domain expiry, alerts, status pages |
+| **Docker Probe** | Private monitoring from inside your network | Internal HTTP/HTTPS/TCP targets, private services, infrastructure access behind NAT |
+| **Infrastructure Connections** | Asset and workload visibility | Proxmox VE, VMware vSphere, Synology NAS, Linux, Docker |
+| **OpsHome NOC for iOS** | Mobile monitoring and alerts | Health, monitors, assets, incidents, notifications, status pages |
+| **OpsHome Console** | Read-only browser operations view | Monitor Matrix, Assets Topology, Incident Workspace, Wall Display Mode |
 
-### Key Capabilities
+## Key Capabilities
 
-- **Cloud monitoring** for public websites, APIs, ports, certificates, DNS, ICMP, and domain-related resources
-- **Private HTTP, HTTPS, and TCP monitoring** through Docker Probe
-- **Local Service Discovery** for authorized private HTTP, HTTPS, and TCP services
-- **Synology NAS visibility** for supported DSM, uptime, CPU, memory, temperature, storage, disks, network, and container data
-- **Proxmox VE visibility** for supported nodes, VMs, LXC guests, storage, memory, network, and health context
-- **Linux host organization** for Docker servers, mini PCs, home servers, storage, automation, and private workloads
-- **Docker container event timelines** for restarts, recoveries, abnormal states, exits, recreations, and OOM kills
-- **Location-based Map grouping** for Docker Probes, assets, and private monitors
-- **Push notifications** for supported incidents and recoveries
-- **Event history and analysis reports** for troubleshooting
-- **Public status pages** with optional access codes, share duration, QR verification, and private-target masking
-- **Sign in with Apple** and a privacy-focused product design
+### Public Monitoring
 
-### Docker Probe Security Model
+Monitor internet-facing services and infrastructure from OpsHome Cloud:
 
-Docker Probe is designed to monitor private homelab services without exposing them to the public internet.
+- HTTP / HTTPS
+- TCP / UDP
+- ICMP
+- SSL certificates
+- DNS
+- Domain expiry
+- Websites and APIs
 
-- Docker Probe runs inside your authorized private network.
+### Private Monitoring
+
+Docker Probe runs inside an authorized private network and connects outbound to OpsHome Cloud.
+
+This allows you to monitor private services without exposing internal management interfaces to the public internet.
+
+- Private HTTP / HTTPS / TCP monitoring
+- No inbound port forwarding required
+- No public management interface required
+- Works behind NAT and home routers
+- Supports private infrastructure connections reachable by the Probe
+
+### Infrastructure Visibility
+
+OpsHome can bring heterogeneous infrastructure into the same operational view:
+
+- **Proxmox VE** — nodes, VMs, LXC guests, storage, resource usage, health, and workload context
+- **VMware vSphere** — hosts, virtual machines, datastores, performance, and health context
+- **Synology NAS** — system status, storage, disks, utilization, temperature, network, and supported container data
+- **Linux** — host health and resource visibility
+- **Docker** — hosts, containers, state, and supported container events
+
+### Incidents and Events
+
+OpsHome keeps more than the current green/red state visible.
+
+Supported views can include:
+
+- Active and recovered incidents
+- Severity and duration
+- Affected monitors or assets
+- Evidence and event timelines
+- Container restarts and recoveries
+- Abnormal container states
+- Container exits, recreations, and OOM kills
+- Historical monitoring context
+
+## OpsHome Console
+
+**OpsHome Console** is the browser-based, read-only operations view for your existing OpsHome environment.
+
+Open it at: **https://console.opshome.run**
+
+Current Console capabilities include:
+
+- Overview of environment health and active risk
+- Monitor Matrix for public and private monitoring
+- Assets Topology for infrastructure health and workloads
+- Incident Workspace with evidence and history
+- Light and dark themes
+- Responsive layouts for desktop, iPad, and mobile browsers
+- Wall Display Mode for long-running operational visibility
+- Sign in with Apple
+- Read-only access by design
+
+The Console is intended for observation and investigation. It does not turn the browser into a remote infrastructure administration panel.
+
+<div align="center">
+
+<img src="assets/images/console/overview-dark.png" alt="OpsHome Console overview in dark mode" width="820">
+
+</div>
+
+## Docker Probe Security Model
+
+Docker Probe is designed to preserve the private-network boundary.
+
+- The Probe runs inside the network it is authorized to observe.
 - It initiates outbound HTTPS connections to OpsHome Cloud.
-- OpsHome Cloud does not directly connect into your LAN.
-- No inbound firewall rule is required.
-- No public IP, port forwarding, or public reverse proxy is required.
-- Docker Probe securely registers with OpsHome Cloud during deployment.
-- Its required configuration can persist across normal container upgrades when persistent data is preserved.
-- Use least-privilege credentials for supported infrastructure connections.
+- OpsHome Cloud does not directly initiate connections into your LAN.
+- No inbound firewall rule or public port forwarding is required for normal Probe operation.
+- Private infrastructure can remain behind the local firewall or router.
+- Use dedicated or least-privilege credentials where supported.
 
-Docker Probe reports only the operational and monitoring data required to provide private monitoring and infrastructure visibility. It is not intended to upload personal files, NAS documents, payment information, or unrelated private content.
+OpsHome processes operational monitoring data required to provide health, event, asset, and alerting functionality. It is not designed to upload personal NAS files, documents, or unrelated private content.
 
-### Plan Overview
+For the current public security controls, see the [Security page](https://app.opshome.run/security.html).
 
-OpsHome NOC distinguishes between **Regular Free**, **Founder Free**, and **Active Pro** accounts.
+## Security Controls
 
-- **Regular Free** is the standard free tier.
-- **Founder Free** is an early-registration benefit for eligible accounts created during the Founder registration campaign. The campaign ends on **May 1, 2027**. After the campaign closes, newly registered accounts receive Regular Free rather than Founder Free.
-- Founder Free benefits remain attached to eligible Founder accounts after the campaign ends. Founder Free is not a separate paid subscription.
-- **Active Pro** is the paid subscription tier.
+The public security documentation currently describes controls including:
 
-| Capability | Regular Free | Founder Free | Active Pro |
-| --- | ---: | ---: | ---: |
-| Cloud monitor targets | 30 | 30 | 100 |
-| Core public types | HTTP / HTTPS / TCP / SSL / ICMP | HTTP / HTTPS / TCP / SSL / ICMP | Included |
-| UDP / DNS / Domain Expiry | — | — | Included |
-| Minimum public check interval | 10 min | 10 min | 5 min |
-| Docker Probe devices | 1 | 3 | 12 |
-| Private assets | 1 | 3 | 50 |
-| Private service protocols | HTTP / HTTPS / TCP | HTTP / HTTPS / TCP | HTTP / HTTPS / TCP |
-| Public status pages | 1 | 1 | 3 |
-| Monitors per status page | 10 | 10 | 20 |
-| Custom status-page title | — | — | Included |
-| Telegram alerts | — | — | Included |
-| Push notifications | Included | Included | Included |
-| Dashboard and analysis | Basic | Basic + Founder private visibility | Full |
+- HTTPS with TLS 1.2 or higher at the public edge
+- HSTS with subdomain coverage
+- Cloudflare Full (strict) origin protection
+- AES-256-GCM protection for supported sensitive server-side credentials at rest
+- Apple Keychain Services for supported iOS authentication tokens
+- Outbound-only private monitoring through Docker Probe
+- Least-privilege guidance for infrastructure connections
+- Immutable OCI image digests for Probe release pinning
 
-The Founder registration campaign closes on May 1, 2027. Registration after the campaign closes does not grant Founder Free status.
+Security details can evolve with the service. Refer to the live [Security page](https://app.opshome.run/security.html) for the current documented controls.
 
-Plan limits and entitlement behavior may change. See the live [Free vs Pro guide](https://docs.opshome.run/free-vs-pro.html) for the current rules.
+## Plans
 
-Pro is available as a monthly or yearly subscription through Apple In-App Purchase. Final pricing and local currency are displayed by the App Store before purchase.
+OpsHome currently provides **Free** and **Pro** plans, with additional permanent Founder benefits for eligible accounts registered during the Founder campaign.
 
-### Quick Start
+### Free
+
+- 30 public monitor targets
+- HTTP / HTTPS / TCP / SSL / ICMP
+- 1 Docker Probe
+- 1 Infrastructure Connection
+- 1 Private Monitor
+- 1 public status page
+- Push alerts and SSL expiry reminders
+- Visual monitoring dashboard
+
+### Pro
+
+- 100 public monitor targets
+- All supported public monitor types, including UDP, DNS, and Domain
+- 12 Docker Probes
+- 12 Infrastructure Connections
+- 50 Private Monitors
+- Expanded private infrastructure capabilities
+- Higher-frequency private monitoring
+- Push + Telegram alerts
+
+### Founder Access
+
+Eligible accounts registered before **May 1, 2027** receive permanent Founder access for:
+
+- 3 Docker Probes
+- 3 Infrastructure Connections
+- 3 Private Monitors
+
+Plan limits and commercial terms may change. The live website and App Store purchase screen are the source of truth for current pricing and entitlements.
+
+See: [Pricing](https://app.opshome.run/#pricing)
+
+## Public Status Pages
+
+OpsHome can publish selected service information to a lightweight public status page.
+
+Status pages can show:
+
+- Current service state
+- Latest check information
+- 24-hour, 7-day, and 30-day uptime summaries
+- Response-time information
+- Recent incidents and recovery context
+- Shareable links and QR codes
+
+Public status pages are designed to expose selected service status without exposing internal operational details such as private IP addresses, hostnames, internal URLs, API keys, Probe identifiers, or sensitive paths.
+
+Learn more: [Status Pages](https://app.opshome.run/status-pages/)
+
+## Quick Start
 
 1. Install OpsHome NOC from the App Store.
 2. Sign in with Apple.
-3. Add one Cloud monitor for a public website, API, certificate, port, or domain-related target.
-4. Deploy Docker Probe for services that are private, internal, or reachable only from your home network.
-5. Add supported Synology, Proxmox, Linux, or Docker infrastructure connections.
-6. Enable push notifications.
-7. Review health, alerts, uptime, events, and analysis reports.
+3. Add a public monitor for a website, API, certificate, port, or domain-related target.
+4. Deploy Docker Probe for private or internal services.
+5. Add supported infrastructure connections such as Proxmox, VMware, Synology, Linux, or Docker.
+6. Enable notifications.
+7. Review monitors, assets, incidents, history, and availability from the iPhone app.
+8. Open OpsHome Console when you need a larger read-only operational view.
 
-A useful first setup is one public HTTPS monitor plus one private Docker Probe monitor. This provides visibility into the same service from both the public internet and your private network.
+A useful first setup is one public HTTPS monitor plus one private Docker Probe target. This helps distinguish external availability from internal service health.
 
-### Status Pages
+## Product Screens
 
-Publish selected monitor results using a shareable public link or QR code.
+<div align="center">
 
-Status pages can include:
+<img src="assets/images/homelab-noc-overview-iphone.png" alt="OpsHome NOC homelab overview on iPhone" width="220">
+&nbsp;&nbsp;
+<img src="assets/images/docker-probe-private-monitoring-iphone.png" alt="OpsHome Docker Probe private monitoring on iPhone" width="220">
+&nbsp;&nbsp;
+<img src="assets/images/docker-container-event-timeline-iphone.png" alt="OpsHome Docker container event timeline on iPhone" width="220">
 
-- Selected monitor names and current status
-- Optional access-code protection
-- Configurable share duration
-- QR verification through the OpsHome app
-- Custom titles for supported Pro accounts
+</div>
 
-Public status pages do not expose private IP addresses, internal targets, container names, or sensitive paths.
+## Documentation
 
-### Documentation
-
-- [OpsHome NOC Documentation](https://docs.opshome.run)
+- [Documentation Home](https://docs.opshome.run)
 - [Quick Start](https://docs.opshome.run/quick-start.html)
 - [Cloud Monitoring](https://docs.opshome.run/cloud-monitoring.html)
-- [Install Docker Probe](https://docs.opshome.run/docs/docker-probe/install/)
-- [Docker Probe Security Model](https://docs.opshome.run/docs/docker-probe/security-model/)
-- [Local Service Discovery](https://docs.opshome.run/docs/docker-probe/local-service-discovery/)
-- [Synology NAS](https://docs.opshome.run/docs/synology/add-synology/)
-- [Proxmox VE](https://docs.opshome.run/docs/proxmox/add-proxmox/)
-- [Linux Hosts](https://docs.opshome.run/docs/linux/add-linux-host/)
-- [Docker Container Event Timeline](https://docs.opshome.run/docs/docker/container-event-timeline/)
-- [Status Pages](https://docs.opshome.run/status-pages.html)
-- [Free vs Pro](https://docs.opshome.run/free-vs-pro.html)
-- [Release Notes](https://docs.opshome.run/release-notes.html)
+- [Docker Probe](https://app.opshome.run/docker-probe/)
+- [Private Monitoring](https://app.opshome.run/private-monitoring/)
+- [Homelab / Infrastructure](https://app.opshome.run/homelab-noc/)
+- [Proxmox Monitoring](https://app.opshome.run/proxmox-monitoring/)
+- [Synology Monitoring](https://app.opshome.run/synology-monitoring/)
+- [Linux Server Monitoring](https://app.opshome.run/linux-server-monitoring/)
+- [Docker Container Monitoring](https://app.opshome.run/docker-container-monitoring/)
+- [Status Pages](https://app.opshome.run/status-pages/)
+- [Console](https://app.opshome.run/console/)
+- [Security](https://app.opshome.run/security.html)
+- [Support](https://app.opshome.run/support.html)
 
----
+## Languages
 
-## 繁體中文
+The OpsHome website currently provides:
 
-### 產品介紹
+- English
+- 简体中文
+- 繁體中文
+- Deutsch
 
-**OpsHome NOC** 將個人基礎設施整理成一個可在 iPhone 上查看的小型 Network Operations Center 視圖。
-
-它整合：
-
-- 由 OpsHome Cloud 執行的公網檢測
-- 透過 Docker Probe 進行的私有網路監控
-- Synology NAS、Proxmox VE、Linux 主機與 Docker 的基礎設施資產視圖
-- 推播告警、事件歷史、可用率、健康摘要與分析報告
-- 依位置整理的拓撲與 Map 分組
-- 可分享的公開狀態頁
-- 主畫面與鎖定畫面 Widget
-
-OpsHome NOC 適合 Homelab 使用者、NAS 擁有者、Docker 使用者、自架服務維護者，以及管理個人網站或小型長時間運行服務的人員。
-
-### 監控來源
-
-| 來源 | 適合場景 | 支援範例 |
-| --- | --- | --- |
-| **OpsHome Cloud** | 可從公網存取的服務 | 網站、API、HTTP/HTTPS、公網 TCP 連接埠、SSL 憑證、DNS、ICMP 與網域到期 |
-| **Docker Probe** | LAN、NAS、Docker 網路或私有 Homelab 內的服務 | 內部 HTTP/HTTPS、私有 TCP、NAS 面板、Proxmox 儀表板、Docker 服務與 NAT 後方目標 |
-| **基礎設施連線** | 不只需要可用率，還需要基礎設施狀態 | Synology NAS、Proxmox 節點、VM、LXC、Linux 主機、Docker 主機與容器、儲存、CPU、記憶體、溫度、網路與健康歷史 |
-
-### 核心能力
-
-- 公開網站、API、連接埠、憑證、DNS、ICMP 與網域資源的雲端監控
-- 透過 Docker Probe 進行私有 HTTP、HTTPS 與 TCP 監控
-- 在授權的私有網路內探索 HTTP、HTTPS 與 TCP 服務
-- Synology DSM、運行時間、CPU、記憶體、溫度、儲存、硬碟、網路與容器資訊
-- Proxmox VE 節點、VM、LXC、儲存、記憶體、網路與健康狀態
-- Linux Docker 主機、Mini PC、家庭伺服器與私有工作負載整理
-- Docker 容器重新啟動、恢復、異常、退出、重建與 OOM Kill 事件時間軸
-- 依位置整理 Docker Probe、資產與私有監控點
-- 支援事件與恢復推播通知
-- 事件歷史與分析報告
-- 支援存取碼、分享期限、QR 驗證與私有目標遮罩的公開狀態頁
-- Sign in with Apple 與隱私優先設計
-
-### Docker Probe 安全模型
-
-Docker Probe 用於監控私有 Homelab 服務，不需要把內部服務暴露到公網。
-
-- Docker Probe 在你授權的私有網路內運行。
-- 它主動透過 HTTPS 連線到 OpsHome Cloud。
-- OpsHome Cloud 不會直接連入你的 LAN。
-- 不需要新增入站防火牆規則。
-- 不需要公網 IP、連接埠轉發或公開反向代理。
-- Docker Probe 會在部署期間安全註冊到 OpsHome Cloud。
-- 保留持久化資料時，正常容器升級可保留 Probe 所需設定。
-- 基礎設施連線應使用最小權限憑證。
-
-Docker Probe 只回報支援的監控結果、心跳、私有服務狀態與 基礎設施健康資料，不用於上傳個人檔案、NAS 文件、付款資訊或其他無關私有內容。
-
-### 方案概覽
-
-OpsHome NOC 明確區分 **普通 Free、初創 Free 與 Active Pro** 帳號。
-
-- **普通 Free**：標準免費方案。
-- **初創 Free**：提供給在初創用戶註冊活動期間完成註冊且符合條件的早期帳號。活動將於 **2027 年 5 月 1 日結束**。活動結束後新註冊的帳號只會獲得普通 Free，不再取得初創 Free 身分。
-- 已符合資格的初創帳號，在活動結束後仍保留其初創 Free 權益。初創 Free 不是獨立的付費訂閱方案。
-- **Active Pro**：付費訂閱方案。
-
-| 功能 | 普通 Free | 初創 Free | Active Pro |
-| --- | ---: | ---: | ---: |
-| 雲端監控目標 | 30 | 30 | 100 |
-| 公網核心類型 | HTTP / HTTPS / TCP / SSL / ICMP | HTTP / HTTPS / TCP / SSL / ICMP | 支援 |
-| UDP / DNS / Domain Expiry | — | — | 支援 |
-| 公網最短檢測間隔 | 10 分鐘 | 10 分鐘 | 5 分鐘 |
-| Docker Probe 數量 | 1 | 3 | 12 |
-| 私有資產 | 1 | 3 | 50 |
-| 私有服務協議 | HTTP / HTTPS / TCP | HTTP / HTTPS / TCP | HTTP / HTTPS / TCP |
-| 公開狀態頁 | 1 | 1 | 3 |
-| 每個狀態頁監控數 | 10 | 10 | 20 |
-| 自訂狀態頁標題 | — | — | 支援 |
-| Telegram 告警 | — | — | 支援 |
-| 推播通知 | 支援 | 支援 | 支援 |
-| 儀表板與分析 | 基礎 | 基礎 + 初創私有可見性 | 完整 |
-
-初創用戶註冊活動於 2027 年 5 月 1 日結束。活動結束後完成註冊的新帳號不會取得初創 Free 身分。
-
-方案限制與權益規則可能調整，請以最新的 [Free vs Pro 說明](https://docs.opshome.run/free-vs-pro.html) 為準。
-
-Pro 可透過 Apple App 內購買訂閱月費或年費方案。最終價格與本地貨幣以 App Store 購買確認頁為準。
-
-### 快速開始
-
-1. 從 App Store 安裝 OpsHome NOC。
-2. 使用 Sign in with Apple 登入。
-3. 為公開網站、API、憑證、連接埠或網域資源建立一個 Cloud Monitor。
-4. 為私有、內部或只能從家庭網路存取的服務部署 Docker Probe。
-5. 新增支援的 Synology、Proxmox、Linux 或 Docker 基礎設施連線。
-6. 開啟推播通知。
-7. 查看健康狀態、告警、可用率、事件與分析報告。
-
-建議先建立一個公開 HTTPS Monitor，再建立一個私有 Docker Probe Monitor，以同時了解服務從公網與私有網路存取時的狀態。
-
-### 狀態頁
-
-透過公開連結或 QR Code 分享選定監控點的狀態。
-
-狀態頁支援：
-
-- 選定監控點名稱與目前狀態
-- 可選的存取碼保護
-- 可設定的分享期限
-- 使用 OpsHome App 掃描 QR Code 驗證
-- 符合條件之 Pro 帳號可自訂標題
-
-公開狀態頁不會顯示私有 IP、內部目標、容器名稱或敏感路徑。
-
-### 文件
-
-- [OpsHome NOC 文件中心](https://docs.opshome.run)
-- [快速開始](https://docs.opshome.run/quick-start.html)
-- [Docker Probe 安裝](https://docs.opshome.run/docs/docker-probe/install/)
-- [Docker Probe 安全模型](https://docs.opshome.run/docs/docker-probe/security-model/)
-- [方案比較](https://docs.opshome.run/free-vs-pro.html)
-- [版本記錄](https://docs.opshome.run/release-notes.html)
+The product interface and documentation may have different language coverage depending on version and platform.
 
 ---
 
 ## 简体中文
 
-### 产品介绍
+### 产品简介
 
-**OpsHome NOC** 将个人基础设施整理为一个可在 iPhone 上查看的小型 Network Operations Center 视图。
+**OpsHome NOC** 是面向 Homelab、自托管服务、NAS 和小型长期运行基础设施的轻量 NOC 平台。
 
-它整合：
+现在的 OpsHome 不再局限于 iPhone 单一界面，而是由 **iOS App + 只读 Web Console + OpsHome Cloud + Docker Probe** 组成统一的监控体验。
 
-- 由 OpsHome Cloud 执行的公网检测
+它可以把以下内容放到同一个运维视图中：
+
+- 公网网站、API、SSL、DNS、域名和网络端点监控
 - 通过 Docker Probe 进行的私有网络监控
-- Synology NAS、Proxmox VE、Linux 主机和 Docker 基础设施资产视图
-- 推送告警、事件历史、可用率、健康摘要和分析报告
-- 按位置整理的拓扑和 Map 分组
-- 可分享的公开状态页
-- 主屏幕和锁定屏幕小组件
+- Proxmox VE、VMware vSphere、Synology NAS、Linux 和 Docker 基础设施
+- 当前健康状态、可用率、资源使用、存储与工作负载信息
+- 活跃和已恢复的 Incidents
+- 事件和证据时间线
+- 推送通知与支持的告警集成
+- 公共状态页
+- Sign in with Apple
 
-OpsHome NOC 适合 Homelab 用户、NAS 用户、Docker 运维者、自托管服务维护者，以及管理个人网站或小型长期运行服务的人员。
+### Web Console
 
-### 监控来源
+**OpsHome Console** 提供与 iOS App 同一账号下的只读 Web 运维视图：
 
-| 来源 | 适合场景 | 支持示例 |
-| --- | --- | --- |
-| **OpsHome Cloud** | 可从公网访问的服务 | 网站、API、HTTP/HTTPS、公网 TCP 端口、SSL 证书、DNS、ICMP 和域名到期 |
-| **Docker Probe** | LAN、NAS、Docker 网络或私有 Homelab 中的服务 | 内部 HTTP/HTTPS、私有 TCP、NAS 面板、Proxmox 控制台、Docker 服务和 NAT 后方目标 |
-| **基础设施连接** | 不仅需要可用性，还需要基础设施状态 | Synology NAS、Proxmox 节点、VM、LXC、Linux 主机、Docker 主机和容器、存储、CPU、内存、温度、网络和健康历史 |
+- Overview
+- Monitor Matrix
+- Assets Topology
+- Incident Workspace
+- Light / Dark Theme
+- Wall Display Mode
+- Desktop / iPad / Mobile 响应式布局
 
-### 核心能力
+Console 地址：**https://console.opshome.run**
 
-- 公共网站、API、端口、证书、DNS、ICMP 和域名资源的云端监控
-- 通过 Docker Probe 进行私有 HTTP、HTTPS 和 TCP 监控
-- 在授权的私有网络内发现 HTTP、HTTPS 和 TCP 服务
-- Synology DSM、运行时间、CPU、内存、温度、存储、磁盘、网络和容器信息
-- Proxmox VE 节点、VM、LXC、存储、内存、网络和健康状态
-- Linux Docker 主机、迷你电脑、家庭服务器和私有工作负载整理
-- Docker 容器重启、恢复、异常、退出、重建和 OOM Kill 事件时间线
-- 按位置组织 Docker Probe、资产和私有监控点
-- 支持事件和恢复推送通知
-- 事件历史与分析报告
-- 支持访问码、分享期限、QR 验证和私有目标隐藏的公开状态页
-- Sign in with Apple 和隐私优先设计
+Console 主要用于观察、排查和大屏展示，不用于远程修改或控制基础设施。
 
-### Docker Probe 安全模型
+### 私有网络监控
 
-Docker Probe 用于监控私有 Homelab 服务，无需将内部服务暴露到公网。
+Docker Probe 部署在你授权的私有网络中，并主动通过 HTTPS 连接 OpsHome Cloud。
 
-- Docker Probe 在你授权的私有网络内运行。
-- 它主动通过 HTTPS 连接 OpsHome Cloud。
-- OpsHome Cloud 不会直接连接到你的 LAN。
-- 不需要新增入站防火墙规则。
-- 不需要公网 IP、端口转发或公开反向代理。
-- Docker Probe 会在部署期间安全注册到 OpsHome Cloud。
-- 保留持久化数据时，正常容器升级可保留 Probe 所需配置。
-- 基础设施连接应使用最小权限凭据。
+正常使用不需要：
 
-Docker Probe 仅上报支持的监控结果、心跳、私有服务状态和 基础设施健康数据，不用于上传个人文件、NAS 文档、付款信息或其他无关私有内容。
+- 开放入站端口
+- 暴露家庭公网 IP
+- 为内部管理界面配置公网反向代理
 
-### 方案概览
+这样可以在保留私有网络边界的同时，查看内部 HTTP / HTTPS / TCP 服务以及受支持的基础设施状态。
 
-OpsHome NOC 明确区分 **普通 Free、初创 Free 和 Active Pro** 账号。
+### 当前支持的基础设施
 
-- **普通 Free**：标准免费方案。
-- **初创 Free**：提供给在初创用户注册活动期间完成注册且符合条件的早期账号。活动将于 **2027 年 5 月 1 日结束**。活动结束后新注册的账号只会获得普通 Free，不再取得初创 Free 身份。
-- 已符合资格的初创账号，在活动结束后仍保留其初创 Free 权益。初创 Free 不是独立的付费订阅方案。
-- **Active Pro**：付费订阅方案。
+- **Proxmox VE**：节点、VM、LXC、存储、资源使用和健康信息
+- **VMware vSphere**：主机、虚拟机、数据存储、性能和健康信息
+- **Synology NAS**：系统、存储、磁盘、资源、温度、网络和支持的容器信息
+- **Linux**：主机资源和健康信息
+- **Docker**：主机、容器、状态和支持的容器事件
 
-| 功能 | 普通 Free | 初创 Free | Active Pro |
-| --- | ---: | ---: | ---: |
-| 云端监控目标 | 30 | 30 | 100 |
-| 公网核心类型 | HTTP / HTTPS / TCP / SSL / ICMP | HTTP / HTTPS / TCP / SSL / ICMP | 支持 |
-| UDP / DNS / Domain Expiry | — | — | 支持 |
-| 公网最短检测间隔 | 10 分钟 | 10 分钟 | 5 分钟 |
-| Docker Probe 数量 | 1 | 3 | 12 |
-| 私有资产 | 1 | 3 | 50 |
-| 私有服务协议 | HTTP / HTTPS / TCP | HTTP / HTTPS / TCP | HTTP / HTTPS / TCP |
-| 公开状态页 | 1 | 1 | 3 |
-| 每个状态页监控数量 | 10 | 10 | 20 |
-| 自定义状态页标题 | — | — | 支持 |
-| Telegram 告警 | — | — | 支持 |
-| 推送通知 | 支持 | 支持 | 支持 |
-| 仪表盘和分析 | 基础 | 基础 + 初创私有可见性 | 完整 |
+### 方案
 
-初创用户注册活动于 2027 年 5 月 1 日结束。活动结束后完成注册的新账号不会取得初创 Free 身份。
+当前公开方案为 **Free / Pro**，符合 Founder 活动条件的账号可获得永久 Founder 权益。
 
-方案限制和权益规则可能调整，请以最新的 [Free vs Pro 说明](https://docs.opshome.run/free-vs-pro.html) 为准。
+当前网站展示的核心额度：
 
-Pro 可通过 Apple App 内购买订阅月费或年费方案。最终价格和本地货币以 App Store 购买确认页为准。
+| 能力 | Free | Pro |
+| --- | ---: | ---: |
+| 公网监控目标 | 30 | 100 |
+| Docker Probe | 1 | 12 |
+| Infrastructure Connection | 1 | 12 |
+| Private Monitor | 1 | 50 |
+| 公共状态页 | 1 | 扩展 |
+
+在 **2027 年 5 月 1 日前**符合条件完成注册的 Founder 账号，可获得永久 **3 Docker Probes + 3 Infrastructure Connections + 3 Private Monitors** 权益。
+
+价格、额度和权益可能随着产品调整，请以 [官网 Pricing](https://app.opshome.run/#pricing) 和 App Store 购买页面为准。
 
 ### 快速开始
 
 1. 从 App Store 安装 OpsHome NOC。
 2. 使用 Sign in with Apple 登录。
-3. 为公开网站、API、证书、端口或域名资源创建一个 Cloud Monitor。
-4. 为私有、内部或只能从家庭网络访问的服务部署 Docker Probe。
-5. 添加支持的 Synology、Proxmox、Linux 或 Docker 基础设施连接。
-6. 开启推送通知。
-7. 查看健康状态、告警、可用率、事件和分析报告。
-
-建议先创建一个公开 HTTPS Monitor，再创建一个私有 Docker Probe Monitor，以同时了解服务从公网和私有网络访问时的状态。
-
-### 状态页
-
-通过公开链接或二维码分享选定监控点的状态。
-
-状态页支持：
-
-- 选定监控点名称与当前状态
-- 可选的访问码保护
-- 可配置的分享期限
-- 使用 OpsHome App 扫描二维码验证
-- 符合条件的 Pro 账号可自定义标题
-
-公开状态页不会显示私有 IP、内部目标、容器名称或敏感路径。
-
-### 文档
-
-- [OpsHome NOC 文档中心](https://docs.opshome.run)
-- [快速开始](https://docs.opshome.run/quick-start.html)
-- [Docker Probe 安装](https://docs.opshome.run/docs/docker-probe/install/)
-- [Docker Probe 安全模型](https://docs.opshome.run/docs/docker-probe/security-model/)
-- [方案比较](https://docs.opshome.run/free-vs-pro.html)
-- [版本记录](https://docs.opshome.run/release-notes.html)
+3. 创建公网 Monitor。
+4. 如需监控私有网络，部署 Docker Probe。
+5. 添加 Proxmox、VMware、Synology、Linux 或 Docker 等支持的基础设施连接。
+6. 开启通知。
+7. 在 iPhone 上查看健康、事件和 Incidents。
+8. 需要更大屏幕时打开 OpsHome Console。
 
 ---
 
-## Screenshots / App 畫面 / App 截图
+## 繁體中文
 
-<p align="center">
-  <img src="/docs/assets/images/screen_home.png" alt="OpsHome NOC Home Dashboard" width="220">
-  <img src="/docs/assets/images/screen_monitors.png" alt="OpsHome NOC Monitor List" width="220">
-  <img src="/docs/assets/images/screen_notifications.png" alt="OpsHome NOC Alerts" width="220">
-  <img src="/docs/assets/images/screen_me_web.png" alt="OpsHome NOC Account" width="220">
-</p>
+### 產品簡介
 
-## App Store
+**OpsHome NOC** 是面向 Homelab、自架服務、NAS 與小型長時間運行基礎設施的輕量 NOC 平台。
 
-OpsHome NOC is available on the App Store:
+目前 OpsHome 由 **iOS App + 唯讀 Web Console + OpsHome Cloud + Docker Probe** 組成統一的監控體驗。
 
-https://apps.apple.com/us/app/opshome-noc/id6763890679
+它可以把以下內容整合到同一個運維視圖：
 
-<a href="https://apps.apple.com/us/app/opshome-noc/id6763890679">
-  <img src="/docs/assets/images/app-store-badge.svg" alt="Download on the App Store" height="48">
-</a>
+- 公網網站、API、SSL、DNS、網域與網路端點監控
+- 透過 Docker Probe 進行的私有網路監控
+- Proxmox VE、VMware vSphere、Synology NAS、Linux 與 Docker 基礎設施
+- 目前健康狀態、可用率、資源使用、儲存與工作負載資訊
+- 活躍與已恢復的 Incidents
+- 事件與證據時間軸
+- 推播通知與支援的告警整合
+- 公開狀態頁
+- Sign in with Apple
 
-## Privacy / 隱私 / 隐私
+### Web Console
 
-OpsHome NOC is designed to collect only the data required to provide monitoring and alerting functionality.
+**OpsHome Console** 提供與 iOS App 相同帳號下的唯讀 Web 運維視圖：
+
+- Overview
+- Monitor Matrix
+- Assets Topology
+- Incident Workspace
+- Light / Dark Theme
+- Wall Display Mode
+- Desktop / iPad / Mobile 響應式版面
+
+Console：**https://console.opshome.run**
+
+Console 主要用於觀察、調查與大螢幕顯示，不用於遠端修改或控制基礎設施。
+
+### 私有網路監控
+
+Docker Probe 部署在你授權的私有網路內，並主動透過 HTTPS 連線 OpsHome Cloud。
+
+正常使用不需要：
+
+- 開放入站連接埠
+- 暴露家庭公網 IP
+- 將內部管理介面放到公開反向代理後方
+
+這樣可以保留私有網路邊界，同時查看內部 HTTP / HTTPS / TCP 服務與支援的基礎設施狀態。
+
+### 目前支援的基礎設施
+
+- **Proxmox VE**：節點、VM、LXC、儲存、資源使用與健康資訊
+- **VMware vSphere**：主機、虛擬機、資料存放區、效能與健康資訊
+- **Synology NAS**：系統、儲存、硬碟、資源、溫度、網路與支援的容器資訊
+- **Linux**：主機資源與健康資訊
+- **Docker**：主機、容器、狀態與支援的容器事件
+
+### 方案
+
+目前公開方案為 **Free / Pro**，符合 Founder 活動條件的帳號可獲得永久 Founder 權益。
+
+在 **2027 年 5 月 1 日前**符合條件完成註冊的 Founder 帳號，可獲得永久 **3 Docker Probes + 3 Infrastructure Connections + 3 Private Monitors** 權益。
+
+價格、額度與權益可能隨產品調整，請以 [官網 Pricing](https://app.opshome.run/#pricing) 與 App Store 購買頁面為準。
+
+### 快速開始
+
+1. 從 App Store 安裝 OpsHome NOC。
+2. 使用 Sign in with Apple 登入。
+3. 建立公網 Monitor。
+4. 如需監控私有網路，部署 Docker Probe。
+5. 新增 Proxmox、VMware、Synology、Linux 或 Docker 等支援的基礎設施連線。
+6. 開啟通知。
+7. 在 iPhone 上查看健康、事件與 Incidents。
+8. 需要更大的畫面時開啟 OpsHome Console。
+
+---
+
+## Deutsch
+
+### Kurzüberblick
+
+**OpsHome NOC** ist eine leichte NOC-Plattform für Homelabs, Self-Hosting, NAS-Systeme und kleine dauerhaft betriebene Infrastrukturen.
+
+Die aktuelle Plattform verbindet:
+
+- iOS-App für mobile Überwachung und Benachrichtigungen
+- Read-only Web Console für Desktop, Tablet und Wall Display
+- Öffentliches Monitoring über OpsHome Cloud
+- Privates Monitoring über Docker Probe
+- Infrastrukturansichten für Proxmox VE, VMware vSphere, Synology NAS, Linux und Docker
+- Incidents, Ereignisse, Wiederherstellungen und Verlauf
+- Öffentliche Statusseiten
+- Sign in with Apple
+
+Console: **https://console.opshome.run**
+
+Website: **https://app.opshome.run**
+
+Dokumentation: **https://docs.opshome.run**
+
+---
+
+## Privacy
+
+OpsHome is designed to process the information required to provide monitoring, health, incident, asset, and alerting functionality.
 
 - No advertising profile
 - No sale of personal data
-- No unnecessary location or contact access
-- API keys and tokens are stored securely in iOS Keychain
-- Public status pages mask internal targets and sensitive private-network details
-- Docker Probe uses an outbound-only connection model
+- No unnecessary access to contacts
+- Supported iOS authentication tokens are protected with Apple Keychain Services
+- Docker Probe uses an outbound-initiated connection model
+- Public status pages are designed to mask private infrastructure details
 
-For details:
+For current details:
 
-- [Privacy Policy](docs/privacy.html)
-- [Terms of Service](docs/terms.html)
+- [Privacy Policy](https://app.opshome.run/privacy.html)
+- [Terms of Service](https://app.opshome.run/terms.html)
+- [Security](https://app.opshome.run/security.html)
 
-## Contact / 聯絡方式 / 联系方式
+## Support
 
-For support or questions:
+For product support, account questions, or security-related contact:
 
-**opshome@outlook.com**
+**support@opshome.run**
+
+- [Support Center](https://app.opshome.run/support.html)
+- [Documentation](https://docs.opshome.run)
 
 ---
 
 <div align="center">
 
-© 2026 OpsHome NOC. All rights reserved.
+© 2026 OpsHome NOC™. All rights reserved.
 
 </div>
