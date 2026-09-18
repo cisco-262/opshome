@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/images/brand-logo.png" alt="OpsHome NOC Logo" width="120">
+<img src="/docs/assets/images/brand-logo.png" alt="OpsHome NOC Logo" width="120">
 
 # OpsHome NOC
 
@@ -21,12 +21,12 @@ Monitor public services, private networks, Proxmox, VMware, Synology, Linux, Doc
 <br>
 
 <a href="https://apps.apple.com/us/app/opshome-noc/id6763890679">
-  <img src="assets/images/app-store-badge.svg" alt="Download OpsHome NOC on the App Store" height="56">
+  <img src="/docs/assets/images/app-store-badge.svg" alt="Download OpsHome NOC on the App Store" height="56">
 </a>
 
 <br><br>
 
-<img src="assets/images/homelab-noc-overview-iphone.png" alt="OpsHome NOC infrastructure overview on iPhone" width="300">
+<img src="/docs/assets/images/homelab-noc-overview-iphone.png" alt="OpsHome NOC infrastructure overview on iPhone" width="300">
 
 <br>
 
