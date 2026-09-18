@@ -427,7 +427,8 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/112292024" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
-<link href="/assets/mobile-nav.css?v=20260916" rel="stylesheet"><link href="/assets/site-nav.css?v=20260916-unified" rel="stylesheet"></head>
+<link href="/assets/mobile-nav.css?v=20260916" rel="stylesheet"><link href="/assets/site-nav.css?v=20260916-unified" rel="stylesheet"><link rel="stylesheet" href="/assets/site-footer.css?v=20260918-unified">
+</head>
 <body>
 <nav>
   <a class="brand" href="/"><img src="assets/images/brand-logo.png" alt="OpsHome NOC logo" width="64" height="64" decoding="async"><span>OpsHome <strong>NOC</strong><sup class="tm">&trade;</sup></span></a>
@@ -591,25 +592,54 @@
   </section>
 </main>
 
-<footer>
-  <div class="footer-inner">
-    <div class="footer-brandline">
-      <img src="assets/images/brand-logo.png" alt="OpsHome NOC logo" width="48" height="48" loading="lazy" decoding="async">
-      <p><span>&copy; 2026 OpsHome NOC&trade;. All rights reserved. OpsHome NOC&trade; is a trademark of its owner.</span></p>
+<footer class="site-footer">
+  <div class="site-footer__main">
+    <div class="site-footer__brand">
+      <a class="site-footer__brandmark" href="/zh-Hant/" aria-label="OpsHome NOC home">
+        <img src="/assets/images/brand-logo.png" alt="OpsHome NOC logo" width="58" height="58" loading="lazy" decoding="async">
+        <span>OpsHome NOC&trade;</span>
+      </a>
+      <p class="site-footer__brandcopy">面向自託管基礎設施的輕量監控平台。</p>
+      <div class="site-footer__socials" aria-label="OpsHome social links">
+        <a class="site-footer__social-link" href="https://x.com/opshome_noc" target="_blank" rel="noopener noreferrer" aria-label="OpsHome NOC on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.657l-5.214-6.817-5.967 6.817H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"/></svg></a>
+      </div>
+      <a class="site-footer__contact" href="mailto:support@opshome.run" aria-label="Email OpsHome support"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16v11H4z"/><path d="m4.5 7 7.5 6 7.5-6"/></svg><span>support@opshome.run</span></a>
     </div>
-    <ul><li><a href="/zh-Hant/"><span>OpsHome NOC</span></a></li>
-      <li><a href="https://fgt.opshome.run/"><span>FortiGate NOC Monitor</span></a></li>
-      <li><a href="https://domain.opshome.run/"><span>Domain Checker: DNS & SSL</span></a></li>
-      <li><a href="https://ssl.opshome.run/zh-cn/"><span>SSL Certificate Monitor</span></a></li>
-      <li><a href="https://wifi.opshome.run/zh-cn/"><span>WiFi Health Check</span></a></li>
-      <li><a href="https://docs.opshome.run/hant/" target="_blank" rel="noopener"><span>文件</span></a></li>
-      <li><a href="https://docs.opshome.run/hant/release-notes.html" target="_blank" rel="noopener"><span>更新日誌</span></a></li>
-      <li><a href="/zh-Hant/status-pages/"><span>狀態頁</span></a></li><li><a href="/zh-Hant/console/"><span>Console</span></a></li>
-      <li><a href="/zh-Hant/security.html"><span>安全</span></a></li>
-      <li><a href="privacy.html"><span>隱私</span></a></li>
-      <li><a href="terms.html"><span>條款</span></a></li>
-      <li><a href="mailto:support@opshome.run"><span>support@opshome.run</span></a></li>
-    </ul>
+
+    <section class="site-footer__column" aria-labelledby="footer-products-zh-Hant">
+      <h2 id="footer-products-zh-Hant">核心產品</h2>
+      <div class="site-footer__links">
+        <a class="site-footer__link" href="/zh-Hant/"><span class="site-footer__product-icon"><img src="/assets/images/brand-logo.png" alt="" width="20" height="20" loading="lazy" decoding="async"></span><span>OpsHome NOC</span></a>
+        <a class="site-footer__link" href="https://fgt.opshome.run/"><span class="site-footer__product-icon" aria-hidden="true">FG</span><span>FortiGate NOC Monitor</span></a>
+      </div>
+    </section>
+
+    <section class="site-footer__column" aria-labelledby="footer-tools-zh-Hant">
+      <h2 id="footer-tools-zh-Hant">工具與文件</h2>
+      <div class="site-footer__links">
+        <a class="site-footer__link" href="https://domain.opshome.run/"><span>Domain Checker: DNS &amp; SSL</span></a>
+        <a class="site-footer__link" href="https://ssl.opshome.run/zh-cn/"><span>SSL Certificate Monitor</span></a>
+        <a class="site-footer__link" href="https://wifi.opshome.run/zh-cn/"><span>WiFi Health Check</span></a>
+        <a class="site-footer__link" href="https://docs.opshome.run/hant/" target="_blank" rel="noopener"><span>文件</span></a>
+      </div>
+    </section>
+
+    <section class="site-footer__column" aria-labelledby="footer-platform-zh-Hant">
+      <h2 id="footer-platform-zh-Hant">平台與支援</h2>
+      <div class="site-footer__links">
+        <a class="site-footer__link" href="/zh-Hant/console/"><span>Console</span></a>
+        <a class="site-footer__link" href="/zh-Hant/status-pages/"><span>狀態頁</span></a>
+        <a class="site-footer__link" href="https://docs.opshome.run/hant/release-notes.html" target="_blank" rel="noopener"><span>更新日誌</span></a>
+        <a class="site-footer__link" href="/zh-Hant/support.html"><span>支援</span></a>
+        <a class="site-footer__link" href="/zh-Hant/security.html"><span>安全</span></a>
+      </div>
+    </section>
+  </div>
+  <div class="site-footer__bottom-wrap">
+    <div class="site-footer__bottom">
+      <p>© 2026 OpsHome NOC™. 保留所有權利。</p>
+      <div class="site-footer__legal"><a href="/terms.html">條款</a><a href="/privacy.html">隱私</a></div>
+    </div>
   </div>
 </footer>
 

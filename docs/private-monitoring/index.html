@@ -54,7 +54,8 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "xfn17kggxe");
   }
-</script><link href="/assets/mobile-nav.css?v=20260916" rel="stylesheet"><link href="/assets/site-nav.css?v=20260916-unified" rel="stylesheet"></head><body>
+</script><link href="/assets/mobile-nav.css?v=20260916" rel="stylesheet"><link href="/assets/site-nav.css?v=20260916-unified" rel="stylesheet"><link rel="stylesheet" href="/assets/site-footer.css?v=20260918-unified">
+</head><body>
 <nav><a class="brand" href="/"><img alt="OpsHome NOC logo" decoding="async" height="64" src="assets/images/brand-logo.png" width="64"/><span>OpsHome <strong>NOC</strong><sup class="tm">™</sup></span></a><ul class="navlinks"><li><a href="/security.html"><span>Security</span></a></li><li><a href="/private-monitoring/"><span>Private Monitoring</span></a></li><li><a href="/homelab-noc/"><span>Infrastructure</span></a></li><li><a href="/console/"><span>Console</span></a></li><li><a href="/status-pages/"><span>Status Pages</span></a></li><li><a href="/#pricing"><span>Pricing</span></a></li><li><a href="/support.html"><span>Support</span></a></li></ul><a class="nav-cta" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" rel="noopener" target="_blank">Download Free</a><div aria-label="Language" class="lang"><a class="active" href="/" lang="en">EN</a><a href="/zh/" lang="zh-Hans">简</a><a href="/zh-Hant/" lang="zh-Hant">繁</a><a href="/de/" lang="de">DE</a></div></nav>
 <header class="hero"><div class="inner"><p class="eyebrow">Private Monitoring</p><h1>Monitor Private Homelab Services Without Exposing Your Network</h1><p>Your private services should not need to become public just so you can monitor them. OpsHome NOC uses Docker Probe inside your network to check internal services, Private Monitors, and infrastructure connections without opening inbound ports.</p><div class="actions"><a class="button primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" rel="noopener" target="_blank">Download on App Store</a><a class="button secondary" href="/docker-probe/">Explore Docker Probe</a></div></div></header><div aria-label="On this page" class="page-jump-nav" role="navigation"><div class="page-jump-inner"><span class="page-jump-label">On this page</span><a href="#overview">Overview</a><a href="#how-it-works">How it works</a><a href="#checks">Private checks</a><a href="#infrastructure">Infrastructure</a><a href="#security">Security</a><a href="#faq">FAQ</a></div></div>
 <main>
@@ -68,5 +69,54 @@
 <section class="alt"><div class="inner"><h2>Related OpsHome topics</h2><div class="related"><a href="/docker-probe/"><strong>Docker Probe</strong><span>Use an outbound-only probe for private homelab monitoring.</span></a><a href="/homelab-noc/"><strong>Homelab NOC</strong><span>See public services, infrastructure connections, and Private Monitors in one operations view.</span></a><a href="/docker-container-monitoring/"><strong>Docker Container Monitoring</strong><span>Review container restarts, recoveries, and OOM kills.</span></a></div></div></section>
 <section class="cta"><div class="inner"><h2>Monitor private services without making them public</h2><p>Install OpsHome NOC and use Docker Probe to review authorized private services from your iPhone.</p><div class="actions"><a class="button primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" rel="noopener" target="_blank">Download on App Store</a><a class="button secondary" href="/docker-probe/">Learn Docker Probe</a></div></div></section>
 </main>
-<footer><div class="footer-inner"><div class="footer-brandline"><img alt="OpsHome NOC logo" decoding="async" height="42" loading="lazy" src="../assets/images/brand-logo.png" width="42"/><span>© 2026 OpsHome NOC™. All rights reserved. OpsHome NOC™ is a trademark of its owner.</span></div><ul><li><a href="https://opshome.run/" rel="noopener" target="_blank"><span>OpsHome</span></a></li><li><a href="/">Home</a></li><li><a href="/docker-probe/">Docker Probe</a></li><li><a href="/homelab-noc/">Homelab NOC</a></li><li><a href="https://domain.opshome.run">Domain Checker: DNS &amp; SSL</a></li><li><a href="https://fgt.opshome.run/">FortiGate NOC Monitor</a></li><li><a href="privacy.html">Privacy</a></li></ul></div></footer>
+<footer class="site-footer">
+  <div class="site-footer__main">
+    <div class="site-footer__brand">
+      <a class="site-footer__brandmark" href="/" aria-label="OpsHome NOC home">
+        <img src="/assets/images/brand-logo.png" alt="OpsHome NOC logo" width="58" height="58" loading="lazy" decoding="async">
+        <span>OpsHome NOC&trade;</span>
+      </a>
+      <p class="site-footer__brandcopy">Infrastructure monitoring for self-hosted environments.</p>
+      <div class="site-footer__socials" aria-label="OpsHome social links">
+        <a class="site-footer__social-link" href="https://x.com/opshome_noc" target="_blank" rel="noopener noreferrer" aria-label="OpsHome NOC on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.657l-5.214-6.817-5.967 6.817H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"/></svg></a>
+      </div>
+      <a class="site-footer__contact" href="mailto:support@opshome.run" aria-label="Email OpsHome support"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16v11H4z"/><path d="m4.5 7 7.5 6 7.5-6"/></svg><span>support@opshome.run</span></a>
+    </div>
+
+    <section class="site-footer__column" aria-labelledby="footer-products-en">
+      <h2 id="footer-products-en">Products</h2>
+      <div class="site-footer__links">
+        <a class="site-footer__link" href="/"><span class="site-footer__product-icon"><img src="/assets/images/brand-logo.png" alt="" width="20" height="20" loading="lazy" decoding="async"></span><span>OpsHome NOC</span></a>
+        <a class="site-footer__link" href="https://fgt.opshome.run/"><span class="site-footer__product-icon" aria-hidden="true">FG</span><span>FortiGate NOC Monitor</span></a>
+      </div>
+    </section>
+
+    <section class="site-footer__column" aria-labelledby="footer-tools-en">
+      <h2 id="footer-tools-en">Tools & Docs</h2>
+      <div class="site-footer__links">
+        <a class="site-footer__link" href="https://domain.opshome.run/"><span>Domain Checker: DNS &amp; SSL</span></a>
+        <a class="site-footer__link" href="https://ssl.opshome.run/"><span>SSL Certificate Monitor</span></a>
+        <a class="site-footer__link" href="https://wifi.opshome.run/"><span>WiFi Health Check</span></a>
+        <a class="site-footer__link" href="https://docs.opshome.run/" target="_blank" rel="noopener"><span>Docs</span></a>
+      </div>
+    </section>
+
+    <section class="site-footer__column" aria-labelledby="footer-platform-en">
+      <h2 id="footer-platform-en">Platform & Support</h2>
+      <div class="site-footer__links">
+        <a class="site-footer__link" href="/console/"><span>Console</span></a>
+        <a class="site-footer__link" href="/status-pages/"><span>Status Pages</span></a>
+        <a class="site-footer__link" href="https://docs.opshome.run/release-notes.html" target="_blank" rel="noopener"><span>Release Log</span></a>
+        <a class="site-footer__link" href="/support.html"><span>Support</span></a>
+        <a class="site-footer__link" href="/security.html"><span>Security</span></a>
+      </div>
+    </section>
+  </div>
+  <div class="site-footer__bottom-wrap">
+    <div class="site-footer__bottom">
+      <p>© 2026 OpsHome NOC™. All rights reserved.</p>
+      <div class="site-footer__legal"><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></div>
+    </div>
+  </div>
+</footer>
 <script src="/assets/mobile-nav.js?v=20260916" defer></script></body></html>
