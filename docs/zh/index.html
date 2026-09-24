@@ -72,10 +72,10 @@
     },
     {
       "@type": "Question",
-      "name": "Free、Founder 和 Pro 有什么区别？",
+      "name": "Free、Founder、Pro 和 Studio 有什么区别？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "OpsHome NOC 有 Free 和 Pro 两种订阅方案，同时为符合条件的早期账号提供永久 Founder 权益。普通 Free 包含 30 个公网监控点、1 个 Docker Probe、1 个基础设施设备和 1 个私网监控点；Founder 账号永久保留 30 个公网监控点、3 个 Docker Probe、3 个基础设施设备和 3 个私网监控点；Pro 提升至 100 个公网监控点、12 个 Docker Probe、12 个基础设施设备和 50 个私网监控点。"
+        "text": "OpsHome NOC 提供 Free、Pro 和 Studio 三档方案，同时为符合条件的早期账号提供永久 Founder 权益。普通 Free 包含 30 个公网监控点、1 个 Docker Probe、1 个基础设施设备和 1 个私网监控点；Founder 账号永久保留 30 个公网监控点、3 个 Docker Probe、3 个基础设施设备和 3 个私网监控点；Pro 提升至 100 个公网监控点、12 个 Docker Probe、12 个基础设施设备和 50 个私网监控点。Studio 包含 Pro 的全部功能，额度提升至 250 个公网监控点、25 个 Docker Probe、12 个基础设施设备、150 个私网监控点和 3 个状态页。"
       }
     },
     {
@@ -537,6 +537,25 @@
     </div>
   </section>
 
+  <section class="pr-section pr-console-showcase" id="web-console" aria-labelledby="web-console-title">
+    <div class="pr-inner">
+      <div class="pr-console-intro">
+        <div class="pr-console-copy">
+          <p class="pr-eyebrow">WEB CONSOLE · 只读运维</p>
+          <h2 id="web-console-title">你的 NOC，放到更大的屏幕上。</h2>
+          <p class="pr-console-description">使用与 OpsHome NOC 相同的 Apple 账户，在浏览器中查看监控点、基础设施资产、事件和监控点可用性。在 iPad 或桌面上，获得更完整的运维视野。</p>
+        </div>
+        <div class="pr-console-actions">
+          <a class="pr-button pr-button-primary" href="/zh/console/">了解 Web Console</a>
+          <a class="pr-button pr-button-secondary" href="https://console.opshome.run/" target="_blank" rel="noopener">打开 Console</a>
+        </div>
+      </div>
+      <figure class="pr-console-shot">
+        <img src="assets/images/console/devices/ipad-landscape-20260924.png" alt="iPad 横屏上的 OpsHome Console 总览，展示监控点、基础设施健康、事件和可用性。" width="1920" height="1485" loading="lazy" decoding="async">
+      </figure>
+    </div>
+  </section>
+
   <section class="pr-section pr-alt">
     <div class="pr-inner pr-feature pr-events">
       <div class="pr-media"><img src="assets/images/hero-carousel/public-services-20260620.webp" alt="网站、API、SSL 和域名的公网服务监控" width="1400" height="788" loading="lazy" decoding="async"></div>
@@ -585,8 +604,14 @@
           <ul><li>&#10003; 100 个公网监控目标</li><li>&#10003; 全部监控类型，包括 UDP、DNS 和域名</li><li>&#10003; 12 个 Docker Probe &middot; 12 个基础设施设备 &middot; 50 个私网监控点</li><li>&#10003; Proxmox VE + 群晖私网集成</li><li>&#10003; 更高频率的私网监控</li><li>&#10003; 推送 + Telegram 告警</li></ul>
           <a class="pr-button pr-button-primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">获取 Pro</a>
         </article>
+        <article class="pr-plan pr-plan-studio">
+          <p class="pr-plan-name">Studio</p><p class="pr-plan-price">$5.99 / 月</p><p class="pr-plan-subline">或 $49.99 / 年<br>面向更大规模的 Homelab 与小型工作室</p>
+          <ul><li>&#10003; 250 个公网监控点</li><li>&#10003; 25 个 Docker Probe &middot; 12 个基础设施设备 &middot; 150 个私网监控点</li><li>&#10003; 3 个状态页 &middot; 每页最多 20 个监控点</li><li>&#10003; 最短检查间隔 5 分钟</li><li>&#10003; 包含全部监控类型与基础设施集成</li></ul>
+          <a class="pr-button pr-button-primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">获取 Studio</a>
+        </article>
       </div>
-      <p class="pr-founder"><strong>Founder 权益 — 早期账号永久权益。</strong> OpsHome NOC 有 Free 和 Pro 两种订阅方案，同时为符合条件的早期账号提供永久 Founder 权益。在 2027 年 5 月 1 日前注册并符合条件，即可永久保留 30 个公网监控点、3 个 Docker Probe、3 个基础设施设备和 3 个私网监控点。Founder 不是单独的订阅方案；即使 Pro 到期，符合条件的账号也会恢复到 Founder 额度，而不是普通 Free。<a href="https://docs.opshome.run/zh/free-vs-pro.html" target="_blank" rel="noopener">查看完整权益表 &rarr;</a></p>
+      <p class="pr-price-note">此处显示美元价格；实际支付价格以你所在地区的 App Store 为准。</p>
+      <p class="pr-founder"><strong>Founder 权益 — 早期账号永久权益。</strong> OpsHome NOC 提供 Free、Pro 和 Studio 三档方案，同时为符合条件的早期账号提供永久 Founder 权益。在 2027 年 5 月 1 日前注册并符合条件，即可永久保留 30 个公网监控点、3 个 Docker Probe、3 个基础设施设备和 3 个私网监控点。Founder 不是单独的订阅方案；即使 Pro 到期，符合条件的账号也会恢复到 Founder 额度，而不是普通 Free。<a href="https://docs.opshome.run/zh/free-vs-pro.html" target="_blank" rel="noopener">查看 Free 与 Pro 权益 &rarr;</a></p>
     </div>
   </section>
 
@@ -597,7 +622,7 @@
         <details open><summary>Docker Probe 是否需要端口转发？</summary><div class="pr-faq-answer">不需要。Docker Probe 通过出站 HTTPS 连接 OpsHome Cloud，不需要入站端口转发，也不需要公开私有管理界面。</div></details>
         <details><summary>Docker Probe 安全吗？</summary><div class="pr-faq-answer">Docker Probe 不接受入站请求，只访问你明确配置的私有服务。安装前可以审查 App 生成的部署命令和公开的安全说明。</div></details>
         <details><summary>关闭 iPhone App 后监控还会继续吗？</summary><div class="pr-faq-answer">会。检测由 OpsHome Cloud 和 Docker Probe 持续执行，iPhone App 用于查看状态、报告和通知。</div></details>
-        <details><summary>Free、Founder 和 Pro 有什么区别？</summary><div class="pr-faq-answer">OpsHome NOC 有 Free 和 Pro 两种订阅方案，同时为符合条件的早期账号提供永久 Founder 权益。普通 Free 包含 30 个公网监控点、1 个 Docker Probe、1 个基础设施设备和 1 个私网监控点；Founder 账号永久保留 30 个公网监控点、3 个 Docker Probe、3 个基础设施设备和 3 个私网监控点；Pro 提升至 100 个公网监控点、12 个 Docker Probe、12 个基础设施设备和 50 个私网监控点。</div></details>
+        <details><summary>Free、Founder、Pro 和 Studio 有什么区别？</summary><div class="pr-faq-answer">OpsHome NOC 提供 Free、Pro 和 Studio 三档方案，同时为符合条件的早期账号提供永久 Founder 权益。普通 Free 包含 30 个公网监控点、1 个 Docker Probe、1 个基础设施设备和 1 个私网监控点；Founder 账号永久保留 30 个公网监控点、3 个 Docker Probe、3 个基础设施设备和 3 个私网监控点；Pro 提升至 100 个公网监控点、12 个 Docker Probe、12 个基础设施设备和 50 个私网监控点。Studio 包含 Pro 的全部功能，额度提升至 250 个公网监控点、25 个 Docker Probe、12 个基础设施设备、150 个私网监控点和 3 个状态页。</div></details>
         <details><summary>什么是 Founder 账号？</summary><div class="pr-faq-answer">Founder 是面向符合条件早期账号的永久权益，不是单独的订阅方案。在 2027 年 5 月 1 日前注册并符合条件的账号会永久保留 Founder 额度。</div></details>
         <details><summary>Pro 到期后 Founder 权益会怎样？</summary><div class="pr-faq-answer">Founder 权益永久绑定符合条件的账号。Pro 到期后，账号会恢复到 Founder 额度，而不是普通 Free：30 个公网监控点、3 个 Docker Probe、3 个基础设施设备和 3 个私网监控点。</div></details>
         <details><summary>为什么不用自托管的 Uptime Kuma？</summary><div class="pr-faq-answer">Uptime Kuma 是一个不错的自托管选项。OpsHome 面向希望直接获得移动端监控、而不必自行托管和维护监控服务的用户。云端监控层由 OpsHome 负责，你可以专注于自己的 Homelab。</div></details>
