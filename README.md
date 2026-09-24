@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/images/brand-logo.png" alt="OpsHome NOC Logo" width="120">
+<img src="/docs/assets/images/brand-logo.png" alt="OpsHome NOC Logo" width="120">
 
 # OpsHome NOC
 
@@ -21,12 +21,12 @@ Monitor public services, private networks, Proxmox, VMware, Synology, Linux, Doc
 <br>
 
 <a href="https://apps.apple.com/us/app/opshome-noc/id6763890679">
-  <img src="assets/images/app-store-badge.svg" alt="Download OpsHome NOC on the App Store" height="56">
+  <img src="/docs/assets/images/app-store-badge.svg" alt="Download OpsHome NOC on the App Store" height="56">
 </a>
 
 <br><br>
 
-<img src="assets/images/homelab-noc-overview-iphone.png" alt="OpsHome NOC infrastructure overview on iPhone" width="300">
+<img src="/docs/assets/images/homelab-noc-overview-iphone.png" alt="OpsHome NOC infrastructure overview on iPhone" width="300">
 
 <br>
 
@@ -127,7 +127,7 @@ The Console is intended for observation and investigation. It does not turn the 
 
 <div align="center">
 
-<img src="assets/images/console/overview-dark.png" alt="OpsHome Console overview in dark mode" width="820">
+<img src="/docs/assets/images/console/overview-dark.png" alt="OpsHome Console overview in dark mode" width="820">
 
 </div>
 
@@ -251,11 +251,11 @@ A useful first setup is one public HTTPS monitor plus one private Docker Probe t
 
 <div align="center">
 
-<img src="assets/images/homelab-noc-overview-iphone.png" alt="OpsHome NOC homelab overview on iPhone" width="220">
+<img src="/docs/assets/images/homelab-noc-overview-iphone.png" alt="OpsHome NOC homelab overview on iPhone" width="220">
 &nbsp;&nbsp;
-<img src="assets/images/docker-probe-private-monitoring-iphone.png" alt="OpsHome Docker Probe private monitoring on iPhone" width="220">
+<img src="/docs/assets/images/docker-probe-private-monitoring-iphone.png" alt="OpsHome Docker Probe private monitoring on iPhone" width="220">
 &nbsp;&nbsp;
-<img src="assets/images/docker-container-event-timeline-iphone.png" alt="OpsHome Docker container event timeline on iPhone" width="220">
+<img src="/docs/assets/images/docker-container-event-timeline-iphone.png" alt="OpsHome Docker container event timeline on iPhone" width="220">
 
 </div>
 
