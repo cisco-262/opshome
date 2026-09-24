@@ -247,17 +247,6 @@ Learn more: [Status Pages](https://app.opshome.run/status-pages/)
 
 A useful first setup is one public HTTPS monitor plus one private Docker Probe target. This helps distinguish external availability from internal service health.
 
-## Product Screens
-
-<div align="center">
-
-<img src="/docs/assets/images/homelab-noc-overview-iphone.png" alt="OpsHome NOC homelab overview on iPhone" width="220">
-&nbsp;&nbsp;
-<img src="/docs/assets/images/docker-probe-private-monitoring-iphone.png" alt="OpsHome Docker Probe private monitoring on iPhone" width="220">
-&nbsp;&nbsp;
-<img src="/docs/assets/images/docker-container-event-timeline-iphone.png" alt="OpsHome Docker container event timeline on iPhone" width="220">
-
-</div>
 
 ## Documentation
 
