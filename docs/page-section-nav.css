@@ -1,0 +1,69 @@
+
+/* Shared in-page navigation for Support and long-form product pages */
+.page-jump-nav{
+  position:sticky;top:101px;z-index:8;
+  border-top:1px solid rgba(220,229,239,.9);
+  border-bottom:1px solid rgba(220,229,239,.95);
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+}
+.page-jump-inner{
+  width:min(1120px,calc(100% - 48px));
+  margin:0 auto;
+  display:flex;align-items:center;gap:6px;
+  overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:none;
+  padding:9px 0;
+}
+.page-jump-inner::-webkit-scrollbar{display:none}
+.page-jump-label{
+  flex:0 0 auto;margin-right:8px;padding:7px 4px;
+  color:#7a899b;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+  font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+}
+.page-jump-nav a{
+  flex:0 0 auto;display:inline-flex;align-items:center;min-height:34px;
+  padding:7px 10px;border-radius:8px;color:#526274;
+  font-size:12px;font-weight:750;line-height:1.25;white-space:nowrap;
+  transition:background .18s ease,color .18s ease;
+}
+.page-jump-nav a:hover,.page-jump-nav a:focus-visible{background:#eef6ff;color:#075fce;outline:none}
+.page-anchor{scroll-margin-top:158px}
+
+/* Support gets the fuller Security-style table of contents on desktop. */
+.support-page .container{max-width:1240px}
+.support-page .hero{max-width:960px;margin-right:auto;margin-left:auto}
+.support-page .support-shell{display:grid;grid-template-columns:180px minmax(0,1fr);gap:28px;align-items:start}
+.support-page .support-content{min-width:0}
+.support-page .support-content .card{scroll-margin-top:112px;margin-top:0;margin-bottom:24px}
+.support-page .page-toc{
+  position:sticky;top:110px;padding:12px;border:1px solid #dce7f2;border-radius:13px;
+  background:rgba(255,255,255,.97);box-shadow:none;color:#223047;
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)
+}
+.support-page .page-toc-title{margin:4px 7px 9px;color:#718096;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.support-page .page-toc ul{display:grid;gap:2px;margin:0;padding:0;list-style:none}
+.support-page .page-toc a{display:block;padding:7px 9px;border-radius:7px;color:#526274;font-size:12px;font-weight:700;line-height:1.35}
+.support-page .page-toc a:hover,.support-page .page-toc a:focus-visible{background:#eef6ff;color:#075fce;outline:none}
+
+@media(max-width:900px){
+  .page-jump-nav{top:87px}
+  .page-jump-inner{width:100%;padding:8px 18px}
+  .page-anchor{scroll-margin-top:142px}
+  .support-page .container{max-width:960px}
+  .support-page .support-shell{grid-template-columns:1fr;gap:18px}
+  .support-page .page-toc{position:sticky;top:101px;z-index:8;overflow-x:auto;padding:7px;border-radius:11px;scrollbar-width:none}
+  .support-page .page-toc::-webkit-scrollbar{display:none}
+  .support-page .page-toc-title{display:none}
+  .support-page .page-toc ul{display:flex;min-width:max-content;gap:3px}
+  .support-page .page-toc a{white-space:nowrap}
+  .support-page .support-content .card{scroll-margin-top:156px}
+}
+@media(max-width:640px){
+  .page-jump-nav{top:81px}
+  .page-jump-inner{padding:7px 14px}
+  .page-jump-label{margin-right:3px}
+  .page-jump-nav a{padding:7px 9px;font-size:11px}
+  .support-page .page-toc{top:81px}
+  .support-page .support-content .card{scroll-margin-top:136px}
+}

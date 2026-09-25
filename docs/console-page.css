@@ -1,0 +1,142 @@
+:root{--console-bg:#f6f9fd;--console-ink:#0b1b2e;--console-muted:#5b6b7d;--console-blue:#1479ff;--console-line:#dbe5f0;--console-dark:#081323;--console-dark-2:#0e1a2d;--console-green:#34c88a;--console-red:#f05252;--console-mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--console-sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+.console-page{overflow:hidden;background:var(--console-bg);color:var(--console-ink);font-family:var(--console-sans)}
+.console-page *{box-sizing:border-box}
+.console-wide{width:min(1440px,calc(100% - 72px));margin:0 auto}
+.console-copy{width:min(900px,100%);margin:0 auto;text-align:center}
+.console-kicker{margin:0 0 16px;color:#75b4ff;font-family:var(--console-mono);font-size:12px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+.console-hero{position:relative;padding:88px 0 78px;background:radial-gradient(circle at 50% 15%,rgba(20,121,255,.22),transparent 30%),linear-gradient(145deg,#06101e 0%,#0a1830 62%,#071426 100%);color:#fff}
+.console-hero:after{content:"";position:absolute;inset:auto 0 0;height:1px;background:linear-gradient(90deg,transparent,rgba(96,165,250,.55),transparent)}
+.console-hero h1{max-width:1020px;margin:0 auto 22px;color:#fff;font-size:clamp(46px,6.4vw,82px);line-height:.98;letter-spacing:-.055em}
+.console-hero .console-lead{max-width:860px;margin:0 auto;color:#ccddf5;font-size:clamp(18px,2vw,22px);line-height:1.65}
+.console-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:32px}
+.console-button{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:13px 22px;border:1px solid rgba(96,165,250,.65);border-radius:11px;font-family:var(--console-mono);font-size:13px;font-weight:800;transition:transform .18s ease,background .18s ease,border-color .18s ease}
+.console-button:hover{transform:translateY(-1px)}
+.console-button.primary{background:var(--console-blue);color:#fff;box-shadow:0 14px 34px rgba(20,121,255,.3)}
+.console-button.secondary{background:rgba(255,255,255,.055);color:#e7f1ff}
+.console-trust{display:flex;justify-content:center;flex-wrap:wrap;gap:9px;margin:22px 0 0;padding:0;list-style:none}
+.console-trust li{padding:7px 11px;border:1px solid rgba(148,163,184,.24);border-radius:999px;background:rgba(255,255,255,.045);color:#bfcee2;font-family:var(--console-mono);font-size:11px}
+.console-hero-shot{position:relative;margin:54px auto 0;padding:8px;border:1px solid rgba(148,180,221,.24);border-radius:18px;background:rgba(255,255,255,.045);box-shadow:0 38px 80px rgba(0,0,0,.42)}
+.console-hero-shot:before{content:"";position:absolute;inset:-45px 10% auto;height:120px;background:rgba(20,121,255,.22);filter:blur(70px);z-index:0}
+.console-hero-shot img{position:relative;z-index:1;display:block;width:100%;height:auto;border-radius:11px}
+.console-value-strip{padding:0;background:#fff;border-bottom:1px solid var(--console-line)}
+.console-values{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.console-value{padding:30px 28px;border-right:1px solid var(--console-line)}
+.console-value:last-child{border-right:0}
+.console-value .num{display:inline-flex;width:30px;height:30px;align-items:center;justify-content:center;margin-bottom:14px;border-radius:8px;background:#eaf3ff;color:var(--console-blue);font-family:var(--console-mono);font-weight:800}
+.console-value h3{margin:0 0 7px;font-size:17px;line-height:1.25}
+.console-value p{margin:0;color:var(--console-muted);font-size:14px;line-height:1.6}
+.console-section{padding:100px 0}
+.console-section.alt{background:#fff}
+.console-section.dark{background:linear-gradient(145deg,#081321,#0d192b);color:#fff}
+.console-section.dark h2,.console-section.dark h3{color:#fff}
+.console-section.dark p{color:#b7c6da}
+.console-section-head{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:64px;align-items:end;margin-bottom:40px}
+.console-section-head .console-kicker{color:#4b8de9}
+.console-section.dark .console-kicker{color:#79b9ff}
+.console-section h2{margin:0;font-size:clamp(34px,4.6vw,58px);line-height:1.04;letter-spacing:-.045em}
+.console-section-head p{max-width:650px;margin:0;color:var(--console-muted);font-size:18px;line-height:1.72}
+.console-frame{margin:0;padding:8px;border:1px solid var(--console-line);border-radius:17px;background:#fff;box-shadow:0 24px 58px rgba(15,35,55,.12)}
+.console-section.dark .console-frame{border-color:rgba(148,163,184,.22);background:rgba(255,255,255,.035);box-shadow:0 30px 70px rgba(0,0,0,.32)}
+.console-frame img{display:block;width:100%;height:auto;border-radius:10px}
+.console-notes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:26px}
+.console-note{padding:19px 20px;border:1px solid var(--console-line);border-radius:12px;background:rgba(255,255,255,.72)}
+.console-note strong{display:block;margin-bottom:5px;color:var(--console-ink);font-size:15px}
+.console-note span{color:var(--console-muted);font-size:13px;line-height:1.55}
+.console-section.dark .console-note{border-color:rgba(148,163,184,.2);background:rgba(255,255,255,.035)}
+.console-section.dark .console-note strong{color:#fff}.console-section.dark .console-note span{color:#9fb1c8}
+.console-theme{padding:108px 0;background:linear-gradient(180deg,#edf5ff 0%,#f8fbff 100%)}
+.console-theme-shell{display:grid;grid-template-columns:minmax(280px,.64fr) minmax(0,1.36fr);gap:58px;align-items:center}
+.console-theme-copy h2{margin:0 0 18px;font-size:clamp(38px,5vw,62px);line-height:1.02;letter-spacing:-.05em}
+.console-theme-copy p{margin:0;color:var(--console-muted);font-size:18px;line-height:1.72}
+.console-theme-tabs{display:inline-flex;gap:5px;margin-top:24px;padding:5px;border:1px solid #cddbea;border-radius:999px;background:#fff}
+.console-theme-tabs button{border:0;border-radius:999px;background:transparent;color:#526274;padding:10px 16px;font-family:var(--console-mono);font-size:12px;font-weight:800;cursor:pointer}
+.console-theme-tabs button[aria-selected="true"]{background:#0b1b2e;color:#fff;box-shadow:0 7px 16px rgba(15,23,42,.16)}
+.console-theme-stage{position:relative;min-width:0;padding:8px;border:1px solid #ccd9e8;border-radius:17px;background:#fff;box-shadow:0 28px 70px rgba(25,55,90,.17)}
+.console-theme-stage img{display:block;width:100%;height:auto;border-radius:10px;transition:opacity .22s ease}
+.console-principles{padding:92px 0;background:#fff}
+.console-principle-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.console-principle{padding:34px;border:1px solid var(--console-line);border-radius:16px;background:#f8fbff}
+.console-principle .icon{display:inline-flex;width:42px;height:42px;align-items:center;justify-content:center;margin-bottom:20px;border-radius:11px;background:#e6f1ff;color:var(--console-blue);font-family:var(--console-mono);font-weight:800}
+.console-principle h3{margin:0 0 10px;font-size:25px}.console-principle p{margin:0;color:var(--console-muted);font-size:16px;line-height:1.7}
+.console-principle ul{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0;padding:0;list-style:none}
+.console-principle li{padding:7px 10px;border:1px solid #d4e2f1;border-radius:999px;background:#fff;color:#46627f;font-family:var(--console-mono);font-size:11px}
+.console-cta{padding:88px 0;background:radial-gradient(circle at 50% 10%,rgba(20,121,255,.18),transparent 34%),#07111f;color:#fff;text-align:center}
+.console-cta h2{max-width:920px;margin:0 auto 18px;color:#fff;font-size:clamp(36px,5vw,60px);line-height:1.04;letter-spacing:-.045em}
+.console-cta p{max-width:760px;margin:0 auto;color:#b7c6da;font-size:18px;line-height:1.7}
+.console-cta .console-actions{margin-top:28px}
+@media(max-width:1180px){.console-wide{width:min(100% - 44px,1440px)}.console-value{padding:25px 20px}.console-section-head{grid-template-columns:1fr;gap:18px;align-items:start}.console-theme-shell{grid-template-columns:1fr;gap:36px}.console-theme-copy{max-width:780px}}
+@media(max-width:900px){.console-wide{width:min(100% - 32px,1440px)}.console-hero{padding:68px 0 58px}.console-values{grid-template-columns:repeat(2,minmax(0,1fr))}.console-value:nth-child(2){border-right:0}.console-value:nth-child(-n+2){border-bottom:1px solid var(--console-line)}.console-section{padding:76px 0}.console-notes{grid-template-columns:1fr}.console-principle-grid{grid-template-columns:1fr}.console-theme{padding:78px 0}}
+@media(max-width:620px){.console-wide{width:min(100% - 24px,1440px)}.console-hero{padding-top:54px}.console-hero h1{font-size:clamp(42px,14vw,62px)}.console-hero-shot{margin-top:38px;padding:4px;border-radius:12px}.console-hero-shot img{border-radius:8px}.console-actions{align-items:stretch;flex-direction:column}.console-button{width:100%}.console-values{grid-template-columns:1fr}.console-value{border-right:0!important;border-bottom:1px solid var(--console-line)!important}.console-value:last-child{border-bottom:0!important}.console-section{padding:62px 0}.console-section h2,.console-theme-copy h2{font-size:36px}.console-section-head p,.console-theme-copy p{font-size:16px}.console-frame,.console-theme-stage{padding:4px;border-radius:12px}.console-principle{padding:26px}.console-principles{padding:68px 0}.console-cta{padding:68px 0}}
+
+/* Responsive multi-device showcase */
+.console-responsive{position:relative;overflow:hidden;padding:112px 0 98px;background:radial-gradient(circle at 52% 42%,rgba(20,121,255,.16),transparent 34%),linear-gradient(145deg,#06101e 0%,#0a1729 62%,#07111f 100%);color:#fff}
+.console-responsive:before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(148,163,184,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(148,163,184,.035) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(to bottom,transparent,black 18%,black 82%,transparent)}
+.console-responsive-copy{position:relative;z-index:2;max-width:900px;margin:0 auto;text-align:center}
+.console-responsive-copy .console-kicker{color:#79b9ff}
+.console-responsive-copy h2{margin:0;color:#fff;font-size:clamp(38px,5.2vw,66px);line-height:1.02;letter-spacing:-.05em}
+.console-responsive-copy>p:not(.console-kicker){max-width:800px;margin:20px auto 0;color:#b8c9de;font-size:18px;line-height:1.72}
+.console-responsive-points{display:flex;justify-content:center;flex-wrap:wrap;gap:9px;margin:24px 0 0;padding:0;list-style:none}
+.console-responsive-points li{padding:8px 11px;border:1px solid rgba(148,180,221,.22);border-radius:999px;background:rgba(255,255,255,.045);color:#c8d7e9;font-family:var(--console-mono);font-size:11px}
+.console-device-stage{position:relative;z-index:2;height:720px;margin:40px auto 0;isolation:isolate}
+.console-device-stage:before{content:"";position:absolute;left:10%;right:9%;bottom:4%;height:22%;border-radius:50%;background:rgba(20,121,255,.19);filter:blur(58px);opacity:.7;pointer-events:none}
+.console-device-card{position:absolute;margin:0;cursor:pointer;outline:none;transition:opacity .28s ease,filter .28s ease,transform .32s cubic-bezier(.2,.7,.2,1);will-change:transform;opacity:.72;filter:saturate(.88) brightness(.9) drop-shadow(0 22px 30px rgba(0,0,0,.18))}
+.console-device-card img{display:block;width:100%;height:auto;user-select:none;-webkit-user-drag:none}
+.console-device-card.portable{left:3%;top:24%;width:55%;z-index:3;transform:scale(.98)}
+.console-device-card.ipad-landscape{left:16%;top:0;width:43%;z-index:1;transform:scale(.97)}
+.console-device-card.ipad-portrait{right:11%;top:4%;width:25%;z-index:2;transform:scale(.97)}
+.console-device-card.iphone{right:2%;bottom:2%;width:13%;z-index:4;transform:scale(.97)}
+.console-device-card.is-active{z-index:8;opacity:1;filter:saturate(1) brightness(1) drop-shadow(0 30px 48px rgba(0,0,0,.42));transform:scale(1.035)}
+.console-device-card:focus-visible{filter:saturate(1) brightness(1) drop-shadow(0 0 0 rgba(0,0,0,0));}
+.console-device-card:focus-visible:after{content:"";position:absolute;inset:4%;border:2px solid #79b9ff;border-radius:18px;pointer-events:none}
+.console-device-controls{position:relative;z-index:3;display:flex;justify-content:center;flex-wrap:wrap;gap:7px;margin:16px auto 0;padding:5px;width:max-content;max-width:100%;border:1px solid rgba(148,180,221,.2);border-radius:999px;background:rgba(6,16,30,.72);backdrop-filter:blur(10px)}
+.console-device-controls button{border:0;border-radius:999px;background:transparent;color:#9fb2ca;padding:10px 14px;font-family:var(--console-mono);font-size:11px;font-weight:800;cursor:pointer;transition:background .2s ease,color .2s ease,box-shadow .2s ease}
+.console-device-controls button[aria-pressed="true"]{background:#e9f2ff;color:#0b1b2e;box-shadow:0 7px 16px rgba(0,0,0,.2)}
+.console-device-controls button:focus-visible{outline:2px solid #79b9ff;outline-offset:2px}
+.console-device-hint{position:relative;z-index:2;margin:13px auto 0;color:#71869f;text-align:center;font-family:var(--console-mono);font-size:10px;line-height:1.5}
+@media(max-width:1180px){.console-device-stage{height:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:40px}.console-device-stage:before{display:none}.console-device-card,.console-device-card.portable,.console-device-card.ipad-landscape,.console-device-card.ipad-portrait,.console-device-card.iphone{position:relative;inset:auto;width:100%;z-index:auto;opacity:1;filter:none;transform:none!important;display:flex;align-items:center;justify-content:center;min-height:330px;padding:16px;border:1px solid rgba(148,180,221,.16);border-radius:20px;background:rgba(255,255,255,.025)}.console-device-card.ipad-portrait img{max-width:74%}.console-device-card.iphone img{max-width:50%}.console-device-card.is-active{border-color:rgba(121,185,255,.5);box-shadow:0 22px 48px rgba(0,0,0,.2)}}
+@media(max-width:760px){.console-responsive{padding:76px 0 68px}.console-responsive-copy h2{font-size:38px}.console-responsive-copy>p:not(.console-kicker){font-size:16px}.console-device-stage{display:flex;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;gap:14px;margin-left:-12px;margin-right:-12px;padding:4px 12px 18px}.console-device-stage::-webkit-scrollbar{display:none}.console-device-card,.console-device-card.portable,.console-device-card.ipad-landscape,.console-device-card.ipad-portrait,.console-device-card.iphone{flex:0 0 88%;min-height:430px;scroll-snap-align:center;padding:16px 10px}.console-device-card.portable img,.console-device-card.ipad-landscape img{max-width:100%}.console-device-card.ipad-portrait img{max-width:72%}.console-device-card.iphone img{max-width:49%}.console-device-controls{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;width:100%;border-radius:13px;padding:6px;scrollbar-width:none}.console-device-controls::-webkit-scrollbar{display:none}.console-device-controls button{white-space:nowrap}.console-device-hint{font-size:9px}}
+
+
+/* Account relationship and secure access */
+.console-relationship{max-width:760px;margin:15px auto 0;color:#9fb2ca;font-size:13px;line-height:1.6}
+.console-access{padding:74px 0;background:#f3f8ff;border-bottom:1px solid var(--console-line)}
+.console-access-shell{display:grid;grid-template-columns:96px minmax(0,1fr);gap:28px;align-items:start;padding:34px 38px;border:1px solid #d5e3f1;border-radius:18px;background:#fff;box-shadow:0 18px 44px rgba(25,55,90,.08)}
+.console-access-icon{display:grid;place-items:center;width:72px;height:72px;border-radius:18px;background:#050505;color:#fff;font-size:34px;box-shadow:0 12px 28px rgba(0,0,0,.16)}
+.console-access-copy .console-kicker{margin-bottom:10px;color:#1479ff}
+.console-access-copy h2{margin:0 0 10px;font-size:clamp(28px,3.4vw,44px);line-height:1.08;letter-spacing:-.035em}
+.console-access-copy>p:not(.console-kicker){max-width:900px;margin:0;color:var(--console-muted);font-size:16px;line-height:1.7}
+.console-access-chips{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 0;padding:0;list-style:none}
+.console-access-chips li{padding:7px 10px;border:1px solid #d3e1ef;border-radius:999px;background:#f7fbff;color:#44627e;font-family:var(--console-mono);font-size:10px;font-weight:800}
+.console-access-link{display:inline-flex;margin-top:18px;color:#0e68dd;font-size:13px;font-weight:800}
+.console-access-link:hover{text-decoration:underline}
+
+/* Supported infrastructure */
+.console-platforms{display:grid;grid-template-columns:minmax(260px,.72fr) minmax(0,1.28fr);gap:34px;align-items:center;margin-top:28px;padding:26px 28px;border:1px solid rgba(148,163,184,.2);border-radius:16px;background:rgba(255,255,255,.035)}
+.console-platform-copy .console-kicker{margin-bottom:8px}.console-platform-copy h3{margin:0 0 8px;font-size:22px}.console-platform-copy p{margin:0!important;color:#9fb1c8!important;font-size:13px;line-height:1.6}
+.console-platform-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.console-platform-card{min-height:82px;display:flex;align-items:center;justify-content:center;gap:10px;padding:14px;border:1px solid rgba(148,163,184,.17);border-radius:12px;background:rgba(255,255,255,.035);color:#f3f7fb}
+.console-platform-card strong{font-size:13px;white-space:nowrap}
+.console-platform-mark{display:grid;place-items:center;width:34px;height:34px;flex:0 0 34px;border-radius:9px;font-family:var(--console-mono);font-size:10px;font-weight:900;letter-spacing:.02em;background:#18263a;color:#fff}
+.console-platform-mark.synology{background:#eef2f7;color:#344054}.console-platform-mark.proxmox{background:#3b2412;color:#f59e0b}.console-platform-mark.vmware{background:#24354a;color:#b9c7d6}.console-platform-mark.linux{background:#f1c232;color:#111827}
+
+/* Quick start */
+.console-quick{padding:94px 0;background:#f7faff;border-top:1px solid #e1eaf4;border-bottom:1px solid #e1eaf4}
+.console-quick-head{max-width:860px;margin:0 auto 34px;text-align:center}.console-quick-head .console-kicker{color:#1479ff}.console-quick-head h2{margin:0;font-size:clamp(34px,4.5vw,56px);line-height:1.05;letter-spacing:-.04em}
+.console-step-grid{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.console-step-grid:before{content:"";position:absolute;left:16%;right:16%;top:31px;height:1px;background:linear-gradient(90deg,#b9d6f7,#7fb3ee,#b9d6f7);z-index:0}
+.console-step{position:relative;z-index:1;padding:28px 26px;border:1px solid #d9e5f1;border-radius:16px;background:#fff;box-shadow:0 14px 34px rgba(25,55,90,.06)}
+.console-step>span{display:grid;place-items:center;width:42px;height:42px;margin-bottom:20px;border-radius:50%;background:#0b1b2e;color:#fff;font-family:var(--console-mono);font-size:11px;font-weight:900;box-shadow:0 0 0 7px #f7faff}
+.console-step h3{margin:0 0 8px;font-size:19px}.console-step p{margin:0;color:var(--console-muted);font-size:14px;line-height:1.65}
+
+@media(max-width:900px){.console-access-shell{grid-template-columns:72px minmax(0,1fr);padding:28px}.console-access-icon{width:58px;height:58px;border-radius:15px;font-size:28px}.console-platforms{grid-template-columns:1fr}.console-platform-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.console-step-grid{grid-template-columns:1fr}.console-step-grid:before{display:none}}
+@media(max-width:620px){.console-access{padding:54px 0}.console-access-shell{grid-template-columns:1fr;gap:18px;padding:24px}.console-access-icon{width:54px;height:54px}.console-platform-grid{grid-template-columns:1fr 1fr}.console-platform-card{min-height:70px}.console-quick{padding:66px 0}.console-step{padding:24px}}
+
+/* Multi-device showcase replaces the standalone overview image in the hero. */
+.console-hero .console-responsive{margin-top:54px;padding:0;overflow:visible;background:transparent}
+.console-hero .console-responsive:before{display:none}
+.console-hero .console-responsive>.console-wide{width:100%}
+.console-hero .console-responsive-copy h2{font-size:clamp(27px,3vw,40px)}
+.console-hero .console-responsive-copy>p:not(.console-kicker){margin-top:12px;font-size:16px}
+.console-hero .console-responsive-points{margin-top:16px}
+.console-hero .console-device-stage{margin-top:26px}
+@media(max-width:760px){.console-hero .console-responsive{margin-top:38px}.console-hero .console-responsive-copy h2{font-size:30px}.console-hero .console-device-stage{margin-top:22px}}
