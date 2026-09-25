@@ -130,3 +130,13 @@
 
 @media(max-width:900px){.console-access-shell{grid-template-columns:72px minmax(0,1fr);padding:28px}.console-access-icon{width:58px;height:58px;border-radius:15px;font-size:28px}.console-platforms{grid-template-columns:1fr}.console-platform-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.console-step-grid{grid-template-columns:1fr}.console-step-grid:before{display:none}}
 @media(max-width:620px){.console-access{padding:54px 0}.console-access-shell{grid-template-columns:1fr;gap:18px;padding:24px}.console-access-icon{width:54px;height:54px}.console-platform-grid{grid-template-columns:1fr 1fr}.console-platform-card{min-height:70px}.console-quick{padding:66px 0}.console-step{padding:24px}}
+
+/* Multi-device showcase replaces the standalone overview image in the hero. */
+.console-hero .console-responsive{margin-top:54px;padding:0;overflow:visible;background:transparent}
+.console-hero .console-responsive:before{display:none}
+.console-hero .console-responsive>.console-wide{width:100%}
+.console-hero .console-responsive-copy h2{font-size:clamp(27px,3vw,40px)}
+.console-hero .console-responsive-copy>p:not(.console-kicker){margin-top:12px;font-size:16px}
+.console-hero .console-responsive-points{margin-top:16px}
+.console-hero .console-device-stage{margin-top:26px}
+@media(max-width:760px){.console-hero .console-responsive{margin-top:38px}.console-hero .console-responsive-copy h2{font-size:30px}.console-hero .console-device-stage{margin-top:22px}}
