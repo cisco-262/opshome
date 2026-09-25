@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" role="img" aria-labelledby="title desc">
+  <title id="title">Security principles pyramid</title>
+  <desc id="desc">A three-level conceptual pyramid: user control, least privilege, and encrypted transport.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#080e17"/><stop offset="1" stop-color="#101b2a"/></linearGradient>
+    <linearGradient id="top" x2="1" y2="1"><stop stop-color="#287f85"/><stop offset="1" stop-color="#42b7aa"/></linearGradient>
+    <linearGradient id="middle" x2="1" y2="1"><stop stop-color="#174f69"/><stop offset="1" stop-color="#23869c"/></linearGradient>
+    <linearGradient id="base" x2="1" y2="1"><stop stop-color="#18394e"/><stop offset="1" stop-color="#205c79"/></linearGradient>
+    <filter id="glow" x="-20%" y="-25%" width="140%" height="150%"><feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#000" flood-opacity=".4"/></filter>
+  </defs>
+  <rect width="1200" height="660" rx="22" fill="url(#bg)"/>
+  <path d="M68 151H1132" stroke="#294051" stroke-opacity=".7"/>
+  <text x="68" y="67" fill="#72d1c6" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" letter-spacing="3.5">SECURITY PRINCIPLES</text>
+  <text x="68" y="118" fill="#f1f6f8" font-family="Arial,Helvetica,sans-serif" font-size="32" font-weight="700">Protection, layer by layer</text>
+  <g filter="url(#glow)" stroke-width="1.4">
+    <path d="M410 173L520 307H300Z" fill="url(#top)" stroke="#72ddcc"/>
+    <path d="M291 319H529L628 449H192Z" fill="url(#middle)" stroke="#68bcc4"/>
+    <path d="M184 461H636L731 587H89Z" fill="url(#base)" stroke="#6097ac"/>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" text-anchor="middle" fill="#edf9f8" font-size="29" font-weight="700">
+    <text x="410" y="276">01</text>
+    <text x="410" y="402">02</text>
+    <text x="410" y="537">03</text>
+  </g>
+  <g fill="none" stroke="#6abdb8" stroke-width="1.5" stroke-opacity=".75">
+    <path d="M480 255H758"/><path d="M579 384H758"/><path d="M685 520H758"/>
+  </g>
+  <g fill="#6ccfc2"><circle cx="758" cy="255" r="3"/><circle cx="758" cy="384" r="3"/><circle cx="758" cy="520" r="3"/></g>
+  <g font-family="Arial,Helvetica,sans-serif">
+    <text x="783" y="247" fill="#f1f8f8" font-size="25" font-weight="700">User control</text>
+    <text x="783" y="278" fill="#aebec9" font-size="17">Decide what to monitor</text>
+    <text x="783" y="376" fill="#f1f8f8" font-size="25" font-weight="700">Least privilege</text>
+    <text x="783" y="407" fill="#aebec9" font-size="17">Limit access to what's needed</text>
+    <text x="783" y="512" fill="#f1f8f8" font-size="25" font-weight="700">Encrypted transport</text>
+    <text x="783" y="543" fill="#aebec9" font-size="17">Protect data in transit</text>
+  </g>
+</svg>
