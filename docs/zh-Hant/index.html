@@ -88,10 +88,10 @@
     },
     {
       "@type": "Question",
-      "name": "Pro 到期後 Founder 權益會怎樣？",
+      "name": "Pro 或 Studio 到期後 Founder 權益會怎樣？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Founder 權益會永久綁定符合條件的帳號。Pro 到期後，帳號會恢復到 Founder 額度，而不是普通 Free：30 個公網監控點、3 個 Docker Probe、3 個基礎設施設備和 3 個私網監控點。"
+        "text": "Founder 權益會永久綁定符合條件的帳號。Pro 或 Studio 到期後，帳號會恢復到 Founder 額度，而不是普通 Free：30 個公網監控點、3 個 Docker Probe、3 個基礎設施設備和 3 個私網監控點。不具備 Founder 資格的帳號會恢復到普通 Free 額度。"
       }
     },
     {
@@ -601,17 +601,17 @@
         </article>
         <article class="pr-plan pr-plan-pro">
           <span class="pr-plan-badge">最受歡迎</span><p class="pr-plan-name">Pro</p><p class="pr-plan-price">$2.99 / 月</p><p class="pr-plan-subline">或 $24.99 / 年 &middot; 最划算<br>面向不斷擴展的私有基礎設施</p>
-          <ul><li>&#10003; 100 個公網監控目標</li><li>&#10003; 全部監控類型，包括 UDP、DNS 和網域</li><li>&#10003; 12 個 Docker Probe &middot; 12 個基礎設施設備 &middot; 50 個私網監控點</li><li>&#10003; Proxmox VE + 群暉私網整合</li><li>&#10003; 更高頻率的私網監控</li><li>&#10003; 推播 + Telegram 告警</li></ul>
+          <ul><li>&#10003; 100 個公網監控目標</li><li>&#10003; 全部監控類型，包括 UDP、DNS 和網域</li><li>&#10003; 12 個 Docker Probe &middot; 12 個基礎設施設備 &middot; 50 個私網監控點</li><li>&#10003; Proxmox VE + VMware vSphere + 群暉私網整合</li><li>&#10003; 最短檢查間隔 3 分鐘</li><li>&#10003; 推播 + Telegram 告警</li></ul>
           <a class="pr-button pr-button-primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">取得 Pro</a>
         </article>
         <article class="pr-plan pr-plan-studio">
           <span class="pr-plan-badge">更高額度</span><p class="pr-plan-name">Studio</p><p class="pr-plan-price">$5.99 / 月</p><p class="pr-plan-subline">或 $49.99 / 年<br>適合更大規模的 Homelab 與小型工作室</p>
-          <ul><li>&#10003; 250 個公網監控點</li><li>&#10003; 25 個 Docker Probe &middot; 12 個基礎設施設備 &middot; 150 個私網監控點</li><li>&#10003; 3 個狀態頁 &middot; 每頁最多 20 個監控點</li><li>&#10003; 最短檢查間隔 5 分鐘</li><li>&#10003; 包含全部監控類型與基礎設施整合</li></ul>
+          <ul><li>&#10003; 250 個公網監控點</li><li>&#10003; 25 個 Docker Probe &middot; 12 個基礎設施設備 &middot; 150 個私網監控點</li><li>&#10003; 3 個狀態頁 &middot; 每頁最多 20 個監控點</li><li>&#10003; 最短檢查間隔 3 分鐘</li><li>&#10003; 包含全部監控類型與基礎設施整合</li></ul>
           <a class="pr-button pr-button-primary" href="https://apps.apple.com/us/app/opshome-noc/id6763890679" target="_blank" rel="noopener">取得 Studio</a>
         </article>
       </div>
       <p class="pr-price-note">此處顯示美元價格；實際付款價格以所在地區的 App Store 為準。</p>
-      <p class="pr-founder"><strong>Founder 權益 — 早期帳號永久權益。</strong> OpsHome NOC 提供 Free、Pro 和 Studio 三種方案，同時為符合條件的早期帳號提供永久 Founder 權益。在 2027 年 5 月 1 日前註冊並符合條件，即可永久保留 30 個公網監控點、3 個 Docker Probe、3 個基礎設施設備和 3 個私網監控點。Founder 不是獨立的訂閱方案；即使 Pro 到期，符合條件的帳號也會恢復到 Founder 額度，而不是普通 Free。<a href="https://docs.opshome.run/hant/free-vs-pro.html" target="_blank" rel="noopener">查看 Free 與 Pro 權益 &rarr;</a></p>
+      <p class="pr-founder"><strong>Founder 權益 — 早期帳號永久權益。</strong> OpsHome NOC 提供 Free、Pro 和 Studio 三種方案，同時為符合條件的早期帳號提供永久 Founder 權益。在 2027 年 5 月 1 日前註冊並符合條件，即可永久保留 30 個公網監控點、3 個 Docker Probe、3 個基礎設施設備和 3 個私網監控點。Founder 不是獨立的訂閱方案；Pro 或 Studio 到期後，符合條件的帳號會恢復到 Founder 額度；原本是普通 Free 的帳號會恢復到普通 Free 額度。<a href="https://docs.opshome.run/hant/free-vs-pro.html" target="_blank" rel="noopener">查看 Free 與 Pro 權益 &rarr;</a></p>
     </div>
   </section>
 
@@ -624,7 +624,7 @@
         <details><summary>關閉 iPhone App 後監控還會繼續嗎？</summary><div class="pr-faq-answer">會。檢測由 OpsHome Cloud 和 Docker Probe 持續執行，iPhone App 用於查看狀態、報告和通知。</div></details>
         <details><summary>Free、Founder、Pro 和 Studio 有什麼差異？</summary><div class="pr-faq-answer">OpsHome NOC 提供 Free、Pro 和 Studio 三種方案，同時為符合條件的早期帳號提供永久 Founder 權益。普通 Free 包含 30 個公網監控點、1 個 Docker Probe、1 個基礎設施設備和 1 個私網監控點；Founder 帳號永久保留 30 個公網監控點、3 個 Docker Probe、3 個基礎設施設備和 3 個私網監控點；Pro 提升至 100 個公網監控點、12 個 Docker Probe、12 個基礎設施設備和 50 個私網監控點。Studio 包含 Pro 的所有功能，額度提升至 250 個公網監控點、25 個 Docker Probe、12 個基礎設施設備、150 個私網監控點和 3 個狀態頁。</div></details>
         <details><summary>什麼是 Founder 帳號？</summary><div class="pr-faq-answer">Founder 是提供給符合條件早期帳號的永久權益，不是獨立的訂閱方案。在 2027 年 5 月 1 日前註冊並符合條件的帳號會永久保留 Founder 額度。</div></details>
-        <details><summary>Pro 到期後 Founder 權益會怎樣？</summary><div class="pr-faq-answer">Founder 權益會永久綁定符合條件的帳號。Pro 到期後，帳號會恢復到 Founder 額度，而不是普通 Free：30 個公網監控點、3 個 Docker Probe、3 個基礎設施設備和 3 個私網監控點。</div></details>
+        <details><summary>Pro 或 Studio 到期後 Founder 權益會怎樣？</summary><div class="pr-faq-answer">Founder 權益會永久綁定符合條件的帳號。Pro 或 Studio 到期後，帳號會恢復到 Founder 額度，而不是普通 Free：30 個公網監控點、3 個 Docker Probe、3 個基礎設施設備和 3 個私網監控點。不具備 Founder 資格的帳號會恢復到普通 Free 額度。</div></details>
         <details><summary>為什麼不用自託管的 Uptime Kuma？</summary><div class="pr-faq-answer">Uptime Kuma 是一個不錯的自託管選項。OpsHome 面向希望直接獲得行動端監控、而不必自行託管和維護監控服務的使用者。雲端監控層由 OpsHome 負責，你可以專注於自己的 Homelab。</div></details>
         <details><summary>OpsHome 只適合 Homelab 使用者嗎？</summary><div class="pr-faq-answer">不是。OpsHome 面向 Homelab 愛好者、IT 管理員、網路工程師和小型基礎設施環境。</div></details>
       </div>
