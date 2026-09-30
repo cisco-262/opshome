@@ -61,7 +61,7 @@
   @media(max-width:900px){.navlinks,.nav-cta{display:none}}
   @media(max-width:900px){nav{padding:16px 22px}.brand img{width:54px;height:54px}main{padding:54px 22px}.grid{grid-template-columns:1fr}footer{padding:30px 22px}.footer-inner{align-items:center;flex-direction:column;text-align:center}.footer-brandline{justify-content:center;margin:0 auto;text-align:center}footer ul{justify-content:center}}
 </style>
-<link rel="stylesheet" href="assets/security-page.css?v=20261001-whitepaper-v2">
+<link rel="stylesheet" href="assets/security-page.css?v=20261001-whitepaper-v5">
 <script type="text/javascript">
   if (window.location.hostname === "app.opshome.run") {
     (function(c,l,a,r,i,t,y){
@@ -165,11 +165,12 @@
       <section class="security-section" id="data">
         <p class="security-section-kicker">05 · Data handling</p>
         <h2>Monitoring records support history, incidents, and notifications</h2><p>OpsHome NOC generates status, event, and trend records from monitoring tasks configured by the user to provide history, incident analysis, and notifications.</p>
-        <div class="security-table-wrap"><table class="security-table"><thead><tr><th>Data category</th><th>Public handling standard</th></tr></thead><tbody>
-          <tr><td>Account and monitoring configuration</td><td>Retained while the account remains active and protected by access controls.</td></tr>
-          <tr><td>Monitoring event history</td><td>Limited to the history window included with the active plan and automatically removed when that window expires.</td></tr>
-          <tr><td>Infrastructure health and metrics</td><td>Used to provide current status, trends, incidents, and notifications.</td></tr>
-          <tr><td>Sensitive business content</td><td>Not retained or uploaded as monitoring telemetry.</td></tr>
+        <div class="security-table-wrap"><table class="security-table security-data-matrix"><thead><tr><th>Data category</th><th>Purpose</th><th>Public handling standard</th></tr></thead><tbody>
+          <tr><td>Account identity</td><td>Sign in, account recognition, and access control.</td><td>Includes the Sign in with Apple identifier where used; retained while the account is active and protected by access controls.</td></tr>
+          <tr><td>Integration credentials and Probe tokens</td><td>Connect monitoring targets authorized by the user.</td><td>Protected at rest and available only to the service components required to perform the authorized connection.</td></tr>
+          <tr><td>Monitoring configuration</td><td>Store the targets and capabilities selected by the user.</td><td>Retained while the account is active or until the user removes the configuration.</td></tr>
+          <tr><td>Status and time-series metrics</td><td>Provide current status, trends, incident analysis, and notifications.</td><td>Limited to the history window included with the active plan and automatically removed when that window expires.</td></tr>
+          <tr><td>Non-monitoring business content</td><td>Not required to provide the monitoring service.</td><td><strong class="security-scope-label">Outside telemetry scope</strong> Application secrets, business-file contents, and unrelated data are not retained or uploaded as monitoring records.</td></tr>
         </tbody></table></div>
         <p>After an account deletion request is confirmed, an automated deletion process starts immediately to remove the account and related service data. Signing out ends the current session and does not delete the account.</p>
       </section>
@@ -183,7 +184,7 @@
         </div>
         <p>The automated scan of the corresponding OpsHome Probe Go binary found 0 known vulnerabilities. The published digest binds this result to the exact verified image.</p>
         <p>Users can independently verify the image digest, published ports, read-only mounts, deployment permissions, and outbound connections.</p>
-        <h3 class="security-rating-title">Independent security validation</h3><div class="security-rating-grid" aria-label="Independent public security ratings"><figure><img src="assets/images/ssllabs-a-plus-result.svg" alt="SSL Labs A+ rating" width="300" height="210" loading="lazy" decoding="async"><figcaption>SSL Labs · A+</figcaption></figure><figure><img src="assets/images/securityheaders-a-result.svg" alt="SecurityHeaders.com Grade A rating" width="300" height="210" loading="lazy" decoding="async"><figcaption>SecurityHeaders.com · Grade A</figcaption></figure></div><div class="security-link-row"><a class="security-link" href="https://docs.opshome.run/docs/docker-probe/security-model/" target="_blank" rel="noopener">Open the verification guide &rarr;</a><a class="security-link" href="https://hub.docker.com/r/opshomenoc/opshome-noc/tags" target="_blank" rel="noopener">View published images &rarr;</a><a class="security-link" href="https://www.ssllabs.com/ssltest/analyze.html?d=app.opshome.run" target="_blank" rel="noopener">View live TLS report &rarr;</a></div>
+        <pre class="security-audit-command"><code>sudo tcpdump -i any -Q out -nn -c 5 'host app.opshome.run and tcp dst port 443'</code></pre><h3 class="security-rating-title">Independent security validation</h3><div class="security-rating-grid" aria-label="Independent public security ratings"><figure><img src="assets/images/ssllabs-a-plus-result.svg" alt="SSL Labs A+ rating" width="300" height="210" loading="lazy" decoding="async"><figcaption>SSL Labs · A+</figcaption></figure><figure><img src="assets/images/securityheaders-a-result.svg" alt="SecurityHeaders.com Grade A rating" width="300" height="210" loading="lazy" decoding="async"><figcaption>SecurityHeaders.com · Grade A</figcaption></figure></div><div class="security-link-row"><a class="security-link" href="https://docs.opshome.run/docs/docker-probe/security-model/" target="_blank" rel="noopener">Open the verification guide &rarr;</a><a class="security-link" href="https://hub.docker.com/r/opshomenoc/opshome-noc/tags" target="_blank" rel="noopener">View published images &rarr;</a><a class="security-link" href="https://www.ssllabs.com/ssltest/analyze.html?d=app.opshome.run" target="_blank" rel="noopener">View live TLS report &rarr;</a></div>
       </section>
 
       <section class="security-section" id="responsibility">
