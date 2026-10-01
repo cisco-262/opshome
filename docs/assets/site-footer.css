@@ -11,7 +11,7 @@
   border-top:1px solid rgba(148,163,184,.16);
   background:#07111f;
   color:#94a3b8;
-  font-family:var(--mono,"Space Mono Local","Space Mono",ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace);
+  font-family:var(--mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace);
   font-size:13px;
   line-height:1.55;
 }
@@ -84,7 +84,7 @@
 .site-footer__column h2{
   margin:2px 0 18px;
   color:#f8fafc;
-  font:700 12px/1.25 var(--mono,"Space Mono Local","Space Mono",ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace);
+  font:700 12px/1.25 var(--mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace);
   letter-spacing:.08em;
   text-transform:uppercase;
 }
