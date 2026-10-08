@@ -55,16 +55,6 @@ OpsHome brings together:
 
 OpsHome is designed for people who want a clear operational view without turning their monitoring system into another infrastructure project to maintain.
 
-## How OpsHome Works
-
-| Product component | Purpose | Examples |
-| --- | --- | --- |
-| **OpsHome Cloud** | Public monitoring and account services | HTTP, HTTPS, TCP, UDP, SSL, DNS, ICMP, domain expiry, alerts, status pages |
-| **Docker Probe** | Private monitoring from inside your network | Internal HTTP/HTTPS/TCP targets, private services, infrastructure access behind NAT |
-| **Asset Sources** | Asset and workload visibility | Proxmox VE, VMware vSphere, Synology NAS, Linux, Docker |
-| **OpsHome NOC for iOS** | Mobile monitoring and alerts | Health, monitors, assets, incidents, notifications, status pages |
-| **OpsHome Console** | Read-only browser operations view | Monitor Matrix, Assets Topology, Incident Workspace, Wall Display Mode |
-
 ## Key Capabilities
 
 ### Public Monitoring
