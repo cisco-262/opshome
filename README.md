@@ -26,7 +26,7 @@ Monitor public services, private networks, Proxmox, VMware, Synology, Linux, Doc
 
 <br><br>
 
-<img src="/docs/assets/images/homelab-noc-overview-iphone.png" alt="OpsHome NOC infrastructure overview on iPhone" width="300">
+<img src="assets/images/homelab-noc-overview-iphone.png" alt="OpsHome NOC infrastructure overview on iPhone" width="300">
 
 <br>
 
@@ -61,7 +61,7 @@ OpsHome is designed for people who want a clear operational view without turning
 | --- | --- | --- |
 | **OpsHome Cloud** | Public monitoring and account services | HTTP, HTTPS, TCP, UDP, SSL, DNS, ICMP, domain expiry, alerts, status pages |
 | **Docker Probe** | Private monitoring from inside your network | Internal HTTP/HTTPS/TCP targets, private services, infrastructure access behind NAT |
-| **Infrastructure Devices** | Asset and workload visibility | Proxmox VE, VMware vSphere, Synology NAS, Linux, Docker |
+| **Asset Sources** | Asset and workload visibility | Proxmox VE, VMware vSphere, Synology NAS, Linux, Docker |
 | **OpsHome NOC for iOS** | Mobile monitoring and alerts | Health, monitors, assets, incidents, notifications, status pages |
 | **OpsHome Console** | Read-only browser operations view | Monitor Matrix, Assets Topology, Incident Workspace, Wall Display Mode |
 
@@ -89,7 +89,7 @@ This allows you to monitor private services without exposing internal management
 - No inbound port forwarding required
 - No public management interface required
 - Works behind NAT and home routers
-- Supports private infrastructure devices reachable by the Probe
+- Supports private infrastructure assets reachable by the Probe
 
 ### Infrastructure Visibility
 
@@ -122,6 +122,17 @@ Supported views can include:
 
 Open it at: **https://console.opshome.run**
 
+Current Console capabilities include:
+
+- Overview of environment health and active risk
+- Monitor Matrix for public and private monitoring
+- Assets Topology for infrastructure health and workloads
+- Incident Workspace with evidence and history
+- Light and dark themes
+- Responsive layouts for desktop, iPad, and mobile browsers
+- Wall Display Mode for long-running operational visibility
+- Sign in with Apple
+- Read-only access by design
 
 The Console is intended for observation and investigation. It does not turn the browser into a remote infrastructure administration panel.
 
@@ -156,25 +167,27 @@ The public security documentation currently describes controls including:
 - AES-256-GCM protection for supported sensitive server-side credentials at rest
 - Apple Keychain Services for supported iOS authentication tokens
 - Outbound-only private monitoring through Docker Probe
-- Least-privilege guidance for infrastructure devices
+- Least-privilege guidance for infrastructure assets
 - Immutable OCI image digests for Probe release pinning
 
 Security details can evolve with the service. Refer to the live [Security page](https://app.opshome.run/security.html) for the current documented controls.
 
 ## Plans & Founder Benefits
 
-OpsHome has **two subscription plans — Free and Pro — plus a permanent Founder Benefit for eligible early accounts**.
+OpsHome has **three plans — Free, Pro, and Studio — plus a permanent Founder Benefit for eligible early accounts**.
 
 Founder is **not a separate subscription plan**. It is a permanent account entitlement that increases the Free allowance for eligible early accounts.
 
 ### Core Allowances
 
-| Capability | Regular Free | Founder | Pro |
-| --- | ---: | ---: | ---: |
-| Public Monitors | 30 | 30 | 100 |
-| Docker Probes | 1 | 3 | 12 |
-| Infrastructure Devices | 1 | 3 | 12 |
-| Private Monitors | 1 | 3 | 50 |
+| Capability | Regular Free | Founder | Pro | Studio |
+| --- | ---: | ---: | ---: | ---: |
+| Public Monitors | 30 | 30 | 100 | 250 |
+| Docker Probes | 1 Synology | 3 Synology | 12 multi-platform | 25 multi-platform |
+| Asset Sources | Synology Assets | Synology Assets | 12 | 25 |
+| Private Monitors | 2 | 6 | 50 | 150 |
+| Public Status Pages | 1 | 1 | 3 | 5 |
+| Minimum Public Check Interval | 10 min | 10 min | 3 min | 3 min |
 
 ### Free
 
@@ -182,9 +195,9 @@ Regular Free accounts include:
 
 - 30 Public Monitors
 - HTTP / HTTPS / TCP / SSL / ICMP monitoring
-- 1 Docker Probe
-- 1 Infrastructure Device
-- 1 Private Monitor
+- 1 Synology Docker Probe
+- Synology Assets
+- 2 Private Monitors
 - 1 public status page
 - Push alerts and SSL expiry reminders
 - Visual monitoring dashboard
@@ -194,11 +207,12 @@ Regular Free accounts include:
 Eligible accounts registered before **May 1, 2027** receive a permanent Founder entitlement:
 
 - 30 Public Monitors
-- 3 Docker Probes
-- 3 Infrastructure Devices
-- 3 Private Monitors
+- 3 Synology Docker Probes
+- Synology Assets
+- 6 Private Monitors
+- 1 public status page
 
-Founder access remains attached to the eligible account. If a Founder account subscribes to Pro and Pro later expires, the account returns to its Founder allowance instead of Regular Free limits.
+Founder access remains attached to the eligible account. If a Founder account subscribes to Pro or Studio and that subscription later expires, the account returns to its Founder allowance. An account without Founder eligibility returns to Regular Free limits.
 
 ### Pro
 
@@ -206,12 +220,17 @@ Pro expands the environment limits to:
 
 - 100 Public Monitors
 - All supported public monitor types, including UDP, DNS, and Domain
-- 12 Docker Probes
-- 12 Infrastructure Devices
+- 12 multi-platform Docker Probes
+- 12 Asset Sources
 - 50 Private Monitors
+- 3 public status pages
+- 3-minute minimum public check interval
 - Expanded private infrastructure capabilities
-- Higher-frequency private monitoring
 - Push + Telegram alerts
+
+### Studio
+
+Studio includes all Pro capabilities and expands the limits to 250 Public Monitors, 25 multi-platform Docker Probes, 25 Asset Sources, 150 Private Monitors, and 5 public status pages. The minimum public check interval remains 3 minutes, with up to 20 monitors per status page.
 
 Plan limits, pricing, and commercial terms can evolve. The live website and App Store purchase screen are the source of truth for current pricing and entitlements.
 
@@ -240,7 +259,7 @@ Learn more: [Status Pages](https://app.opshome.run/status-pages/)
 2. Sign in with Apple.
 3. Add a public monitor for a website, API, certificate, port, or domain-related target.
 4. Deploy Docker Probe for private or internal services.
-5. Add supported infrastructure devices such as Proxmox, VMware, Synology, Linux, or Docker.
+5. Add supported Asset Sources such as Proxmox, VMware, Synology, Linux, or Docker.
 6. Enable notifications.
 7. Review monitors, assets, incidents, history, and availability from the iPhone app.
 8. Open OpsHome Console when you need a larger read-only operational view.
@@ -300,6 +319,16 @@ The product interface and documentation may have different language coverage dep
 
 ### Web Console
 
+**OpsHome Console** 提供与 iOS App 同一账号下的只读 Web 运维视图：
+
+- Overview
+- Monitor Matrix
+- Assets Topology
+- Incident Workspace
+- Light / Dark Theme
+- Wall Display Mode
+- Desktop / iPad / Mobile 响应式布局
+
 Console 地址：**https://console.opshome.run**
 
 Console 主要用于观察、排查和大屏展示，不用于远程修改或控制基础设施。
@@ -326,25 +355,28 @@ Docker Probe 部署在你授权的私有网络中，并主动通过 HTTPS 连接
 
 ### 方案与 Founder 权益
 
-OpsHome 当前有 **Free / Pro 两个订阅方案**，同时为符合条件的早期账号提供永久 **Founder 权益**。
+OpsHome 当前有 **Free / Pro / Studio 三档方案**，同时为符合条件的早期账号提供永久 **Founder 权益**。
 
-Founder **不是第三个订阅方案**，而是附加在符合条件账号上的永久权益。Founder 账号即使没有有效 Pro 订阅，也会保留高于普通 Free 的基础额度。
+Founder **不是单独的订阅方案**，而是附加在符合条件账号上的永久权益。Founder 账号即使没有有效 Pro 或 Studio 订阅，也会保留高于普通 Free 的基础额度。
 
-| 能力 | 普通 Free | Founder | Pro |
-| --- | ---: | ---: | ---: |
-| 公网监控 | 30 | 30 | 100 |
-| Docker Probe | 1 | 3 | 12 |
-| 基础设施设备 | 1 | 3 | 12 |
-| Private Monitor | 1 | 3 | 50 |
+| 能力 | 普通 Free | Founder | Pro | Studio |
+| --- | ---: | ---: | ---: | ---: |
+| 公网监控 | 30 | 30 | 100 | 250 |
+| Docker Probe | 1 个群晖 | 3 个群晖 | 12 个全平台 | 25 个全平台 |
+| 资产源 | 群晖资产 | 群晖资产 | 12 | 25 |
+| Private Monitor | 2 | 6 | 50 | 150 |
+| 公开状态页 | 1 | 1 | 3 | 5 |
+| 公网最短检查间隔 | 10 分钟 | 10 分钟 | 3 分钟 | 3 分钟 |
 
 在 **2027 年 5 月 1 日前**符合条件完成注册的 Founder 账号，可永久保留：
 
 - 30 个公网监控
-- 3 个 Docker Probe
-- 3 台基础设施设备
-- 3 个 Private Monitor
+- 3 个群晖 Docker Probe
+- 群晖资产
+- 6 个 Private Monitor
+- 1 个公开状态页
 
-如果 Founder 账号之后订阅 Pro，在 Pro 到期或取消后，账号会回到 **Founder 权益额度**，而不是普通 Free 额度。
+如果 Founder 账号之后订阅 Pro 或 Studio，在订阅到期或取消后，账号会回到 **Founder 权益额度**；不具备 Founder 资格的账号会恢复到普通 Free 额度。Studio 每个状态页最多包含 20 个监控点。
 
 价格、额度和权益可能随着产品调整，请以 [官网 Pricing](https://app.opshome.run/#pricing) 和 App Store 购买页面为准。
 
@@ -354,7 +386,7 @@ Founder **不是第三个订阅方案**，而是附加在符合条件账号上�
 2. 使用 Sign in with Apple 登录。
 3. 创建公网 Monitor。
 4. 如需监控私有网络，部署 Docker Probe。
-5. 添加 Proxmox、VMware、Synology、Linux 或 Docker 等支持的基础设施设备。
+5. 添加 Proxmox、VMware、Synology、Linux 或 Docker 等支持的资产源。
 6. 开启通知。
 7. 在 iPhone 上查看健康、事件和 Incidents。
 8. 需要更大屏幕时打开 OpsHome Console。
@@ -383,6 +415,15 @@ Founder **不是第三个订阅方案**，而是附加在符合条件账号上�
 
 ### Web Console
 
+**OpsHome Console** 提供與 iOS App 相同帳號下的唯讀 Web 運維視圖：
+
+- Overview
+- Monitor Matrix
+- Assets Topology
+- Incident Workspace
+- Light / Dark Theme
+- Wall Display Mode
+- Desktop / iPad / Mobile 響應式版面
 
 Console：**https://console.opshome.run**
 
@@ -410,25 +451,28 @@ Docker Probe 部署在你授權的私有網路內，並主動透過 HTTPS 連線
 
 ### 方案與 Founder 權益
 
-OpsHome 目前有 **Free / Pro 兩個訂閱方案**，同時為符合條件的早期帳號提供永久 **Founder 權益**。
+OpsHome 目前有 **Free / Pro / Studio 三種方案**，同時為符合條件的早期帳號提供永久 **Founder 權益**。
 
-Founder **不是第三個訂閱方案**，而是附加在符合條件帳號上的永久權益。Founder 帳號即使沒有有效 Pro 訂閱，也會保留高於一般 Free 的基礎額度。
+Founder **不是獨立的訂閱方案**，而是附加在符合條件帳號上的永久權益。Founder 帳號即使沒有有效 Pro 或 Studio 訂閱，也會保留高於一般 Free 的基礎額度。
 
-| 能力 | 一般 Free | Founder | Pro |
-| --- | ---: | ---: | ---: |
-| 公網監控 | 30 | 30 | 100 |
-| Docker Probe | 1 | 3 | 12 |
-| 基礎設施設備 | 1 | 3 | 12 |
-| Private Monitor | 1 | 3 | 50 |
+| 能力 | 一般 Free | Founder | Pro | Studio |
+| --- | ---: | ---: | ---: | ---: |
+| 公網監控 | 30 | 30 | 100 | 250 |
+| Docker Probe | 1 個群暉 | 3 個群暉 | 12 個全平台 | 25 個全平台 |
+| 資產來源 | 群暉資產 | 群暉資產 | 12 | 25 |
+| Private Monitor | 2 | 6 | 50 | 150 |
+| 公開狀態頁 | 1 | 1 | 3 | 5 |
+| 公網最短檢查間隔 | 10 分鐘 | 10 分鐘 | 3 分鐘 | 3 分鐘 |
 
 在 **2027 年 5 月 1 日前**符合條件完成註冊的 Founder 帳號，可永久保留：
 
 - 30 個公網監控
-- 3 個 Docker Probe
-- 3 台基礎設施設備
-- 3 個 Private Monitor
+- 3 個群暉 Docker Probe
+- 群暉資產
+- 6 個 Private Monitor
+- 1 個公開狀態頁
 
-如果 Founder 帳號之後訂閱 Pro，在 Pro 到期或取消後，帳號會回到 **Founder 權益額度**，而不是一般 Free 額度。
+如果 Founder 帳號之後訂閱 Pro 或 Studio，在訂閱到期或取消後，帳號會回到 **Founder 權益額度**；不具備 Founder 資格的帳號會恢復到一般 Free 額度。Studio 每個狀態頁最多包含 20 個監控點。
 
 價格、額度與權益可能隨產品調整，請以 [官網 Pricing](https://app.opshome.run/#pricing) 與 App Store 購買頁面為準。
 
@@ -438,7 +482,7 @@ Founder **不是第三個訂閱方案**，而是附加在符合條件帳號上�
 2. 使用 Sign in with Apple 登入。
 3. 建立公網 Monitor。
 4. 如需監控私有網路，部署 Docker Probe。
-5. 新增 Proxmox、VMware、Synology、Linux 或 Docker 等支援的基礎設施設備。
+5. 新增 Proxmox、VMware、Synology、Linux 或 Docker 等支援的資產來源。
 6. 開啟通知。
 7. 在 iPhone 上查看健康、事件與 Incidents。
 8. 需要更大的畫面時開啟 OpsHome Console。
@@ -466,6 +510,15 @@ Die Plattform verbindet:
 
 Die **OpsHome Console** bietet eine schreibgeschützte Web-Ansicht für dasselbe OpsHome-Konto.
 
+Aktuelle Bereiche umfassen:
+
+- Overview
+- Monitor Matrix
+- Assets Topology
+- Incident Workspace
+- Light / Dark Theme
+- Wall Display Mode
+- Responsive Darstellung für Desktop, iPad und mobile Browser
 
 Console: **https://console.opshome.run**
 
@@ -487,25 +540,28 @@ Unterstützte Infrastruktur umfasst:
 
 ### Tarife und Founder-Vorteil
 
-OpsHome hat **zwei Abonnement-Tarife — Free und Pro — sowie einen dauerhaften Founder-Vorteil für berechtigte frühe Konten**.
+OpsHome hat **drei Tarife — Free, Pro und Studio — sowie einen dauerhaften Founder-Vorteil für berechtigte frühe Konten**.
 
-Founder ist **kein dritter Abonnement-Tarif**, sondern ein dauerhaftes Konto-Entitlement.
+Founder ist **kein eigenständiger Abonnement-Tarif**, sondern ein dauerhaftes Konto-Entitlement.
 
-| Funktion | Regulär Free | Founder | Pro |
-| --- | ---: | ---: | ---: |
-| Public Monitors | 30 | 30 | 100 |
-| Docker Probes | 1 | 3 | 12 |
-| Infrastruktur-Geräte | 1 | 3 | 12 |
-| Private Monitors | 1 | 3 | 50 |
+| Funktion | Regulär Free | Founder | Pro | Studio |
+| --- | ---: | ---: | ---: | ---: |
+| Public Monitors | 30 | 30 | 100 | 250 |
+| Docker Probes | 1 Synology | 3 Synology | 12 plattformübergreifend | 25 plattformübergreifend |
+| Asset-Quellen | Synology Assets | Synology Assets | 12 | 25 |
+| Private Monitors | 2 | 6 | 50 | 150 |
+| Öffentliche Statusseiten | 1 | 1 | 3 | 5 |
+| Kürzestes öffentliches Prüfintervall | 10 Min. | 10 Min. | 3 Min. | 3 Min. |
 
 Berechtigte Konten, die vor dem **1. Mai 2027** registriert werden, behalten dauerhaft:
 
 - 30 Public Monitors
-- 3 Docker Probes
-- 3 Infrastruktur-Geräte
-- 3 Private Monitors
+- 3 Synology Docker Probes
+- Synology Assets
+- 6 Private Monitors
+- 1 öffentliche Statusseite
 
-Wenn ein Founder-Konto später Pro abonniert und Pro anschließend endet, fällt das Konto auf die **Founder-Grenzen** zurück und nicht auf die regulären Free-Grenzen.
+Wenn ein Founder-Konto später Pro oder Studio abonniert und das Abonnement anschließend endet, fällt das Konto auf die **Founder-Grenzen** zurück. Ein Konto ohne Founder-Berechtigung kehrt zu den regulären Free-Grenzen zurück. Studio erlaubt bis zu 20 Monitore pro Statusseite.
 
 Aktuelle Preise und Bedingungen: [Pricing](https://app.opshome.run/#pricing)
 
@@ -514,12 +570,6 @@ Website: **https://app.opshome.run**
 Dokumentation: **https://docs.opshome.run**
 
 ---
-
-## Repository Distribution
-
-This README is intentionally written with standard Markdown and simple HTML so it can be rendered consistently on **GitHub, GitLab, and Gitee**.
-
-Official product links remain the source of truth for live product behavior, pricing, limits, security documentation, and support information.
 
 ## Privacy
 
