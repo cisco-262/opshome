@@ -26,7 +26,7 @@ Monitor public services, private networks, Proxmox, VMware, Synology, Linux, Doc
 
 <br><br>
 
-<img src="assets/images/homelab-noc-overview-iphone.png" alt="OpsHome NOC infrastructure overview on iPhone" width="300">
+<img src="/docs/assets/images/homelab-noc-overview-iphone.png" alt="OpsHome NOC infrastructure overview on iPhone" width="300">
 
 <br>
 
